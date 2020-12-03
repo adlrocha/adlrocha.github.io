@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>web3 on @adlrocha</title>
+    <link>adlrocha.github.io/tags/web3/</link>
+    <description>Recent content in web3 on @adlrocha</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 29 Nov 2020 18:16:08 +0100</lastBuildDate><atom:link href="adlrocha.github.io/tags/web3/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Demystifying Ethereum 2.0</title>
+      <link>adlrocha.github.io/blog/2020-11-demystifying-ethereum2.0/</link>
+      <pubDate>Sun, 29 Nov 2020 18:16:08 +0100</pubDate>
+      
+      <guid>adlrocha.github.io/blog/2020-11-demystifying-ethereum2.0/</guid>
+      <description>@adlrocha - Demystifying Ethereum 2.0 A gentle introduction to what is yet to come! Ethereum 2.0 is set to launch on the 1st of December, and using this as an excuse I decided to invest some time to learn a bit more about the new developments happening in the Ethereum space.
+What is Eth2?  Eth2 refers to a set of interconnected upgrades that will make Ethereum more scalable, more secure, and more sustainable.</description>
+    </item>
+    
+    <item>
+      <title>My vision for a new Internet</title>
+      <link>adlrocha.github.io/blog/template-copy/</link>
+      <pubDate>Sun, 13 Sep 2020 18:16:08 +0100</pubDate>
+      
+      <guid>adlrocha.github.io/blog/template-copy/</guid>
+      <description>@adlrocha - My vision for a new Internet Where everyone can become an ISP | Alfonso de la Rocha
+
+I was skimming through this paper (A Public Option for the Core), when I read the following sentence in the abstract: *&amp;ldquo;In this paper we discuss both the challenges and the opportunities that make this an auspicious time to revisit how we might best structure the Internet&amp;rsquo;s infrastructure.&amp;quot; *And I said, well this may be something worth reflecting on and discussing in my newsletter.</description>
+    </item>
+    
+  </channel>
+</rss>
