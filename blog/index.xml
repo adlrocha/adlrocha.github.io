@@ -2,56 +2,56 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Blogs on @adlrocha</title>
-    <link>adlrocha.github.io/blog/</link>
+    <link>/blog/</link>
     <description>Recent content in Blogs on @adlrocha</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 29 Nov 2020 18:16:08 +0100</lastBuildDate><atom:link href="adlrocha.github.io/blog/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 29 Nov 2020 18:16:08 +0100</lastBuildDate><atom:link href="/blog/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Demystifying Ethereum 2.0</title>
-      <link>adlrocha.github.io/blog/2020-11-demystifying-ethereum2.0/</link>
+      <link>/blog/2020-11-demystifying-ethereum2.0/</link>
       <pubDate>Sun, 29 Nov 2020 18:16:08 +0100</pubDate>
       
-      <guid>adlrocha.github.io/blog/2020-11-demystifying-ethereum2.0/</guid>
+      <guid>/blog/2020-11-demystifying-ethereum2.0/</guid>
       <description>@adlrocha - Demystifying Ethereum 2.0 A gentle introduction to what is yet to come! Ethereum 2.0 is set to launch on the 1st of December, and using this as an excuse I decided to invest some time to learn a bit more about the new developments happening in the Ethereum space.
 What is Eth2?  Eth2 refers to a set of interconnected upgrades that will make Ethereum more scalable, more secure, and more sustainable.</description>
     </item>
     
     <item>
       <title>Broken Social Incentive Systems</title>
-      <link>adlrocha.github.io/blog/2020-10-social-broken-incentive/</link>
+      <link>/blog/2020-10-social-broken-incentive/</link>
       <pubDate>Thu, 29 Oct 2020 18:16:08 +0100</pubDate>
       
-      <guid>adlrocha.github.io/blog/2020-10-social-broken-incentive/</guid>
+      <guid>/blog/2020-10-social-broken-incentive/</guid>
       <description>@adlrocha - Broken Social Incentive Systems And how short-term thinking can be dangerous 
  &amp;ldquo;If our descendants were to diagnose the ills of 21st-century civilization, they would observe a dangerous short-termism: a collective failure to escape the present moment and look further ahead. The world is saturated in information, and standards of living have never been higher, but so often it&amp;rsquo;s a struggle to see beyond the next news cycle, political term, or business quarter.</description>
     </item>
     
     <item>
       <title>My vision for a new Internet</title>
-      <link>adlrocha.github.io/blog/2020-10-nat/</link>
+      <link>/blog/2020-10-nat/</link>
       <pubDate>Tue, 13 Oct 2020 18:16:08 +0100</pubDate>
       
-      <guid>adlrocha.github.io/blog/2020-10-nat/</guid>
+      <guid>/blog/2020-10-nat/</guid>
       <description>@adlrocha - Traversing the NAT A quest for direct global connectivity between devices. 
 These past few weeks I&amp;rsquo;ve been pretty obsessed with the future of the Internet, how it may look like, and the technological path towards it. All this started when I jumped into writing my personal vision for a new Internet. A few weeks later I was invited to participate in a discussion panel about the future of the Internet and web3 in the European Blockchain Convention, and as preparation for the panel I decided to interview a bunch of colleagues in the field to learn their thoughts on the matter.</description>
     </item>
     
     <item>
       <title>Network Coding in P2P Networks</title>
-      <link>adlrocha.github.io/blog/2020-08-network-coding/</link>
+      <link>/blog/2020-08-network-coding/</link>
       <pubDate>Tue, 13 Oct 2020 18:16:08 +0100</pubDate>
       
-      <guid>adlrocha.github.io/blog/2020-08-network-coding/</guid>
+      <guid>/blog/2020-08-network-coding/</guid>
       <description>@adlrocha - Network Coding in P2P Networks Linear combinations on-the-fly! I am not going to lie, writing my Sunday publication is getting harder and harder as I go deeper into my research on file-sharing in P2P networks. I spend almost all of my waking hours working on it, and by the end of the day I don&amp;rsquo;t have any more brain power left to start writing one of these pieces. Fortunately, I am working on such an exciting field that I can always choose one of the things I&amp;rsquo;ve been exploring throughout the week and just start writing about it.</description>
     </item>
     
     <item>
       <title>My vision for a new Internet</title>
-      <link>adlrocha.github.io/blog/2020-09-vision-internet/</link>
+      <link>/blog/2020-09-vision-internet/</link>
       <pubDate>Sun, 13 Sep 2020 18:16:08 +0100</pubDate>
       
-      <guid>adlrocha.github.io/blog/2020-09-vision-internet/</guid>
+      <guid>/blog/2020-09-vision-internet/</guid>
       <description>@adlrocha - My vision for a new Internet Where everyone can become an ISP | Alfonso de la Rocha
 
 I was skimming through this paper (A Public Option for the Core), when I read the following sentence in the abstract: *&amp;ldquo;In this paper we discuss both the challenges and the opportunities that make this an auspicious time to revisit how we might best structure the Internet&amp;rsquo;s infrastructure.&amp;quot; *And I said, well this may be something worth reflecting on and discussing in my newsletter.</description>
