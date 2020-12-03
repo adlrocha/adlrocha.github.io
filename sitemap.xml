@@ -38,12 +38,32 @@
   </url>
   
   <url>
+    <loc>/blog/2020-10-nat/</loc>
+    <lastmod>2020-10-13T18:16:08+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/blog/2020-08-network-coding/</loc>
+    <lastmod>2020-10-13T18:16:08+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/tags/networking/</loc>
+    <lastmod>2020-10-13T18:16:08+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/tags/research/</loc>
+    <lastmod>2020-10-13T18:16:08+01:00</lastmod>
+  </url>
+  
+  <url>
     <loc>/tags/ideas/</loc>
     <lastmod>2020-09-13T18:16:08+01:00</lastmod>
   </url>
   
   <url>
-    <loc>/blog/template-copy/</loc>
+    <loc>/blog/2020-09-vision-internet/</loc>
     <lastmod>2020-09-13T18:16:08+01:00</lastmod>
   </url>
   
