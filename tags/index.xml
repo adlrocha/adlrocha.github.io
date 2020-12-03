@@ -2,53 +2,53 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tags on @adlrocha</title>
-    <link>/tags/</link>
+    <link>adlrocha.github.io/tags/</link>
     <description>Recent content in Tags on @adlrocha</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 29 Nov 2020 18:16:08 +0100</lastBuildDate><atom:link href="/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 29 Nov 2020 18:16:08 +0100</lastBuildDate><atom:link href="adlrocha.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>web3</title>
-      <link>/tags/web3/</link>
+      <link>adlrocha.github.io/tags/web3/</link>
       <pubDate>Sun, 29 Nov 2020 18:16:08 +0100</pubDate>
       
-      <guid>/tags/web3/</guid>
+      <guid>adlrocha.github.io/tags/web3/</guid>
       <description></description>
     </item>
     
     <item>
       <title>reflections</title>
-      <link>/tags/reflections/</link>
+      <link>adlrocha.github.io/tags/reflections/</link>
       <pubDate>Thu, 29 Oct 2020 18:16:08 +0100</pubDate>
       
-      <guid>/tags/reflections/</guid>
+      <guid>adlrocha.github.io/tags/reflections/</guid>
       <description></description>
     </item>
     
     <item>
       <title>networking</title>
-      <link>/tags/networking/</link>
+      <link>adlrocha.github.io/tags/networking/</link>
       <pubDate>Tue, 13 Oct 2020 18:16:08 +0100</pubDate>
       
-      <guid>/tags/networking/</guid>
+      <guid>adlrocha.github.io/tags/networking/</guid>
       <description></description>
     </item>
     
     <item>
       <title>research</title>
-      <link>/tags/research/</link>
+      <link>adlrocha.github.io/tags/research/</link>
       <pubDate>Tue, 13 Oct 2020 18:16:08 +0100</pubDate>
       
-      <guid>/tags/research/</guid>
+      <guid>adlrocha.github.io/tags/research/</guid>
       <description></description>
     </item>
     
     <item>
       <title>ideas</title>
-      <link>/tags/ideas/</link>
+      <link>adlrocha.github.io/tags/ideas/</link>
       <pubDate>Sun, 13 Sep 2020 18:16:08 +0100</pubDate>
       
-      <guid>/tags/ideas/</guid>
+      <guid>adlrocha.github.io/tags/ideas/</guid>
       <description></description>
     </item>
     
