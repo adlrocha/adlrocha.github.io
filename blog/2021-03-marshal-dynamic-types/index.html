@@ -10,7 +10,7 @@
   <meta name="googlebot" content="index,follow,snippet,archive">
   <meta property="og:title" content="Never take Marshaling for granted" />
 <meta property="og:description" content="@adlrocha - Never take Marshaling for granted Marshaling interfaces in Go.
-We sometimes take marshaling for granted, but** there is more than one occasion in which you have no choice but to write your own custom marshaller. ** Either because your compiler/marshal library is not able to infer how to automatically marshal your objects, because your marshaler is not generating the right output (we saw last week_how a JSON document can be parsed with different values across microservices, leading to a variety of potential security risk), etc." />
+We sometimes take marshaling for granted, but** there is more than one occasion in which you have no choice but to write your own custom marshaller. **Either because your compiler/marshal library is not able to infer how to automatically marshal your objects, because your marshaler is not generating the right output** (we saw last weekhow a JSON document can be parsed with different values across microservices, leading to a variety of potential security risk), etc." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="/blog/2021-03-marshal-dynamic-types/" />
 <meta property="article:published_time" content="2021-03-21T00:00:00+00:00" />
@@ -19,7 +19,7 @@ We sometimes take marshaling for granted, but** there is more than one occasion 
   <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Never take Marshaling for granted"/>
 <meta name="twitter:description" content="@adlrocha - Never take Marshaling for granted Marshaling interfaces in Go.
-We sometimes take marshaling for granted, but** there is more than one occasion in which you have no choice but to write your own custom marshaller. ** Either because your compiler/marshal library is not able to infer how to automatically marshal your objects, because your marshaler is not generating the right output (we saw last week_how a JSON document can be parsed with different values across microservices, leading to a variety of potential security risk), etc."/>
+We sometimes take marshaling for granted, but** there is more than one occasion in which you have no choice but to write your own custom marshaller. **Either because your compiler/marshal library is not able to infer how to automatically marshal your objects, because your marshaler is not generating the right output** (we saw last weekhow a JSON document can be parsed with different values across microservices, leading to a variety of potential security risk), etc."/>
 
   
   
@@ -82,8 +82,8 @@ We sometimes take marshaling for granted, but** there is more than one occasion 
   
     <h1 id="adlrocha---never-take-marshaling-for-granted">@adlrocha - Never take Marshaling for granted</h1>
 <p><em>Marshaling interfaces in Go.</em></p>
-<p><img src="images/image1.png" alt="alt_text" title="image_tooltip"></p>
-<p>We sometimes take marshaling for granted, but** there is more than one occasion in which you have no choice but to write your own custom marshaller. ** Either because your compiler/marshal library is not able to infer how to automatically marshal your objects, because your marshaler is not generating the right output (we saw last week_<a href="https://labs.bishopfox.com/tech-blog/an-exploration-of-json-interoperability-vulnerabilities"> how a JSON document can be parsed with different values across microservices, leading to a variety of potential security risk</a>), etc. The fact is that for one reason or the other, one day you may end up having to tinker with your marshaller,** and you better be prepared if you don’t want to drain your time trying to make things work. **This is exactly what happened to me this week. Let me walk you through the marvelous world of interface marshaling in Golang.</p>
+<p><img src="images/marshal.jpg" alt="alt_text" title="image_tooltip"></p>
+<p>We sometimes take marshaling for granted, but** there is more than one occasion in which you have no choice but to write your own custom marshaller. **Either because your compiler/marshal library is not able to infer how to automatically marshal your objects, because your marshaler is not generating the right output** (we saw last week<a href="https://labs.bishopfox.com/tech-blog/an-exploration-of-json-interoperability-vulnerabilities"> how a JSON document can be parsed with different values across microservices, leading to a variety of potential security risk</a>), etc. The fact is that for one reason or the other, one day you may end up having to tinker with your marshaller, and you better be prepared if you don’t want to drain your time trying to make things work. **This is exactly what happened to me this week.** Let me walk you through the marvelous world of interface marshaling in Golang.</p>
 <h2 id="vanilla-marshal">Vanilla Marshal</h2>
 <p>I guess everyone is aware about what marshaling means (at least in the field of computer science), but just in case, marshaling _“is the process of transforming the memory representation of an object into a data format suitable for storage or transmission”. _You can marshal an object to several different formats: from formats such as JSON, or XML, to binary representations like CBOR. <strong>Throughout this publication, we are going to focus on JSON marshaling, but all of the concepts presented are applicable when targeting other types of representation.</strong></p>
 <p>Until you face complex use cases, marshaling seems like a straightforward thing in Golang. You take the <code>encoding/json</code> library (or the convenient want for your serialization format), annotate your objects, and let the library do the rest. Let’s look at a quick example:</p>
@@ -485,7 +485,7 @@ We sometimes take marshaling for granted, but** there is more than one occasion 
 }
 </code></pre></div><p>Playground link: <a href="https://play.golang.org/p/RNPwJkzZ6PU">https://play.golang.org/p/RNPwJkzZ6PU</a></p>
 <p>Gits hosting the code: <a href="https://gist.github.com/adlrocha/28c522e0bb3e628d65531a84b5c7fb5e">https://gist.github.com/adlrocha/28c522e0bb3e628d65531a84b5c7fb5e</a></p>
-<p>Did you love this publication? Did you hated that you couldn&rsquo;t read it directly from your email? Send me some love and good feedback <a href="https://twitter.com/adlrocha">here</a>. And if you got to this post using your browser, do not forget to subscribe for more content <a href="https://adlrocha.substack.com">here</a>.</p>
+<p>Did you love this publication? Did you hate that you couldn&rsquo;t read it directly from your email? Send me some love and good feedback <a href="https://twitter.com/adlrocha">here</a>. And if you got to this post using your favorite search engine, do not forget to subscribe for more content <a href="https://adlrocha.substack.com">here</a>.</p>
 
   
   </div>

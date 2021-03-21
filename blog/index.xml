@@ -18,7 +18,7 @@
       
       <guid>/blog/2021-03-marshal-dynamic-types/</guid>
       <description>@adlrocha - Never take Marshaling for granted Marshaling interfaces in Go.
-We sometimes take marshaling for granted, but** there is more than one occasion in which you have no choice but to write your own custom marshaller. ** Either because your compiler/marshal library is not able to infer how to automatically marshal your objects, because your marshaler is not generating the right output (we saw last week_how a JSON document can be parsed with different values across microservices, leading to a variety of potential security risk), etc.</description>
+We sometimes take marshaling for granted, but** there is more than one occasion in which you have no choice but to write your own custom marshaller. **Either because your compiler/marshal library is not able to infer how to automatically marshal your objects, because your marshaler is not generating the right output** (we saw last weekhow a JSON document can be parsed with different values across microservices, leading to a variety of potential security risk), etc.</description>
     </item>
     
     <item>
