@@ -8,12 +8,17 @@
   </url>
   
   <url>
-    <loc>/blog/2021-03-marshal-dynamic-types/</loc>
+    <loc>/blog/</loc>
     <lastmod>2021-03-21T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/blog/</loc>
+    <loc>/tags/go-programming/</loc>
+    <lastmod>2021-03-21T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/blog/2021-03-marshal-dynamic-types/</loc>
     <lastmod>2021-03-21T00:00:00+00:00</lastmod>
   </url>
   
@@ -23,12 +28,12 @@
   </url>
   
   <url>
-    <loc>/tags/web3/</loc>
-    <lastmod>2021-03-21T00:00:00+00:00</lastmod>
+    <loc>/blog/2020-11-demystifying-ethereum2.0/</loc>
+    <lastmod>2020-11-29T18:16:08+01:00</lastmod>
   </url>
   
   <url>
-    <loc>/blog/2020-11-demystifying-ethereum2.0/</loc>
+    <loc>/tags/web3/</loc>
     <lastmod>2020-11-29T18:16:08+01:00</lastmod>
   </url>
   
