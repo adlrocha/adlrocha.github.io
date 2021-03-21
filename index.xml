@@ -6,7 +6,21 @@
     <description>Recent content on @adlrocha</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 29 Nov 2020 18:16:08 +0100</lastBuildDate><atom:link href="/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 21 Mar 2021 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>@adlrocha - Never take Marshaling for granted</title>
+      <link>/blog/2021-03-marshal-dynamic-types/</link>
+      <pubDate>Sun, 21 Mar 2021 00:00:00 +0000</pubDate>
+      
+      <guid>/blog/2021-03-marshal-dynamic-types/</guid>
+      <description>@adlrocha - Never take Marshaling for granted Marshaling interfaces in Go.
+We sometimes take marshaling for granted, but** there is more than one occasion in which you have no choice but to write your own custom marshaller. ** Either because your compiler/marshal library is not able to infer how to automatically marshal your objects, because your marshaler is not generating the right output (we saw last week_how a JSON document can be parsed with different values across microservices, leading to a variety of potential security risk), etc.</description>
+    </item>
+    
     <item>
       <title>Demystifying Ethereum 2.0</title>
       <link>/blog/2020-11-demystifying-ethereum2.0/</link>
