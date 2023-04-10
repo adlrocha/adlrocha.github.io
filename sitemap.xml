@@ -2,12 +2,54 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>localhost/blog/</loc>
+    <loc>/</loc>
+    <lastmod>2021-03-21T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>localhost/</loc>
+    <loc>/blog/</loc>
+    <lastmod>2021-03-21T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>localhost/series/</loc>
+    <loc>/tags/go-programming/</loc>
+    <lastmod>2021-03-21T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>localhost/tags/</loc>
+    <loc>/blog/2021-03-marshal-dynamic-types/</loc>
+    <lastmod>2021-03-21T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>/tags/</loc>
+    <lastmod>2021-03-21T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>/blog/2020-11-demystifying-ethereum2.0/</loc>
+    <lastmod>2020-11-29T18:16:08+01:00</lastmod>
+  </url><url>
+    <loc>/tags/web3/</loc>
+    <lastmod>2020-11-29T18:16:08+01:00</lastmod>
+  </url><url>
+    <loc>/blog/2020-10-social-broken-incentive/</loc>
+    <lastmod>2020-10-29T18:16:08+01:00</lastmod>
+  </url><url>
+    <loc>/tags/reflections/</loc>
+    <lastmod>2020-10-29T18:16:08+01:00</lastmod>
+  </url><url>
+    <loc>/blog/2020-08-network-coding/</loc>
+    <lastmod>2020-10-13T18:16:08+01:00</lastmod>
+  </url><url>
+    <loc>/tags/networking/</loc>
+    <lastmod>2020-10-13T18:16:08+01:00</lastmod>
+  </url><url>
+    <loc>/tags/research/</loc>
+    <lastmod>2020-10-13T18:16:08+01:00</lastmod>
+  </url><url>
+    <loc>/blog/2020-10-nat/</loc>
+    <lastmod>2020-10-13T18:16:08+01:00</lastmod>
+  </url><url>
+    <loc>/tags/ideas/</loc>
+    <lastmod>2020-09-13T18:16:08+01:00</lastmod>
+  </url><url>
+    <loc>/blog/2020-09-vision-internet/</loc>
+    <lastmod>2020-09-13T18:16:08+01:00</lastmod>
+  </url><url>
+    <loc>/patrons/</loc>
+    <lastmod>2019-12-03T18:00:27+01:00</lastmod>
+  </url><url>
+    <loc>/categories/</loc>
   </url>
 </urlset>

@@ -1,0 +1,526 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title> Never take Marshaling for granted | @adlrocha</title>
+  <meta name="description" content="Before joining Protocol Labs as a Research Engineer, I worked as a blockchain expert at Telefónica R&amp;D, where I was responsible for the design and development of core technology based on blockchains, distributed systems, and advanced cryptography. My involvement in research and development began at Universidad Politécnica de Madrid, where I worked on topics related to energy efficiency in data centers. My R&amp;D experience also includes research into the compression efficiency of video coding standards at Ericsson Research and projects related to securing interdomain routing protocols at KTH Royal Institute of Technology in Stockholm. I am also an avid reader and basketball lover.">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="all,follow">
+  <meta name="googlebot" content="index,follow,snippet,archive">
+  <meta property="og:title" content="Never take Marshaling for granted" />
+<meta property="og:description" content="@adlrocha - Never take Marshaling for granted Marshaling interfaces in Go.
+We sometimes take marshaling for granted, but** there is more than one occasion in which you have no choice but to write your own custom marshaller. Either because your compiler/marshal library is not able to infer how to automatically marshal your objects, because your marshaler is not generating the right output (we saw last weekhow a JSON document can be parsed with different values across microservices, leading to a variety of potential security risk), etc." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="/blog/2021-03-marshal-dynamic-types/" /><meta property="article:section" content="blog" />
+<meta property="article:published_time" content="2021-03-21T00:00:00+00:00" />
+<meta property="article:modified_time" content="2021-03-21T00:00:00+00:00" />
+
+
+  <meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Never take Marshaling for granted"/>
+<meta name="twitter:description" content="@adlrocha - Never take Marshaling for granted Marshaling interfaces in Go.
+We sometimes take marshaling for granted, but** there is more than one occasion in which you have no choice but to write your own custom marshaller. Either because your compiler/marshal library is not able to infer how to automatically marshal your objects, because your marshaler is not generating the right output (we saw last weekhow a JSON document can be parsed with different values across microservices, leading to a variety of potential security risk), etc."/>
+
+  
+  
+    
+  
+  
+  <link rel="stylesheet" href="/css/style-dark.css">
+  
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  
+
+  
+<link rel="icon" type="image/png" href="/images/favicon.ico" />
+
+  
+  
+</head>
+
+<body class="max-width mx-auto px3 ltr">
+  <div class="content index py4">
+
+    <header id="header">
+  <a href="/">
+  
+    <div id="logo" style="background-image: url(/images/logo.png)"></div>
+  
+  <div id="title">
+    <h1>@adlrocha</h1>
+  </div>
+  </a>
+  <div id="nav">
+    <ul>
+      <li class="icon">
+        <a href="#"><i class="fas fa-bars fa-2x"></i></a>
+      </li>
+      
+        <li><a href="/">Home</a></li>
+      
+        <li><a href="/blog">All posts</a></li>
+      
+        <li><a href="https://adlrocha.substack.com/archive">Newsletter</a></li>
+      
+        <li><a href="/tags">Tags</a></li>
+      
+        <li><a href="/patrons">Patrons</a></li>
+      
+    </ul>
+  </div>
+</header>
+
+
+
+    
+<article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <div class="content" itemprop="articleBody">
+  
+    <h1 id="adlrocha---never-take-marshaling-for-granted">@adlrocha - Never take Marshaling for granted</h1>
+<p><em>Marshaling interfaces in Go.</em></p>
+<p><img src="https://images.unsplash.com/photo-1525091752287-44ce44eab2fa?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&amp;ixlib=rb-1.2.1&amp;auto=format&amp;fit=crop&amp;w=1049&amp;q=80" alt="alt_text" title="image_tooltip"></p>
+<p>We sometimes take marshaling for granted, but** there is more than one occasion in which you have no choice but to write your own custom marshaller. <strong>Either because your compiler/marshal library is not able to infer how to automatically marshal your objects, because your marshaler is not generating the right output</strong> (we saw last week<a href="https://labs.bishopfox.com/tech-blog/an-exploration-of-json-interoperability-vulnerabilities"> how a JSON document can be parsed with different values across microservices, leading to a variety of potential security risk</a>), etc. The fact is that for one reason or the other, one day you may end up having to tinker with your marshaller, and you better be prepared if you don’t want to drain your time trying to make things work. <strong>This is exactly what happened to me this week.</strong> Let me walk you through the marvelous world of interface marshaling in Golang.</p>
+<h2 id="vanilla-marshal">Vanilla Marshal</h2>
+<p>I guess everyone is aware about what marshaling means (at least in the field of computer science), but just in case, marshaling _“is the process of transforming the memory representation of an object into a data format suitable for storage or transmission”. _You can marshal an object to several different formats: from formats such as JSON, or XML, to binary representations like CBOR. <strong>Throughout this publication, we are going to focus on JSON marshaling, but all of the concepts presented are applicable when targeting other types of representation.</strong></p>
+<p>Until you face complex use cases, marshaling seems like a straightforward thing in Golang. You take the <code>encoding/json</code> library (or the convenient want for your serialization format), annotate your objects, and let the library do the rest. Let’s look at a quick example:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go">
+<span style="color:#f92672">package</span> <span style="color:#a6e22e">main</span>
+
+<span style="color:#f92672">import</span> (
+    <span style="color:#e6db74">&#34;fmt&#34;</span>
+    <span style="color:#e6db74">&#34;encoding/json&#34;</span>
+)
+
+<span style="color:#66d9ef">type</span> <span style="color:#a6e22e">Pair</span> <span style="color:#66d9ef">struct</span> {
+    <span style="color:#a6e22e">Key</span> <span style="color:#66d9ef">string</span> <span style="color:#e6db74">`json:&#34;key&#34;`</span>
+    <span style="color:#a6e22e">Value</span> <span style="color:#66d9ef">int</span>  <span style="color:#e6db74">`json:&#34;value&#34;`</span>
+}
+
+<span style="color:#66d9ef">type</span> <span style="color:#a6e22e">Pairs</span> []<span style="color:#a6e22e">Pair</span>
+
+<span style="color:#66d9ef">func</span> <span style="color:#a6e22e">main</span>() {
+    <span style="color:#75715e">// Marshaling a struct
+</span><span style="color:#75715e"></span>    <span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Println</span>(<span style="color:#e6db74">&#34;== Marshalling struct ==&#34;</span>)
+    <span style="color:#a6e22e">p</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">Pair</span>{<span style="color:#a6e22e">Key</span>: <span style="color:#e6db74">&#34;someKey&#34;</span>, <span style="color:#a6e22e">Value</span>: <span style="color:#ae81ff">1</span>}
+    <span style="color:#75715e">// Marshal
+</span><span style="color:#75715e"></span>    <span style="color:#a6e22e">byteData</span>, <span style="color:#a6e22e">err</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">json</span>.<span style="color:#a6e22e">Marshal</span>(<span style="color:#a6e22e">p</span>)
+    <span style="color:#a6e22e">checkErr</span>(<span style="color:#a6e22e">err</span>)
+    <span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Println</span>(<span style="color:#e6db74">&#34;Marshalled:&#34;</span>, string(<span style="color:#a6e22e">byteData</span>))
+
+    <span style="color:#75715e">// Unmarshal into Pair struct
+</span><span style="color:#75715e"></span>    <span style="color:#a6e22e">pout</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">Pair</span>{}
+    <span style="color:#a6e22e">err</span> = <span style="color:#a6e22e">json</span>.<span style="color:#a6e22e">Unmarshal</span>(<span style="color:#a6e22e">byteData</span>, <span style="color:#f92672">&amp;</span><span style="color:#a6e22e">pout</span>)
+    <span style="color:#a6e22e">checkErr</span>(<span style="color:#a6e22e">err</span>)
+    <span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Println</span>(<span style="color:#e6db74">&#34;Unmarshalled:&#34;</span>, <span style="color:#a6e22e">pout</span>)
+
+    <span style="color:#75715e">// Marshaling a list of Pairs
+</span><span style="color:#75715e"></span>    <span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Println</span>(<span style="color:#e6db74">&#34;== Marshalling pairs ==&#34;</span>)
+    <span style="color:#a6e22e">p1</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">Pair</span>{<span style="color:#a6e22e">Key</span>: <span style="color:#e6db74">&#34;someKey&#34;</span>, <span style="color:#a6e22e">Value</span>: <span style="color:#ae81ff">1</span>}
+    <span style="color:#a6e22e">p2</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">Pair</span>{<span style="color:#a6e22e">Key</span>: <span style="color:#e6db74">&#34;otherKey&#34;</span>, <span style="color:#a6e22e">Value</span>: <span style="color:#ae81ff">2</span>}
+    <span style="color:#a6e22e">pl</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">Pairs</span>{<span style="color:#a6e22e">p1</span>, <span style="color:#a6e22e">p2</span>}
+
+    <span style="color:#a6e22e">byteData</span>, <span style="color:#a6e22e">err</span> = <span style="color:#a6e22e">json</span>.<span style="color:#a6e22e">Marshal</span>(<span style="color:#a6e22e">pl</span>)
+    <span style="color:#a6e22e">checkErr</span>(<span style="color:#a6e22e">err</span>)
+    <span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Println</span>(<span style="color:#e6db74">&#34;Marshalled:&#34;</span>, string(<span style="color:#a6e22e">byteData</span>))
+
+    <span style="color:#75715e">// Unmarshalling into the right type
+</span><span style="color:#75715e"></span>    <span style="color:#a6e22e">plout</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">Pairs</span>{}
+    <span style="color:#a6e22e">err</span> = <span style="color:#a6e22e">json</span>.<span style="color:#a6e22e">Unmarshal</span>(<span style="color:#a6e22e">byteData</span>, <span style="color:#f92672">&amp;</span><span style="color:#a6e22e">plout</span>)
+    <span style="color:#a6e22e">checkErr</span>(<span style="color:#a6e22e">err</span>)
+    <span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Println</span>(<span style="color:#e6db74">&#34;Unmarshalled:&#34;</span>, <span style="color:#a6e22e">plout</span>)
+
+}
+
+<span style="color:#66d9ef">func</span> <span style="color:#a6e22e">checkErr</span>(<span style="color:#a6e22e">err</span> <span style="color:#66d9ef">error</span>){
+    <span style="color:#66d9ef">if</span> <span style="color:#a6e22e">err</span> <span style="color:#f92672">!=</span> <span style="color:#66d9ef">nil</span>{
+   	 panic(<span style="color:#a6e22e">err</span>)
+    }
+}
+</code></pre></div><p>Playground link: <a href="https://play.golang.org/p/ZoKXcUuFa1d">https://play.golang.org/p/ZoKXcUuFa1d</a></p>
+<p>We created a <code>Pair</code>and <code>Pairs</code> structs, annotated the Pair struct, and marshalled them without involving any kind of black magic. <strong>Everything works “out-of-the-box”.</strong> Marshaling doesn’t seem that hard right?</p>
+<h2 id="introducing-interfaces-to-the-mix">Introducing interfaces to the mix</h2>
+<p>But what happens when we start introducing interfaces to the mix? Things start getting a bit messier. Let Pair have now a key and a value of type Node. Node is an interface type, so it means that key and value can be of several different types. To see what happens when marshaling interface types, <strong>we create two new String and Int types which implement the Node interface.</strong> Let’s see what happens now when we try to marshal something using the straightforward and naïve approach from above.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#f92672">package</span> <span style="color:#a6e22e">main</span>
+<span style="color:#f92672">import</span> (
+    <span style="color:#e6db74">&#34;fmt&#34;</span>
+    <span style="color:#e6db74">&#34;encoding/json&#34;</span>
+)
+
+<span style="color:#75715e">// Object Structs
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">type</span> <span style="color:#a6e22e">Node</span> <span style="color:#66d9ef">interface</span>{
+    <span style="color:#a6e22e">Print</span>()
+}
+
+<span style="color:#66d9ef">type</span> <span style="color:#a6e22e">Pair</span> <span style="color:#66d9ef">struct</span> {
+    <span style="color:#a6e22e">Key</span> <span style="color:#a6e22e">Node</span> <span style="color:#e6db74">`json:&#34;key&#34;`</span>
+    <span style="color:#a6e22e">Value</span> <span style="color:#a6e22e">Node</span>  <span style="color:#e6db74">`json:&#34;value&#34;`</span>
+}
+
+<span style="color:#66d9ef">type</span> <span style="color:#a6e22e">String</span> <span style="color:#66d9ef">struct</span> {
+    <span style="color:#a6e22e">Value</span> <span style="color:#66d9ef">string</span>
+}
+
+<span style="color:#66d9ef">type</span> <span style="color:#a6e22e">Int</span> <span style="color:#66d9ef">struct</span> {
+    <span style="color:#a6e22e">Value</span> <span style="color:#66d9ef">int</span>
+}
+
+<span style="color:#66d9ef">func</span> (<span style="color:#a6e22e">s</span> <span style="color:#a6e22e">String</span>) <span style="color:#a6e22e">Print</span>(){
+    <span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Println</span>(<span style="color:#a6e22e">s</span>.<span style="color:#a6e22e">Value</span>)
+}
+
+<span style="color:#66d9ef">func</span> (<span style="color:#a6e22e">i</span> <span style="color:#a6e22e">Int</span>) <span style="color:#a6e22e">Print</span>(){
+    <span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Println</span>(<span style="color:#a6e22e">i</span>.<span style="color:#a6e22e">Value</span>)
+}
+
+<span style="color:#66d9ef">type</span> <span style="color:#a6e22e">Pairs</span> []<span style="color:#a6e22e">Pair</span>
+
+<span style="color:#66d9ef">func</span> <span style="color:#a6e22e">main</span>() {
+
+    <span style="color:#75715e">// Marshaling a struct
+</span><span style="color:#75715e"></span>    <span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Println</span>(<span style="color:#e6db74">&#34;== Marshalling struct ==&#34;</span>)
+    <span style="color:#a6e22e">p</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">Pair</span>{<span style="color:#a6e22e">Key</span>: <span style="color:#a6e22e">String</span>{<span style="color:#e6db74">&#34;someKey&#34;</span>}, <span style="color:#a6e22e">Value</span>: <span style="color:#a6e22e">Int</span>{<span style="color:#ae81ff">1</span>}}
+    <span style="color:#75715e">// Marshal
+</span><span style="color:#75715e"></span>    <span style="color:#a6e22e">byteData</span>, <span style="color:#a6e22e">err</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">json</span>.<span style="color:#a6e22e">Marshal</span>(<span style="color:#a6e22e">p</span>)
+    <span style="color:#a6e22e">checkErr</span>(<span style="color:#a6e22e">err</span>)
+    <span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Println</span>(<span style="color:#e6db74">&#34;Marshalled:&#34;</span>, string(<span style="color:#a6e22e">byteData</span>))
+
+    <span style="color:#75715e">// Unmarshal into Pair struct
+</span><span style="color:#75715e"></span>    <span style="color:#a6e22e">pout</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">Pair</span>{}
+    <span style="color:#a6e22e">err</span> = <span style="color:#a6e22e">json</span>.<span style="color:#a6e22e">Unmarshal</span>(<span style="color:#a6e22e">byteData</span>, <span style="color:#f92672">&amp;</span><span style="color:#a6e22e">pout</span>)
+    <span style="color:#a6e22e">checkErr</span>(<span style="color:#a6e22e">err</span>)
+    <span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Println</span>(<span style="color:#e6db74">&#34;Unmarshalled:&#34;</span>, <span style="color:#a6e22e">pout</span>)
+
+}
+
+<span style="color:#66d9ef">func</span> <span style="color:#a6e22e">checkErr</span>(<span style="color:#a6e22e">err</span> <span style="color:#66d9ef">error</span>){
+    <span style="color:#66d9ef">if</span> <span style="color:#a6e22e">err</span> <span style="color:#f92672">!=</span> <span style="color:#66d9ef">nil</span>{
+   	    panic(<span style="color:#a6e22e">err</span>)
+    }
+}
+</code></pre></div><p>Playground link: <a href="https://play.golang.org/p/tbG9jrVA_u7">https://play.golang.org/p/tbG9jrVA_u7</a></p>
+<p>Oh, oh! Problems! We are doing exactly the same as before but now the types inside the struct are interfaces. Unmarshaling doesn’t go as smooth as expected, and <strong>now we are getting the following error:</strong></p>
+<pre tabindex="0"><code>panic: json: cannot unmarshal object into Go struct field Pair.key of type main.Node
+</code></pre><p>Why is this happening? The package <code>encoding/json</code> uses <code>reflect</code> under the hood to infer the type in which it needs to unmarshal the serialization. **But interfaces are dynamic types, and our JSON marshaler is not able to infer by itself the right type to use for the unmarshaling. **What can we do? We will have to give some hints to our unmarshaller.</p>
+<h2 id="building-a-custom-unmarshaller">Building a custom unmarshaller</h2>
+<p>We can give our unmarshaller hints in several ways. <strong>The first thing we are going to try is to write a custom unmarshaller for Pair</strong>, so we can manually process the serialization and assign the right Node type. The <code>encoding/json</code> package lets you overwrite its interface to implement your custom unmarshaller, and that is exactly what we are going to do.  For this task, we are going to use the <a href="https://golang.org/pkg/encoding/json/#RawMessage">RawMessage</a> capabilities of the<code>encoding/json</code> package. _“RawMessage is a raw encoded JSON value. It implements Marshaler and Unmarshaler and can be used to delay JSON decoding or precompute a JSON encoding”. _This is how our custom unmarshaller for Pair looks like:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#75715e">// Custom unmarshal for pairs
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">func</span> (<span style="color:#a6e22e">p</span> <span style="color:#f92672">*</span><span style="color:#a6e22e">Pair</span>) <span style="color:#a6e22e">UnmarshalJSON</span>(<span style="color:#a6e22e">b</span> []<span style="color:#66d9ef">byte</span>) <span style="color:#66d9ef">error</span> {
+    <span style="color:#75715e">// Use RawMessage to get the key and value of the struct
+</span><span style="color:#75715e"></span>    <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">objMap</span> <span style="color:#66d9ef">map</span>[<span style="color:#66d9ef">string</span>]<span style="color:#f92672">*</span><span style="color:#a6e22e">json</span>.<span style="color:#a6e22e">RawMessage</span>
+    <span style="color:#a6e22e">err</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">json</span>.<span style="color:#a6e22e">Unmarshal</span>(<span style="color:#a6e22e">b</span>, <span style="color:#f92672">&amp;</span><span style="color:#a6e22e">objMap</span>)
+
+    <span style="color:#66d9ef">if</span> <span style="color:#a6e22e">err</span> <span style="color:#f92672">!=</span> <span style="color:#66d9ef">nil</span> {
+        <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">err</span>
+    }
+
+    <span style="color:#75715e">// Let the compiler know they are of type String
+</span><span style="color:#75715e"></span>    <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">k</span>, <span style="color:#a6e22e">v</span> <span style="color:#a6e22e">String</span>
+    <span style="color:#75715e">// Unmarshal the key and value
+</span><span style="color:#75715e"></span>    <span style="color:#a6e22e">err</span> = <span style="color:#a6e22e">json</span>.<span style="color:#a6e22e">Unmarshal</span>(<span style="color:#f92672">*</span><span style="color:#a6e22e">objMap</span>[<span style="color:#e6db74">&#34;key&#34;</span>], <span style="color:#f92672">&amp;</span><span style="color:#a6e22e">k</span>)
+    <span style="color:#66d9ef">if</span> <span style="color:#a6e22e">err</span> <span style="color:#f92672">!=</span> <span style="color:#66d9ef">nil</span> {
+   	    <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">err</span>
+    }
+    <span style="color:#a6e22e">err</span> = <span style="color:#a6e22e">json</span>.<span style="color:#a6e22e">Unmarshal</span>(<span style="color:#f92672">*</span><span style="color:#a6e22e">objMap</span>[<span style="color:#e6db74">&#34;value&#34;</span>], <span style="color:#f92672">&amp;</span><span style="color:#a6e22e">v</span>)
+    <span style="color:#66d9ef">if</span> <span style="color:#a6e22e">err</span> <span style="color:#f92672">!=</span> <span style="color:#66d9ef">nil</span> {
+        <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">err</span>
+    }
+
+    <span style="color:#a6e22e">p</span>.<span style="color:#a6e22e">Key</span> = <span style="color:#a6e22e">k</span>
+    <span style="color:#a6e22e">p</span>.<span style="color:#a6e22e">Value</span> = <span style="color:#a6e22e">v</span>
+    <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">nil</span>
+
+}
+</code></pre></div><p>We use RawMessage to get the raw bytes of the Key and Value fields of the struct, and we perform the independent unmarshalling of both letting our unmarshaller know that in this case both, key and value, are of type String. With this simple trick we managed to unmarshal Pairs whose key and value are of type String, but what happens if we create an object where  Key or Value are of type Int? Things start breaking again, <strong>because our custom unmarshaller only understands String Nodes and not Int Nodes.</strong> But how can we tell our unmarshaller that the Key or the Value are of a certain type? We need to add this knowledge to our serialized format.</p>
+<h2 id="building-a-custom-unmarshaller-1">Building a custom unmarshaller</h2>
+<p><strong>The same way we overwrite the unmarshaller for Pairs we are going to write a custom marshaller for our Int and String nodes so we can include information about the type in the serialized format</strong> that our unmarshaller can use to its convenience. This sounds simple, right? We create, for instance, a MarshalType with an enum of the different types implementing the Node interface, and wrap the current default marshaller for Int and String into a new marshaller that also includes the type. Easy peasy. Wait, don’t be so quick to claim victory. If we naïvely write our marshaller like this:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go">
+<span style="color:#66d9ef">func</span> (<span style="color:#a6e22e">i</span> <span style="color:#a6e22e">Int</span>) <span style="color:#a6e22e">MarshalJSON</span>() (<span style="color:#a6e22e">bdata</span> []<span style="color:#66d9ef">byte</span>, <span style="color:#a6e22e">e</span> <span style="color:#66d9ef">error</span>) {
+    <span style="color:#a6e22e">c</span> <span style="color:#f92672">:=</span> <span style="color:#66d9ef">struct</span> {
+        <span style="color:#a6e22e">Type</span>  <span style="color:#a6e22e">MarshalType</span> <span style="color:#e6db74">`json:&#34;type&#34;`</span>
+        <span style="color:#a6e22e">Value</span> <span style="color:#a6e22e">tmp</span>     	<span style="color:#e6db74">`json:&#34;value&#34;`</span>
+    }{<span style="color:#a6e22e">Type</span>: <span style="color:#a6e22e">IntType</span>, <span style="color:#a6e22e">Value</span>: <span style="color:#a6e22e">ts</span>}
+    
+    <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">json</span>.<span style="color:#a6e22e">Marshal</span>(<span style="color:#f92672">&amp;</span><span style="color:#a6e22e">c</span>)
+}
+
+</code></pre></div><p><strong>We end up reaching an infinite loop.</strong> Every time the marshaller encounters (in the above case) an Int type, it calls this function, which already calls json.Marshal for Int (<code>return json.Marshal(&amp;c)</code>). The infinite loop is served. How can we then wrap the standard recursion in our overwritten marshaller? Using a temporal type to avoid recursion as follows:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go">
+<span style="color:#66d9ef">func</span> (<span style="color:#a6e22e">i</span> <span style="color:#a6e22e">Int</span>) <span style="color:#a6e22e">MarshalJSON</span>() (<span style="color:#a6e22e">bdata</span> []<span style="color:#66d9ef">byte</span>, <span style="color:#a6e22e">e</span> <span style="color:#66d9ef">error</span>) {
+    <span style="color:#75715e">// Temporal type to avoid recursion
+</span><span style="color:#75715e"></span>    <span style="color:#66d9ef">type</span> <span style="color:#a6e22e">tmp</span> <span style="color:#a6e22e">Int</span>
+    <span style="color:#a6e22e">ts</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">tmp</span>(<span style="color:#a6e22e">i</span>)
+
+    <span style="color:#a6e22e">c</span> <span style="color:#f92672">:=</span> <span style="color:#66d9ef">struct</span> {
+        <span style="color:#a6e22e">Type</span>  <span style="color:#a6e22e">MarshalType</span> <span style="color:#e6db74">`json:&#34;type&#34;`</span>
+        <span style="color:#a6e22e">Value</span> <span style="color:#a6e22e">tmp</span>     	<span style="color:#e6db74">`json:&#34;value&#34;`</span>
+    }{<span style="color:#a6e22e">Type</span>: <span style="color:#a6e22e">IntType</span>, <span style="color:#a6e22e">Value</span>: <span style="color:#a6e22e">ts</span>}
+    
+    <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">json</span>.<span style="color:#a6e22e">Marshal</span>(<span style="color:#f92672">&amp;</span><span style="color:#a6e22e">c</span>)
+}
+
+<span style="color:#75715e">// Custom Marshal Functions
+</span><span style="color:#75715e"></span>
+<span style="color:#66d9ef">func</span> (<span style="color:#a6e22e">s</span> <span style="color:#a6e22e">String</span>) <span style="color:#a6e22e">MarshalJSON</span>() (<span style="color:#a6e22e">bdata</span> []<span style="color:#66d9ef">byte</span>, <span style="color:#a6e22e">e</span> <span style="color:#66d9ef">error</span>) {
+    <span style="color:#75715e">// Temporal type to avoid recursion
+</span><span style="color:#75715e"></span>    <span style="color:#66d9ef">type</span> <span style="color:#a6e22e">tmp</span> <span style="color:#a6e22e">String</span>
+    <span style="color:#a6e22e">ts</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">tmp</span>(<span style="color:#a6e22e">i</span>)
+
+    <span style="color:#a6e22e">c</span> <span style="color:#f92672">:=</span> <span style="color:#66d9ef">struct</span> {
+        <span style="color:#a6e22e">Type</span>  <span style="color:#a6e22e">MarshalType</span> <span style="color:#e6db74">`json:&#34;type&#34;`</span>
+        <span style="color:#a6e22e">Value</span> <span style="color:#a6e22e">tmp</span>     	<span style="color:#e6db74">`json:&#34;value&#34;`</span>
+    }{<span style="color:#a6e22e">Type</span>: <span style="color:#a6e22e">StringType</span>, <span style="color:#a6e22e">Value</span>: <span style="color:#a6e22e">ts</span>}
+    
+    <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">json</span>.<span style="color:#a6e22e">Marshal</span>(<span style="color:#f92672">&amp;</span><span style="color:#a6e22e">c</span>)
+}
+
+</code></pre></div><p>The two first lines of the function add a temporal type so we avoid recursion when calling the <code>json.Marshal</code> inside our custom marshaller.</p>
+<h2 id="putting-it-all-together">Putting it all together</h2>
+<p>We are almost done! Now we just have to **modify our Pair custom unmarshaller to identify the type of the Node everytime it encounters one so it knows the right way to unmarshal it. **We create the following auxiliary function for this:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#75715e">// Unmarshaling Pair types
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">func</span> <span style="color:#a6e22e">UnmarshalType</span>(<span style="color:#a6e22e">tp</span> <span style="color:#a6e22e">MarshalType</span>, <span style="color:#a6e22e">b</span> []<span style="color:#66d9ef">byte</span>) (<span style="color:#a6e22e">Node</span>, <span style="color:#66d9ef">error</span>) {
+        <span style="color:#66d9ef">switch</span> <span style="color:#a6e22e">tp</span> {
+        <span style="color:#66d9ef">case</span> <span style="color:#a6e22e">StringType</span>:
+                <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">n</span> <span style="color:#a6e22e">String</span>
+                <span style="color:#a6e22e">err</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">json</span>.<span style="color:#a6e22e">Unmarshal</span>(<span style="color:#a6e22e">b</span>, <span style="color:#f92672">&amp;</span><span style="color:#a6e22e">n</span>)
+                <span style="color:#66d9ef">if</span> <span style="color:#a6e22e">err</span> <span style="color:#f92672">!=</span> <span style="color:#66d9ef">nil</span> {
+                        <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">nil</span>, <span style="color:#a6e22e">err</span>
+                }
+                <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">n</span>, <span style="color:#66d9ef">nil</span>
+        <span style="color:#66d9ef">case</span> <span style="color:#a6e22e">IntType</span>:
+                <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">n</span> <span style="color:#a6e22e">Int</span>
+                <span style="color:#a6e22e">err</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">json</span>.<span style="color:#a6e22e">Unmarshal</span>(<span style="color:#a6e22e">b</span>, <span style="color:#f92672">&amp;</span><span style="color:#a6e22e">n</span>)
+                <span style="color:#66d9ef">if</span> <span style="color:#a6e22e">err</span> <span style="color:#f92672">!=</span> <span style="color:#66d9ef">nil</span> {
+                        <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">nil</span>, <span style="color:#a6e22e">err</span>
+                }
+                <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">n</span>, <span style="color:#66d9ef">nil</span>
+        }
+        <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">nil</span>, <span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Errorf</span>(<span style="color:#e6db74">&#34;Wrong type&#34;</span>)
+}
+
+</code></pre></div><p>This simple function gives the unmarshaller the hint it needs to know how to unmarshal the right type (avoiding the errors we were facing above). Our custom Pair unmarshaller doesn’t change much, we just need to replace the json.Unmarshal by this UnmarshalType, things would run smoothly:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#75715e">// Custom unmarshal for pairs
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">func</span> (<span style="color:#a6e22e">p</span> <span style="color:#f92672">*</span><span style="color:#a6e22e">Pair</span>) <span style="color:#a6e22e">UnmarshalJSON</span>(<span style="color:#a6e22e">b</span> []<span style="color:#66d9ef">byte</span>) <span style="color:#66d9ef">error</span> {
+    <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">objMap</span> <span style="color:#66d9ef">map</span>[<span style="color:#66d9ef">string</span>]<span style="color:#66d9ef">map</span>[<span style="color:#66d9ef">string</span>]<span style="color:#f92672">*</span><span style="color:#a6e22e">json</span>.<span style="color:#a6e22e">RawMessage</span>
+    <span style="color:#a6e22e">err</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">json</span>.<span style="color:#a6e22e">Unmarshal</span>(<span style="color:#a6e22e">b</span>, <span style="color:#f92672">&amp;</span><span style="color:#a6e22e">objMap</span>)
+    <span style="color:#66d9ef">if</span> <span style="color:#a6e22e">err</span> <span style="color:#f92672">!=</span> <span style="color:#66d9ef">nil</span> {
+   	    <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">err</span>
+    }
+
+    <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">kType</span>, <span style="color:#a6e22e">vType</span> <span style="color:#66d9ef">int</span>
+    <span style="color:#a6e22e">json</span>.<span style="color:#a6e22e">Unmarshal</span>(<span style="color:#f92672">*</span><span style="color:#a6e22e">objMap</span>[<span style="color:#e6db74">&#34;key&#34;</span>][<span style="color:#e6db74">&#34;type&#34;</span>], <span style="color:#f92672">&amp;</span><span style="color:#a6e22e">kType</span>)
+    <span style="color:#a6e22e">json</span>.<span style="color:#a6e22e">Unmarshal</span>(<span style="color:#f92672">*</span><span style="color:#a6e22e">objMap</span>[<span style="color:#e6db74">&#34;value&#34;</span>][<span style="color:#e6db74">&#34;type&#34;</span>], <span style="color:#f92672">&amp;</span><span style="color:#a6e22e">vType</span>)
+
+    <span style="color:#a6e22e">p</span>.<span style="color:#a6e22e">Key</span>, <span style="color:#a6e22e">err</span> = <span style="color:#a6e22e">UnmarshalType</span>(<span style="color:#a6e22e">MarshalType</span>(<span style="color:#a6e22e">kType</span>), <span style="color:#f92672">*</span><span style="color:#a6e22e">objMap</span>[<span style="color:#e6db74">&#34;key&#34;</span>][<span style="color:#e6db74">&#34;value&#34;</span>])
+    <span style="color:#66d9ef">if</span> <span style="color:#a6e22e">err</span> <span style="color:#f92672">!=</span> <span style="color:#66d9ef">nil</span> {
+   	    <span style="color:#a6e22e">eturn</span> <span style="color:#a6e22e">err</span>
+    }
+    <span style="color:#a6e22e">p</span>.<span style="color:#a6e22e">Value</span>, <span style="color:#a6e22e">err</span> = <span style="color:#a6e22e">UnmarshalType</span>(<span style="color:#a6e22e">MarshalType</span>(<span style="color:#a6e22e">vType</span>), <span style="color:#f92672">*</span><span style="color:#a6e22e">objMap</span>[<span style="color:#e6db74">&#34;value&#34;</span>][<span style="color:#e6db74">&#34;value&#34;</span>])
+    <span style="color:#66d9ef">if</span> <span style="color:#a6e22e">err</span> <span style="color:#f92672">!=</span> <span style="color:#66d9ef">nil</span> {
+   	    <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">err</span>
+    }
+    <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">nil</span>
+}
+
+</code></pre></div><p>And voilá, we managed to build our custom marshaller and unmarshaller to serialize dynamic types. Cool right? Here is the full working code:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#75715e">/* Copyright (c) 2021, Alfonso de la Rocha
+</span><span style="color:#75715e">
+</span><span style="color:#75715e">Licensed under the Apache License, Version 2.0 (the &#34;License&#34;);
+</span><span style="color:#75715e">you may not use this file except in compliance with the License.
+</span><span style="color:#75715e">You may obtain a copy of the License at
+</span><span style="color:#75715e">
+</span><span style="color:#75715e">  http://www.apache.org/licenses/LICENSE-2.0
+</span><span style="color:#75715e">
+</span><span style="color:#75715e">Unless required by applicable law or agreed to in writing, software
+</span><span style="color:#75715e">distributed under the License is distributed on an &#34;AS IS&#34; BASIS,
+</span><span style="color:#75715e">WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+</span><span style="color:#75715e">See the License for the specific language governing permissions and
+</span><span style="color:#75715e">limitations under the License. */</span>
+
+<span style="color:#f92672">package</span> <span style="color:#a6e22e">main</span>
+
+<span style="color:#f92672">import</span> (
+	<span style="color:#e6db74">&#34;fmt&#34;</span>
+	<span style="color:#e6db74">&#34;encoding/json&#34;</span>
+)
+
+<span style="color:#75715e">// Object Structs
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">type</span> <span style="color:#a6e22e">Node</span> <span style="color:#66d9ef">interface</span>{
+	<span style="color:#a6e22e">Print</span>()
+}
+
+<span style="color:#66d9ef">type</span> <span style="color:#a6e22e">Pair</span> <span style="color:#66d9ef">struct</span> {
+	<span style="color:#a6e22e">Key</span> <span style="color:#a6e22e">Node</span> <span style="color:#e6db74">`json:&#34;key&#34;`</span>
+	<span style="color:#a6e22e">Value</span> <span style="color:#a6e22e">Node</span>  <span style="color:#e6db74">`json:&#34;value&#34;`</span>
+}
+
+<span style="color:#66d9ef">type</span> <span style="color:#a6e22e">Pairs</span> []<span style="color:#a6e22e">Pair</span>
+
+<span style="color:#66d9ef">type</span> <span style="color:#a6e22e">String</span> <span style="color:#66d9ef">struct</span> {
+	<span style="color:#a6e22e">Value</span> <span style="color:#66d9ef">string</span>
+}
+
+<span style="color:#66d9ef">type</span> <span style="color:#a6e22e">Int</span> <span style="color:#66d9ef">struct</span> {
+	<span style="color:#a6e22e">Value</span> <span style="color:#66d9ef">int</span>
+}
+
+<span style="color:#66d9ef">func</span> (<span style="color:#a6e22e">s</span> <span style="color:#a6e22e">String</span>) <span style="color:#a6e22e">Print</span>(){
+	<span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Println</span>(<span style="color:#a6e22e">s</span>.<span style="color:#a6e22e">Value</span>)
+}
+
+<span style="color:#75715e">// MarshalType to strongly type json
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">type</span> <span style="color:#a6e22e">MarshalType</span> <span style="color:#66d9ef">int</span>
+
+<span style="color:#66d9ef">const</span> (
+	<span style="color:#a6e22e">StringType</span> = <span style="color:#66d9ef">iota</span>
+	<span style="color:#a6e22e">IntType</span>
+)
+<span style="color:#66d9ef">func</span> (<span style="color:#a6e22e">i</span> <span style="color:#a6e22e">Int</span>) <span style="color:#a6e22e">Print</span>(){
+	<span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Println</span>(<span style="color:#a6e22e">i</span>.<span style="color:#a6e22e">Value</span>)
+}
+
+<span style="color:#75715e">// Custom Marshal Functions
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">func</span> (<span style="color:#a6e22e">s</span> <span style="color:#a6e22e">String</span>) <span style="color:#a6e22e">MarshalJSON</span>() (<span style="color:#a6e22e">bdata</span> []<span style="color:#66d9ef">byte</span>, <span style="color:#a6e22e">e</span> <span style="color:#66d9ef">error</span>) {
+	<span style="color:#75715e">// Temporal type to avoid recursion
+</span><span style="color:#75715e"></span>	<span style="color:#66d9ef">type</span> <span style="color:#a6e22e">tmp</span> <span style="color:#a6e22e">String</span>
+	<span style="color:#a6e22e">ts</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">tmp</span>(<span style="color:#a6e22e">s</span>)
+
+	<span style="color:#a6e22e">c</span> <span style="color:#f92672">:=</span> <span style="color:#66d9ef">struct</span> {
+		<span style="color:#a6e22e">Type</span>  <span style="color:#a6e22e">MarshalType</span> <span style="color:#e6db74">`json:&#34;type&#34;`</span>
+		<span style="color:#a6e22e">Value</span> <span style="color:#a6e22e">tmp</span>         <span style="color:#e6db74">`json:&#34;value&#34;`</span>
+	}{<span style="color:#a6e22e">Type</span>: <span style="color:#a6e22e">StringType</span>, <span style="color:#a6e22e">Value</span>: <span style="color:#a6e22e">ts</span>}
+	<span style="color:#66d9ef">return</span> <span style="color:#a6e22e">json</span>.<span style="color:#a6e22e">Marshal</span>(<span style="color:#f92672">&amp;</span><span style="color:#a6e22e">c</span>)
+}
+
+<span style="color:#66d9ef">func</span> (<span style="color:#a6e22e">i</span> <span style="color:#a6e22e">Int</span>) <span style="color:#a6e22e">MarshalJSON</span>() (<span style="color:#a6e22e">bdata</span> []<span style="color:#66d9ef">byte</span>, <span style="color:#a6e22e">e</span> <span style="color:#66d9ef">error</span>) {
+	<span style="color:#75715e">// Temporal type to avoid recursion
+</span><span style="color:#75715e"></span>	<span style="color:#66d9ef">type</span> <span style="color:#a6e22e">tmp</span> <span style="color:#a6e22e">Int</span>
+	<span style="color:#a6e22e">ts</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">tmp</span>(<span style="color:#a6e22e">i</span>)
+
+	<span style="color:#a6e22e">c</span> <span style="color:#f92672">:=</span> <span style="color:#66d9ef">struct</span> {
+		<span style="color:#a6e22e">Type</span>  <span style="color:#a6e22e">MarshalType</span> <span style="color:#e6db74">`json:&#34;type&#34;`</span>
+		<span style="color:#a6e22e">Value</span> <span style="color:#a6e22e">tmp</span>         <span style="color:#e6db74">`json:&#34;value&#34;`</span>
+	}{<span style="color:#a6e22e">Type</span>: <span style="color:#a6e22e">IntType</span>, <span style="color:#a6e22e">Value</span>: <span style="color:#a6e22e">ts</span>}
+	<span style="color:#66d9ef">return</span> <span style="color:#a6e22e">json</span>.<span style="color:#a6e22e">Marshal</span>(<span style="color:#f92672">&amp;</span><span style="color:#a6e22e">c</span>)
+}
+
+<span style="color:#75715e">// Unmarshaling Pair types
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">func</span> <span style="color:#a6e22e">UnmarshalType</span>(<span style="color:#a6e22e">tp</span> <span style="color:#a6e22e">MarshalType</span>, <span style="color:#a6e22e">b</span> []<span style="color:#66d9ef">byte</span>) (<span style="color:#a6e22e">Node</span>, <span style="color:#66d9ef">error</span>) {
+	<span style="color:#66d9ef">switch</span> <span style="color:#a6e22e">tp</span> {
+	<span style="color:#66d9ef">case</span> <span style="color:#a6e22e">StringType</span>:
+		<span style="color:#66d9ef">var</span> <span style="color:#a6e22e">n</span> <span style="color:#a6e22e">String</span>
+		<span style="color:#a6e22e">err</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">json</span>.<span style="color:#a6e22e">Unmarshal</span>(<span style="color:#a6e22e">b</span>, <span style="color:#f92672">&amp;</span><span style="color:#a6e22e">n</span>)
+		<span style="color:#66d9ef">if</span> <span style="color:#a6e22e">err</span> <span style="color:#f92672">!=</span> <span style="color:#66d9ef">nil</span> {
+			<span style="color:#66d9ef">return</span> <span style="color:#66d9ef">nil</span>, <span style="color:#a6e22e">err</span>
+		}
+		<span style="color:#66d9ef">return</span> <span style="color:#a6e22e">n</span>, <span style="color:#66d9ef">nil</span>
+	<span style="color:#66d9ef">case</span> <span style="color:#a6e22e">IntType</span>:
+		<span style="color:#66d9ef">var</span> <span style="color:#a6e22e">n</span> <span style="color:#a6e22e">Int</span>
+		<span style="color:#a6e22e">err</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">json</span>.<span style="color:#a6e22e">Unmarshal</span>(<span style="color:#a6e22e">b</span>, <span style="color:#f92672">&amp;</span><span style="color:#a6e22e">n</span>)
+		<span style="color:#66d9ef">if</span> <span style="color:#a6e22e">err</span> <span style="color:#f92672">!=</span> <span style="color:#66d9ef">nil</span> {
+			<span style="color:#66d9ef">return</span> <span style="color:#66d9ef">nil</span>, <span style="color:#a6e22e">err</span>
+		}
+		<span style="color:#66d9ef">return</span> <span style="color:#a6e22e">n</span>, <span style="color:#66d9ef">nil</span>
+	}
+	<span style="color:#66d9ef">return</span> <span style="color:#66d9ef">nil</span>, <span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Errorf</span>(<span style="color:#e6db74">&#34;Wrong type&#34;</span>)
+}
+
+<span style="color:#75715e">// Custom unmarshal for pairs
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">func</span> (<span style="color:#a6e22e">p</span> <span style="color:#f92672">*</span><span style="color:#a6e22e">Pair</span>) <span style="color:#a6e22e">UnmarshalJSON</span>(<span style="color:#a6e22e">b</span> []<span style="color:#66d9ef">byte</span>) <span style="color:#66d9ef">error</span> {
+
+	<span style="color:#66d9ef">var</span> <span style="color:#a6e22e">objMap</span> <span style="color:#66d9ef">map</span>[<span style="color:#66d9ef">string</span>]<span style="color:#66d9ef">map</span>[<span style="color:#66d9ef">string</span>]<span style="color:#f92672">*</span><span style="color:#a6e22e">json</span>.<span style="color:#a6e22e">RawMessage</span>
+	<span style="color:#a6e22e">err</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">json</span>.<span style="color:#a6e22e">Unmarshal</span>(<span style="color:#a6e22e">b</span>, <span style="color:#f92672">&amp;</span><span style="color:#a6e22e">objMap</span>)
+	<span style="color:#66d9ef">if</span> <span style="color:#a6e22e">err</span> <span style="color:#f92672">!=</span> <span style="color:#66d9ef">nil</span> {
+		<span style="color:#66d9ef">return</span> <span style="color:#a6e22e">err</span>
+	}
+	<span style="color:#66d9ef">var</span> <span style="color:#a6e22e">kType</span>, <span style="color:#a6e22e">vType</span> <span style="color:#66d9ef">int</span>
+	<span style="color:#a6e22e">json</span>.<span style="color:#a6e22e">Unmarshal</span>(<span style="color:#f92672">*</span><span style="color:#a6e22e">objMap</span>[<span style="color:#e6db74">&#34;key&#34;</span>][<span style="color:#e6db74">&#34;type&#34;</span>], <span style="color:#f92672">&amp;</span><span style="color:#a6e22e">kType</span>)
+	<span style="color:#a6e22e">json</span>.<span style="color:#a6e22e">Unmarshal</span>(<span style="color:#f92672">*</span><span style="color:#a6e22e">objMap</span>[<span style="color:#e6db74">&#34;value&#34;</span>][<span style="color:#e6db74">&#34;type&#34;</span>], <span style="color:#f92672">&amp;</span><span style="color:#a6e22e">vType</span>)
+	<span style="color:#a6e22e">p</span>.<span style="color:#a6e22e">Key</span>, <span style="color:#a6e22e">err</span> = <span style="color:#a6e22e">UnmarshalType</span>(<span style="color:#a6e22e">MarshalType</span>(<span style="color:#a6e22e">kType</span>), <span style="color:#f92672">*</span><span style="color:#a6e22e">objMap</span>[<span style="color:#e6db74">&#34;key&#34;</span>][<span style="color:#e6db74">&#34;value&#34;</span>])
+	<span style="color:#66d9ef">if</span> <span style="color:#a6e22e">err</span> <span style="color:#f92672">!=</span> <span style="color:#66d9ef">nil</span> {
+		<span style="color:#66d9ef">return</span> <span style="color:#a6e22e">err</span>
+	}
+	<span style="color:#a6e22e">p</span>.<span style="color:#a6e22e">Value</span>, <span style="color:#a6e22e">err</span> = <span style="color:#a6e22e">UnmarshalType</span>(<span style="color:#a6e22e">MarshalType</span>(<span style="color:#a6e22e">vType</span>), <span style="color:#f92672">*</span><span style="color:#a6e22e">objMap</span>[<span style="color:#e6db74">&#34;value&#34;</span>][<span style="color:#e6db74">&#34;value&#34;</span>])
+	<span style="color:#66d9ef">if</span> <span style="color:#a6e22e">err</span> <span style="color:#f92672">!=</span> <span style="color:#66d9ef">nil</span> {
+		<span style="color:#66d9ef">return</span> <span style="color:#a6e22e">err</span>
+	}
+	<span style="color:#66d9ef">return</span> <span style="color:#66d9ef">nil</span>
+}
+
+
+<span style="color:#66d9ef">func</span> <span style="color:#a6e22e">main</span>() {
+	<span style="color:#75715e">// Marshaling a struct
+</span><span style="color:#75715e"></span>	<span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Println</span>(<span style="color:#e6db74">&#34;== Marshalling struct ==&#34;</span>)
+	<span style="color:#a6e22e">p</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">Pair</span>{<span style="color:#a6e22e">Key</span>: <span style="color:#a6e22e">String</span>{<span style="color:#e6db74">&#34;someKey&#34;</span>}, <span style="color:#a6e22e">Value</span>: <span style="color:#a6e22e">Int</span>{<span style="color:#ae81ff">1</span>}}
+	<span style="color:#75715e">// Marshal
+</span><span style="color:#75715e"></span>	<span style="color:#a6e22e">byteData</span>, <span style="color:#a6e22e">err</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">json</span>.<span style="color:#a6e22e">Marshal</span>(<span style="color:#a6e22e">p</span>)
+	<span style="color:#a6e22e">checkErr</span>(<span style="color:#a6e22e">err</span>)
+	<span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Println</span>(<span style="color:#e6db74">&#34;Marshalled:&#34;</span>, string(<span style="color:#a6e22e">byteData</span>))
+	<span style="color:#75715e">// Unmarshal into Pair struct
+</span><span style="color:#75715e"></span>	<span style="color:#a6e22e">pout</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">Pair</span>{}
+	<span style="color:#a6e22e">err</span> = <span style="color:#a6e22e">json</span>.<span style="color:#a6e22e">Unmarshal</span>(<span style="color:#a6e22e">byteData</span>, <span style="color:#f92672">&amp;</span><span style="color:#a6e22e">pout</span>)
+	<span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Println</span>(<span style="color:#e6db74">&#34;Unmarshalled:&#34;</span>, <span style="color:#a6e22e">pout</span>)
+	
+    	<span style="color:#75715e">// Marshaling a list of Pairs
+</span><span style="color:#75715e"></span>	<span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Println</span>(<span style="color:#e6db74">&#34;== Marshalling pairs ==&#34;</span>)
+    	<span style="color:#a6e22e">p1</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">Pair</span>{<span style="color:#a6e22e">Key</span>: <span style="color:#a6e22e">String</span>{<span style="color:#e6db74">&#34;someKey&#34;</span>}, <span style="color:#a6e22e">Value</span>: <span style="color:#a6e22e">Int</span>{<span style="color:#ae81ff">1</span>}}
+       <span style="color:#a6e22e">p2</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">Pair</span>{<span style="color:#a6e22e">Key</span>: <span style="color:#a6e22e">String</span>{<span style="color:#e6db74">&#34;otherKey&#34;</span>}, <span style="color:#a6e22e">Value</span>: <span style="color:#a6e22e">Int</span>{<span style="color:#ae81ff">2</span>}}
+       <span style="color:#a6e22e">pl</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">Pairs</span>{<span style="color:#a6e22e">p1</span>, <span style="color:#a6e22e">p2</span>}
+       <span style="color:#a6e22e">byteData</span>, <span style="color:#a6e22e">err</span> = <span style="color:#a6e22e">json</span>.<span style="color:#a6e22e">Marshal</span>(<span style="color:#a6e22e">pl</span>)
+       <span style="color:#a6e22e">checkErr</span>(<span style="color:#a6e22e">err</span>)
+       <span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Println</span>(<span style="color:#e6db74">&#34;Marshalled:&#34;</span>, string(<span style="color:#a6e22e">byteData</span>))
+       <span style="color:#75715e">// Unmarshalling into the right type
+</span><span style="color:#75715e"></span>       <span style="color:#a6e22e">plout</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">Pairs</span>{}
+       <span style="color:#a6e22e">err</span> = <span style="color:#a6e22e">json</span>.<span style="color:#a6e22e">Unmarshal</span>(<span style="color:#a6e22e">byteData</span>, <span style="color:#f92672">&amp;</span><span style="color:#a6e22e">plout</span>)
+       <span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Println</span>(<span style="color:#e6db74">&#34;Unmarshalled:&#34;</span>, <span style="color:#a6e22e">plout</span>)
+}
+
+<span style="color:#66d9ef">func</span> <span style="color:#a6e22e">checkErr</span>(<span style="color:#a6e22e">err</span> <span style="color:#66d9ef">error</span>){
+	<span style="color:#66d9ef">if</span> <span style="color:#a6e22e">err</span> <span style="color:#f92672">!=</span> <span style="color:#66d9ef">nil</span>{
+		panic(<span style="color:#a6e22e">err</span>)
+	}
+}
+</code></pre></div><p>Playground link: <a href="https://play.golang.org/p/RNPwJkzZ6PU">https://play.golang.org/p/RNPwJkzZ6PU</a></p>
+<p>Gits hosting the code: <a href="https://gist.github.com/adlrocha/28c522e0bb3e628d65531a84b5c7fb5e">https://gist.github.com/adlrocha/28c522e0bb3e628d65531a84b5c7fb5e</a></p>
+<p>Did you love this publication? Did you hate that you couldn&rsquo;t read it directly from your email? Send me some love and good feedback <a href="https://twitter.com/adlrocha">here</a>. And if you got to this post using your favorite search engine, do not forget to subscribe for more content <a href="https://adlrocha.substack.com">here</a>.</p>
+
+  
+  </div>
+</article>
+
+
+    <footer id="footer">
+  <div class="footer-left">
+    Copyright  &copy; 2023  @adlrocha 
+  </div>
+  <div class="footer-right">
+    <nav>
+      <ul>
+         
+        <li><a href="/">Home</a></li>
+         
+        <li><a href="/blog">All posts</a></li>
+         
+        <li><a href="https://adlrocha.substack.com/archive">Newsletter</a></li>
+         
+        <li><a href="/tags">Tags</a></li>
+         
+        <li><a href="/patrons">Patrons</a></li>
+        
+      </ul>
+    </nav>
+  </div>
+</footer>
+
+
+  </div>
+</body>
+
+<link rel="stylesheet" href=/lib/font-awesome/css/all.min.css>
+<script src=/lib/jquery/jquery.min.js></script>
+<script src=/js/main.js></script>
+</html>

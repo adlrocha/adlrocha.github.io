@@ -1,11 +1,69 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Tags on Hello Friend NG</title>
-    <link>localhost/tags/</link>
-    <description>Recent content in Tags on Hello Friend NG</description>
+    <title>Tags on @adlrocha</title>
+    <link>/tags/</link>
+    <description>Recent content in Tags on @adlrocha</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <copyright>&lt;a href=&#34;https://creativecommons.org/licenses/by-nc/4.0/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;CC BY-NC 4.0&lt;/a&gt;</copyright><atom:link href="localhost/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 21 Mar 2021 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="/tags/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Go, Programming</title>
+      <link>/tags/go-programming/</link>
+      <pubDate>Sun, 21 Mar 2021 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/go-programming/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>web3</title>
+      <link>/tags/web3/</link>
+      <pubDate>Sun, 29 Nov 2020 18:16:08 +0100</pubDate>
+      
+      <guid>/tags/web3/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>reflections</title>
+      <link>/tags/reflections/</link>
+      <pubDate>Thu, 29 Oct 2020 18:16:08 +0100</pubDate>
+      
+      <guid>/tags/reflections/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>networking</title>
+      <link>/tags/networking/</link>
+      <pubDate>Tue, 13 Oct 2020 18:16:08 +0100</pubDate>
+      
+      <guid>/tags/networking/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>research</title>
+      <link>/tags/research/</link>
+      <pubDate>Tue, 13 Oct 2020 18:16:08 +0100</pubDate>
+      
+      <guid>/tags/research/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>ideas</title>
+      <link>/tags/ideas/</link>
+      <pubDate>Sun, 13 Sep 2020 18:16:08 +0100</pubDate>
+      
+      <guid>/tags/ideas/</guid>
+      <description></description>
+    </item>
+    
   </channel>
 </rss>
