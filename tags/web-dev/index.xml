@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>web-dev on @adlrocha</title>
+    <link>/tags/web-dev/</link>
+    <description>Recent content in web-dev on @adlrocha</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 14 Jun 2023 00:00:00 +0000</lastBuildDate><atom:link href="/tags/web-dev/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>GoatCounter: Easy and open-source web analytics</title>
+      <link>/til/2023-06-14-goatcounter/</link>
+      <pubDate>Wed, 14 Jun 2023 00:00:00 +0000</pubDate>
+      
+      <guid>/til/2023-06-14-goatcounter/</guid>
+      <description>GoatCounter: Easy and open-source web analytics. I was trying to find an analytics system that was open-source, that respected privacy as much as possible, and that was easy to set up. Suprisingly, I was able to find one after the first search without having to navigate several blog posts or Twitter threads with &amp;ldquo;the best analytics tools you should really now about in 2023&amp;rdquo;.
+As their website states, GoatCounter &amp;ldquo;is an open source web analytics platform available as a free donation-supported hosted service or self-hosted app.</description>
+    </item>
+    
+  </channel>
+</rss>

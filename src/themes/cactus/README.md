@@ -53,14 +53,19 @@ url = "/posts"
 weight = 2
 
 [[menu.main]]
+name = "TIL"
+url = "/til"
+weight = 2
+
+[[menu.main]]
 name = "Tags"
 url = "/tags"
-weight = 3
+weight = 4
 
 [[menu.main]]
 name = "About"
 url = "/about"
-weight = 4
+weight = 5
 ```
 
 ### Homepage settings

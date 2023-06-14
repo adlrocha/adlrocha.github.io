@@ -2,7 +2,7 @@
 title: "Never take Marshaling for granted"
 date: 2021-03-21
 draft: false
-tags: Go, Programming
+tags: go, programming
 ---
 
 # @adlrocha - Never take Marshaling for granted
