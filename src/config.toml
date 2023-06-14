@@ -17,7 +17,7 @@ theme = "cactus"
 
     [[params.social]]
         name = "email"
-        link = "adlrocha@tutamail.com" # no need for "mailto:" at the start
+        link = "me@adlrocha.com" # no need for "mailto:" at the start
 
     [[params.social]]
         name = "linkedin"

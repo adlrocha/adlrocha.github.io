@@ -6,11 +6,7 @@
     <description>Recent content on @adlrocha</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 21 Mar 2021 00:00:00 +0000</lastBuildDate>
-    
-	<atom:link href="/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Sun, 21 Mar 2021 00:00:00 +0000</lastBuildDate><atom:link href="/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Never take Marshaling for granted</title>
       <link>/blog/2021-03-marshal-dynamic-types/</link>
@@ -18,7 +14,7 @@
       
       <guid>/blog/2021-03-marshal-dynamic-types/</guid>
       <description>@adlrocha - Never take Marshaling for granted Marshaling interfaces in Go.
-We sometimes take marshaling for granted, but** there is more than one occasion in which you have no choice but to write your own custom marshaller. **Either because your compiler/marshal library is not able to infer how to automatically marshal your objects, because your marshaler is not generating the right output** (we saw last weekhow a JSON document can be parsed with different values across microservices, leading to a variety of potential security risk), etc.</description>
+We sometimes take marshaling for granted, but** there is more than one occasion in which you have no choice but to write your own custom marshaller. Either because your compiler/marshal library is not able to infer how to automatically marshal your objects, because your marshaler is not generating the right output (we saw last weekhow a JSON document can be parsed with different values across microservices, leading to a variety of potential security risk), etc.</description>
     </item>
     
     <item>
@@ -77,7 +73,7 @@ I was skimming through this paper (A Public Option for the Core), when I read th
       <pubDate>Tue, 03 Dec 2019 18:00:27 +0100</pubDate>
       
       <guid>/patrons/</guid>
-      <description>Become a sponsor of my work! I have a lot of ideas, but I don&amp;rsquo;t have the time to develop them. Financial independence will give me the ability to develop the ideas and research I share in this site and in my newsletter. If you see my ideas become a reality, become a sponsor of my work. Right now I am only accepting sponsors for my newsletter, but this will change in the near future.</description>
+      <description>Become a sponsor of my work! I have a lot of ideas, but I don&amp;rsquo;t have the time to develop them. Financial independence would give me the ability to develop the ideas and research I share in this site and in my newsletter. If you see my ideas become a reality, become a sponsor of my work. Right now I am only accepting sponsors for my newsletter, but this will change in the near future.</description>
     </item>
     
   </channel>
