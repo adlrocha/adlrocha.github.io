@@ -11,14 +11,14 @@ hugo # if using a theme, replace with `hugo -t <YOURTHEME>`
 # Add changes to git.
 cp -r public/* ../
 cd ..
-git add *
+git add .
 
 # Commit changes.
 msg="rebuilding site $(date)"
 if [ -n "$*" ]; then
 	msg="$*"
 fi
-git commit -m "$msg"
+git commit -s -m "$msg"
 
 # Push source and build repos.
 git push origin master
