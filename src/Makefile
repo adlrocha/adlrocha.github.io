@@ -8,5 +8,7 @@ new-til:
 	./scripts/new.sh til $(TITLE)
 new-post:
 	./scripts/new.sh post $(TITLE)
+analytics:
+	open https://adlrocha.goatcounter.com/
 
 .PHONY: publish
