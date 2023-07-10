@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>design patterns on @adlrocha</title>
+    <link>/tags/design-patterns/</link>
+    <description>Recent content in design patterns on @adlrocha</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 28 Jun 2023 00:00:00 +0000</lastBuildDate><atom:link href="/tags/design-patterns/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Ikea-oriented development</title>
+      <link>/til/2023-06-26-ikea-oriented/</link>
+      <pubDate>Wed, 28 Jun 2023 00:00:00 +0000</pubDate>
+      
+      <guid>/til/2023-06-26-ikea-oriented/</guid>
+      <description>Ikea-oriented development Today I want to share an interesting idea that I feel all software engineers will appreciate in some way (either because they strong agree or disagree): Ikea-oriented development.
+The TL;DR idea behind this approach to software engineering is:
+  Packaging is the product: Delivering data is expensive. Pre-packaged depedencies: If you can’t bundle allen keys for your hex fasteners, stick to screws. Likewise, if you lack the engineering resources to support multiple SDKs, make damn sure your web API is easy enough to access with curl.</description>
+    </item>
+    
+  </channel>
+</rss>

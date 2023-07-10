@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>edge computing on @adlrocha</title>
+    <link>/tags/edge-computing/</link>
+    <description>Recent content in edge computing on @adlrocha</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 27 Jun 2023 00:00:00 +0000</lastBuildDate><atom:link href="/tags/edge-computing/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Why do we need a new Internet?</title>
+      <link>/blog/2023-06-26-green/</link>
+      <pubDate>Tue, 27 Jun 2023 00:00:00 +0000</pubDate>
+      
+      <guid>/blog/2023-06-26-green/</guid>
+      <description>Why do we need a decentralized Internet? Today I had what we could call a crisis of faith. After so many years working in the web3 space, and seeing so much speculation and cool tech solving artificial problems, I was wondering &amp;ldquo;do we really need a new Internet? Or is it just another artificial problem we are creating to have an excuse to attract investment and work in cool tech?. So I decided to write down a list of reasons why a company or an individual would choose to deploy their applications or services over a decentralized Internet over our current one.</description>
+    </item>
+    
+  </channel>
+</rss>

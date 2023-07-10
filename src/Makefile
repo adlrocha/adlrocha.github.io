@@ -11,4 +11,4 @@ new-post:
 analytics:
 	open https://adlrocha.goatcounter.com/
 
-.PHONY: publish
+.PHONY: publish, debug, new-til, new-post, analytics

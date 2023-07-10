@@ -6,7 +6,70 @@
     <description>Recent content in Tags on @adlrocha</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 14 Jun 2023 00:00:00 +0000</lastBuildDate><atom:link href="/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 28 Jun 2023 00:00:00 +0000</lastBuildDate><atom:link href="/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>design patterns</title>
+      <link>/tags/design-patterns/</link>
+      <pubDate>Wed, 28 Jun 2023 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/design-patterns/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>software-dev</title>
+      <link>/tags/software-dev/</link>
+      <pubDate>Wed, 28 Jun 2023 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/software-dev/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>decentralization</title>
+      <link>/tags/decentralization/</link>
+      <pubDate>Tue, 27 Jun 2023 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/decentralization/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>edge computing</title>
+      <link>/tags/edge-computing/</link>
+      <pubDate>Tue, 27 Jun 2023 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/edge-computing/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>ideas</title>
+      <link>/tags/ideas/</link>
+      <pubDate>Tue, 27 Jun 2023 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/ideas/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>AI</title>
+      <link>/tags/ai/</link>
+      <pubDate>Mon, 26 Jun 2023 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/ai/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>reading</title>
+      <link>/tags/reading/</link>
+      <pubDate>Mon, 26 Jun 2023 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/reading/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>web-dev</title>
       <link>/tags/web-dev/</link>
@@ -58,15 +121,6 @@
       <pubDate>Tue, 13 Oct 2020 18:16:08 +0100</pubDate>
       
       <guid>/tags/research/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>ideas</title>
-      <link>/tags/ideas/</link>
-      <pubDate>Sun, 13 Sep 2020 18:16:08 +0100</pubDate>
-      
-      <guid>/tags/ideas/</guid>
       <description></description>
     </item>
     

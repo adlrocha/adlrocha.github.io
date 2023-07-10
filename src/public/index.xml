@@ -6,7 +6,36 @@
     <description>Recent content on @adlrocha</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 14 Jun 2023 00:00:00 +0000</lastBuildDate><atom:link href="/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 28 Jun 2023 00:00:00 +0000</lastBuildDate><atom:link href="/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Ikea-oriented development</title>
+      <link>/til/2023-06-26-ikea-oriented/</link>
+      <pubDate>Wed, 28 Jun 2023 00:00:00 +0000</pubDate>
+      
+      <guid>/til/2023-06-26-ikea-oriented/</guid>
+      <description>Ikea-oriented development Today I want to share an interesting idea that I feel all software engineers will appreciate in some way (either because they strong agree or disagree): Ikea-oriented development.
+The TL;DR idea behind this approach to software engineering is:
+  Packaging is the product: Delivering data is expensive. Pre-packaged depedencies: If you can’t bundle allen keys for your hex fasteners, stick to screws. Likewise, if you lack the engineering resources to support multiple SDKs, make damn sure your web API is easy enough to access with curl.</description>
+    </item>
+    
+    <item>
+      <title>Why do we need a new Internet?</title>
+      <link>/blog/2023-06-26-green/</link>
+      <pubDate>Tue, 27 Jun 2023 00:00:00 +0000</pubDate>
+      
+      <guid>/blog/2023-06-26-green/</guid>
+      <description>Why do we need a decentralized Internet? Today I had what we could call a crisis of faith. After so many years working in the web3 space, and seeing so much speculation and cool tech solving artificial problems, I was wondering &amp;ldquo;do we really need a new Internet? Or is it just another artificial problem we are creating to have an excuse to attract investment and work in cool tech?. So I decided to write down a list of reasons why a company or an individual would choose to deploy their applications or services over a decentralized Internet over our current one.</description>
+    </item>
+    
+    <item>
+      <title>Some AI-related links</title>
+      <link>/til/2023-06-26-ai-links/</link>
+      <pubDate>Mon, 26 Jun 2023 00:00:00 +0000</pubDate>
+      
+      <guid>/til/2023-06-26-ai-links/</guid>
+      <description>June 2023 AI-related Reading List I just found myself with a few dozens of tabs opened with AI-related resources that I wanted to read. I feel that having them in RAM (i.e. opened in my browser) was starting overwhelm me, as I felt I could never find the time to read them (leading to a really uncomfortable feeling while I had to make progress in my day-to-day job). Hence, I decided to periodically move from RAM to a &amp;ldquo;persistent storage&amp;rdquo; my reading lists so that I could pick them up once I have some time for them (and in the process share them with others that my be interested).</description>
+    </item>
+    
     <item>
       <title>GoatCounter: Easy and open-source web analytics</title>
       <link>/til/2023-06-14-goatcounter/</link>

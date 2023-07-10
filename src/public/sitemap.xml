@@ -3,22 +3,52 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>/</loc>
-    <lastmod>2023-06-14T00:00:00+00:00</lastmod>
+    <lastmod>2023-06-28T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>/tags/design-patterns/</loc>
+    <lastmod>2023-06-28T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>/til/2023-06-26-ikea-oriented/</loc>
+    <lastmod>2023-06-28T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>/tags/software-dev/</loc>
+    <lastmod>2023-06-28T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>/tags/</loc>
+    <lastmod>2023-06-28T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>/til/</loc>
+    <lastmod>2023-06-28T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>/blog/</loc>
+    <lastmod>2023-06-27T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>/tags/decentralization/</loc>
+    <lastmod>2023-06-27T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>/tags/edge-computing/</loc>
+    <lastmod>2023-06-27T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>/tags/ideas/</loc>
+    <lastmod>2023-06-27T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>/blog/2023-06-26-green/</loc>
+    <lastmod>2023-06-27T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>/tags/ai/</loc>
+    <lastmod>2023-06-26T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>/tags/reading/</loc>
+    <lastmod>2023-06-26T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>/til/2023-06-26-ai-links/</loc>
+    <lastmod>2023-06-26T00:00:00+00:00</lastmod>
   </url><url>
     <loc>/til/2023-06-14-goatcounter/</loc>
     <lastmod>2023-06-14T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/tags/</loc>
-    <lastmod>2023-06-14T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>/til/</loc>
-    <lastmod>2023-06-14T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>/tags/web-dev/</loc>
     <lastmod>2023-06-14T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>/blog/</loc>
-    <lastmod>2021-03-21T00:00:00+00:00</lastmod>
   </url><url>
     <loc>/tags/go-programming/</loc>
     <lastmod>2021-03-21T00:00:00+00:00</lastmod>
@@ -49,9 +79,6 @@
   </url><url>
     <loc>/blog/2020-10-nat/</loc>
     <lastmod>2020-10-13T18:16:08+01:00</lastmod>
-  </url><url>
-    <loc>/tags/ideas/</loc>
-    <lastmod>2020-09-13T18:16:08+01:00</lastmod>
   </url><url>
     <loc>/blog/2020-09-vision-internet/</loc>
     <lastmod>2020-09-13T18:16:08+01:00</lastmod>
