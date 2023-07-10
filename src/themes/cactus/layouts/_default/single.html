@@ -1,12 +1,42 @@
 {{ define "main" }}
 <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
-<!-- TODO: gallery -->
+  <!-- TODO: gallery -->
   <div class="content" itemprop="articleBody">
-  {{ if (eq .Type "search") }}
+    {{ if (eq .Type "search") }}
     <!-- TODO: search https://gohugo.io/tools/search/ -->
-  {{ else }}
+    {{ else }}
+    <p>
+      <i>Any comments, contributions, or feedback? Ping me!</i>
+    </p>
+    <p>
+      <span>
+        <a href="https://twitter.com/adlrocha?ref_src=twsrc%5Etfw" class="twitter-follow-button"
+          data-show-count="false">Follow @adlrocha</a>
+        <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+      </span>
+      <span>
+        <a href="https://twitter.com/intent/tweet?screen_name=adlrocha&ref_src=twsrc%5Etfw"
+          class="twitter-mention-button" data-show-count="false">Tweet to @adlrocha</a>
+        <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+      </span>
+    </p>
     {{ .Content }}
-  {{ end }}
+    <p>
+      <i>Any comments, contributions, or feedback? Ping me!</i>
+    </p>
+    <p>
+      <span>
+        <a href="https://twitter.com/adlrocha?ref_src=twsrc%5Etfw" class="twitter-follow-button"
+          data-show-count="false">Follow @adlrocha</a>
+        <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+      </span>
+      <span>
+        <a href="https://twitter.com/intent/tweet?screen_name=adlrocha&ref_src=twsrc%5Etfw"
+          class="twitter-mention-button" data-show-count="false">Tweet to @adlrocha</a>
+        <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+      </span>
+    </p>
+    {{ end }}
   </div>
 </article>
 {{ end }}

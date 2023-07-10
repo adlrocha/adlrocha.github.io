@@ -1,68 +1,72 @@
 baseURL = "/"
 languageCode = "en-us"
-title = "@adlrocha"
 theme = "cactus"
+title = "@adlrocha"
 
 [params]
-    colortheme = "dark" # dark, light, white, or classic
-    description = "Before joining Protocol Labs as a Research Engineer, I worked as a blockchain expert at Telefónica R&D, where I was responsible for the design and development of core technology based on blockchains, distributed systems, and advanced cryptography. My involvement in research and development began at Universidad Politécnica de Madrid, where I worked on topics related to energy efficiency in data centers. My R&D experience also includes research into the compression efficiency of video coding standards at Ericsson Research and projects related to securing interdomain routing protocols at KTH Royal Institute of Technology in Stockholm. I am also an avid reader and basketball lover."   
-    mainSection = "blog"
-    showAllPostsOnHomePage = true
-    postsOnHomePage = 5
-    tagsOverview = true
+colortheme = "dark" # dark, light, white, or classic
+description = "Before joining Protocol Labs as a Research Engineer, I worked as a blockchain expert at Telefónica R&D, where I was responsible for the design and development of core technology based on blockchains, distributed systems, and advanced cryptography. My involvement in research and development began at Universidad Politécnica de Madrid, where I worked on topics related to energy efficiency in data centers. My R&D experience also includes research into the compression efficiency of video coding standards at Ericsson Research and projects related to securing interdomain routing protocols at KTH Royal Institute of Technology in Stockholm. I am also an avid reader and basketball lover." 
+mainSection = "blog" 
+postsOnHomePage = 5 
+showAllPostsOnHomePage = true 
+tagsOverview = true 
 
-    [[params.social]]
-        name = "github"
-        link = "https://github.com/adlrocha"
+[[params.social]]
+link = "https://github.com/adlrocha"
+name = "github"
 
-    [[params.social]]
-        name = "email"
-        link = "me@adlrocha.com" # no need for "mailto:" at the start
+[[params.social]]
+link = "https://www.twitter.com/adlrocha/"
+name = "twitter"
 
-    [[params.social]]
-        name = "linkedin"
-        link = "https://www.linkedin.com/in/adlrocha/"
-    
-    [[params.social]]
-        name = "medium"
-        link = "https://adlrocha.substack.com/subscribe"
+[[params.social]]
+link = "me@adlrocha.com" # no need for "mailto:" at the start
+name = "email" 
 
-    # Main menu which appears below site header.
-    [[menu.main]]
-        name = "Home"
-        url = "/"
-        weight = 1
-    # [[menu.main]]
-    # name = "Blog"
-    # url = "/blog"
-    # weight = 2
+[[params.social]]
+link = "https://www.linkedin.com/in/adlrocha/"
+name = "linkedin"
 
-    [[menu.main]]
-        name = "All posts"
-        url = "/blog"
-        weight = 2
-    
-    [[menu.main]]
-        name = "TIL"
-        url = "/til"
-        weight = 3
+[[params.social]]
+link = "https://adlrocha.substack.com/subscribe"
+name = "medium"
 
-    [[menu.main]]
-        name = "Newsletter"
-        url = "https://adlrocha.substack.com/archive"
-        weight = 4
+# Main menu which appears below site header.
+[[menu.main]]
+name = "Home"
+url = "/"
+weight = 1
+# [[menu.main]]
+# name = "Blog"
+# url = "/blog"
+# weight = 2
 
-    [[menu.main]]
-        name = "Tags"
-        url = "/tags"
-        weight = 5
+[[menu.main]]
 
-    [[menu.main]]
-        name = "Patrons"
-        url = "/patrons"
-        weight = 6
+name = "All posts"
+url = "/blog"
+weight = 2
+[[menu.main]]
+name = "TIL"
+url = "/til"
+weight = 3
 
-    # [[menu.main]]
-    #     name = "About"
-    #     url = "/about"
-    #     weight = 4
+[[menu.main]]
+name = "Newsletter"
+url = "https://adlrocha.substack.com/archive"
+weight = 4
+
+[[menu.main]]
+name = "Tags"
+url = "/tags"
+weight = 5
+
+[[menu.main]]
+name = "Patrons"
+url = "/patrons"
+weight = 6
+
+# [[menu.main]]
+#     name = "About"
+#     url = "/about"
+#     weight = 4
