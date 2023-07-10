@@ -13,3 +13,6 @@ The Internet is full of useful learning resources, but is generally hard to keep
 
 ## Rust
 - [RISC-V using Rust](https://osblog.stephenmarz.com/ch1.html)
+
+## Blockchain
+- [Solidity patterns](https://github.com/fravoll/solidity-patterns)
