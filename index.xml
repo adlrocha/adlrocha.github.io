@@ -28,7 +28,7 @@ The TL;DR idea behind this approach to software engineering is:
     </item>
     
     <item>
-      <title>Some AI-related links</title>
+      <title>June 2023 AI-related Reading List</title>
       <link>/til/2023-06-26-ai-links/</link>
       <pubDate>Mon, 26 Jun 2023 00:00:00 +0000</pubDate>
       
@@ -104,6 +104,16 @@ These past few weeks I&amp;rsquo;ve been pretty obsessed with the future of the 
       <description>@adlrocha - My vision for a new Internet Where everyone can become an ISP | Alfonso de la Rocha
 
 I was skimming through this paper (A Public Option for the Core), when I read the following sentence in the abstract: *&amp;ldquo;In this paper we discuss both the challenges and the opportunities that make this an auspicious time to revisit how we might best structure the Internet&amp;rsquo;s infrastructure.&amp;quot; *And I said, well this may be something worth reflecting on and discussing in my newsletter.</description>
+    </item>
+    
+    <item>
+      <title>Learning Resources</title>
+      <link>/learning/</link>
+      <pubDate>Tue, 03 Dec 2019 18:00:27 +0100</pubDate>
+      
+      <guid>/learning/</guid>
+      <description>Learning Resources The Internet is full of useful learning resources, but is generally hard to keep track of all of the useful stuff out there. This page collects a useful list of resources that may come handy in the future for many (especially me).
+Cryptography  VDF Research Proof of Space  Rust  RISC-V using Rust  </description>
     </item>
     
     <item>
