@@ -1,7 +1,7 @@
 ---
 title: "Reducing the size of Solidity contracts"
 date: "2023-07-10"
-draft: true
+draft: false
 tags: [blockchain, solidity, Ethereum, smart-contract]
 ---
 

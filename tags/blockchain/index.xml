@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>blockchain on @adlrocha</title>
+    <link>/tags/blockchain/</link>
+    <description>Recent content in blockchain on @adlrocha</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 10 Jul 2023 00:00:00 +0000</lastBuildDate><atom:link href="/tags/blockchain/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Reducing the size of Solidity contracts</title>
+      <link>/til/2023-07-10-solidity-contract-size/</link>
+      <pubDate>Mon, 10 Jul 2023 00:00:00 +0000</pubDate>
+      
+      <guid>/til/2023-07-10-solidity-contract-size/</guid>
+      <description>Reducing the size of Solidity contracts I am currently working on a project that we call IPC (InterPlanetary Consensus). We are now implementing the core logic of the protocol in a set of Solidity contracts. Unfortunately, the implementation of one of the contracts of the protocol, the Gateway, was too large to be deployed (over the 24KB limit), so we had to figure out ways to reduce its size. This post, is a great introduction of the different approaches to fight the contract size limit.</description>
+    </item>
+    
+  </channel>
+</rss>
