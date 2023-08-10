@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>consensus on @adlrocha</title>
+    <link>/tags/consensus/</link>
+    <description>Recent content in consensus on @adlrocha</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 10 Aug 2023 00:00:00 +0000</lastBuildDate><atom:link href="/tags/consensus/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>RandomX: PoW for general-purpose CPUs</title>
+      <link>/til/2023-08-10-randomx/</link>
+      <pubDate>Thu, 10 Aug 2023 00:00:00 +0000</pubDate>
+      
+      <guid>/til/2023-08-10-randomx/</guid>
+      <description>RandomX: PoW for general-purpose CPUs I was discussing today with the Fluence Labs team and they were describing how they want their Fluence network to be run by a PoW consensus algorithm. They want miners to be able to mine new blocks with just a general-purpose CPU, without requiring expensive GPUs or ASICs. And I didn&amp;rsquo;t know that there was already a PoW implementation, originally implemented for Monero, that is optimized for its use in general purpose CPUs.</description>
+    </item>
+    
+  </channel>
+</rss>

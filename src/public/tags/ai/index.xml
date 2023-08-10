@@ -6,7 +6,16 @@
     <description>Recent content in AI on @adlrocha</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 26 Jun 2023 00:00:00 +0000</lastBuildDate><atom:link href="/tags/ai/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 21 Jul 2023 00:00:00 +0000</lastBuildDate><atom:link href="/tags/ai/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>80,000 hours: Positive impact jobs</title>
+      <link>/til/2023-07-21-80000/</link>
+      <pubDate>Fri, 21 Jul 2023 00:00:00 +0000</pubDate>
+      
+      <guid>/til/2023-07-21-80000/</guid>
+      <description>8,000 hours: Positive impact jobs I am genuinely worried about the existential risk that AI may pose to humanity in the next decade. Some people take this as a unreal threat inherited from science fiction movies, but I beg to differ. I have studied AI fundamentals when I was in college, and I even ended up doing AI professionally a decade ago for a few months (when LLMs weren&amp;rsquo;t a thing, the transformer paper had just been published, and random forest was still winning Kaggle competitions).</description>
+    </item>
+    
     <item>
       <title>June 2023 AI-related Reading List</title>
       <link>/til/2023-06-26-ai-links/</link>

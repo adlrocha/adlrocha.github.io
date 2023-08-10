@@ -3,10 +3,34 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>/</loc>
-    <lastmod>2023-07-10T00:00:00+00:00</lastmod>
+    <lastmod>2023-08-10T00:00:00+00:00</lastmod>
   </url><url>
     <loc>/tags/blockchain/</loc>
-    <lastmod>2023-07-10T00:00:00+00:00</lastmod>
+    <lastmod>2023-08-10T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>/tags/consensus/</loc>
+    <lastmod>2023-08-10T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>/til/2023-08-10-randomx/</loc>
+    <lastmod>2023-08-10T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>/tags/</loc>
+    <lastmod>2023-08-10T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>/til/</loc>
+    <lastmod>2023-08-10T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>/tags/web3/</loc>
+    <lastmod>2023-08-10T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>/til/2023-07-21-80000/</loc>
+    <lastmod>2023-07-21T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>/tags/ai/</loc>
+    <lastmod>2023-07-21T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>/tags/existential-risks/</loc>
+    <lastmod>2023-07-21T00:00:00+00:00</lastmod>
   </url><url>
     <loc>/tags/ethereum/</loc>
     <lastmod>2023-07-10T00:00:00+00:00</lastmod>
@@ -18,12 +42,6 @@
     <lastmod>2023-07-10T00:00:00+00:00</lastmod>
   </url><url>
     <loc>/tags/solidity/</loc>
-    <lastmod>2023-07-10T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>/tags/</loc>
-    <lastmod>2023-07-10T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>/til/</loc>
     <lastmod>2023-07-10T00:00:00+00:00</lastmod>
   </url><url>
     <loc>/tags/design-patterns/</loc>
@@ -50,9 +68,6 @@
     <loc>/blog/2023-06-26-decentralized-cloud/</loc>
     <lastmod>2023-06-27T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/tags/ai/</loc>
-    <lastmod>2023-06-26T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>/til/2023-06-26-ai-links/</loc>
     <lastmod>2023-06-26T00:00:00+00:00</lastmod>
   </url><url>
@@ -72,9 +87,6 @@
     <lastmod>2021-03-21T00:00:00+00:00</lastmod>
   </url><url>
     <loc>/blog/2020-11-demystifying-ethereum2.0/</loc>
-    <lastmod>2020-11-29T18:16:08+01:00</lastmod>
-  </url><url>
-    <loc>/tags/web3/</loc>
     <lastmod>2020-11-29T18:16:08+01:00</lastmod>
   </url><url>
     <loc>/blog/2020-10-social-broken-incentive/</loc>

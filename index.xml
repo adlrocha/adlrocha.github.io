@@ -6,7 +6,25 @@
     <description>Recent content on @adlrocha</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 10 Jul 2023 00:00:00 +0000</lastBuildDate><atom:link href="/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 10 Aug 2023 00:00:00 +0000</lastBuildDate><atom:link href="/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>RandomX: PoW for general-purpose CPUs</title>
+      <link>/til/2023-08-10-randomx/</link>
+      <pubDate>Thu, 10 Aug 2023 00:00:00 +0000</pubDate>
+      
+      <guid>/til/2023-08-10-randomx/</guid>
+      <description>RandomX: PoW for general-purpose CPUs I was discussing today with the Fluence Labs team and they were describing how they want their Fluence network to be run by a PoW consensus algorithm. They want miners to be able to mine new blocks with just a general-purpose CPU, without requiring expensive GPUs or ASICs. And I didn&amp;rsquo;t know that there was already a PoW implementation, originally implemented for Monero, that is optimized for its use in general purpose CPUs.</description>
+    </item>
+    
+    <item>
+      <title>80,000 hours: Positive impact jobs</title>
+      <link>/til/2023-07-21-80000/</link>
+      <pubDate>Fri, 21 Jul 2023 00:00:00 +0000</pubDate>
+      
+      <guid>/til/2023-07-21-80000/</guid>
+      <description>8,000 hours: Positive impact jobs I am genuinely worried about the existential risk that AI may pose to humanity in the next decade. Some people take this as a unreal threat inherited from science fiction movies, but I beg to differ. I have studied AI fundamentals when I was in college, and I even ended up doing AI professionally a decade ago for a few months (when LLMs weren&amp;rsquo;t a thing, the transformer paper had just been published, and random forest was still winning Kaggle competitions).</description>
+    </item>
+    
     <item>
       <title>Reducing the size of Solidity contracts</title>
       <link>/til/2023-07-10-solidity-contract-size/</link>

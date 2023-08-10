@@ -26,4 +26,4 @@ tags: []
 EOF
 
 # Open the file in your preferred text editor
-code "$FILE"
+emacs "$FILE"

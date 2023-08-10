@@ -6,13 +6,49 @@
     <description>Recent content in Tags on @adlrocha</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 10 Jul 2023 00:00:00 +0000</lastBuildDate><atom:link href="/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 10 Aug 2023 00:00:00 +0000</lastBuildDate><atom:link href="/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>blockchain</title>
       <link>/tags/blockchain/</link>
-      <pubDate>Mon, 10 Jul 2023 00:00:00 +0000</pubDate>
+      <pubDate>Thu, 10 Aug 2023 00:00:00 +0000</pubDate>
       
       <guid>/tags/blockchain/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>consensus</title>
+      <link>/tags/consensus/</link>
+      <pubDate>Thu, 10 Aug 2023 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/consensus/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>web3</title>
+      <link>/tags/web3/</link>
+      <pubDate>Thu, 10 Aug 2023 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/web3/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>AI</title>
+      <link>/tags/ai/</link>
+      <pubDate>Fri, 21 Jul 2023 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/ai/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>existential risks</title>
+      <link>/tags/existential-risks/</link>
+      <pubDate>Fri, 21 Jul 2023 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/existential-risks/</guid>
       <description></description>
     </item>
     
@@ -89,15 +125,6 @@
     </item>
     
     <item>
-      <title>AI</title>
-      <link>/tags/ai/</link>
-      <pubDate>Mon, 26 Jun 2023 00:00:00 +0000</pubDate>
-      
-      <guid>/tags/ai/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>reading</title>
       <link>/tags/reading/</link>
       <pubDate>Mon, 26 Jun 2023 00:00:00 +0000</pubDate>
@@ -121,15 +148,6 @@
       <pubDate>Sun, 21 Mar 2021 00:00:00 +0000</pubDate>
       
       <guid>/tags/go-programming/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>web3</title>
-      <link>/tags/web3/</link>
-      <pubDate>Sun, 29 Nov 2020 18:16:08 +0100</pubDate>
-      
-      <guid>/tags/web3/</guid>
       <description></description>
     </item>
     
