@@ -6,7 +6,16 @@
     <description>Recent content on @adlrocha</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 10 Aug 2023 00:00:00 +0000</lastBuildDate><atom:link href="/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 29 Aug 2023 00:00:00 +0000</lastBuildDate><atom:link href="/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>When should one use Rust&#39;s `Pin&lt;&gt;`?</title>
+      <link>/til/2023-08-29-rust-pin/</link>
+      <pubDate>Tue, 29 Aug 2023 00:00:00 +0000</pubDate>
+      
+      <guid>/til/2023-08-29-rust-pin/</guid>
+      <description>When should one use Rust&amp;rsquo;s Pin&amp;lt;&amp;gt;? The other day I was reviewing some code from the Fendermint project that I am currently contributing to, and I had to ask the author of the PR directly, &amp;ldquo;man! you have to teach me when I am supposed to use Pin&amp;lt;&amp;gt;. I see you are using it all over the place in this API, but I don&amp;rsquo;t know why&amp;rdquo;. His immediate answer was a bit surprising although kind of expected.</description>
+    </item>
+    
     <item>
       <title>RandomX: PoW for general-purpose CPUs</title>
       <link>/til/2023-08-10-randomx/</link>
