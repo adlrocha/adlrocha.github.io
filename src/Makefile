@@ -7,7 +7,7 @@ debug:
 new-til:
 	./scripts/new.sh til $(TITLE)
 new-post:
-	./scripts/new.sh post $(TITLE)
+	./scripts/new.sh blog $(TITLE)
 analytics:
 	open https://adlrocha.goatcounter.com/
 
