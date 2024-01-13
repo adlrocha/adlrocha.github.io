@@ -6,7 +6,17 @@
     <description>Recent content on @adlrocha</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 29 Aug 2023 00:00:00 +0000</lastBuildDate><atom:link href="/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 02 Jan 2024 00:00:00 +0000</lastBuildDate><atom:link href="/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>The State of LLMs</title>
+      <link>/blog/2023-12-07-state-ai/</link>
+      <pubDate>Tue, 02 Jan 2024 00:00:00 +0000</pubDate>
+      
+      <guid>/blog/2023-12-07-state-ai/</guid>
+      <description>The Current State of AI  Or rather, my limited view from the outside.
+ I&amp;rsquo;ve been trying to stay up to date (at least at a high level) with all the new developments in the field of AI, but with my full-time job it has been quite a challenge. This can be even more of a challenge when your full-time job is not closely related with the field of AI.</description>
+    </item>
+    
     <item>
       <title>When should one use Rust&#39;s `Pin&lt;&gt;`?</title>
       <link>/til/2023-08-29-rust-pin/</link>
