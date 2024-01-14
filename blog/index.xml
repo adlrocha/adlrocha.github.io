@@ -6,15 +6,26 @@
     <description>Recent content in Blogs on @adlrocha</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 02 Jan 2024 00:00:00 +0000</lastBuildDate><atom:link href="/blog/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 10 Jan 2024 00:00:00 +0000</lastBuildDate><atom:link href="/blog/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>The State of LLMs</title>
-      <link>/blog/2023-12-07-state-ai/</link>
-      <pubDate>Tue, 02 Jan 2024 00:00:00 +0000</pubDate>
+      <title>Making sense of the current state of AI</title>
+      <link>/blog/2024-01-10-state-ai/</link>
+      <pubDate>Wed, 10 Jan 2024 00:00:00 +0000</pubDate>
       
-      <guid>/blog/2023-12-07-state-ai/</guid>
-      <description>The Current State of AI  Or rather, my limited view from the outside.
+      <guid>/blog/2024-01-10-state-ai/</guid>
+      <description>Making sense of the current state of AI  Or rather, my limited view as an outsider.
  I&amp;rsquo;ve been trying to stay up to date (at least at a high level) with all the new developments in the field of AI, but with my full-time job it has been quite a challenge. This can be even more of a challenge when your full-time job is not closely related with the field of AI.</description>
+    </item>
+    
+    <item>
+      <title>From open-source to open-platforms</title>
+      <link>/blog/2022-10-open-platforms/</link>
+      <pubDate>Mon, 30 Oct 2023 00:00:00 +0000</pubDate>
+      
+      <guid>/blog/2022-10-open-platforms/</guid>
+      <description>@adlrocha - From open-source Ato open-platforms Originally published in 2022 in the newsletter
+ On the killer app for blockchains
+ It&amp;rsquo;s been over 6 months since my last publication. I could start making up dozens of excuses to justify my absence, but honestly? it has just been a matter of priorities. I realized that all of the time I was spending finding topics to write about, researching them, and writing the publication, could be better spent building new systems (i.</description>
     </item>
     
     <item>
