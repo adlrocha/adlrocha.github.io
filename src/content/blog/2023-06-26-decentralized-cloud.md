@@ -1,5 +1,5 @@
 ---
-title: "Why do we need a new Internet?"
+title: "@adlrocha - Why do we need a new Internet?"
 date: "2023-06-27"
 draft: false
 tags: [decentralization, ideas, edge computing]

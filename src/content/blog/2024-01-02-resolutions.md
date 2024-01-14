@@ -1,11 +1,11 @@
 ---
 title: "2024 Resolutions"
 date: "2024-01-04"
-draft: true
+draft: false
 tags: [personal, self-improvement]
 ---
 
-# 2024 Resolutions
+# @aldrocha - 2024 Resolutions
 > Getting back into good habits, and entering the world of AI.
 
 Is great to be back! It feels like ages since I last wrote here. These past few years have been full of intense work, stressing deadlines, and **a clear neglect for this newsletter**. However, that doesn't mean that I've completely stopped writing. Actually, last year has been **the year that I've written the most in my life.**

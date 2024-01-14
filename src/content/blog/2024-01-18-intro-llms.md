@@ -1,5 +1,5 @@
 ---
-title: "Late arrival to the fuss of LLMs"
+title: "@adlrocha - Late arrival to the fuss of LLMs"
 date: "2024-01-04"
 draft: true
 tags: [AI, LLM, ML, research]
