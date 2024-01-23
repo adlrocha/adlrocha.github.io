@@ -1,5 +1,5 @@
 ---
-title: "@adlrocha - Late arrival to the fuss of LLMs"
+title: "Late arrival to the fuss of LLMs"
 date: "2024-01-18"
 draft: true
 tags: [AI, LLM, ML, research]
@@ -8,58 +8,34 @@ tags: [AI, LLM, ML, research]
 # Late Arrival to the Fuss of LLMs
 > From zero to zero-point-one in a few resources
 
-After spending some time reading about the [state of AI](./2023-12-07-state-ai.md) at a high-level, it was time to dig into some of the details. Obviously, my first stop to kick-off my AI enlightenment were LLMs, and what is exactly is underneath LLMs? The transformer architecture.
+After spending some time reading about the [state of AI](./2023-12-07-state-ai.md) at a high-level, it was time to dive into the details. For obvious reasons, I decided LLMs were a good first-stop for my AI enlightenment. What are LLMs and how they work (because apparently the why is still a burning open question)?
 
-Rivers of digital ink have been spilled lately with gentle introductions and deep descriptions of how LLMs and transformer models work. The good thing? There is a lot of information available to learn about them. The bad thing? Filtering the best resources to get you to a good understanding may be time consuming. Thus, I decided that instead of writing yet another introductory post about transformers, it may be more useful to just share the curated list of resources that have helped me the most on this humble quest. So here it goes.
+Rivers of digital ink have been spilled lately with gentle introductions and deep illustrations of how LLMs and their underlying transformer architecture work. The good thing about this? There is a lot of information available to learn about them. The bad thing? Filtering the best resources to get you to a good understanding with the lower overhead may be time consuming. Consequently, I decided that instead of writing yet another introductory post about transformers and LLMs, it may be more useful to just share the curated list of resources that have helped me the most on this humble quest. I hope you enjoy it (and if you find any good resource worth including to this list, feel free to send it my way and I'll edit this post). 
 
-![A person arriving late to a party where there is a lot going on](../images/kid-ai.jpeg)
+![A person arriving late to a party where there is a lot going on](../images/llm-arrive-late.png)
 *A person arriving late to a party where there is a lot going on - SDXL*
 
-###  LLMs
-- [Intro to Large Language Models](https://www.youtube.com/watch?v=zjkBMFhNj_g) and [Let's build GPT: from scratch, in code, spelled out](https://www.youtube.com/watch?v=kCc8FmEb1nY) amazing videos from Andrej Karpathy.
-  - Perfect high-level foundation to get some intuition of what LLMs are and how they are implemented.
-  - Tree of thoughts, self-improvement.
-  - Use of tools
-  - Related to above a new good overview: https://willthompson.name/what-we-know-about-llms-primer
-- [A Hacker's Guide to Language Models](https://www.youtube.com/watch?v=jkrNMKz9pWU)
-  - A few good pointers of where to look if one wants to start writing code with LLMs. An example of a code interpreter and fine-tuning a model.
+##  LLMs
+Large Language Models (LLMs) are this amazing family of NLP (Natural Language Processing) models that have taken the Internet by storm. The core idea is simple, it is a type of sequence-to-sequence deep learning model based on an architecture called the transformer that is trained on predicting the most probable next sequence of words, given some sequence as an input. Trained over a large enough dataset (like a dataset with all the content in the Internet), leads to the intelligent-like behaviors that we are seeing in systems like OpenAI's ChatGPT, or Anthropic's Claude.
+
+On my journey to gain a better understanding of LLMs, the best introductory resources I've come across are:
+- Andrej Karpathy's amazing ["1hr Intro to Large Language Models"](https://www.youtube.com/watch?v=zjkBMFhNj_g) with an overview of how LLMs work, their current state of development and interesting ideas for future work and open problems (like LLM security, tree of thoughts, self-improvement, prompt injection, or the idea of LLM OS). If you have a bit more of time, also worth watching Karpathy's [Let's build GPT: from scratch, in code, spelled out](https://www.youtube.com/watch?v=kCc8FmEb1nY), with a 2h walkthrough of how to write a transformer from scratch, and train it to speak like Shakespeare.
+- From one renowned deep learning popularizer to another, Jeremy Howard's ["A Hacker's Guide to Language Models"](https://www.youtube.com/watch?v=jkrNMKz9pWU) is the best way to get your hands dirty programmatically interacting with ChatGPT, or running an open-source LLMs like Llama. Actually, I used this resource as a base to start tinkering with LLMs myself and run Microsoft's new [phi-2](https://www.microsoft.com/en-us/research/blog/phi-2-the-surprising-power-of-small-language-models/) in a Google Colab notebook. 
+- Finally, I would recommend Will Thompson's ["What We Know About LLMs (Primer)"](https://willthompson.name/what-we-know-about-llms-primer). It was written in July 2023 but it has pointer to a log of good resources around buzzword in the world of LLMs like LoRa, InstructGPT, or RLHF. I will write more about these in the future, but this article really helped me understand some of the things I was reading about fine-tuning open-source LLMs, how you could run Llama in a Mac, or why this or that model was outperforming ChatGPT 3.5.
+
+I would say that the resources from above is all that I needed to get a good grasp of LLMs at a high-level, but let me share a few more that I found quite interesting and (in one case) thought provoking.
 - [Training and deploying open-source LLMs](https://www.youtube.com/watch?v=Ma4clS-IdhA): Good high-level overview of the state of open-source models from end 2023.
+- [Getting started with Llama](https://ai.meta.com/llama/get-started/) has an overview of Llama2 and how to start playing with it
+- [Large Language Models and the End of Programming](https://www.youtube.com/watch?v=JhCl-GeT4jw) from Matt Welsh's Fixie.ai. The thing that I liked about this talk is how closely related it is with the concept of software 2.0, and using LLMs and agents as CPUs to orchestrate larger systems.
 
+## The Transformer
+After going through the previous section, it may be obvious to you that _"attention is all you need"_, and that one of the key responsible for the operation of LLMs is the transformer. If I wanted to get a good intuition of how LLMs worked, I felt like I first had to understand deeply how transformers worked (and I had literally no idea). In this regard, these were the resources that helped me the most and that I would highly recommend.
+- [The Illustrated Transformer](https://jalammar.github.io/illustrated-transformer/) visually presents their operation while sharing useful links about core concepts like [the context and attention of a seq2seq model](https://machinelearningmastery.com/what-are-word-embeddings/) and [word embeddings](https://machinelearningmastery.com/what-are-word-embeddings/).
+- [The annotated transformer](https://nlp.seas.harvard.edu/2018/04/03/attention.html) walks you through the original transformer paper with code and examples, and [Transformer Architecture: The Positional Encoding](https://kazemnejad.com/blog/transformer_architecture_positional_encoding/) is the best explanation I could found to what of the parts of the transformer architecture that I understood the least after I read the previous articles.
+- But I have to say, the key resource that really helped me to (finally) understand what transformers are all about is Theia Vogel's ["I made a transformer by hand"](https://vgel.me/posts/handmade-transformer/) and her sequel ["How to make LLMs go fast"](https://vgel.me/posts/faster-inference/). 
+- In line with the above, I also went through [Llama from scratch](https://blog.briankitano.com/llama-from-scratch/) to get a better sense of the implementation of more complex transformer architectures.
 
-- [Large Language Models and the End of Programming](https://www.youtube.com/watch?v=JhCl-GeT4jw)
-  - Matt Welsh Fixie.ai
-  - The concept of Software 2.0. from Karpathy.
-  - Not much technical but though provoking. 
-  - Agents
-- [What We Know About LLMs (Primer)](https://willthompson.name/what-we-know-about-llms-primer) is a good overview of the landscape of LLMs from mid-2023 with links to papers and additional resources.
-
-### Transformers
-- The Illustrated Transformer: https://jalammar.github.io/illustrated-transformer/
-  - Useful links to core concepts like [the context and attention of a seq2seq model](https://machinelearningmastery.com/what-are-word-embeddings/), [word embeddings](https://machinelearningmastery.com/what-are-word-embeddings/), 
-
-### Hardware
-When I started with this, I was wondering what hardware to use:
-https://timdettmers.com/2023/01/30/which-gpu-for-deep-learning/#How_do_GPUs_work
-- GPUs are expensive, so is probably better to start with Colab and any of the GPU providers available
-- I tried to run a set of models locally to understand what were the capabilities of my hardware.
-  - nvidia GT1030 2GiB - Models work out of the box, but not enough memory for image.
-  - AMD Ryzen 2023 with integrated graphics - hard to make it work without CUDA.
-  - I decided to go with Google Colab and GPU providers.
-  - The cheapest providers are: https://www.runpod.io/ and https://cloud.vast.ai/. They both support spot machine for lower prices. Some GPUs at Vast AI are provided by the community.
-  - If you destroy a machine there is no GPU charges, but there is still storage charges.
-
-  - When playing with Google Colab, and testing Phi2 (a relatively small model), I reached the limits of GPU memory and need to restart to take them back down.
-  - https://colab.research.google.com/drive/1woqimI_x6TyXhgZjQqiAXyCZQ5zKY6wH?usp=sharing
-- Colab for exploration, and then GPU providers for long-lasting jobs
-- External data to google Colab.
-
-![GPU Recommendation Chart](../images/gpu-decision.png)
-*Source: https://timdettmers.com/2023/01/30/which-gpu-for-deep-learning/#Overview*
-
-## Writing some code
-Leveraging all the content above, I decided to start writing some code to test LLMS, here's a link to my Google Colab in case you want to tinker with it yourself:
-
-[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1woqimI_x6TyXhgZjQqiAXyCZQ5zKY6wH?usp=sharing)
+Finally, for those looking to win extra credits, [The Transformer Family Version 2.0](https://lilianweng.github.io/posts/2023-01-27-the-transformer-family-v2/), and [Understanding and Coding Self-Attention, Multi-Head Attention, Cross-Attention, and Causal-Attention in LLMs](https://magazine.sebastianraschka.com/p/understanding-and-coding-self-attention) dive into more complex topics, but they really helped me consolidate the basics.
 
 ## Learning path
-Throughout the festive season, I've been crafting a personal AI learning roadmap to start getting up to speed on this field. I want it to be as hands-on as possible, and to share my progress publicly so others as illiterate in the world of ML as me can benefit from it.  Ready to dive into the world of AI? Let the coding and festive fun begin!
+And this is just the start, throughout the festive season I've been crafting a personal AI learning roadmap to start getting up to speed on this field. I want it to be as hands-on as possible, and to share my progress publicly so others as illiterate as me in the world of ML as me can benefit from it. Ready to dive into the world of AI? Let the coding and festive fun begin! 🎉
