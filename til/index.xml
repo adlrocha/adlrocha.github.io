@@ -6,7 +6,17 @@
     <description>Recent content in Tils on @adlrocha</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 29 Aug 2023 00:00:00 +0000</lastBuildDate><atom:link href="/til/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 20 Jan 2024 00:00:00 +0000</lastBuildDate><atom:link href="/til/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Remember `to(&#39;cpu&#39;)` in Pytorch to release GPU memory</title>
+      <link>/til/2024-01-11-pytorch-collab-to-cpu/</link>
+      <pubDate>Sat, 20 Jan 2024 00:00:00 +0000</pubDate>
+      
+      <guid>/til/2024-01-11-pytorch-collab-to-cpu/</guid>
+      <description>Remember to(&#39;cpu&#39;) in Pytorch to release GPU memory When I saw that Microsoft had released phi-2, a 2.7B parameters LLM, I thought: &amp;ldquo;this is the perfect excuse to get my hands dirty with LLMs&amp;rdquo;. The model was small enough to test it directly inside Google Colab, as it would fit the 15GiB memory GPUs provided in the free plan.
+So without further ado, I opened Google Colab, pip installed HF&amp;rsquo;s transformers library, and wrote the following code snippet to test the model:</description>
+    </item>
+    
     <item>
       <title>When should one use Rust&#39;s `Pin&lt;&gt;`?</title>
       <link>/til/2023-08-29-rust-pin/</link>

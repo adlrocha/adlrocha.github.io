@@ -1,11 +1,11 @@
 ---
 title: "Remember `to('cpu')` in Pytorch to release GPU memory"
-date: "2024-01-11"
-draft: true
-tags: [LLM, AI, pytorch, propgramming, python]
+date: "2024-01-20"
+draft: false 
+tags: [LLM, AI, pytorch, programming, python]
 ---
 
-# Remember `to('cpu')` in Pytorch to relase GPU memory
+# Remember `to('cpu')` in Pytorch to release GPU memory
 
 When I saw that Microsoft had released [phi-2](https://www.microsoft.com/en-us/research/blog/phi-2-the-surprising-power-of-small-language-models/), a 2.7B parameters LLM, I thought: _"this is the perfect excuse to get my hands dirty with LLMs"_. The model was small enough to test it directly inside Google Colab, as it would fit the 15GiB memory GPUs provided in the free plan.
 
@@ -39,7 +39,7 @@ print(phi2_input(test))
 ```
 But if I called the code from above again, __it was failing with the following `OutOfMemoryError` from CUDA__:
 ```console
-OutOfMemoryError: CUDA out of memory. Tried to allocate 38.00 MiB. GPU 0 has a total capacty of 14.75 GiB of which 15.06 MiB is free. Process 4265 has 14.73 GiB memory in use. Of the allocated memory 14.47 GiB is allocated by PyTorch
+OutOfMemoryError: CUDA out of memory. Tried to allocate 38.00 MiB. GPU 0 has a total capacity of 14.75 GiB of which 15.06 MiB is free. Process 4265 has 14.73 GiB memory in use. Of the allocated memory 14.47 GiB is allocated by PyTorch
 ```
 I had no idea why, my GPU memory wasn't being released between calls, and I had to restart the runtime in order to get a fresh GPU with all its memory if I wanted to prompt the model again. What could be happening?
 
