@@ -1,7 +1,7 @@
 ---
 title: "Late arrival to the fuss of LLMs"
 date: "2024-01-21"
-draft: true
+draft: false
 tags: [AI, LLM, ML, research]
 ---
 

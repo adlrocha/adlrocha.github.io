@@ -6,7 +6,18 @@
     <description>Recent content in research on @adlrocha</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 10 Jan 2024 00:00:00 +0000</lastBuildDate><atom:link href="/tags/research/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 21 Jan 2024 00:00:00 +0000</lastBuildDate><atom:link href="/tags/research/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Late arrival to the fuss of LLMs</title>
+      <link>/blog/2024-01-18-intro-llms/</link>
+      <pubDate>Sun, 21 Jan 2024 00:00:00 +0000</pubDate>
+      
+      <guid>/blog/2024-01-18-intro-llms/</guid>
+      <description>Late Arrival to the Fuss of LLMs  From zero to zero-point-one in a few resources
+ After spending some time reading about the state of AI at a high-level, it was time to dive into the details. For obvious reasons, I decided LLMs were a good first-stop for my AI enlightenment. What are LLMs and how they work (because apparently the why is still a burning open question)?.
+Rivers of digital ink have been spilled lately with gentle introductions and deep illustrations of how LLMs and their underlying transformer architectures work.</description>
+    </item>
+    
     <item>
       <title>Making sense of the current state of AI</title>
       <link>/blog/2024-01-10-state-ai/</link>
