@@ -6,7 +6,17 @@
     <description>Recent content in rust on @adlrocha</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 29 Aug 2023 00:00:00 +0000</lastBuildDate><atom:link href="/tags/rust/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 18 Feb 2024 00:00:00 +0000</lastBuildDate><atom:link href="/tags/rust/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Running LLMs and ML in Wasm</title>
+      <link>/blog/2024-02-18-wasm-llm/</link>
+      <pubDate>Sun, 18 Feb 2024 00:00:00 +0000</pubDate>
+      
+      <guid>/blog/2024-02-18-wasm-llm/</guid>
+      <description>Running LLMs and ML in Wasm  Searching new runtimes for AI
+ I came up with an (obvious) idea the other day that led to me to the following question: &amp;ldquo;would it be possible to run LLM inference from Wasm?&amp;quot;. Being able to compile ML models into Wasm would allow us to run them in a heterogeneous set of runtimes and devices, including mobile or the browser. However, would running these models in Wasm offer access to the low-level computational resources of the device required for an efficient execution?</description>
+    </item>
+    
     <item>
       <title>When should one use Rust&#39;s `Pin&lt;&gt;`?</title>
       <link>/til/2023-08-29-rust-pin/</link>

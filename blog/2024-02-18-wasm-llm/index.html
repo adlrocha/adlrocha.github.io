@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title> Running LLMs and ML in Wasm | @adlrocha</title>
+  <meta name="description" content="Before joining Protocol Labs as a Research Engineer, I worked as a blockchain expert at Telefónica R&amp;D, where I was responsible for the design and development of core technology based on blockchains, distributed systems, and advanced cryptography. My involvement in research and development began at Universidad Politécnica de Madrid, where I worked on topics related to energy efficiency in data centers. My R&amp;D experience also includes research into the compression efficiency of video coding standards at Ericsson Research and projects related to securing interdomain routing protocols at KTH Royal Institute of Technology in Stockholm. I am also an avid reader and basketball lover.">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="all,follow">
+  <meta name="googlebot" content="index,follow,snippet,archive">
+  <meta property="og:title" content="Running LLMs and ML in Wasm" />
+<meta property="og:description" content="Running LLMs and ML in Wasm  Searching new runtimes for AI
+ I came up with an (obvious) idea the other day that led to me to the following question: &ldquo;would it be possible to run LLM inference from Wasm?&quot;. Being able to compile ML models into Wasm would allow us to run them in a heterogeneous set of runtimes and devices, including mobile or the browser. However, would running these models in Wasm offer access to the low-level computational resources of the device required for an efficient execution?" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="/blog/2024-02-18-wasm-llm/" /><meta property="article:section" content="blog" />
+<meta property="article:published_time" content="2024-02-18T00:00:00+00:00" />
+<meta property="article:modified_time" content="2024-02-18T00:00:00+00:00" />
+
+
+  <meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Running LLMs and ML in Wasm"/>
+<meta name="twitter:description" content="Running LLMs and ML in Wasm  Searching new runtimes for AI
+ I came up with an (obvious) idea the other day that led to me to the following question: &ldquo;would it be possible to run LLM inference from Wasm?&quot;. Being able to compile ML models into Wasm would allow us to run them in a heterogeneous set of runtimes and devices, including mobile or the browser. However, would running these models in Wasm offer access to the low-level computational resources of the device required for an efficient execution?"/>
+
+  
+  
+    
+  
+  
+  <link rel="stylesheet" href="/css/style-dark.css">
+  
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  
+
+  
+<link rel="icon" type="image/png" href="/images/favicon.ico" />
+
+  
+  
+</head>
+
+
+<body class="max-width mx-auto px3 ltr">
+  <div class="content index py4">
+
+    <header id="header">
+  <a href="/">
+  
+    <div id="logo" style="background-image: url(/images/logo.png)"></div>
+  
+  <div id="title">
+    <h1>@adlrocha</h1>
+  </div>
+  </a>
+  <div id="nav">
+    <ul>
+      <li class="icon">
+        <a href="#"><i class="fas fa-bars fa-2x"></i></a>
+      </li>
+      
+        <li><a href="/">Home</a></li>
+      
+        <li><a href="/blog">All posts</a></li>
+      
+        <li><a href="/til">TIL</a></li>
+      
+        <li><a href="https://adlrocha.substack.com/archive">Newsletter</a></li>
+      
+        <li><a href="/tags">Tags</a></li>
+      
+        <li><a href="/learning">Learning</a></li>
+      
+        <li><a href="/patrons">Patrons</a></li>
+      
+    </ul>
+  </div>
+</header>
+
+
+
+    
+<article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+  
+  <div class="content" itemprop="articleBody">
+    
+    <p>
+      <i>Any comments, contributions, or feedback? Ping me!</i>
+    </p>
+    <p>
+      <span>
+        <a href="https://twitter.com/adlrocha?ref_src=twsrc%5Etfw" class="twitter-follow-button"
+          data-show-count="false">Follow @adlrocha</a>
+        <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+      </span>
+      <span>
+        <a href="https://twitter.com/intent/tweet?screen_name=adlrocha&ref_src=twsrc%5Etfw"
+          class="twitter-mention-button" data-show-count="false">Tweet to @adlrocha</a>
+        <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+      </span>
+    </p>
+    <h1 id="running-llms-and-ml-in-wasm">Running LLMs and ML in Wasm</h1>
+<blockquote>
+<p>Searching new runtimes for AI</p>
+</blockquote>
+<p>I came up with an (obvious) idea the other day that led to me to the following question: <em>&ldquo;would it be possible to run LLM inference from Wasm?&quot;</em>. Being able to compile ML models into Wasm would allow us to run them in a heterogeneous set of runtimes and devices, including mobile or the browser. However, would running these models in Wasm offer access to the low-level computational resources of the device required for an efficient execution?</p>
+<p>And this is how my journey into ML in Wasm started.</p>
+<p><img src="../images/crab-ai.png" alt="A cartoon of a crab that is building a artifical intelligence robot and enjoying the work">
+<em>A cartoon of a crab that is building a artifical intelligence robot and enjoying the work - SDXL</em></p>
+<h2 id="wasi-nn"><code>wasi-nn</code></h2>
+<p>A simple DuckDuckGo search for <em>&ldquo;ML in Wasm&rdquo;</em> immediately throws <a href="https://github.com/WebAssembly/wasi-nn?tab=readme-ov-file"><code>wasi-nn</code></a> as the key result. <strong><code>wasi-nn</code> is a WASI API spec proposal for performing ML inference in Wasm</strong>. The proposal is not exactly oriented for the execution of ML models inside Wasm, but to expose ML capabilities to Wasm modules. WebAssembly programs that want to use a host&rsquo;s ML capabilities (like triggering the execution of computational graphs in GPU) can access these through wasi-nn&rsquo;s core abstractions: backends, graphs, and tensors.</p>
+<blockquote>
+<p>&ldquo;the nature of ML inference makes it amenable to hardware acceleration of various kinds; without this hardware acceleration, inference can suffer slowdowns of several hundred times. Hardware acceleration for ML is very diverse — SIMD (e.g., AVX512), GPUs, TPUs, FPGAs — and it is unlikely (impossible?) that all of these would be supported natively in WebAssembly&rdquo;.</p>
+</blockquote>
+<p>The best way to understand what <code>wasi-nn</code> proposes is to read <a href="https://github.com/WebAssembly/wasi-nn/blob/main/wit/wasi-nn.wit">the proposed API</a>. It basically exposes to Wasm ways to create tensors, load a computational graph from a specific ML framework like Tensorflow or pyTorch, and triggering inferences against a specific backend, as shown in the API walkthrough from the proposal:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-rust" data-lang="rust"><span style="color:#75715e">// Load the model.
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">let</span> encoding <span style="color:#f92672">=</span> wasi_nn::GRAPH_ENCODING_<span style="color:#f92672">..</span>.;
+<span style="color:#66d9ef">let</span> target <span style="color:#f92672">=</span> wasi_nn::EXECUTION_TARGET_CPU;
+<span style="color:#66d9ef">let</span> graph <span style="color:#f92672">=</span> wasi_nn::load(<span style="color:#f92672">&amp;</span>[bytes, more_bytes], encoding, target);
+
+<span style="color:#75715e">// Configure the execution context.
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">let</span> context <span style="color:#f92672">=</span> wasi_nn::init_execution_context(graph);
+<span style="color:#66d9ef">let</span> tensor <span style="color:#f92672">=</span> wasi_nn::Tensor { <span style="color:#f92672">..</span>. };
+wasi_nn::set_input(context, <span style="color:#ae81ff">0</span>, tensor);
+
+<span style="color:#75715e">// Compute the inference.
+</span><span style="color:#75715e"></span>wasi_nn::compute(context);
+wasi_nn::get_output(context, <span style="color:#ae81ff">0</span>, <span style="color:#f92672">&amp;</span><span style="color:#66d9ef">mut</span> output_buffer, output_buffer.len());
+</code></pre></div><p><a href="https://bytecodealliance.org/articles/implementing-wasi-nn-in-Wasmtime">This post</a> is a good walk-through the implementation rationale. And you may wondering, <strong>&ldquo;is someone already leveraging <code>wasi_nn</code> for their application?</strong> They are.
+Second State has already been tinkering with <code>wasi-nn</code> to run LLM inference as shown in <a href="https://www.secondstate.io/articles/Wasm-runtime-agi/">this post</a>, <a href="https://www.youtube.com/watch?v=upNNI_b4tNY">this talk</a>, and <a href="https://www.secondstate.io/articles/run-llm-sh/"><code>run-llm.sh</code></a></p>
+<h2 id="re-write-in-rustwasm">Re-write in Rust/Wasm</h2>
+<p>After going through <code>wasi-nn</code> I thought <strong>&ldquo;what if one could rewrite the inference graph of a model in line with what <a href="https://github.com/ggerganov/llama.cpp">llama.cpp</a> did to run inference over Llama using C++ so that it can be compiled to Wasm?&quot;</strong>. <em>&ldquo;Rewriting in Rust&rdquo;</em> has been a trend in the recent years, but is sometimes not a good idea, and this may be one of those cases. The closest that I could find that resembles running ML inference in rust is <a href="https://github.com/LaurentMazare/tch-rs/tree/main"><code>tch-rs</code></a>, which provides a wrapper around the C++ pyTorch API. However, the backend would still be C++, and this is far from allowing a Wasm compiled inference implementation. Someone has even tried to <a href="https://ngoldbaum.github.io/posts/python-vs-rust-nn/">re-write a model from scratch from Python into Rust</a> with lower improvements than the ones original expected.</p>
+<p>But if we think this through for a moment, it actually makes sense. One of the key requirements to do ML inference (or training), is to perform vast quantities of matrix multiplications. For this, to accelerate these operations we use GPUs, and the most amenable language to interact with GPUs is C++. We can write wrappers and bindings for the ML frameworks in many languages but for now, the backend will still be C++-based and compiled to specific hardware. So we may be far from &ldquo;compiling once and running anywhere&rdquo; for AI.</p>
+<p><img src="../images/rewrite_rust.jpg" alt="Rewrite in rust"></p>
+<p>But don&rsquo;t get me wrong, this doesn&rsquo;t mean that Rust may not end up having an important place in moving AI into production, a good example of this is how <a href="https://twitter.com/ExaAILabs/status/1757157659651006845">Exa.ai managed to improve 4x the throughput of their real-time embedding by migrating from Python to Rust</a>. This doesn&rsquo;t exactly involve model inference (which was my original target), but it is something.</p>
+<h2 id="candle">Candle</h2>
+<p>And when I thought that everything was lost, and running inference for AI models in Wasm was just not there yet, I came across <a href="https://github.com/huggingface/candle">Candle, a minimalist ML framework for Rust with a focus on peformance</a>. The framework includes GPU support, and <strong>supports the compilation of some models in Wasm!</strong>. Skimming through their README you&rsquo;ll already see how they provide the implementation of several models like <code>yolo</code>, <code>whisper</code>, <code>phi</code>, or <code>LLaMa2</code> that can be compiled to Wasm and entirely run in the browser. Just what I was looking for!</p>
+<p>With this, I will be able to explore the idea that I mentioned at the beginning of the post. In the next few weeks I&rsquo;ll tinker a bit and report back with the results. In the meantime, <a href="https://huggingface.co/spaces/radames/Candle-phi1-phi2-wasm-demo">here&rsquo;s an example of Phi1.5/Phi2 fully running in the browser</a>.</p>
+<p>I still need to dig a bit deeper into the codebase to see if these examples leverage WebGL (or even the newer <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGPU_API#examples">WebGL</a>) APIs to access the underlying GPU resources of a device, but in any case this gives me a great foundation to build upon.</p>
+<h2 id="onnx-runtime">ONNX Runtime</h2>
+<p>Throughout my research, I also came across <a href="https://onnxruntime.ai/">ONXX Runtime</a>, which seems to be the de-factor runtime to run models implemented with different frameworks in an heterogeneous set of backends. <em>&ldquo;ONNX Runtime is compatible with different hardware, drivers, and operating systems, and provides optimal performance by leveraging hardware accelerators where applicable alongside graph optimizations and transforms&rdquo;</em>. ONNX offers ways to run inference over models in mobile devices and <a href="https://www.youtube.com/watch?v=vYzWrT3A7wQ">web browsers</a>.</p>
+<p>How does this runtime works? You train your model in a ML framework like Tensorflow, pyTorch or even the traditional Scikit-learn, export the model into an ONNX format, and then provide the output to the ONNX runtime to run inferences for it in any of the provided backends supported by the runtime. So basically, as long as your model can be exported into an ONNX format, you can leverage the runtime to run in the cloud, the edge, the browser, etc.</p>
+<p>Similar to ONNX runtime, there&rsquo;s a project called <a href="https://github.com/mlc-ai/mlc-llm">MLC LLM</a> focused on the deployment of LLMs over different runtimes.</p>
+<h2 id="conclusion">Conclusion</h2>
+<p>A few years ago the bulk of AI was being run in Jupyter notebooks and Python, but as the technology matures, and more and more of these models are move from research into production, we see their deployment and execution in more and more runtimes and hardware. With my distributed systems background, I am honestly really excited to see (and hopefully contribute) to this <strong>jump of AI into every corner of the computational space</strong>.</p>
+
+    <p>
+      <i>Any comments, contributions, or feedback? Ping me!</i>
+    </p>
+    <p>
+      <span>
+        <a href="https://twitter.com/adlrocha?ref_src=twsrc%5Etfw" class="twitter-follow-button"
+          data-show-count="false">Follow @adlrocha</a>
+        <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+      </span>
+      <span>
+        <a href="https://twitter.com/intent/tweet?screen_name=adlrocha&ref_src=twsrc%5Etfw"
+          class="twitter-mention-button" data-show-count="false">Tweet to @adlrocha</a>
+        <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+      </span>
+    </p>
+    
+  </div>
+</article>
+
+
+    <footer id="footer">
+  <div class="footer-left">
+    Copyright  &copy; 2024  @adlrocha 
+  </div>
+  <div class="footer-right">
+    <nav>
+      <ul>
+         
+        <li><a href="/">Home</a></li>
+         
+        <li><a href="/blog">All posts</a></li>
+         
+        <li><a href="/til">TIL</a></li>
+         
+        <li><a href="https://adlrocha.substack.com/archive">Newsletter</a></li>
+         
+        <li><a href="/tags">Tags</a></li>
+         
+        <li><a href="/learning">Learning</a></li>
+         
+        <li><a href="/patrons">Patrons</a></li>
+        
+      </ul>
+    </nav>
+  </div>
+</footer>
+
+
+  </div>
+</body>
+
+<link rel="stylesheet" href=/lib/font-awesome/css/all.min.css>
+<script src=/lib/jquery/jquery.min.js></script>
+<script src=/js/main.js></script>
+<script data-goatcounter="https://adlrocha.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>;
+
+</html>

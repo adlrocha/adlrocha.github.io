@@ -6,8 +6,11 @@ tags: [Linux, operating systems]
 ---
 
 # Enabling Hibernate on my Linux laptop (Pop OS)
+> Or how to keep your battery after closing your laptop.
 
-I've been using Linux on my laptop for more than a decade now. It is well-known that depending on the distro and the laptop you use, _"deep sleep"_ and/or hibernate may not be well-supported. This means that even if I closed the lid of my laptop, its battery will end up draining until it runs out. This was quite frustrating, because it meant that if I was working on my laptop and close the lid without remembering to shut down the laptop, I would come back to a laptop without battery. I recently bought a new [Framework](https://frame.work/), and while I was setting it up I decided that enough is enough, and that it was long overdo since I properly configured hibernate or deep sleep so that when I closed the lid and came back to my laptop I could come back to work without worrying about its battery.
+I've been using Linux on my laptop for more than a decade now. It is well-known that __depending on the distro and the laptop you use, _"deep sleep"_ and/or hibernate may not be well-supported__. This means that even every time that I closed the lid of my laptop, its battery will end up draining until it runs out. This was quite frustrating, because it meant that if I was working on my laptop and closed the lid without remembering to shut down the laptop, I would come back to a laptop without battery.
+
+I recently bought a new [Framework](https://frame.work/) computer, and while I was setting it up, I decided that it was long overdo for me go properly configure my laptops so this didn't happen ever again. After closing the lid of my laptop, I wanted to come back to a device with its battery (almost) intact. __And this is how I embarked myself into the adventure of figuring out how to configure hibernate on my Linux distro.__
 
 ## Prerequisites
 Full context, I am currently running [Pop OS](https://pop.system76.com/) (a Debian-based distro created by System76) on all my devices. These steps should definitely work on every Debian-based distro, and presumably also apply to other distros, but let me know if this is the case.
@@ -16,10 +19,10 @@ First thing's first. Before doing anything we should double-check that hibernate
 ```shell
 cat /sys/power/state
 ```
-In order to avoid any changes to my disk partitions, I will set up a swapfile to support hibernation, so the above command should list `disk` for our kernel to support the hibernation setup that I will walk you through in this post.
+In order to avoid any changes to my disk partitions, I will set up a swapfile to support hibernation, so the above command should list `disk` in order for our kernel to support the hibernation setup that I will walk you through in this post.
 
 ## Create a swap file
-If you don't already have a swap partition, or it is not big enough to fit the size requirements to hibernate your system, you'll need to create a new swap file. As a rule of thumb, your swapfile should have around twice the size of your RAM to ensure that there' s enough space to persist the data for hibernation (but you could also check out this [support page](https://help.ubuntu.com/community/SwapFaq) for a more accurate explanation). In my case, I have `64GiB` of RAM in my laptop, so I configured a `128G` swap file through  as follows:
+If you don't already have a swap partition, or it is not big enough to fit the size requirements to hibernate your system, you'll need to create a new swap file. As a rule of thumb, __your swapfile should have around twice the size of your RAM to ensure that there' s enough space to persist your data for hibernation__ (but you could also check out this [support page](https://help.ubuntu.com/community/SwapFaq) for a more accurate explanation). In my case, I have `64GiB` of RAM in my laptop, so I configured a `128G` swap file through:
 
 - First, I created the swap file, assigned the right permissions, and formatted as a swap.
 ```shell
@@ -49,7 +52,7 @@ You should receive an output that is something like `9e29141f-822f-4758-bb9a-87f
 sudo filefrag -v /swapfile | awk '{ if($1=="0:"){print $4} }'
 ```
 The output should be a number such as `9999999..`.
-- We'll configure the kernel swap using the `<UUID>` and `<offset>` values from above (replace these in the command below with your own values).
+- We'll configure now the kernel swap using the `<UUID>` and `<offset>` values from above (replace these in the command below with your own values).
 ```shell
 sudo kernelstub -a "resume=UUID=<UUID>"
 sudo kernelstub -a "resume_offset=<offeset>"
@@ -58,7 +61,7 @@ sudo kernelstub -a "resume_offset=<offeset>"
 # sudo kernelstub -a "resume=UUID=9e29141f-822f-4758-bb9a-87f3eaa6e1a5"
 # sudo kernelstub -a "resume_offset=9999999"
 ```
-And adding the following line to `/etc/initramfs-tools/conf.d/resume`. You should create the file if the file doesn't already exist.
+- And adding the following line to `/etc/initramfs-tools/conf.d/resume`. You should create the file if the file doesn't already exist.
 ```
 resume=UUID=<UUID> resume_offset=<offset>
 ```
@@ -74,7 +77,7 @@ sudo systemctl hibernate
 ```
 
 ## Configure hibernation when closing the lid
-Cool! So hibernate works, but how can I configure the system to hibernate after some time when closing the lid so my battery is not drained? Actually this was simpler than expected. We just need to:
+Cool! So hibernate works, but how can I __configure the system to hibernate after some time when closing the lid__ so my battery is not drained? Actually this was simpler than expected. We just need to:
 - Edit  `/etc/systemd/logind.conf` to enable `suspend-then-hibernate` (as you may see in the config below, you can also optionally set this configuration when the lid is closed and there is external power, or when we suspend the device after being idle for some time):
 ```diff
 [Login]
@@ -99,7 +102,7 @@ IdleAction=suspend-then-hibernate
 IdleActionSec=30min
 . . .
 ```
-- Finally, we can configure the delay in seconds for hibernate to kick-in when the system is suspended by editing `etc/systemd/sleep.conf` as follows (in my case 60 mins):
+- We can configure the delay in seconds for hibernate to kick-in when the system is suspended by editing `etc/systemd/sleep.conf` as follows (in my case 60 mins):
 ```diff
 [Sleep]
 #AllowSuspend=yes
@@ -116,7 +119,7 @@ IdleActionSec=30min
 + HibernateDelaySec=60min
 ```
 
-And with this (hopefully), you won't run out of battery when you close your lid and forget to shutdown your laptop for the day.
+And with this (hopefully), you won't run out of battery when you close your lid and forget to shutdown your laptop for the day. If you try this, let me know if it works for you. I would love to keep this article as up-to-date as possible, and even add a _"workaround"_ section with all of the "gotchas" that other people may have found. Cheers!
 
 
 ## References
