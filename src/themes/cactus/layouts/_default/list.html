@@ -7,10 +7,15 @@
   about here? Feel free to contact me.
 </p>
 {{ else if eq .Section "til" }}
+<h1>TIL (Today I learned)</h1>
 <p>This is the TIL <i>(Today I Learned)</i> section of my website. Here you'll find short and raw posts about things I
   learned
   a day I once called <i>"today"</i>.
   Think of it as a personal journal.
+</p>
+{{ else if eq .Section "blunders" }}
+<h1>Blunders Bin</h1>
+<p> A collection of blunders and mistakes made throughout my professional life. This is a good way to remind myself and share them publicly in case it helps someone else.
 </p>
 {{ end }}
 

@@ -46,9 +46,15 @@ weight = 1
 name = "All posts"
 url = "/blog"
 weight = 2
+
 [[menu.main]]
 name = "TIL"
 url = "/til"
+weight = 3
+
+[[menu.main]]
+name = "Blunders"
+url = "/blunders"
 weight = 3
 
 [[menu.main]]
@@ -66,10 +72,10 @@ name = "Learning"
 url = "/learning"
 weight = 6
 
-[[menu.main]]
-name = "Patrons"
-url = "/patrons"
-weight = 7
+# [[menu.main]]
+# name = "Patrons"
+# url = "/patrons"
+# weight = 7
 
 # [[menu.main]]
 #     name = "About"
