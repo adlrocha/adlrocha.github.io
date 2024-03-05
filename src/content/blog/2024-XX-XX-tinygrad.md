@@ -9,3 +9,4 @@ tags: [Wasm, runtimes, programming, Typescript]
 - Concept of reducing maintainability and layering the stack
 
 
+- Micrograd compiled in C: https://bernsteinbear.com/blog/compiling-ml-models/
