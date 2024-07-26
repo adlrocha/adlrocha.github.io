@@ -37,7 +37,7 @@ Even more, I wanted to see if I could bootstrap something by myself. __I sought 
 
 Making the decision of leaving PL after so long, and leaving behind such a group of talented individuals and the amazing things that we had built together wasn't an easy task. I remember asking myself immediately after committing to the decision, "and now what?".
 
-The only thing that was clear to me was that I wasn't ready to join another company as a regular employee right away. For this I could have just stayed at PL. __It was time for me to try and build something of my own, and thanks to PL I was in a privileged position that allowed me to explore this possibility for a few months without having to worry about my runway.__
+What ended up being clear to me quite early in this journey was that I wasn't ready to join another company as a regular employee right away. For this I could have just stayed at PL. __It was time for me to try and build something of my own, and thanks to PL I was in a privileged position that allowed me to explore this possibility for a few months without having to worry about my runway.__
 
 I explored several ideas throughout this time:
 
