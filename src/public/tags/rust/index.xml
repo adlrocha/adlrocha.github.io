@@ -1,30 +1,26 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>rust on @adlrocha</title>
+    <title>Rust on @adlrocha</title>
     <link>/tags/rust/</link>
-    <description>Recent content in rust on @adlrocha</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <description>Recent content in Rust on @adlrocha</description>
+    <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 18 Feb 2024 00:00:00 +0000</lastBuildDate><atom:link href="/tags/rust/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 18 Feb 2024 00:00:00 +0000</lastBuildDate>
+    <atom:link href="/tags/rust/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Running LLMs and ML in Wasm</title>
       <link>/blog/2024-02-18-wasm-llm/</link>
       <pubDate>Sun, 18 Feb 2024 00:00:00 +0000</pubDate>
-      
       <guid>/blog/2024-02-18-wasm-llm/</guid>
-      <description>Running LLMs and ML in Wasm  Searching new runtimes for AI
- I came up with an (obvious) idea the other day that led to me to the following question: &amp;ldquo;would it be possible to run LLM inference from Wasm?&amp;quot;. Being able to compile ML models into Wasm would allow us to run them in a heterogeneous set of runtimes and devices, including mobile or the browser. However, would running these models in Wasm offer access to the low-level computational resources of the device required for an efficient execution?</description>
+      <description>&lt;h1 id=&#34;running-llms-and-ml-in-wasm&#34;&gt;Running LLMs and ML in Wasm&lt;/h1&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;p&gt;Searching new runtimes for AI&lt;/p&gt;&lt;/blockquote&gt;&#xA;&lt;p&gt;I came up with an (obvious) idea the other day that led to me to the following question: &lt;em&gt;&amp;ldquo;would it be possible to run LLM inference from Wasm?&amp;rdquo;&lt;/em&gt;. Being able to compile ML models into Wasm would allow us to run them in a heterogeneous set of runtimes and devices, including mobile or the browser. However, would running these models in Wasm offer access to the low-level computational resources of the device required for an efficient execution?&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>When should one use Rust&#39;s `Pin&lt;&gt;`?</title>
       <link>/til/2023-08-29-rust-pin/</link>
       <pubDate>Tue, 29 Aug 2023 00:00:00 +0000</pubDate>
-      
       <guid>/til/2023-08-29-rust-pin/</guid>
-      <description>When should one use Rust&amp;rsquo;s Pin&amp;lt;&amp;gt;? The other day I was reviewing some code from the Fendermint project that I am currently contributing to, and I had to ask the author of the PR directly, &amp;ldquo;man! you have to teach me when I am supposed to use Pin&amp;lt;&amp;gt;. I see you are using it all over the place in this API, but I don&amp;rsquo;t know why&amp;rdquo;. His immediate answer was a bit surprising although kind of expected.</description>
+      <description>&lt;h1 id=&#34;when-should-one-use-rusts-pin&#34;&gt;When should one use Rust&amp;rsquo;s &lt;code&gt;Pin&amp;lt;&amp;gt;&lt;/code&gt;?&lt;/h1&gt;&#xA;&lt;p&gt;The other day I was reviewing some code from the &lt;a href=&#34;https://github.com/consensus-shipyard/fendermint&#34;&gt;Fendermint&lt;/a&gt; project that I am currently contributing to, and I had to ask the author of the PR directly, &lt;em&gt;&amp;ldquo;man! you have to teach me when I am supposed to use &lt;code&gt;Pin&amp;lt;&amp;gt;&lt;/code&gt;. I see you are using it all over the place in this API, but I don&amp;rsquo;t know why&amp;rdquo;&lt;/em&gt;. His immediate answer was a bit surprising although kind of expected. He answered, &lt;em&gt;&amp;ldquo;I do compiler-driven development, so I don&amp;rsquo;t have a good answer for you&amp;rdquo;&lt;/em&gt;. It was kind of an expected answer because after some time writing code in Rust you get used to relying on the compiler for a lot of the heavy-lifting when writing more complex code in order to minimize your cognitive load.&lt;/p&gt;</description>
     </item>
-    
   </channel>
 </rss>

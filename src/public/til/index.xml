@@ -4,94 +4,79 @@
     <title>Tils on @adlrocha</title>
     <link>/til/</link>
     <description>Recent content in Tils on @adlrocha</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 13 Feb 2024 00:00:00 +0000</lastBuildDate><atom:link href="/til/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 23 Jan 2025 00:00:00 +0000</lastBuildDate>
+    <atom:link href="/til/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Querying BigQuery public datasets from DuckDB</title>
+      <link>/til/2025-01-23-duckdb-bigquery/</link>
+      <pubDate>Thu, 23 Jan 2025 00:00:00 +0000</pubDate>
+      <guid>/til/2025-01-23-duckdb-bigquery/</guid>
+      <description>&lt;h1 id=&#34;querying-bigquery-public-datasets-from-duckdb&#34;&gt;Querying BigQuery public datasets from DuckDB&lt;/h1&gt;&#xA;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;FORCE INSTALL &amp;#39;bigquery&amp;#39; FROM community;&#xA;LOAD &amp;#39;bigquery&amp;#39;;&#xA;&#xA;SELECT * FROM duckdb_extensions();&#xA;&#xA;ATTACH &amp;#39;project=test-project-444413&amp;#39; AS bq (TYPE bigquery);&#xA;&#xA;SELECT * FROM bigquery_execute(&amp;#39;bq&amp;#39;, &amp;#39;SELECT * FROM bigquery-public-data.bitcoin_blockchain.blocks LIMIT 1&amp;#39;);&#xA;&lt;/code&gt;&lt;/pre&gt;</description>
+    </item>
     <item>
       <title>Enabling Hibernate on my Linux laptop (Pop OS)</title>
       <link>/til/2024-02-13-linux-hibernate/</link>
       <pubDate>Tue, 13 Feb 2024 00:00:00 +0000</pubDate>
-      
       <guid>/til/2024-02-13-linux-hibernate/</guid>
-      <description>Enabling Hibernate on my Linux laptop (Pop OS)  Or how to keep your battery after closing your laptop.
- I&amp;rsquo;ve been using Linux on my laptop for more than a decade now. It is well-known that depending on the distro and the laptop you use, &amp;ldquo;deep sleep&amp;rdquo; and/or hibernate may not be well-supported. This means that even every time that I closed the lid of my laptop, its battery will end up draining until it runs out.</description>
+      <description>&lt;h1 id=&#34;enabling-hibernate-on-my-linux-laptop-pop-os&#34;&gt;Enabling Hibernate on my Linux laptop (Pop OS)&lt;/h1&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;p&gt;Or how to keep your battery after closing your laptop.&lt;/p&gt;&lt;/blockquote&gt;&#xA;&lt;p&gt;I&amp;rsquo;ve been using Linux on my laptop for more than a decade now. It is well-known that &lt;strong&gt;depending on the distro and the laptop you use, &lt;em&gt;&amp;ldquo;deep sleep&amp;rdquo;&lt;/em&gt; and/or hibernate may not be well-supported&lt;/strong&gt;. This means that even every time that I closed the lid of my laptop, its battery will end up draining until it runs out. This was quite frustrating, because it meant that if I was working on my laptop and closed the lid without remembering to shut down the laptop, I would come back to a laptop without battery.&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Remember `to(&#39;cpu&#39;)` in Pytorch to release GPU memory</title>
       <link>/til/2024-01-11-pytorch-collab-to-cpu/</link>
       <pubDate>Sat, 20 Jan 2024 00:00:00 +0000</pubDate>
-      
       <guid>/til/2024-01-11-pytorch-collab-to-cpu/</guid>
-      <description>Remember to(&#39;cpu&#39;) in Pytorch to release GPU memory When I saw that Microsoft had released phi-2, a 2.7B parameters LLM, I thought: &amp;ldquo;this is the perfect excuse to get my hands dirty with LLMs&amp;rdquo;. The model was small enough to test it directly inside Google Colab, as it would fit the 15GiB memory GPUs provided in the free plan.
-So without further ado, I opened Google Colab, pip installed HF&amp;rsquo;s transformers library, and wrote the following code snippet to test the model:</description>
+      <description>&lt;h1 id=&#34;remember-tocpu-in-pytorch-to-release-gpu-memory&#34;&gt;Remember &lt;code&gt;to(&#39;cpu&#39;)&lt;/code&gt; in Pytorch to release GPU memory&lt;/h1&gt;&#xA;&lt;p&gt;When I saw that Microsoft had released &lt;a href=&#34;https://www.microsoft.com/en-us/research/blog/phi-2-the-surprising-power-of-small-language-models/&#34;&gt;phi-2&lt;/a&gt;, a 2.7B parameters LLM, I thought: &lt;em&gt;&amp;ldquo;this is the perfect excuse to get my hands dirty with LLMs&amp;rdquo;&lt;/em&gt;. The model was small enough to test it directly inside Google Colab, as it would fit the 15GiB memory GPUs provided in the free plan.&lt;/p&gt;&#xA;&lt;p&gt;So without further ado, I opened Google Colab, &lt;code&gt;pip install&lt;/code&gt;ed HF&amp;rsquo;s &lt;code&gt;transformers&lt;/code&gt; library, and wrote the following code snippet to test the model:&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>When should one use Rust&#39;s `Pin&lt;&gt;`?</title>
       <link>/til/2023-08-29-rust-pin/</link>
       <pubDate>Tue, 29 Aug 2023 00:00:00 +0000</pubDate>
-      
       <guid>/til/2023-08-29-rust-pin/</guid>
-      <description>When should one use Rust&amp;rsquo;s Pin&amp;lt;&amp;gt;? The other day I was reviewing some code from the Fendermint project that I am currently contributing to, and I had to ask the author of the PR directly, &amp;ldquo;man! you have to teach me when I am supposed to use Pin&amp;lt;&amp;gt;. I see you are using it all over the place in this API, but I don&amp;rsquo;t know why&amp;rdquo;. His immediate answer was a bit surprising although kind of expected.</description>
+      <description>&lt;h1 id=&#34;when-should-one-use-rusts-pin&#34;&gt;When should one use Rust&amp;rsquo;s &lt;code&gt;Pin&amp;lt;&amp;gt;&lt;/code&gt;?&lt;/h1&gt;&#xA;&lt;p&gt;The other day I was reviewing some code from the &lt;a href=&#34;https://github.com/consensus-shipyard/fendermint&#34;&gt;Fendermint&lt;/a&gt; project that I am currently contributing to, and I had to ask the author of the PR directly, &lt;em&gt;&amp;ldquo;man! you have to teach me when I am supposed to use &lt;code&gt;Pin&amp;lt;&amp;gt;&lt;/code&gt;. I see you are using it all over the place in this API, but I don&amp;rsquo;t know why&amp;rdquo;&lt;/em&gt;. His immediate answer was a bit surprising although kind of expected. He answered, &lt;em&gt;&amp;ldquo;I do compiler-driven development, so I don&amp;rsquo;t have a good answer for you&amp;rdquo;&lt;/em&gt;. It was kind of an expected answer because after some time writing code in Rust you get used to relying on the compiler for a lot of the heavy-lifting when writing more complex code in order to minimize your cognitive load.&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>RandomX: PoW for general-purpose CPUs</title>
       <link>/til/2023-08-10-randomx/</link>
       <pubDate>Thu, 10 Aug 2023 00:00:00 +0000</pubDate>
-      
       <guid>/til/2023-08-10-randomx/</guid>
-      <description>RandomX: PoW for general-purpose CPUs I was discussing today with the Fluence Labs team and they were describing how they want their Fluence network to be run by a PoW consensus algorithm. They want miners to be able to mine new blocks with just a general-purpose CPU, without requiring expensive GPUs or ASICs. And I didn&amp;rsquo;t know that there was already a PoW implementation, originally implemented for Monero, that is optimized for its use in general purpose CPUs.</description>
+      <description>&lt;h1 id=&#34;randomx-pow-for-general-purpose-cpus&#34;&gt;RandomX: PoW for general-purpose CPUs&lt;/h1&gt;&#xA;&lt;p&gt;I was discussing today with the &lt;a href=&#34;https://github.com/fluencelabs&#34;&gt;Fluence Labs&lt;/a&gt; team and they were describing how they want their Fluence network to be run by a PoW consensus algorithm. They want miners to be able to mine new blocks with just a general-purpose CPU, without requiring expensive GPUs or ASICs. And I didn&amp;rsquo;t know that there was already a PoW implementation, originally implemented for Monero, that is optimized for its use in general purpose CPUs.&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>80,000 hours: Positive impact jobs</title>
       <link>/til/2023-07-21-80000/</link>
       <pubDate>Fri, 21 Jul 2023 00:00:00 +0000</pubDate>
-      
       <guid>/til/2023-07-21-80000/</guid>
-      <description>8,000 hours: Positive impact jobs I am genuinely worried about the existential risk that AI may pose to humanity in the next decade. Some people take this as a unreal threat inherited from science fiction movies, but I beg to differ. I have studied AI fundamentals when I was in college, and I even ended up doing AI professionally a decade ago for a few months (when LLMs weren&amp;rsquo;t a thing, the transformer paper had just been published, and random forest was still winning Kaggle competitions).</description>
+      <description>&lt;h1 id=&#34;8000-hours-positive-impact-jobs&#34;&gt;8,000 hours: Positive impact jobs&lt;/h1&gt;&#xA;&lt;p&gt;I am genuinely worried about the existential risk that AI may pose to humanity in the next decade. Some people take this as a unreal threat inherited from science fiction movies, but I beg to differ. I have studied AI fundamentals when I was in college, and I even ended up doing AI professionally a decade ago for a few months (when LLMs weren&amp;rsquo;t a thing, the transformer paper had just been published, and random forest was still winning Kaggle competitions). Sadly, I don&amp;rsquo;t think I have the required background to contribute to this problem in any way.&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Reducing the size of Solidity contracts</title>
       <link>/til/2023-07-10-solidity-contract-size/</link>
       <pubDate>Mon, 10 Jul 2023 00:00:00 +0000</pubDate>
-      
       <guid>/til/2023-07-10-solidity-contract-size/</guid>
-      <description>Reducing the size of Solidity contracts I am currently working on a project that we call IPC (InterPlanetary Consensus). We are now implementing the core logic of the protocol in a set of Solidity contracts. Unfortunately, the implementation of one of the contracts of the protocol, the Gateway, was too large to be deployed (over the 24KB limit), so we had to figure out ways to reduce its size. This post, is a great introduction of the different approaches to fight the contract size limit.</description>
+      <description>&lt;h1 id=&#34;reducing-the-size-of-solidity-contracts&#34;&gt;Reducing the size of Solidity contracts&lt;/h1&gt;&#xA;&lt;p&gt;I am currently working on a project that we call &lt;a href=&#34;https://ipc.space/&#34;&gt;IPC (InterPlanetary Consensus)&lt;/a&gt;. We are now implementing the core logic of the protocol in a set of Solidity contracts. Unfortunately, the implementation of one of the contracts of the protocol, the &lt;code&gt;Gateway&lt;/code&gt;, was too large to be deployed (over the &lt;code&gt;24KB&lt;/code&gt; limit), so we had to figure out ways to reduce its size. &lt;a href=&#34;https://ethereum.org/en/developers/tutorials/downsizing-contracts-to-fight-the-contract-size-limit/&#34;&gt;This post&lt;/a&gt;, is a great introduction of the different approaches to fight the contract size limit. In this quick write-up I will share chronologically how we leveraged each of these approaches to try and make our contract &lt;em&gt;&amp;ldquo;deployable&amp;rdquo;&lt;/em&gt;.&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Ikea-oriented development</title>
       <link>/til/2023-06-26-ikea-oriented/</link>
       <pubDate>Wed, 28 Jun 2023 00:00:00 +0000</pubDate>
-      
       <guid>/til/2023-06-26-ikea-oriented/</guid>
-      <description>Ikea-oriented development Today I want to share an interesting idea that I feel all software engineers will appreciate in some way (either because they strong agree or disagree): Ikea-oriented development.
-The TL;DR idea behind this approach to software engineering is:
-  Packaging is the product: Delivering data is expensive. Pre-packaged depedencies: If you can’t bundle allen keys for your hex fasteners, stick to screws. Likewise, if you lack the engineering resources to support multiple SDKs, make damn sure your web API is easy enough to access with curl.</description>
+      <description>&lt;h1 id=&#34;ikea-oriented-development&#34;&gt;Ikea-oriented development&lt;/h1&gt;&#xA;&lt;p&gt;Today I want to share an interesting idea that I feel all software engineers will appreciate in some way (either because they strong agree or disagree): &lt;a href=&#34;https://taylor.town/ikea-oriented-development&#34;&gt;Ikea-oriented development&lt;/a&gt;.&lt;/p&gt;&#xA;&lt;p&gt;The TL;DR idea behind this approach to software engineering is:&lt;/p&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Packaging is the product: Delivering data is expensive.&lt;/li&gt;&#xA;&lt;li&gt;Pre-packaged depedencies: If you can’t bundle allen keys for your hex fasteners, stick to screws. Likewise, if you lack the engineering resources to support multiple SDKs, make damn sure your web API is easy enough to access with curl. [&amp;hellip;] My MarioKart 64 cartridge probably won’t inform me that Python2.7 was deprecated. If your program isn’t designed to work 20 years from now, it won’t.&lt;/li&gt;&#xA;&lt;li&gt;Make experimentation effortless. If tweaking and testing your codebase is a pain, devs will avoid making changes. Nobody wants to wade through spaghetti then wait 40 seconds for recompilation.&lt;/li&gt;&#xA;&lt;li&gt;Embrace reliable mainstream formats. Use common interfaces like CSV, webhooks, JSON, and RSS. Products are way more useful when you can plug them into GNU utils, IFTTT, Siri Shortcuts, etc.&lt;/li&gt;&#xA;&lt;li&gt;Write code that can be replaced. Writing code is easy, but editing code is hard. Make inputs and outputs extremely clear; everything between is disposable detail. We intuitively call irreplacable code “complicated” or “spaghetti”.&lt;/li&gt;&#xA;&lt;/ul&gt;&lt;/blockquote&gt;</description>
     </item>
-    
     <item>
       <title>June 2023 AI-related Reading List</title>
       <link>/til/2023-06-26-ai-links/</link>
       <pubDate>Mon, 26 Jun 2023 00:00:00 +0000</pubDate>
-      
       <guid>/til/2023-06-26-ai-links/</guid>
-      <description>June 2023 AI-related Reading List I just found myself with a few dozens of tabs opened with AI-related resources that I wanted to read. I feel that having them in RAM (i.e. opened in my browser) was starting overwhelm me, as I felt I could never find the time to read them (leading to a really uncomfortable feeling while I had to make progress in my day-to-day job). Hence, I decided to periodically move from RAM to a &amp;ldquo;persistent storage&amp;rdquo; my reading lists so that I could pick them up once I have some time for them (and in the process share them with others that my be interested).</description>
+      <description>&lt;h1 id=&#34;june-2023-ai-related-reading-list&#34;&gt;June 2023 AI-related Reading List&lt;/h1&gt;&#xA;&lt;p&gt;I just found myself with a few dozens of tabs opened with AI-related resources that I wanted to read. I feel that having them in &lt;em&gt;RAM&lt;/em&gt; (i.e. opened in my browser) was starting overwhelm me, as I felt I could never find the time to read them (leading to a really uncomfortable feeling while I had to make progress in my day-to-day job). Hence, I decided to periodically move from &lt;em&gt;RAM&lt;/em&gt; to a &lt;em&gt;&amp;ldquo;persistent storage&amp;rdquo;&lt;/em&gt; my reading lists so that I could pick them up once I have some time for them (and in the process share them with others that my be interested).&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>GoatCounter: Easy and open-source web analytics</title>
       <link>/til/2023-06-14-goatcounter/</link>
       <pubDate>Wed, 14 Jun 2023 00:00:00 +0000</pubDate>
-      
       <guid>/til/2023-06-14-goatcounter/</guid>
-      <description>GoatCounter: Easy and open-source web analytics. I was trying to find an analytics system that was open-source, that respected privacy as much as possible, and that was easy to set up. Suprisingly, I was able to find one after the first search without having to navigate several blog posts or Twitter threads with &amp;ldquo;the best analytics tools you should really now about in 2023&amp;rdquo;.
-As their website states, GoatCounter &amp;ldquo;is an open source web analytics platform available as a free donation-supported hosted service or self-hosted app.</description>
+      <description>&lt;h1 id=&#34;goatcounter-easy-and-open-source-web-analytics&#34;&gt;GoatCounter: Easy and open-source web analytics.&lt;/h1&gt;&#xA;&lt;p&gt;I was trying to find an analytics system that was open-source, that respected privacy as much as possible, and that was easy to set up. Suprisingly, I was able to find one after the first search without having to navigate several blog posts or Twitter threads with &lt;em&gt;&amp;ldquo;the best analytics tools you should really now about in 2023&amp;rdquo;&lt;/em&gt;.&lt;/p&gt;&#xA;&lt;p&gt;As their website states, &lt;a href=&#34;https://www.goatcounter.com/&#34;&gt;GoatCounter&lt;/a&gt; &lt;em&gt;&amp;ldquo;is an open source web analytics platform available as a free donation-supported hosted service or self-hosted app. It aims to offer easy to use and meaningful privacy-friendly web analytics as an alternative to Google Analytics or Matomo.&amp;rdquo;&lt;/em&gt;&lt;/p&gt;</description>
     </item>
-    
   </channel>
 </rss>

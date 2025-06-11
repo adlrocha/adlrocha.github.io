@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Duckdb on @adlrocha</title>
+    <link>/tags/duckdb/</link>
+    <description>Recent content in Duckdb on @adlrocha</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 23 Jan 2025 00:00:00 +0000</lastBuildDate>
+    <atom:link href="/tags/duckdb/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Querying BigQuery public datasets from DuckDB</title>
+      <link>/til/2025-01-23-duckdb-bigquery/</link>
+      <pubDate>Thu, 23 Jan 2025 00:00:00 +0000</pubDate>
+      <guid>/til/2025-01-23-duckdb-bigquery/</guid>
+      <description>&lt;h1 id=&#34;querying-bigquery-public-datasets-from-duckdb&#34;&gt;Querying BigQuery public datasets from DuckDB&lt;/h1&gt;&#xA;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;FORCE INSTALL &amp;#39;bigquery&amp;#39; FROM community;&#xA;LOAD &amp;#39;bigquery&amp;#39;;&#xA;&#xA;SELECT * FROM duckdb_extensions();&#xA;&#xA;ATTACH &amp;#39;project=test-project-444413&amp;#39; AS bq (TYPE bigquery);&#xA;&#xA;SELECT * FROM bigquery_execute(&amp;#39;bq&amp;#39;, &amp;#39;SELECT * FROM bigquery-public-data.bitcoin_blockchain.blocks LIMIT 1&amp;#39;);&#xA;&lt;/code&gt;&lt;/pre&gt;</description>
+    </item>
+  </channel>
+</rss>

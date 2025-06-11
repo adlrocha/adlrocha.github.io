@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title> Ilya u30 | @adlrocha</title>
+  <meta name="description" content="Co-founder and CTO of Finisterra Labs, where we&#39;re organising the world&#39;s structured data. Before founding Finisterra Labs, I worked at Protocol Labs as a Research Engineer, contributing to open-source projects like libp2p, IPFS, and Filecoin. I also worked as a blockchain expert at Telefónica R&amp;D, where I was responsible for the design and development of core technology based on blockchains, distributed systems, and advanced cryptography. My involvement in research and development began at Universidad Politécnica de Madrid, where I worked on topics related to energy efficiency in data centers. My R&amp;D experience also includes research into the compression efficiency of video coding standards at Ericsson Research and projects related to securing interdomain routing protocols at KTH Royal Institute of Technology in Stockholm. I am also an avid reader and basketball lover.">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="all,follow">
+  <meta name="googlebot" content="index,follow,snippet,archive">
+  <meta property="og:url" content="//localhost:1313/blog/2024-xx-xx-ilya-30-u30/">
+  <meta property="og:site_name" content="@adlrocha">
+  <meta property="og:title" content="Ilya u30">
+  <meta property="og:description" content="► Information theory, algorithmic complexity theory, and other relevant background A Tutorial Introduction to the Minimum Description Length Principle (Tutorial/Paper) Friendly! Go read it!
+Kolmogorov Complexity And Algorithmic Randomness from page 434 onwards (Textbook) Oh this one is way less friendly haha
+The First Law of Complexodynamics (Blog post) and Quantifying the Rise and Fall of Complexity in Closed Systems: The Coffee Automaton (Paper) TODO God I love Scott.
+Keeping Neural Networks Simple by Minimizing the Description Length of the Weights (Paper) TODO">
+  <meta property="og:locale" content="en_us">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="blog">
+    <meta property="article:published_time" content="2024-01-31T00:00:00+00:00">
+    <meta property="article:modified_time" content="2024-01-31T00:00:00+00:00">
+    <meta property="article:tag" content="Wasm">
+    <meta property="article:tag" content="Runtimes">
+    <meta property="article:tag" content="Programming">
+    <meta property="article:tag" content="Typescript">
+
+  
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Ilya u30">
+  <meta name="twitter:description" content="► Information theory, algorithmic complexity theory, and other relevant background A Tutorial Introduction to the Minimum Description Length Principle (Tutorial/Paper) Friendly! Go read it!
+Kolmogorov Complexity And Algorithmic Randomness from page 434 onwards (Textbook) Oh this one is way less friendly haha
+The First Law of Complexodynamics (Blog post) and Quantifying the Rise and Fall of Complexity in Closed Systems: The Coffee Automaton (Paper) TODO God I love Scott.
+Keeping Neural Networks Simple by Minimizing the Description Length of the Weights (Paper) TODO">
+
+  
+  
+    
+  
+  
+  <link rel="stylesheet" href="//localhost:1313/css/style-dark.css">
+  
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  
+
+  
+<link rel="icon" type="image/png" href="//localhost:1313/images/favicon.ico" />
+
+  
+</head>
+
+
+<body class="max-width mx-auto px3 ltr">
+  <div class="content index py4">
+
+    <header id="header">
+  <a href="//localhost:1313/">
+  
+    <div id="logo" style="background-image: url(//localhost:1313/images/logo.png)"></div>
+  
+  <div id="title">
+    <h1>@adlrocha</h1>
+  </div>
+  </a>
+  <div id="nav">
+    <ul>
+      <li class="icon">
+        <a href="#"><i class="fas fa-bars fa-2x"></i></a>
+      </li>
+      
+        <li><a href="/">Home</a></li>
+      
+        <li><a href="/blog">All posts</a></li>
+      
+        <li><a href="/blunders">Blunders</a></li>
+      
+        <li><a href="/til">TIL</a></li>
+      
+        <li><a href="https://adlrocha.substack.com/archive">Newsletter</a></li>
+      
+        <li><a href="/tags">Tags</a></li>
+      
+        <li><a href="/learning">Learning</a></li>
+      
+    </ul>
+  </div>
+</header>
+
+
+
+    
+<article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+  
+  <div class="content" itemprop="articleBody">
+    
+    <p>
+      <i>Any comments, contributions, or feedback? Ping me!</i>
+    </p>
+    <p>
+      <span>
+        <a href="https://twitter.com/adlrocha?ref_src=twsrc%5Etfw" class="twitter-follow-button"
+          data-show-count="false">Follow @adlrocha</a>
+        <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+      </span>
+      <span>
+        <a href="https://twitter.com/intent/tweet?screen_name=adlrocha&ref_src=twsrc%5Etfw"
+          class="twitter-mention-button" data-show-count="false">Tweet to @adlrocha</a>
+        <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+      </span>
+    </p>
+    <h2 id="-information-theory-algorithmic-complexity-theory-and-other-relevant-background">► Information theory, algorithmic complexity theory, and other relevant background</h2>
+<h3 id="a-tutorial-introduction-to-the-minimum-description-length-principletutorialpaper"><a href="https://w.laudiacay.cool/2024/05/11/Tutorial-Introduction-to-MDL.html">A Tutorial Introduction to the Minimum Description Length Principle</a> <a href="https://arxiv.org/pdf/math/0406077">(Tutorial/Paper)</a></h3>
+<p>Friendly! Go read it!</p>
+<h3 id="kolmogorov-complexity-and-algorithmic-randomnessfrom-page-434-onwards-textbook"><a href="https://www.lirmm.fr/~ashen/kolmbook-eng-scan.pdf">Kolmogorov Complexity And Algorithmic Randomness</a> from page 434 onwards (Textbook)</h3>
+<p>Oh this one is way less friendly haha</p>
+<h3 id="the-first-law-of-complexodynamicsblog-post-andquantifying-the-rise-and-fall-of-complexity-in-closed-systems-the-coffee-automatonpaper"><a href="https://scottaaronson.blog/?p=762">The First Law of Complexodynamics</a> (Blog post) and <a href="https://arxiv.org/pdf/1405.6903">Quantifying the Rise and Fall of Complexity in Closed Systems: The Coffee Automaton</a> (Paper)</h3>
+<p>TODO God I love Scott.</p>
+<h3 id="keeping-neural-networks-simple-by-minimizing-the-description-length-of-the-weightspaper"><a href="https://www.cs.toronto.edu/~hinton/absps/colt93.pdf">Keeping Neural Networks Simple by Minimizing the Description Length of the Weights</a> (Paper)</h3>
+<p>TODO</p>
+<h2 id="-generalized-architectures-and-techniques-with-a-philosophical-bent-meatiest-section">► Generalized Architectures and Techniques (With A Philosophical Bent) (Meatiest Section)</h2>
+<h3 id="understanding-lstm-networkspaper"><a href="https://w.laudiacay.cool/2024/05/09/Understanding-LSTM-Networks.html">Understanding LSTM Networks</a> <a href="https://colah.github.io/posts/2015-08-Understanding-LSTMs/">(Paper)</a></h3>
+<h3 id="the-unreasonable-effectiveness-of-recurrent-neural-networksblog"><a href="https://karpathy.github.io/2015/05/21/rnn-effectiveness/">The Unreasonable Effectiveness of Recurrent Neural Networks</a> (Blog)</h3>
+<p>TODO</p>
+<h3 id="recurrent-neural-network-regularizationpaper"><a href="https://arxiv.org/pdf/1409.2329">Recurrent Neural Network Regularization</a> (Paper)</h3>
+<p>TODO</p>
+<h3 id="relational-recurrent-neural-networkspaper"><a href="https://arxiv.org/pdf/1806.01822">Relational recurrent neural networks</a> (Paper)</h3>
+<p>TODO</p>
+<h3 id="a-simple-neural-network-module-for-relational-reasoningpaper"><a href="https://arxiv.org/pdf/1706.01427">A simple neural network module for relational reasoning</a> (Paper)</h3>
+<p>TODO</p>
+<h3 id="neural-turing-machinespaper"><a href="https://arxiv.org/pdf/1410.5401">Neural Turing Machines</a> (Paper)</h3>
+<p>TODO</p>
+<h3 id="variational-lossy-autoencoderpaper"><a href="https://arxiv.org/pdf/1611.02731">Variational Lossy Autoencoder</a> (Paper)</h3>
+<p>TODO</p>
+<h3 id="identity-mappings-in-deep-residual-networkspaper"><a href="https://arxiv.org/pdf/1603.05027">Identity Mappings in Deep Residual Networks</a> (Paper)</h3>
+<p>TODO</p>
+<h3 id="order-matters-sequence-to-sequence-for-setspaper"><a href="https://arxiv.org/pdf/1511.06391">Order Matters: Sequence to Sequence for Sets</a> (Paper)</h3>
+<p>TODO</p>
+<h3 id="pointer-networkspaper"><a href="https://arxiv.org/pdf/1506.03134">Pointer Networks</a> (Paper)</h3>
+<p>TODO</p>
+<h2 id="-techniques-and-architectures-for-computer-vision">► Techniques and Architectures for Computer Vision</h2>
+<h3 id="convolutional-neural-networks-for-visual-recognitionstanford-course-notes"><a href="https://cs231n.github.io/">Convolutional Neural Networks for Visual Recognition</a> (Stanford Course Notes)</h3>
+<p>TODO</p>
+<h3 id="multi-scale-context-aggregation-by-dilated-convolutionspaper"><a href="https://arxiv.org/pdf/1511.07122">Multi Scale Context Aggregation By Dilated Convolutions</a> (Paper)</h3>
+<p>TODO</p>
+<h3 id="deep-residual-learning-for-image-recognitionpaper"><a href="https://arxiv.org/pdf/1512.03385">Deep Residual Learning For Image Recognition</a> (Paper)</h3>
+<p>TODO</p>
+<h3 id="imagenet-classification-with-deep-convolutional-neural-networkspaper"><a href="https://proceedings.neurips.cc/paper_files/paper/2012/file/c399862d3b9d6b76c8436e924a68c45b-Paper.pdf">ImageNet Classification with Deep Convolutional Neural Networks</a> (Paper)</h3>
+<p>TODO</p>
+<h2 id="-techniques-and-architectures-for-nlp">► Techniques and Architectures for NLP</h2>
+<h3 id="attention-is-all-you-needpaper-andthe-annotated-transformerjupyter-notebookblog"><a href="https://arxiv.org/pdf/1706.03762">Attention is all you need</a> (Paper) and <a href="https://nlp.seas.harvard.edu/annotated-transformer/">The Annotated Transformer</a> (Jupyter Notebook/Blog)</h3>
+<p>Attention Is All You Need is the 2017 paper that introduces the transformer. The key innovation is in the title: A transformer is a model architecture that works over sequences and uses encoders and decoders. However, unlike previous architectures, it is neither RNN nor CNN. Instead, it uses an attention mechanism to take a global view of the input and focus appropriately on elements and connections between them.</p>
+<p>The Annotated Transformer is a very useful post to read alongside the transformer paper. It does what it says on the label, walking you through the transformer, alternating between Jupyter snippets of implementation and explanations of what&rsquo;s going on.</p>
+<p>Intuitively, it makes a lot of sense that this works better than an LSTM or GRU, if you just reflect on what happens when you read anything complex. Imagine how difficult a time you&rsquo;d have if you couldn&rsquo;t move around freely to focus on different areas of the subject matter, but instead had to move through it rigidly one word at a time.</p>
+<p>Key insight: how does a transformer work?</p>
+<ol>
+<li>Embeds the inputs and adds a &ldquo;positional encoding&rdquo; feature to them (more about this mechanism later- it&rsquo;s really nifty)</li>
+<li>Perform multi-head attention on the inputs (this picks out what&rsquo;s important)</li>
+<li>&hellip;. TODO &hellip; finish</li>
+</ol>
+<p>TODO</p>
+<h3 id="deep-speech-2-end-to-end-speech-recognition-in-english-and-mandarinpaper"><a href="https://arxiv.org/pdf/1512.02595">Deep Speech 2: End-to-End Speech Recognition in English and Mandarin</a> (Paper)</h3>
+<p>TODO</p>
+<h3 id="scaling-laws-for-neural-language-modelspaper"><a href="https://arxiv.org/pdf/2001.08361">Scaling Laws for Neural Language Models</a> (Paper)</h3>
+<p>TODO</p>
+<h3 id="neural-machine-translation-by-jointly-learning-to-align-and-translatepaper"><a href="https://arxiv.org/pdf/1409.0473">Neural Machine Translation by Jointly Learning to Align and Translate</a> (Paper)</h3>
+<p>TODO</p>
+<h2 id="-grab-bag">► Grab Bag</h2>
+<h3 id="machine-super-intelligencephd-thesis"><a href="https://www.vetta.org/documents/Machine_Super_Intelligence.pdf">Machine Super Intelligence</a> (PhD Thesis)</h3>
+<p>TODO</p>
+<h3 id="neural-message-passing-for-quantum-chemistrypaper"><a href="https://arxiv.org/pdf/1704.01212">Neural Message Passing for Quantum Chemistry</a> (Paper)</h3>
+<p>TODO</p>
+<h3 id="gpipe-easy-scaling-with-micro-batch-pipeline-parallelismpaper"><a href="https://arxiv.org/pdf/1811.06965">GPipe: Easy Scaling with Micro-Batch Pipeline Parallelism</a> (Paper)</h3>
+<p>TODO</p>
+
+    <p>
+      <i>Any comments, contributions, or feedback? Ping me!</i>
+    </p>
+    <p>
+      <span>
+        <a href="https://twitter.com/adlrocha?ref_src=twsrc%5Etfw" class="twitter-follow-button"
+          data-show-count="false">Follow @adlrocha</a>
+        <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+      </span>
+      <span>
+        <a href="https://twitter.com/intent/tweet?screen_name=adlrocha&ref_src=twsrc%5Etfw"
+          class="twitter-mention-button" data-show-count="false">Tweet to @adlrocha</a>
+        <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+      </span>
+    </p>
+    
+  </div>
+</article>
+
+
+    <footer id="footer">
+  <div class="footer-left">
+    Copyright  &copy; 2025  @adlrocha 
+  </div>
+  <div class="footer-right">
+    <nav>
+      <ul>
+         
+        <li><a href="/">Home</a></li>
+         
+        <li><a href="/blog">All posts</a></li>
+         
+        <li><a href="/blunders">Blunders</a></li>
+         
+        <li><a href="/til">TIL</a></li>
+         
+        <li><a href="https://adlrocha.substack.com/archive">Newsletter</a></li>
+         
+        <li><a href="/tags">Tags</a></li>
+         
+        <li><a href="/learning">Learning</a></li>
+        
+      </ul>
+    </nav>
+  </div>
+</footer>
+
+
+  </div>
+</body>
+
+<link rel="stylesheet" href=/lib/font-awesome/css/all.min.css>
+<script src=/lib/jquery/jquery.min.js></script>
+<script src=/js/main.js></script>
+<script data-goatcounter="https://adlrocha.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>;
+
+</html>

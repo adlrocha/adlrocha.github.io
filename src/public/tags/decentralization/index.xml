@@ -1,31 +1,26 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>decentralization on @adlrocha</title>
+    <title>Decentralization on @adlrocha</title>
     <link>/tags/decentralization/</link>
-    <description>Recent content in decentralization on @adlrocha</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <description>Recent content in Decentralization on @adlrocha</description>
+    <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 30 Oct 2023 00:00:00 +0000</lastBuildDate><atom:link href="/tags/decentralization/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 30 Oct 2023 00:00:00 +0000</lastBuildDate>
+    <atom:link href="/tags/decentralization/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>From open-source to open-platforms</title>
       <link>/blog/2022-10-open-platforms/</link>
       <pubDate>Mon, 30 Oct 2023 00:00:00 +0000</pubDate>
-      
       <guid>/blog/2022-10-open-platforms/</guid>
-      <description>@adlrocha - From open-source Ato open-platforms Originally published in 2022 in the newsletter
- On the killer app for blockchains
- It&amp;rsquo;s been over 6 months since my last publication. I could start making up dozens of excuses to justify my absence, but honestly? it has just been a matter of priorities. I realized that all of the time I was spending finding topics to write about, researching them, and writing the publication, could be better spent building new systems (i.</description>
+      <description>&lt;h1 id=&#34;adlrocha---from-open-source-ato-open-platforms&#34;&gt;@adlrocha - From open-source Ato open-platforms&lt;/h1&gt;&#xA;&lt;p&gt;&lt;em&gt;Originally published in 2022 &lt;a href=&#34;https://adlrocha.substack.com/p/adlrocha-from-open-source-to-open&#34;&gt;in the newsletter&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;p&gt;On the killer app for blockchains&lt;/p&gt;&lt;/blockquote&gt;&#xA;&lt;p&gt;&lt;img src=&#34;https://images.unsplash.com/photo-1569017388730-020b5f80a004?ixlib=rb-4.0.3&amp;amp;ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;amp;auto=format&amp;amp;fit=crop&amp;amp;w=1000&amp;amp;q=80&#34; alt=&#34;Open LED signage&#34; title=&#34;Open LED signage&#34;&gt;&lt;/p&gt;&#xA;&lt;p&gt;It&amp;rsquo;s been over 6 months since my last publication. I could start making up dozens of excuses to justify my absence, but honestly? it has just been a matter of priorities. I realized that all of the time I was spending finding topics to write about, researching them, and writing the publication, could be better spent building new systems (i.e working on my day-to-day projects), and spending the weekends with my family and friends.&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>@adlrocha - Why do we need a new Internet?</title>
       <link>/blog/2023-06-26-decentralized-cloud/</link>
       <pubDate>Tue, 27 Jun 2023 00:00:00 +0000</pubDate>
-      
       <guid>/blog/2023-06-26-decentralized-cloud/</guid>
-      <description>Why do we need a decentralized Internet? Today I had what we could call a crisis of faith. After so many years working in the web3 space, and seeing so much speculation and cool tech solving artificial problems, I was wondering &amp;ldquo;do we really need a new Internet? Or is it just another artificial problem we are creating to have an excuse to attract investment and work in cool tech?. So I decided to write down a list of reasons why a company or an individual would choose to deploy their applications or services over a decentralized Internet over our current one.</description>
+      <description>&lt;h1 id=&#34;why-do-we-need-a-decentralized-internet&#34;&gt;Why do we need a decentralized Internet?&lt;/h1&gt;&#xA;&lt;p&gt;Today I had what we could call a crisis of faith. After so many years working in the web3 space, and seeing so much speculation and cool tech solving artificial problems, I was wondering &lt;em&gt;&amp;ldquo;do we really need a new Internet? Or is it just another artificial problem we are creating to have an excuse to attract investment and work in cool tech?&lt;/em&gt;. So I decided to write down a list of reasons why a company or an individual would choose to deploy their applications or services over a decentralized Internet over our current one.&lt;/p&gt;</description>
     </item>
-    
   </channel>
 </rss>

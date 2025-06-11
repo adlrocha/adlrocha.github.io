@@ -4,29 +4,23 @@
     <title>ML on @adlrocha</title>
     <link>/tags/ml/</link>
     <description>Recent content in ML on @adlrocha</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 18 Feb 2024 00:00:00 +0000</lastBuildDate><atom:link href="/tags/ml/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 18 Feb 2024 00:00:00 +0000</lastBuildDate>
+    <atom:link href="/tags/ml/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Running LLMs and ML in Wasm</title>
       <link>/blog/2024-02-18-wasm-llm/</link>
       <pubDate>Sun, 18 Feb 2024 00:00:00 +0000</pubDate>
-      
       <guid>/blog/2024-02-18-wasm-llm/</guid>
-      <description>Running LLMs and ML in Wasm  Searching new runtimes for AI
- I came up with an (obvious) idea the other day that led to me to the following question: &amp;ldquo;would it be possible to run LLM inference from Wasm?&amp;quot;. Being able to compile ML models into Wasm would allow us to run them in a heterogeneous set of runtimes and devices, including mobile or the browser. However, would running these models in Wasm offer access to the low-level computational resources of the device required for an efficient execution?</description>
+      <description>&lt;h1 id=&#34;running-llms-and-ml-in-wasm&#34;&gt;Running LLMs and ML in Wasm&lt;/h1&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;p&gt;Searching new runtimes for AI&lt;/p&gt;&lt;/blockquote&gt;&#xA;&lt;p&gt;I came up with an (obvious) idea the other day that led to me to the following question: &lt;em&gt;&amp;ldquo;would it be possible to run LLM inference from Wasm?&amp;rdquo;&lt;/em&gt;. Being able to compile ML models into Wasm would allow us to run them in a heterogeneous set of runtimes and devices, including mobile or the browser. However, would running these models in Wasm offer access to the low-level computational resources of the device required for an efficient execution?&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Late arrival to the fuss of LLMs</title>
       <link>/blog/2024-01-18-intro-llms/</link>
       <pubDate>Sun, 21 Jan 2024 00:00:00 +0000</pubDate>
-      
       <guid>/blog/2024-01-18-intro-llms/</guid>
-      <description>Late Arrival to the Fuss of LLMs  From zero to zero-point-one in a few resources
- After spending some time reading about the state of AI at a high-level, it was time to dive into the details. For obvious reasons, I decided LLMs were a good first-stop for my AI enlightenment. What are LLMs and how they work (because apparently the why is still a burning open question)?.
-Rivers of digital ink have been spilled lately with gentle introductions and deep illustrations of how LLMs and their underlying transformer architectures work.</description>
+      <description>&lt;h1 id=&#34;late-arrival-to-the-fuss-of-llms&#34;&gt;Late Arrival to the Fuss of LLMs&lt;/h1&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;p&gt;From zero to zero-point-one in a few resources&lt;/p&gt;&lt;/blockquote&gt;&#xA;&lt;p&gt;After spending some time reading about the &lt;a href=&#34;./2023-12-07-state-ai.md&#34;&gt;state of AI&lt;/a&gt; at a high-level, it was time to dive into the details. For obvious reasons, I decided LLMs were a good first-stop for my AI enlightenment. &lt;strong&gt;What are LLMs and how they work (because apparently the why is still a burning open question)?&lt;/strong&gt;.&lt;/p&gt;&#xA;&lt;p&gt;Rivers of digital ink have been spilled lately with gentle introductions and deep illustrations of how LLMs and their underlying transformer architectures work. The good thing about this? There is a lot of information available to learn about them. The bad thing? Filtering the best resources to get you to a good understanding with the lower overhead may be time consuming. Consequently, I decided that instead of writing yet another introductory post about transformers and LLMs, it may be more useful to just share the curated list of resources that have helped me the most on this humble quest. I hope you enjoy it (and if you find any good resource worth including to this list, feel free to send it my way and I&amp;rsquo;ll edit this post).&lt;/p&gt;</description>
     </item>
-    
   </channel>
 </rss>

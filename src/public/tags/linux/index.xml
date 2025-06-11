@@ -4,18 +4,16 @@
     <title>Linux on @adlrocha</title>
     <link>/tags/linux/</link>
     <description>Recent content in Linux on @adlrocha</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 13 Feb 2024 00:00:00 +0000</lastBuildDate><atom:link href="/tags/linux/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 13 Feb 2024 00:00:00 +0000</lastBuildDate>
+    <atom:link href="/tags/linux/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Enabling Hibernate on my Linux laptop (Pop OS)</title>
       <link>/til/2024-02-13-linux-hibernate/</link>
       <pubDate>Tue, 13 Feb 2024 00:00:00 +0000</pubDate>
-      
       <guid>/til/2024-02-13-linux-hibernate/</guid>
-      <description>Enabling Hibernate on my Linux laptop (Pop OS)  Or how to keep your battery after closing your laptop.
- I&amp;rsquo;ve been using Linux on my laptop for more than a decade now. It is well-known that depending on the distro and the laptop you use, &amp;ldquo;deep sleep&amp;rdquo; and/or hibernate may not be well-supported. This means that even every time that I closed the lid of my laptop, its battery will end up draining until it runs out.</description>
+      <description>&lt;h1 id=&#34;enabling-hibernate-on-my-linux-laptop-pop-os&#34;&gt;Enabling Hibernate on my Linux laptop (Pop OS)&lt;/h1&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;p&gt;Or how to keep your battery after closing your laptop.&lt;/p&gt;&lt;/blockquote&gt;&#xA;&lt;p&gt;I&amp;rsquo;ve been using Linux on my laptop for more than a decade now. It is well-known that &lt;strong&gt;depending on the distro and the laptop you use, &lt;em&gt;&amp;ldquo;deep sleep&amp;rdquo;&lt;/em&gt; and/or hibernate may not be well-supported&lt;/strong&gt;. This means that even every time that I closed the lid of my laptop, its battery will end up draining until it runs out. This was quite frustrating, because it meant that if I was working on my laptop and closed the lid without remembering to shut down the laptop, I would come back to a laptop without battery.&lt;/p&gt;</description>
     </item>
-    
   </channel>
 </rss>

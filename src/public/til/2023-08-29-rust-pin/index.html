@@ -8,17 +8,22 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="robots" content="all,follow">
   <meta name="googlebot" content="index,follow,snippet,archive">
-  <meta property="og:title" content="When should one use Rust&#39;s `Pin&lt;&gt;`?" />
-<meta property="og:description" content="When should one use Rust&rsquo;s Pin&lt;&gt;? The other day I was reviewing some code from the Fendermint project that I am currently contributing to, and I had to ask the author of the PR directly, &ldquo;man! you have to teach me when I am supposed to use Pin&lt;&gt;. I see you are using it all over the place in this API, but I don&rsquo;t know why&rdquo;. His immediate answer was a bit surprising although kind of expected." />
-<meta property="og:type" content="article" />
-<meta property="og:url" content="/til/2023-08-29-rust-pin/" /><meta property="article:section" content="til" />
-<meta property="article:published_time" content="2023-08-29T00:00:00+00:00" />
-<meta property="article:modified_time" content="2023-08-29T00:00:00+00:00" />
+  <meta property="og:url" content="/til/2023-08-29-rust-pin/">
+  <meta property="og:site_name" content="@adlrocha">
+  <meta property="og:title" content="When should one use Rust&#39;s `Pin&lt;&gt;`?">
+  <meta property="og:description" content="When should one use Rust’s Pin&lt;&gt;? The other day I was reviewing some code from the Fendermint project that I am currently contributing to, and I had to ask the author of the PR directly, “man! you have to teach me when I am supposed to use Pin&lt;&gt;. I see you are using it all over the place in this API, but I don’t know why”. His immediate answer was a bit surprising although kind of expected. He answered, “I do compiler-driven development, so I don’t have a good answer for you”. It was kind of an expected answer because after some time writing code in Rust you get used to relying on the compiler for a lot of the heavy-lifting when writing more complex code in order to minimize your cognitive load.">
+  <meta property="og:locale" content="en_us">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="til">
+    <meta property="article:published_time" content="2023-08-29T00:00:00+00:00">
+    <meta property="article:modified_time" content="2023-08-29T00:00:00+00:00">
+    <meta property="article:tag" content="Programming">
+    <meta property="article:tag" content="Rust">
 
-
-  <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="When should one use Rust&#39;s `Pin&lt;&gt;`?"/>
-<meta name="twitter:description" content="When should one use Rust&rsquo;s Pin&lt;&gt;? The other day I was reviewing some code from the Fendermint project that I am currently contributing to, and I had to ask the author of the PR directly, &ldquo;man! you have to teach me when I am supposed to use Pin&lt;&gt;. I see you are using it all over the place in this API, but I don&rsquo;t know why&rdquo;. His immediate answer was a bit surprising although kind of expected."/>
+  
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="When should one use Rust&#39;s `Pin&lt;&gt;`?">
+  <meta name="twitter:description" content="When should one use Rust’s Pin&lt;&gt;? The other day I was reviewing some code from the Fendermint project that I am currently contributing to, and I had to ask the author of the PR directly, “man! you have to teach me when I am supposed to use Pin&lt;&gt;. I see you are using it all over the place in this API, but I don’t know why”. His immediate answer was a bit surprising although kind of expected. He answered, “I do compiler-driven development, so I don’t have a good answer for you”. It was kind of an expected answer because after some time writing code in Rust you get used to relying on the compiler for a lot of the heavy-lifting when writing more complex code in order to minimize your cognitive load.">
 
   
   
@@ -36,7 +41,6 @@
   
 <link rel="icon" type="image/png" href="/images/favicon.ico" />
 
-  
   
 </head>
 
@@ -128,7 +132,7 @@
 
     <footer id="footer">
   <div class="footer-left">
-    Copyright  &copy; 2024  @adlrocha 
+    Copyright  &copy; 2025  @adlrocha 
   </div>
   <div class="footer-right">
     <nav>

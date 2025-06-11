@@ -4,39 +4,37 @@
     <title>LLM on @adlrocha</title>
     <link>/tags/llm/</link>
     <description>Recent content in LLM on @adlrocha</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 18 Feb 2024 00:00:00 +0000</lastBuildDate><atom:link href="/tags/llm/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 10 Jun 2025 00:00:00 +0000</lastBuildDate>
+    <atom:link href="/tags/llm/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Baselight Letters Volume 1: Project Titanic, your personal assistant, and a flagship dataset</title>
+      <link>/blog/2025-06-10-baselight-letters-v1/</link>
+      <pubDate>Tue, 10 Jun 2025 00:00:00 +0000</pubDate>
+      <guid>/blog/2025-06-10-baselight-letters-v1/</guid>
+      <description>&lt;h2 id=&#34;baselight-letters-volume-1-project-titanic-your-personal-assistant-and-a-flagship-dataset&#34;&gt;Baselight Letters Volume 1: Project Titanic, your personal assistant, and a flagship dataset&lt;/h2&gt;&#xA;&lt;p&gt;We&amp;rsquo;ve been heads down pushing new features every week&#xA;to&lt;a href=&#34;https://c.vialoops.com/CL0/https:%2F%2Fbaselight.ai%2F%3Futm_source=loops%26utm_medium=email%26utm_campaign=lfcto1/1/010001975b424eed-5a4da8d6-e0a2-460e-bfbd-d36775aefc03-000000/UfwWxMvxjF9hhLNIqHF8FYdhG9xJ1YMR1ooc6ZPAhq0=408&#34;&gt; Baselight&lt;/a&gt;!&#xA;As the Baselight CTO, I want to make sure everyone knows all that we&amp;rsquo;ve been cooking, and the new&#xA;capabilities that these features would bring to them.&lt;/p&gt;&#xA;&lt;p&gt;This is my attempt to show you, a bi-weekly product update for Baselight. You&amp;rsquo;ve probably come&#xA;across&#xA;these&lt;a href=&#34;https://c.vialoops.com/CL0/https:%2F%2Fx.com%2FBaselightDB%2Fstatus%2F1929922621107261887/1/010001975b424eed-5a4da8d6-e0a2-460e-bfbd-d36775aefc03-000000/xZalc8MoCYafKKBe-2Gs55OKn6qIvStx360QNAzo32E=408&#34;&gt; Baselight Builder&lt;/a&gt;&#xA;and&lt;a href=&#34;https://c.vialoops.com/CL0/https:%2F%2Fx.com%2FBaselightDB%2Fstatus%2F1928149865042715116/1/010001975b424eed-5a4da8d6-e0a2-460e-bfbd-d36775aefc03-000000/wCdDfn_RWeLqZXpVmSVh24BOSKWT2GJSB5hALuANNwU=408&#34;&gt; Baselight is Data&lt;/a&gt;&#xA;updates. Well, these posts unpack what&amp;rsquo;s behind these updates and what&amp;rsquo;s to come.&lt;/p&gt;</description>
+    </item>
     <item>
       <title>Running LLMs and ML in Wasm</title>
       <link>/blog/2024-02-18-wasm-llm/</link>
       <pubDate>Sun, 18 Feb 2024 00:00:00 +0000</pubDate>
-      
       <guid>/blog/2024-02-18-wasm-llm/</guid>
-      <description>Running LLMs and ML in Wasm  Searching new runtimes for AI
- I came up with an (obvious) idea the other day that led to me to the following question: &amp;ldquo;would it be possible to run LLM inference from Wasm?&amp;quot;. Being able to compile ML models into Wasm would allow us to run them in a heterogeneous set of runtimes and devices, including mobile or the browser. However, would running these models in Wasm offer access to the low-level computational resources of the device required for an efficient execution?</description>
+      <description>&lt;h1 id=&#34;running-llms-and-ml-in-wasm&#34;&gt;Running LLMs and ML in Wasm&lt;/h1&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;p&gt;Searching new runtimes for AI&lt;/p&gt;&lt;/blockquote&gt;&#xA;&lt;p&gt;I came up with an (obvious) idea the other day that led to me to the following question: &lt;em&gt;&amp;ldquo;would it be possible to run LLM inference from Wasm?&amp;rdquo;&lt;/em&gt;. Being able to compile ML models into Wasm would allow us to run them in a heterogeneous set of runtimes and devices, including mobile or the browser. However, would running these models in Wasm offer access to the low-level computational resources of the device required for an efficient execution?&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Late arrival to the fuss of LLMs</title>
       <link>/blog/2024-01-18-intro-llms/</link>
       <pubDate>Sun, 21 Jan 2024 00:00:00 +0000</pubDate>
-      
       <guid>/blog/2024-01-18-intro-llms/</guid>
-      <description>Late Arrival to the Fuss of LLMs  From zero to zero-point-one in a few resources
- After spending some time reading about the state of AI at a high-level, it was time to dive into the details. For obvious reasons, I decided LLMs were a good first-stop for my AI enlightenment. What are LLMs and how they work (because apparently the why is still a burning open question)?.
-Rivers of digital ink have been spilled lately with gentle introductions and deep illustrations of how LLMs and their underlying transformer architectures work.</description>
+      <description>&lt;h1 id=&#34;late-arrival-to-the-fuss-of-llms&#34;&gt;Late Arrival to the Fuss of LLMs&lt;/h1&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;p&gt;From zero to zero-point-one in a few resources&lt;/p&gt;&lt;/blockquote&gt;&#xA;&lt;p&gt;After spending some time reading about the &lt;a href=&#34;./2023-12-07-state-ai.md&#34;&gt;state of AI&lt;/a&gt; at a high-level, it was time to dive into the details. For obvious reasons, I decided LLMs were a good first-stop for my AI enlightenment. &lt;strong&gt;What are LLMs and how they work (because apparently the why is still a burning open question)?&lt;/strong&gt;.&lt;/p&gt;&#xA;&lt;p&gt;Rivers of digital ink have been spilled lately with gentle introductions and deep illustrations of how LLMs and their underlying transformer architectures work. The good thing about this? There is a lot of information available to learn about them. The bad thing? Filtering the best resources to get you to a good understanding with the lower overhead may be time consuming. Consequently, I decided that instead of writing yet another introductory post about transformers and LLMs, it may be more useful to just share the curated list of resources that have helped me the most on this humble quest. I hope you enjoy it (and if you find any good resource worth including to this list, feel free to send it my way and I&amp;rsquo;ll edit this post).&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Remember `to(&#39;cpu&#39;)` in Pytorch to release GPU memory</title>
       <link>/til/2024-01-11-pytorch-collab-to-cpu/</link>
       <pubDate>Sat, 20 Jan 2024 00:00:00 +0000</pubDate>
-      
       <guid>/til/2024-01-11-pytorch-collab-to-cpu/</guid>
-      <description>Remember to(&#39;cpu&#39;) in Pytorch to release GPU memory When I saw that Microsoft had released phi-2, a 2.7B parameters LLM, I thought: &amp;ldquo;this is the perfect excuse to get my hands dirty with LLMs&amp;rdquo;. The model was small enough to test it directly inside Google Colab, as it would fit the 15GiB memory GPUs provided in the free plan.
-So without further ado, I opened Google Colab, pip installed HF&amp;rsquo;s transformers library, and wrote the following code snippet to test the model:</description>
+      <description>&lt;h1 id=&#34;remember-tocpu-in-pytorch-to-release-gpu-memory&#34;&gt;Remember &lt;code&gt;to(&#39;cpu&#39;)&lt;/code&gt; in Pytorch to release GPU memory&lt;/h1&gt;&#xA;&lt;p&gt;When I saw that Microsoft had released &lt;a href=&#34;https://www.microsoft.com/en-us/research/blog/phi-2-the-surprising-power-of-small-language-models/&#34;&gt;phi-2&lt;/a&gt;, a 2.7B parameters LLM, I thought: &lt;em&gt;&amp;ldquo;this is the perfect excuse to get my hands dirty with LLMs&amp;rdquo;&lt;/em&gt;. The model was small enough to test it directly inside Google Colab, as it would fit the 15GiB memory GPUs provided in the free plan.&lt;/p&gt;&#xA;&lt;p&gt;So without further ado, I opened Google Colab, &lt;code&gt;pip install&lt;/code&gt;ed HF&amp;rsquo;s &lt;code&gt;transformers&lt;/code&gt; library, and wrote the following code snippet to test the model:&lt;/p&gt;</description>
     </item>
-    
   </channel>
 </rss>

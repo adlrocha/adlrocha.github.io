@@ -8,17 +8,24 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="robots" content="all,follow">
   <meta name="googlebot" content="index,follow,snippet,archive">
-  <meta property="og:title" content="Reducing the size of Solidity contracts" />
-<meta property="og:description" content="Reducing the size of Solidity contracts I am currently working on a project that we call IPC (InterPlanetary Consensus). We are now implementing the core logic of the protocol in a set of Solidity contracts. Unfortunately, the implementation of one of the contracts of the protocol, the Gateway, was too large to be deployed (over the 24KB limit), so we had to figure out ways to reduce its size. This post, is a great introduction of the different approaches to fight the contract size limit." />
-<meta property="og:type" content="article" />
-<meta property="og:url" content="/til/2023-07-10-solidity-contract-size/" /><meta property="article:section" content="til" />
-<meta property="article:published_time" content="2023-07-10T00:00:00+00:00" />
-<meta property="article:modified_time" content="2023-07-10T00:00:00+00:00" />
+  <meta property="og:url" content="/til/2023-07-10-solidity-contract-size/">
+  <meta property="og:site_name" content="@adlrocha">
+  <meta property="og:title" content="Reducing the size of Solidity contracts">
+  <meta property="og:description" content="Reducing the size of Solidity contracts I am currently working on a project that we call IPC (InterPlanetary Consensus). We are now implementing the core logic of the protocol in a set of Solidity contracts. Unfortunately, the implementation of one of the contracts of the protocol, the Gateway, was too large to be deployed (over the 24KB limit), so we had to figure out ways to reduce its size. This post, is a great introduction of the different approaches to fight the contract size limit. In this quick write-up I will share chronologically how we leveraged each of these approaches to try and make our contract “deployable”.">
+  <meta property="og:locale" content="en_us">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="til">
+    <meta property="article:published_time" content="2023-07-10T00:00:00+00:00">
+    <meta property="article:modified_time" content="2023-07-10T00:00:00+00:00">
+    <meta property="article:tag" content="Blockchain">
+    <meta property="article:tag" content="Solidity">
+    <meta property="article:tag" content="Ethereum">
+    <meta property="article:tag" content="Smart-Contract">
 
-
-  <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Reducing the size of Solidity contracts"/>
-<meta name="twitter:description" content="Reducing the size of Solidity contracts I am currently working on a project that we call IPC (InterPlanetary Consensus). We are now implementing the core logic of the protocol in a set of Solidity contracts. Unfortunately, the implementation of one of the contracts of the protocol, the Gateway, was too large to be deployed (over the 24KB limit), so we had to figure out ways to reduce its size. This post, is a great introduction of the different approaches to fight the contract size limit."/>
+  
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Reducing the size of Solidity contracts">
+  <meta name="twitter:description" content="Reducing the size of Solidity contracts I am currently working on a project that we call IPC (InterPlanetary Consensus). We are now implementing the core logic of the protocol in a set of Solidity contracts. Unfortunately, the implementation of one of the contracts of the protocol, the Gateway, was too large to be deployed (over the 24KB limit), so we had to figure out ways to reduce its size. This post, is a great introduction of the different approaches to fight the contract size limit. In this quick write-up I will share chronologically how we leveraged each of these approaches to try and make our contract “deployable”.">
 
   
   
@@ -36,7 +43,6 @@
   
 <link rel="icon" type="image/png" href="/images/favicon.ico" />
 
-  
   
 </head>
 
@@ -112,8 +118,7 @@
 <h2 id="eip-2535-diamond-contract">EIP-2535: Diamond contract</h2>
 <p>At this point we decided to embark ourselves into more complex contract separation architectures. While reading through different solutions and EIPs, we came across this <a href="https://eip2535diamonds.substack.com/p/introduction-to-the-diamond-standard">Introduction to EIP-2553 diamonds</a> that perfectly illustrated what we were after, and I quote:</p>
 <blockquote>
-<p>&ldquo;I wanted one storage space for all state variables and one Ethereum address from which I could design and implement all functions without bytecode size limitation. And I wanted all functions to read and write to state variables directly, easily and in the same way. It would also be nice to have optional, seemless upgrade functionality: to be able to replace functions, remove them and add new functionality without needing to redeploy everything. To be able to extend the smart contract system in a consistent, systematic way after it is deployed.&rdquo;</p>
-</blockquote>
+<p>&ldquo;I wanted one storage space for all state variables and one Ethereum address from which I could design and implement all functions without bytecode size limitation. And I wanted all functions to read and write to state variables directly, easily and in the same way. It would also be nice to have optional, seemless upgrade functionality: to be able to replace functions, remove them and add new functionality without needing to redeploy everything. To be able to extend the smart contract system in a consistent, systematic way after it is deployed.&rdquo;</p></blockquote>
 <p>It seemed like the Diamond pattern was a perfect fit for us. A diamond appears to be a single smart contract with a single Ethereum address. But internally and hidden from the outside it utilizes a set of contracts called facets for its external functions. The following two images depicts the implementation of a diamond under the hood:</p>
 <p><img src="https://substackcdn.com/image/fetch/f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fbucketeer-e05bbc84-baa3-437e-9518-adb32be77984.s3.amazonaws.com%2Fpublic%2Fimages%2F2c35c90b-9755-4aea-93fd-58e97f38f32f_554x725.png" alt=""></p>
 <p><img src="https://substackcdn.com/image/fetch/f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fbucketeer-e05bbc84-baa3-437e-9518-adb32be77984.s3.amazonaws.com%2Fpublic%2Fimages%2F796bcd50-8c08-408a-8fb2-45fc044cd5ac_640x360.png" alt=""></p>
@@ -157,7 +162,7 @@
 
     <footer id="footer">
   <div class="footer-left">
-    Copyright  &copy; 2024  @adlrocha 
+    Copyright  &copy; 2025  @adlrocha 
   </div>
   <div class="footer-right">
     <nav>

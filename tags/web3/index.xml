@@ -1,52 +1,40 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>web3 on @adlrocha</title>
+    <title>Web3 on @adlrocha</title>
     <link>/tags/web3/</link>
-    <description>Recent content in web3 on @adlrocha</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <description>Recent content in Web3 on @adlrocha</description>
+    <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 30 Oct 2023 00:00:00 +0000</lastBuildDate><atom:link href="/tags/web3/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 30 Oct 2023 00:00:00 +0000</lastBuildDate>
+    <atom:link href="/tags/web3/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>From open-source to open-platforms</title>
       <link>/blog/2022-10-open-platforms/</link>
       <pubDate>Mon, 30 Oct 2023 00:00:00 +0000</pubDate>
-      
       <guid>/blog/2022-10-open-platforms/</guid>
-      <description>@adlrocha - From open-source Ato open-platforms Originally published in 2022 in the newsletter
- On the killer app for blockchains
- It&amp;rsquo;s been over 6 months since my last publication. I could start making up dozens of excuses to justify my absence, but honestly? it has just been a matter of priorities. I realized that all of the time I was spending finding topics to write about, researching them, and writing the publication, could be better spent building new systems (i.</description>
+      <description>&lt;h1 id=&#34;adlrocha---from-open-source-ato-open-platforms&#34;&gt;@adlrocha - From open-source Ato open-platforms&lt;/h1&gt;&#xA;&lt;p&gt;&lt;em&gt;Originally published in 2022 &lt;a href=&#34;https://adlrocha.substack.com/p/adlrocha-from-open-source-to-open&#34;&gt;in the newsletter&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;p&gt;On the killer app for blockchains&lt;/p&gt;&lt;/blockquote&gt;&#xA;&lt;p&gt;&lt;img src=&#34;https://images.unsplash.com/photo-1569017388730-020b5f80a004?ixlib=rb-4.0.3&amp;amp;ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;amp;auto=format&amp;amp;fit=crop&amp;amp;w=1000&amp;amp;q=80&#34; alt=&#34;Open LED signage&#34; title=&#34;Open LED signage&#34;&gt;&lt;/p&gt;&#xA;&lt;p&gt;It&amp;rsquo;s been over 6 months since my last publication. I could start making up dozens of excuses to justify my absence, but honestly? it has just been a matter of priorities. I realized that all of the time I was spending finding topics to write about, researching them, and writing the publication, could be better spent building new systems (i.e working on my day-to-day projects), and spending the weekends with my family and friends.&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>RandomX: PoW for general-purpose CPUs</title>
       <link>/til/2023-08-10-randomx/</link>
       <pubDate>Thu, 10 Aug 2023 00:00:00 +0000</pubDate>
-      
       <guid>/til/2023-08-10-randomx/</guid>
-      <description>RandomX: PoW for general-purpose CPUs I was discussing today with the Fluence Labs team and they were describing how they want their Fluence network to be run by a PoW consensus algorithm. They want miners to be able to mine new blocks with just a general-purpose CPU, without requiring expensive GPUs or ASICs. And I didn&amp;rsquo;t know that there was already a PoW implementation, originally implemented for Monero, that is optimized for its use in general purpose CPUs.</description>
+      <description>&lt;h1 id=&#34;randomx-pow-for-general-purpose-cpus&#34;&gt;RandomX: PoW for general-purpose CPUs&lt;/h1&gt;&#xA;&lt;p&gt;I was discussing today with the &lt;a href=&#34;https://github.com/fluencelabs&#34;&gt;Fluence Labs&lt;/a&gt; team and they were describing how they want their Fluence network to be run by a PoW consensus algorithm. They want miners to be able to mine new blocks with just a general-purpose CPU, without requiring expensive GPUs or ASICs. And I didn&amp;rsquo;t know that there was already a PoW implementation, originally implemented for Monero, that is optimized for its use in general purpose CPUs.&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Demystifying Ethereum 2.0</title>
       <link>/blog/2020-11-demystifying-ethereum2.0/</link>
       <pubDate>Sun, 29 Nov 2020 18:16:08 +0100</pubDate>
-      
       <guid>/blog/2020-11-demystifying-ethereum2.0/</guid>
-      <description>@adlrocha - Demystifying Ethereum 2.0 A gentle introduction to what is yet to come! Ethereum 2.0 is set to launch on the 1st of December, and using this as an excuse I decided to invest some time to learn a bit more about the new developments happening in the Ethereum space.
-What is Eth2?  Eth2 refers to a set of interconnected upgrades that will make Ethereum more scalable, more secure, and more sustainable.</description>
+      <description>&lt;h1 id=&#34;adlrocha---demystifying-ethereum-20&#34;&gt;&lt;a href=&#34;https://adlrocha.substack.com/p/adlrocha-demystifying-ethereum-20&#34;&gt;@adlrocha - Demystifying Ethereum 2.0&lt;/a&gt;&lt;/h1&gt;&#xA;&lt;h3 id=&#34;a-gentle-introduction-to-what-is-yet-to-come&#34;&gt;A gentle introduction to what is yet to come!&lt;/h3&gt;&#xA;&lt;p&gt;&lt;a href=&#34;https://coinjournal.net/news/ethereum-2-0-to-launch-on-1-december/&#34;&gt;Ethereum 2.0 is set to launch on the 1st of December&lt;/a&gt;, and using this as an excuse I decided to invest some time &lt;strong&gt;to learn a bit more about the new developments happening in the Ethereum space.&lt;/strong&gt;&lt;/p&gt;&#xA;&lt;h2 id=&#34;what-is-eth2&#34;&gt;What is Eth2?&lt;/h2&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;p&gt;&lt;em&gt;Eth2 refers to a set of interconnected upgrades that will make Ethereum more scalable, more secure, and more sustainable. These upgrades are being built by multiple teams from across the Ethereum ecosystem.&lt;/em&gt;&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>My vision for a new Internet</title>
       <link>/blog/2020-09-vision-internet/</link>
       <pubDate>Sun, 13 Sep 2020 18:16:08 +0100</pubDate>
-      
       <guid>/blog/2020-09-vision-internet/</guid>
-      <description>@adlrocha - My vision for a new Internet Where everyone can become an ISP | Alfonso de la Rocha
-
-I was skimming through this paper (A Public Option for the Core), when I read the following sentence in the abstract: *&amp;ldquo;In this paper we discuss both the challenges and the opportunities that make this an auspicious time to revisit how we might best structure the Internet&amp;rsquo;s infrastructure.&amp;quot; *And I said, well this may be something worth reflecting on and discussing in my newsletter.</description>
+      <description>&lt;h1 id=&#34;adlrocha---my-vision-for-a-new-internet&#34;&gt;@adlrocha - My vision for a new Internet&lt;/h1&gt;&#xA;&lt;h3 id=&#34;where-everyone-can-become-an-isp&#34;&gt;Where everyone can become an ISP&lt;/h3&gt;&#xA;&lt;p&gt;| &lt;a href=&#34;https://adlrocha.substack.com/people/3137214-alfonso-de-la-rocha&#34;&gt;Alfonso de la Rocha&lt;/a&gt;&lt;/p&gt;&#xA;&lt;p&gt;&lt;a href=&#34;https://cdn.substack.com/image/fetch/f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fbucketeer-e05bbc84-baa3-437e-9518-adb32be77984.s3.amazonaws.com%2Fpublic%2Fimages%2Ffd321da8-410f-4b63-9a3a-4157ae598c69_1000x665.jpeg&#34;&gt;&lt;img src=&#34;https://cdn.substack.com/image/fetch/w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fbucketeer-e05bbc84-baa3-437e-9518-adb32be77984.s3.amazonaws.com%2Fpublic%2Fimages%2Ffd321da8-410f-4b63-9a3a-4157ae598c69_1000x665.jpeg&#34; alt=&#34;photo of outer space&#34;&gt;&lt;/a&gt;&lt;/p&gt;&#xA;&lt;p&gt;I was skimming through &lt;a href=&#34;https://storage.googleapis.com/jellyposter-store/1fb104613a0cd93669370886a8614451.pdf&#34;&gt;this paper (A Public Option for the Core)&lt;/a&gt;, when I read the following sentence in the abstract: *&amp;ldquo;In this paper we discuss both the challenges and the opportunities that &lt;strong&gt;make this an auspicious time to revisit how we might best structure the Internet&amp;rsquo;s infrastructure.&amp;rdquo;&lt;/strong&gt; *And I said, well this may be something worth reflecting on and discussing in my newsletter.&lt;/p&gt;</description>
     </item>
-    
   </channel>
 </rss>

@@ -8,19 +8,24 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="robots" content="all,follow">
   <meta name="googlebot" content="index,follow,snippet,archive">
-  <meta property="og:title" content="Enabling Hibernate on my Linux laptop (Pop OS)" />
-<meta property="og:description" content="Enabling Hibernate on my Linux laptop (Pop OS)  Or how to keep your battery after closing your laptop.
- I&rsquo;ve been using Linux on my laptop for more than a decade now. It is well-known that depending on the distro and the laptop you use, &ldquo;deep sleep&rdquo; and/or hibernate may not be well-supported. This means that even every time that I closed the lid of my laptop, its battery will end up draining until it runs out." />
-<meta property="og:type" content="article" />
-<meta property="og:url" content="/til/2024-02-13-linux-hibernate/" /><meta property="article:section" content="til" />
-<meta property="article:published_time" content="2024-02-13T00:00:00+00:00" />
-<meta property="article:modified_time" content="2024-02-13T00:00:00+00:00" />
+  <meta property="og:url" content="/til/2024-02-13-linux-hibernate/">
+  <meta property="og:site_name" content="@adlrocha">
+  <meta property="og:title" content="Enabling Hibernate on my Linux laptop (Pop OS)">
+  <meta property="og:description" content="Enabling Hibernate on my Linux laptop (Pop OS) Or how to keep your battery after closing your laptop.
+I’ve been using Linux on my laptop for more than a decade now. It is well-known that depending on the distro and the laptop you use, “deep sleep” and/or hibernate may not be well-supported. This means that even every time that I closed the lid of my laptop, its battery will end up draining until it runs out. This was quite frustrating, because it meant that if I was working on my laptop and closed the lid without remembering to shut down the laptop, I would come back to a laptop without battery.">
+  <meta property="og:locale" content="en_us">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="til">
+    <meta property="article:published_time" content="2024-02-13T00:00:00+00:00">
+    <meta property="article:modified_time" content="2024-02-13T00:00:00+00:00">
+    <meta property="article:tag" content="Linux">
+    <meta property="article:tag" content="Operating Systems">
 
-
-  <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Enabling Hibernate on my Linux laptop (Pop OS)"/>
-<meta name="twitter:description" content="Enabling Hibernate on my Linux laptop (Pop OS)  Or how to keep your battery after closing your laptop.
- I&rsquo;ve been using Linux on my laptop for more than a decade now. It is well-known that depending on the distro and the laptop you use, &ldquo;deep sleep&rdquo; and/or hibernate may not be well-supported. This means that even every time that I closed the lid of my laptop, its battery will end up draining until it runs out."/>
+  
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Enabling Hibernate on my Linux laptop (Pop OS)">
+  <meta name="twitter:description" content="Enabling Hibernate on my Linux laptop (Pop OS) Or how to keep your battery after closing your laptop.
+I’ve been using Linux on my laptop for more than a decade now. It is well-known that depending on the distro and the laptop you use, “deep sleep” and/or hibernate may not be well-supported. This means that even every time that I closed the lid of my laptop, its battery will end up draining until it runs out. This was quite frustrating, because it meant that if I was working on my laptop and closed the lid without remembering to shut down the laptop, I would come back to a laptop without battery.">
 
   
   
@@ -38,7 +43,6 @@
   
 <link rel="icon" type="image/png" href="/images/favicon.ico" />
 
-  
   
 </head>
 
@@ -103,107 +107,105 @@
     </p>
     <h1 id="enabling-hibernate-on-my-linux-laptop-pop-os">Enabling Hibernate on my Linux laptop (Pop OS)</h1>
 <blockquote>
-<p>Or how to keep your battery after closing your laptop.</p>
-</blockquote>
+<p>Or how to keep your battery after closing your laptop.</p></blockquote>
 <p>I&rsquo;ve been using Linux on my laptop for more than a decade now. It is well-known that <strong>depending on the distro and the laptop you use, <em>&ldquo;deep sleep&rdquo;</em> and/or hibernate may not be well-supported</strong>. This means that even every time that I closed the lid of my laptop, its battery will end up draining until it runs out. This was quite frustrating, because it meant that if I was working on my laptop and closed the lid without remembering to shut down the laptop, I would come back to a laptop without battery.</p>
 <p>I recently bought a new <a href="https://frame.work/">Framework</a> computer, and while I was setting it up, I decided that it was long overdo for me go properly configure my laptops so this didn&rsquo;t happen ever again. After closing the lid of my laptop, I wanted to come back to a device with its battery (almost) intact. <strong>And this is how I embarked myself into the adventure of figuring out how to configure hibernate on my Linux distro.</strong></p>
 <h2 id="prerequisites">Prerequisites</h2>
 <p>Full context, I am currently running <a href="https://pop.system76.com/">Pop OS</a> (a Debian-based distro created by System76) on all my devices. These steps should definitely work on every Debian-based distro, and presumably also apply to other distros, but let me know if this is the case.</p>
 <p>First thing&rsquo;s first. Before doing anything we should double-check that hibernate is actually supported by our kernel:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">cat /sys/power/state
-</code></pre></div><p>In order to avoid any changes to my disk partitions, I will set up a swapfile to support hibernation, so the above command should list <code>disk</code> in order for our kernel to support the hibernation setup that I will walk you through in this post.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>cat /sys/power/state
+</span></span></code></pre></div><p>In order to avoid any changes to my disk partitions, I will set up a swapfile to support hibernation, so the above command should list <code>disk</code> in order for our kernel to support the hibernation setup that I will walk you through in this post.</p>
 <h2 id="create-a-swap-file">Create a swap file</h2>
-<p>If you don&rsquo;t already have a swap partition, or it is not big enough to fit the size requirements to hibernate your system, you&rsquo;ll need to create a new swap file. As a rule of thumb, <strong>your swapfile should have around twice the size of your RAM to ensure that there' s enough space to persist your data for hibernation</strong> (but you could also check out this <a href="https://help.ubuntu.com/community/SwapFaq">support page</a> for a more accurate explanation). In my case, I have <code>64GiB</code> of RAM in my laptop, so I configured a <code>128G</code> swap file through:</p>
+<p>If you don&rsquo;t already have a swap partition, or it is not big enough to fit the size requirements to hibernate your system, you&rsquo;ll need to create a new swap file. As a rule of thumb, <strong>your swapfile should have around twice the size of your RAM to ensure that there&rsquo; s enough space to persist your data for hibernation</strong> (but you could also check out this <a href="https://help.ubuntu.com/community/SwapFaq">support page</a> for a more accurate explanation). In my case, I have <code>64GiB</code> of RAM in my laptop, so I configured a <code>128G</code> swap file through:</p>
 <ul>
 <li>First, I created the swap file, assigned the right permissions, and formatted as a swap.</li>
 </ul>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">sudo fallocate -l 128G /swapfile
-sudo chmod <span style="color:#ae81ff">600</span> /swapfile
-sudo mkswap /swapfile
-</code></pre></div><ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>sudo fallocate -l 128G /swapfile
+</span></span><span style="display:flex;"><span>sudo chmod <span style="color:#ae81ff">600</span> /swapfile
+</span></span><span style="display:flex;"><span>sudo mkswap /swapfile
+</span></span></code></pre></div><ul>
 <li>And then activated the swap</li>
 </ul>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">sudo swapon /swapfile
-echo <span style="color:#e6db74">&#39;/swapfile none swap defaults 0 0&#39;</span> | sudo tee -a /etc/fstab
-</code></pre></div><ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>sudo swapon /swapfile
+</span></span><span style="display:flex;"><span>echo <span style="color:#e6db74">&#39;/swapfile none swap defaults 0 0&#39;</span> | sudo tee -a /etc/fstab
+</span></span></code></pre></div><ul>
 <li>Finally, we can check if the above commands worked by listing the system&rsquo;s swaps. Your new <code>/swapfile</code> swap should be listed there.</li>
 </ul>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">cat /proc/swaps
-</code></pre></div><h2 id="configure-hibernation">Configure hibernation</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>cat /proc/swaps
+</span></span></code></pre></div><h2 id="configure-hibernation">Configure hibernation</h2>
 <p>With our swap ready, we are now in a position to configure hibernation in our system:</p>
 <ul>
 <li>We first need to get the <code>UUID</code> of our new swap file:</li>
 </ul>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">findmnt -no UUID -T /swapfile
-</code></pre></div><p>You should receive an output that is something like <code>9e29141f-822f-4758-bb9a-87f3eaa6e1a5</code>.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>findmnt -no UUID -T /swapfile
+</span></span></code></pre></div><p>You should receive an output that is something like <code>9e29141f-822f-4758-bb9a-87f3eaa6e1a5</code>.</p>
 <ul>
 <li>We then need to get the swap offset.</li>
 </ul>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">sudo filefrag -v /swapfile | awk <span style="color:#e6db74">&#39;{ if($1==&#34;0:&#34;){print $4} }&#39;</span>
-</code></pre></div><p>The output should be a number such as <code>9999999..</code>.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>sudo filefrag -v /swapfile | awk <span style="color:#e6db74">&#39;{ if($1==&#34;0:&#34;){print $4} }&#39;</span>
+</span></span></code></pre></div><p>The output should be a number such as <code>9999999..</code>.</p>
 <ul>
 <li>We&rsquo;ll configure now the kernel swap using the <code>&lt;UUID&gt;</code> and <code>&lt;offset&gt;</code> values from above (replace these in the command below with your own values).</li>
 </ul>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">sudo kernelstub -a <span style="color:#e6db74">&#34;resume=UUID=&lt;UUID&gt;&#34;</span>
-sudo kernelstub -a <span style="color:#e6db74">&#34;resume_offset=&lt;offeset&gt;&#34;</span>
-
-<span style="color:#75715e"># Example</span>
-<span style="color:#75715e"># sudo kernelstub -a &#34;resume=UUID=9e29141f-822f-4758-bb9a-87f3eaa6e1a5&#34;</span>
-<span style="color:#75715e"># sudo kernelstub -a &#34;resume_offset=9999999&#34;</span>
-</code></pre></div><ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>sudo kernelstub -a <span style="color:#e6db74">&#34;resume=UUID=&lt;UUID&gt;&#34;</span>
+</span></span><span style="display:flex;"><span>sudo kernelstub -a <span style="color:#e6db74">&#34;resume_offset=&lt;offeset&gt;&#34;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Example</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># sudo kernelstub -a &#34;resume=UUID=9e29141f-822f-4758-bb9a-87f3eaa6e1a5&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># sudo kernelstub -a &#34;resume_offset=9999999&#34;</span>
+</span></span></code></pre></div><ul>
 <li>And adding the following line to <code>/etc/initramfs-tools/conf.d/resume</code>. You should create the file if the file doesn&rsquo;t already exist.</li>
 </ul>
 <pre tabindex="0"><code>resume=UUID=&lt;UUID&gt; resume_offset=&lt;offset&gt;
 </code></pre><ul>
 <li>Finally, we update our kernel configuration through:</li>
 </ul>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">sudo update-initramfs -u
-</code></pre></div><p>In order to test if this worked you can restart your system, and then run see what happens:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">sudo systemctl hibernate
-
-</code></pre></div><h2 id="configure-hibernation-when-closing-the-lid">Configure hibernation when closing the lid</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>sudo update-initramfs -u
+</span></span></code></pre></div><p>In order to test if this worked you can restart your system, and then run see what happens:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>sudo systemctl hibernate
+</span></span></code></pre></div><h2 id="configure-hibernation-when-closing-the-lid">Configure hibernation when closing the lid</h2>
 <p>Cool! So hibernate works, but how can I <strong>configure the system to hibernate after some time when closing the lid</strong> so my battery is not drained? Actually this was simpler than expected. We just need to:</p>
 <ul>
 <li>Edit  <code>/etc/systemd/logind.conf</code> to enable <code>suspend-then-hibernate</code> (as you may see in the config below, you can also optionally set this configuration when the lid is closed and there is external power, or when we suspend the device after being idle for some time):</li>
 </ul>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-diff" data-lang="diff">[Login]
-. . .
-#HandlePowerKey=poweroff
-#HandleSuspendKey=suspend
-#HandleHibernateKey=hibernate
-#HandleLidSwitch=suspend
-<span style="color:#a6e22e">+ HandleLidSwitch=suspend-then-hibernate
-</span><span style="color:#a6e22e"></span>HandleLidSwitchExternalPower=suspend-then-hibernate
-#HandleLidSwitchDocked=ignore
-#HandleRebootKey=reboot
-#PowerKeyIgnoreInhibited=no
-#SuspendKeyIgnoreInhibited=no
-#HibernateKeyIgnoreInhibited=no
-#LidSwitchIgnoreInhibited=yes
-#RebootKeyIgnoreInhibited=no
-#HoldoffTimeoutSec=30s
-#IdleAction=ignore
-IdleAction=suspend-then-hibernate
-#IdleActionSec=30min
-IdleActionSec=30min
-. . .
-</code></pre></div><ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-diff" data-lang="diff"><span style="display:flex;"><span>[Login]
+</span></span><span style="display:flex;"><span>. . .
+</span></span><span style="display:flex;"><span>#HandlePowerKey=poweroff
+</span></span><span style="display:flex;"><span>#HandleSuspendKey=suspend
+</span></span><span style="display:flex;"><span>#HandleHibernateKey=hibernate
+</span></span><span style="display:flex;"><span>#HandleLidSwitch=suspend
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">+ HandleLidSwitch=suspend-then-hibernate
+</span></span></span><span style="display:flex;"><span><span style="color:#a6e22e"></span>HandleLidSwitchExternalPower=suspend-then-hibernate
+</span></span><span style="display:flex;"><span>#HandleLidSwitchDocked=ignore
+</span></span><span style="display:flex;"><span>#HandleRebootKey=reboot
+</span></span><span style="display:flex;"><span>#PowerKeyIgnoreInhibited=no
+</span></span><span style="display:flex;"><span>#SuspendKeyIgnoreInhibited=no
+</span></span><span style="display:flex;"><span>#HibernateKeyIgnoreInhibited=no
+</span></span><span style="display:flex;"><span>#LidSwitchIgnoreInhibited=yes
+</span></span><span style="display:flex;"><span>#RebootKeyIgnoreInhibited=no
+</span></span><span style="display:flex;"><span>#HoldoffTimeoutSec=30s
+</span></span><span style="display:flex;"><span>#IdleAction=ignore
+</span></span><span style="display:flex;"><span>IdleAction=suspend-then-hibernate
+</span></span><span style="display:flex;"><span>#IdleActionSec=30min
+</span></span><span style="display:flex;"><span>IdleActionSec=30min
+</span></span><span style="display:flex;"><span>. . .
+</span></span></code></pre></div><ul>
 <li>We can configure the delay in seconds for hibernate to kick-in when the system is suspended by editing <code>etc/systemd/sleep.conf</code> as follows (in my case 60 mins):</li>
 </ul>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-diff" data-lang="diff">[Sleep]
-#AllowSuspend=yes
-#AllowHibernation=yes
-#AllowSuspendThenHibernate=yes
-#AllowHybridSleep=yes
-#SuspendMode=
-#SuspendState=mem standby freeze
-#HibernateMode=platform shutdown
-#HibernateState=disk
-#HybridSleepMode=suspend platform shutdown
-#HybridSleepState=disk
-#HibernateDelaySec=180min
-<span style="color:#a6e22e">+ HibernateDelaySec=60min
-</span></code></pre></div><p>And with this (hopefully), you won&rsquo;t run out of battery when you close your lid and forget to shutdown your laptop for the day. If you try this, let me know if it works for you. I would love to keep this article as up-to-date as possible, and even add a <em>&ldquo;workaround&rdquo;</em> section with all of the &ldquo;gotchas&rdquo; that other people may have found. Cheers!</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-diff" data-lang="diff"><span style="display:flex;"><span>[Sleep]
+</span></span><span style="display:flex;"><span>#AllowSuspend=yes
+</span></span><span style="display:flex;"><span>#AllowHibernation=yes
+</span></span><span style="display:flex;"><span>#AllowSuspendThenHibernate=yes
+</span></span><span style="display:flex;"><span>#AllowHybridSleep=yes
+</span></span><span style="display:flex;"><span>#SuspendMode=
+</span></span><span style="display:flex;"><span>#SuspendState=mem standby freeze
+</span></span><span style="display:flex;"><span>#HibernateMode=platform shutdown
+</span></span><span style="display:flex;"><span>#HibernateState=disk
+</span></span><span style="display:flex;"><span>#HybridSleepMode=suspend platform shutdown
+</span></span><span style="display:flex;"><span>#HybridSleepState=disk
+</span></span><span style="display:flex;"><span>#HibernateDelaySec=180min
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">+ HibernateDelaySec=60min
+</span></span></span></code></pre></div><p>And with this (hopefully), you won&rsquo;t run out of battery when you close your lid and forget to shutdown your laptop for the day. If you try this, let me know if it works for you. I would love to keep this article as up-to-date as possible, and even add a <em>&ldquo;workaround&rdquo;</em> section with all of the &ldquo;gotchas&rdquo; that other people may have found. Cheers!</p>
 <h2 id="references">References</h2>
 <ul>
 <li><a href="https://abskmj.github.io/notes/posts/pop-os/enable-hibernate/">https://abskmj.github.io/notes/posts/pop-os/enable-hibernate/</a></li>
@@ -234,7 +236,7 @@ IdleActionSec=30min
 
     <footer id="footer">
   <div class="footer-left">
-    Copyright  &copy; 2024  @adlrocha 
+    Copyright  &copy; 2025  @adlrocha 
   </div>
   <div class="footer-right">
     <nav>

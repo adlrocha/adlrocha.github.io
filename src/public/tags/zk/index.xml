@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>ZK on @adlrocha</title>
+    <link>//localhost:1313/tags/zk/</link>
+    <description>Recent content in ZK on @adlrocha</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 31 Jan 2024 00:00:00 +0000</lastBuildDate>
+    <atom:link href="//localhost:1313/tags/zk/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Deno Internals</title>
+      <link>//localhost:1313/blog/2024-xx-xx-zkvm/</link>
+      <pubDate>Wed, 31 Jan 2024 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/blog/2024-xx-xx-zkvm/</guid>
+      <description>&lt;ul&gt;&#xA;&lt;li&gt;Check how FVM compiles the EVM to Wasm (new runtimes).&lt;/li&gt;&#xA;&lt;li&gt;Vitalik: The different kinds of ZkEVM: &lt;a href=&#34;https://vitalik.ca/general/2022/08/04/zkevm.html&#34;&gt;https://vitalik.ca/general/2022/08/04/zkevm.html&lt;/a&gt;&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h2 id=&#34;zkevms&#34;&gt;ZKEVMs&lt;/h2&gt;&#xA;&lt;p&gt;&lt;img src=&#34;../images/zkevm-comparison.png&#34; alt=&#34;&#34;&gt;&#xA;&lt;img src=&#34;../images/zkevm-landscape.png&#34; alt=&#34;&#34;&gt;&#xA;&lt;em&gt;Source: &lt;a href=&#34;https://blog.jarrodwatts.com/the-ultimate-zk-evm-comparison-guide&#34;&gt;https://blog.jarrodwatts.com/the-ultimate-zk-evm-comparison-guide&lt;/a&gt; (slightly updated)&lt;/em&gt;&lt;/p&gt;&#xA;&lt;p&gt;ZKEVM:&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Scroll:&lt;/li&gt;&#xA;&lt;li&gt;Taiko: &lt;a href=&#34;https://github.com/taikoxyz/raiko&#34;&gt;https://github.com/taikoxyz/raiko&lt;/a&gt;&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h2 id=&#34;general-purpose-zkvms&#34;&gt;General-purpose ZKVMs&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Risc0&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Docs: &lt;a href=&#34;https://dev.risczero.com/api&#34;&gt;https://dev.risczero.com/api&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;Risc0: &lt;a href=&#34;https://github.com/risc0/risc0&#34;&gt;https://github.com/risc0/risc0&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;Zeth: &lt;a href=&#34;https://github.com/risc0/zeth&#34;&gt;https://github.com/risc0/zeth&lt;/a&gt;&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;SP1:&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://github.com/succinctlabs/sp1&#34;&gt;https://github.com/succinctlabs/sp1&lt;/a&gt;&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;ZKWasm / Delphius Labs: &lt;a href=&#34;https://delphinuslab.com/2023/01/29/delphinus-tutorial-1-create-your-first-zkwasm-application/&#34;&gt;https://delphinuslab.com/2023/01/29/delphinus-tutorial-1-create-your-first-zkwasm-application/&lt;/a&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;What is the backend?&lt;/li&gt;&#xA;&lt;li&gt;Wasm functions. Creates a circuit. Generate proofs of the execution.&lt;/li&gt;&#xA;&lt;li&gt;Code: &lt;a href=&#34;https://github.com/DelphinusLab/zkWasm&#34;&gt;https://github.com/DelphinusLab/zkWasm&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;Circuit: &lt;a href=&#34;https://jhc.sjtu.edu.cn/~hongfeifu/manuscriptb.pdf&#34;&gt;https://jhc.sjtu.edu.cn/~hongfeifu/manuscriptb.pdf&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;ZkWasm code explorer: &lt;a href=&#34;https://explorer.zkwasmhub.com/&#34;&gt;https://explorer.zkwasmhub.com/&lt;/a&gt;&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/li&gt;&#xA;&lt;/ul&gt;</description>
+    </item>
+  </channel>
+</rss>

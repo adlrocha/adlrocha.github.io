@@ -4,296 +4,275 @@
     <title>Tags on @adlrocha</title>
     <link>/tags/</link>
     <description>Recent content in Tags on @adlrocha</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 25 Jul 2024 00:00:00 +0000</lastBuildDate><atom:link href="/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 10 Jun 2025 00:00:00 +0000</lastBuildDate>
+    <atom:link href="/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>entrepreneurship</title>
+      <title>Baselight</title>
+      <link>/tags/baselight/</link>
+      <pubDate>Tue, 10 Jun 2025 00:00:00 +0000</pubDate>
+      <guid>/tags/baselight/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Data</title>
+      <link>/tags/data/</link>
+      <pubDate>Tue, 10 Jun 2025 00:00:00 +0000</pubDate>
+      <guid>/tags/data/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Entrepreneurship</title>
       <link>/tags/entrepreneurship/</link>
-      <pubDate>Thu, 25 Jul 2024 00:00:00 +0000</pubDate>
-      
+      <pubDate>Tue, 10 Jun 2025 00:00:00 +0000</pubDate>
       <guid>/tags/entrepreneurship/</guid>
       <description></description>
     </item>
-    
-    <item>
-      <title>ideas</title>
-      <link>/tags/ideas/</link>
-      <pubDate>Thu, 25 Jul 2024 00:00:00 +0000</pubDate>
-      
-      <guid>/tags/ideas/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>personal</title>
-      <link>/tags/personal/</link>
-      <pubDate>Thu, 25 Jul 2024 00:00:00 +0000</pubDate>
-      
-      <guid>/tags/personal/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>blunders</title>
-      <link>/tags/blunders/</link>
-      <pubDate>Tue, 05 Mar 2024 00:00:00 +0000</pubDate>
-      
-      <guid>/tags/blunders/</guid>
-      <description></description>
-    </item>
-    
     <item>
       <title>LLM</title>
       <link>/tags/llm/</link>
-      <pubDate>Sun, 18 Feb 2024 00:00:00 +0000</pubDate>
-      
+      <pubDate>Tue, 10 Jun 2025 00:00:00 +0000</pubDate>
       <guid>/tags/llm/</guid>
       <description></description>
     </item>
-    
+    <item>
+      <title>Startup</title>
+      <link>/tags/startup/</link>
+      <pubDate>Tue, 10 Jun 2025 00:00:00 +0000</pubDate>
+      <guid>/tags/startup/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Bigquery</title>
+      <link>/tags/bigquery/</link>
+      <pubDate>Thu, 23 Jan 2025 00:00:00 +0000</pubDate>
+      <guid>/tags/bigquery/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Duckdb</title>
+      <link>/tags/duckdb/</link>
+      <pubDate>Thu, 23 Jan 2025 00:00:00 +0000</pubDate>
+      <guid>/tags/duckdb/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Sql</title>
+      <link>/tags/sql/</link>
+      <pubDate>Thu, 23 Jan 2025 00:00:00 +0000</pubDate>
+      <guid>/tags/sql/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Ideas</title>
+      <link>/tags/ideas/</link>
+      <pubDate>Thu, 25 Jul 2024 00:00:00 +0000</pubDate>
+      <guid>/tags/ideas/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Personal</title>
+      <link>/tags/personal/</link>
+      <pubDate>Thu, 25 Jul 2024 00:00:00 +0000</pubDate>
+      <guid>/tags/personal/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Blunders</title>
+      <link>/tags/blunders/</link>
+      <pubDate>Tue, 05 Mar 2024 00:00:00 +0000</pubDate>
+      <guid>/tags/blunders/</guid>
+      <description></description>
+    </item>
     <item>
       <title>ML</title>
       <link>/tags/ml/</link>
       <pubDate>Sun, 18 Feb 2024 00:00:00 +0000</pubDate>
-      
       <guid>/tags/ml/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>research</title>
+      <title>Research</title>
       <link>/tags/research/</link>
       <pubDate>Sun, 18 Feb 2024 00:00:00 +0000</pubDate>
-      
       <guid>/tags/research/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>rust</title>
+      <title>Rust</title>
       <link>/tags/rust/</link>
       <pubDate>Sun, 18 Feb 2024 00:00:00 +0000</pubDate>
-      
       <guid>/tags/rust/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>Wasm</title>
       <link>/tags/wasm/</link>
       <pubDate>Sun, 18 Feb 2024 00:00:00 +0000</pubDate>
-      
       <guid>/tags/wasm/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>Linux</title>
       <link>/tags/linux/</link>
       <pubDate>Tue, 13 Feb 2024 00:00:00 +0000</pubDate>
-      
       <guid>/tags/linux/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>operating systems</title>
+      <title>Operating Systems</title>
       <link>/tags/operating-systems/</link>
       <pubDate>Tue, 13 Feb 2024 00:00:00 +0000</pubDate>
-      
       <guid>/tags/operating-systems/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>AI</title>
       <link>/tags/ai/</link>
       <pubDate>Sun, 21 Jan 2024 00:00:00 +0000</pubDate>
-      
       <guid>/tags/ai/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>programming</title>
+      <title>Programming</title>
       <link>/tags/programming/</link>
       <pubDate>Sat, 20 Jan 2024 00:00:00 +0000</pubDate>
-      
       <guid>/tags/programming/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>python</title>
+      <title>Python</title>
       <link>/tags/python/</link>
       <pubDate>Sat, 20 Jan 2024 00:00:00 +0000</pubDate>
-      
       <guid>/tags/python/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>pytorch</title>
+      <title>Pytorch</title>
       <link>/tags/pytorch/</link>
       <pubDate>Sat, 20 Jan 2024 00:00:00 +0000</pubDate>
-      
       <guid>/tags/pytorch/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>self-improvement</title>
+      <title>Self-Improvement</title>
       <link>/tags/self-improvement/</link>
       <pubDate>Thu, 04 Jan 2024 00:00:00 +0000</pubDate>
-      
       <guid>/tags/self-improvement/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>decentralization</title>
+      <title>Decentralization</title>
       <link>/tags/decentralization/</link>
       <pubDate>Mon, 30 Oct 2023 00:00:00 +0000</pubDate>
-      
       <guid>/tags/decentralization/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>web3</title>
+      <title>Web3</title>
       <link>/tags/web3/</link>
       <pubDate>Mon, 30 Oct 2023 00:00:00 +0000</pubDate>
-      
       <guid>/tags/web3/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>blockchain</title>
+      <title>Blockchain</title>
       <link>/tags/blockchain/</link>
       <pubDate>Thu, 10 Aug 2023 00:00:00 +0000</pubDate>
-      
       <guid>/tags/blockchain/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>consensus</title>
+      <title>Consensus</title>
       <link>/tags/consensus/</link>
       <pubDate>Thu, 10 Aug 2023 00:00:00 +0000</pubDate>
-      
       <guid>/tags/consensus/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>existential risks</title>
+      <title>Existential Risks</title>
       <link>/tags/existential-risks/</link>
       <pubDate>Fri, 21 Jul 2023 00:00:00 +0000</pubDate>
-      
       <guid>/tags/existential-risks/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>Ethereum</title>
       <link>/tags/ethereum/</link>
       <pubDate>Mon, 10 Jul 2023 00:00:00 +0000</pubDate>
-      
       <guid>/tags/ethereum/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>smart-contract</title>
+      <title>Smart-Contract</title>
       <link>/tags/smart-contract/</link>
       <pubDate>Mon, 10 Jul 2023 00:00:00 +0000</pubDate>
-      
       <guid>/tags/smart-contract/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>solidity</title>
+      <title>Solidity</title>
       <link>/tags/solidity/</link>
       <pubDate>Mon, 10 Jul 2023 00:00:00 +0000</pubDate>
-      
       <guid>/tags/solidity/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>design patterns</title>
+      <title>Design Patterns</title>
       <link>/tags/design-patterns/</link>
       <pubDate>Wed, 28 Jun 2023 00:00:00 +0000</pubDate>
-      
       <guid>/tags/design-patterns/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>software-dev</title>
+      <title>Software-Dev</title>
       <link>/tags/software-dev/</link>
       <pubDate>Wed, 28 Jun 2023 00:00:00 +0000</pubDate>
-      
       <guid>/tags/software-dev/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>edge computing</title>
+      <title>Edge Computing</title>
       <link>/tags/edge-computing/</link>
       <pubDate>Tue, 27 Jun 2023 00:00:00 +0000</pubDate>
-      
       <guid>/tags/edge-computing/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>reading</title>
+      <title>Reading</title>
       <link>/tags/reading/</link>
       <pubDate>Mon, 26 Jun 2023 00:00:00 +0000</pubDate>
-      
       <guid>/tags/reading/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>web-dev</title>
+      <title>Web-Dev</title>
       <link>/tags/web-dev/</link>
       <pubDate>Wed, 14 Jun 2023 00:00:00 +0000</pubDate>
-      
       <guid>/tags/web-dev/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>go, programming</title>
+      <title>Go, Programming</title>
       <link>/tags/go-programming/</link>
       <pubDate>Sun, 21 Mar 2021 00:00:00 +0000</pubDate>
-      
       <guid>/tags/go-programming/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>reflections</title>
+      <title>Reflections</title>
       <link>/tags/reflections/</link>
       <pubDate>Thu, 29 Oct 2020 18:16:08 +0100</pubDate>
-      
       <guid>/tags/reflections/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>networking</title>
+      <title>Networking</title>
       <link>/tags/networking/</link>
       <pubDate>Tue, 13 Oct 2020 18:16:08 +0100</pubDate>
-      
       <guid>/tags/networking/</guid>
       <description></description>
     </item>
-    
   </channel>
 </rss>

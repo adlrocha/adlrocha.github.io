@@ -8,17 +8,23 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="robots" content="all,follow">
   <meta name="googlebot" content="index,follow,snippet,archive">
-  <meta property="og:title" content="RandomX: PoW for general-purpose CPUs" />
-<meta property="og:description" content="RandomX: PoW for general-purpose CPUs I was discussing today with the Fluence Labs team and they were describing how they want their Fluence network to be run by a PoW consensus algorithm. They want miners to be able to mine new blocks with just a general-purpose CPU, without requiring expensive GPUs or ASICs. And I didn&rsquo;t know that there was already a PoW implementation, originally implemented for Monero, that is optimized for its use in general purpose CPUs." />
-<meta property="og:type" content="article" />
-<meta property="og:url" content="/til/2023-08-10-randomx/" /><meta property="article:section" content="til" />
-<meta property="article:published_time" content="2023-08-10T00:00:00+00:00" />
-<meta property="article:modified_time" content="2023-08-10T00:00:00+00:00" />
+  <meta property="og:url" content="/til/2023-08-10-randomx/">
+  <meta property="og:site_name" content="@adlrocha">
+  <meta property="og:title" content="RandomX: PoW for general-purpose CPUs">
+  <meta property="og:description" content="RandomX: PoW for general-purpose CPUs I was discussing today with the Fluence Labs team and they were describing how they want their Fluence network to be run by a PoW consensus algorithm. They want miners to be able to mine new blocks with just a general-purpose CPU, without requiring expensive GPUs or ASICs. And I didn’t know that there was already a PoW implementation, originally implemented for Monero, that is optimized for its use in general purpose CPUs.">
+  <meta property="og:locale" content="en_us">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="til">
+    <meta property="article:published_time" content="2023-08-10T00:00:00+00:00">
+    <meta property="article:modified_time" content="2023-08-10T00:00:00+00:00">
+    <meta property="article:tag" content="Blockchain">
+    <meta property="article:tag" content="Web3">
+    <meta property="article:tag" content="Consensus">
 
-
-  <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="RandomX: PoW for general-purpose CPUs"/>
-<meta name="twitter:description" content="RandomX: PoW for general-purpose CPUs I was discussing today with the Fluence Labs team and they were describing how they want their Fluence network to be run by a PoW consensus algorithm. They want miners to be able to mine new blocks with just a general-purpose CPU, without requiring expensive GPUs or ASICs. And I didn&rsquo;t know that there was already a PoW implementation, originally implemented for Monero, that is optimized for its use in general purpose CPUs."/>
+  
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="RandomX: PoW for general-purpose CPUs">
+  <meta name="twitter:description" content="RandomX: PoW for general-purpose CPUs I was discussing today with the Fluence Labs team and they were describing how they want their Fluence network to be run by a PoW consensus algorithm. They want miners to be able to mine new blocks with just a general-purpose CPU, without requiring expensive GPUs or ASICs. And I didn’t know that there was already a PoW implementation, originally implemented for Monero, that is optimized for its use in general purpose CPUs.">
 
   
   
@@ -36,7 +42,6 @@
   
 <link rel="icon" type="image/png" href="/images/favicon.ico" />
 
-  
   
 </head>
 
@@ -101,7 +106,7 @@
     </p>
     <h1 id="randomx-pow-for-general-purpose-cpus">RandomX: PoW for general-purpose CPUs</h1>
 <p>I was discussing today with the <a href="https://github.com/fluencelabs">Fluence Labs</a> team and they were describing how they want their Fluence network to be run by a PoW consensus algorithm. They want miners to be able to mine new blocks with just a general-purpose CPU, without requiring expensive GPUs or ASICs. And I didn&rsquo;t know that there was already a PoW implementation, originally implemented for Monero, that is optimized for its use in general purpose CPUs.</p>
-<p>This implementation is <a href="https://github.com/fluencelabs/RandomX">RandomX</a>. <em>&ldquo;RandomX is a proof-of-work (PoW) algorithm that is optimized for general-purpose CPUs. RandomX uses random code execution (hence the name) together with several memory-hard techniques to minimize the efficiency advantage of specialized hardware.&quot;</em>.</p>
+<p>This implementation is <a href="https://github.com/fluencelabs/RandomX">RandomX</a>. <em>&ldquo;RandomX is a proof-of-work (PoW) algorithm that is optimized for general-purpose CPUs. RandomX uses random code execution (hence the name) together with several memory-hard techniques to minimize the efficiency advantage of specialized hardware.&rdquo;</em>.</p>
 <p>Borrowing a few paragraphs from their README:</p>
 <blockquote>
 <p>RandomX utilizes a virtual machine that executes programs in a special instruction set that consists of integer math, floating point math and branches. These programs can be translated into the CPU&rsquo;s native machine code on the fly (example: program.asm). At the end, the outputs of the executed programs are consolidated into a 256-bit result using a cryptographic hashing function (Blake2b).</p>
@@ -109,8 +114,7 @@
 <ul>
 <li>The key K is selected to be the hash of a block in the blockchain - this block is called the &lsquo;key block&rsquo;. For optimal mining and verification performance, the key should change every 2048 blocks (~2.8 days) and there should be a delay of 64 blocks (~2 hours) between the key block and the change of the key K. This can be achieved by changing the key when blockHeight % 2048 == 64 and selecting key block such that keyBlockHeight % 2048 == 0.</li>
 <li>The input H is the standard hashing blob with a selected nonce value.</li>
-</ul>
-</blockquote>
+</ul></blockquote>
 <p>If used with care, this protocol should achieve ASIC resistance, offering theoretical <em>&ldquo;equal&rdquo;</em> opportunity and access to mining rewards to all miners in the system.</p>
 <p>The team at Fluence seems to also be exploring a <a href="https://github.com/fluencelabs/randomx_risc0">RiscZero implementation for RandomX</a>. Really cool stuff!</p>
 
@@ -136,7 +140,7 @@
 
     <footer id="footer">
   <div class="footer-left">
-    Copyright  &copy; 2024  @adlrocha 
+    Copyright  &copy; 2025  @adlrocha 
   </div>
   <div class="footer-right">
     <nav>

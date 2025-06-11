@@ -4,57 +4,44 @@
     <title>AI on @adlrocha</title>
     <link>/tags/ai/</link>
     <description>Recent content in AI on @adlrocha</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 21 Jan 2024 00:00:00 +0000</lastBuildDate><atom:link href="/tags/ai/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 21 Jan 2024 00:00:00 +0000</lastBuildDate>
+    <atom:link href="/tags/ai/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Late arrival to the fuss of LLMs</title>
       <link>/blog/2024-01-18-intro-llms/</link>
       <pubDate>Sun, 21 Jan 2024 00:00:00 +0000</pubDate>
-      
       <guid>/blog/2024-01-18-intro-llms/</guid>
-      <description>Late Arrival to the Fuss of LLMs  From zero to zero-point-one in a few resources
- After spending some time reading about the state of AI at a high-level, it was time to dive into the details. For obvious reasons, I decided LLMs were a good first-stop for my AI enlightenment. What are LLMs and how they work (because apparently the why is still a burning open question)?.
-Rivers of digital ink have been spilled lately with gentle introductions and deep illustrations of how LLMs and their underlying transformer architectures work.</description>
+      <description>&lt;h1 id=&#34;late-arrival-to-the-fuss-of-llms&#34;&gt;Late Arrival to the Fuss of LLMs&lt;/h1&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;p&gt;From zero to zero-point-one in a few resources&lt;/p&gt;&lt;/blockquote&gt;&#xA;&lt;p&gt;After spending some time reading about the &lt;a href=&#34;./2023-12-07-state-ai.md&#34;&gt;state of AI&lt;/a&gt; at a high-level, it was time to dive into the details. For obvious reasons, I decided LLMs were a good first-stop for my AI enlightenment. &lt;strong&gt;What are LLMs and how they work (because apparently the why is still a burning open question)?&lt;/strong&gt;.&lt;/p&gt;&#xA;&lt;p&gt;Rivers of digital ink have been spilled lately with gentle introductions and deep illustrations of how LLMs and their underlying transformer architectures work. The good thing about this? There is a lot of information available to learn about them. The bad thing? Filtering the best resources to get you to a good understanding with the lower overhead may be time consuming. Consequently, I decided that instead of writing yet another introductory post about transformers and LLMs, it may be more useful to just share the curated list of resources that have helped me the most on this humble quest. I hope you enjoy it (and if you find any good resource worth including to this list, feel free to send it my way and I&amp;rsquo;ll edit this post).&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Remember `to(&#39;cpu&#39;)` in Pytorch to release GPU memory</title>
       <link>/til/2024-01-11-pytorch-collab-to-cpu/</link>
       <pubDate>Sat, 20 Jan 2024 00:00:00 +0000</pubDate>
-      
       <guid>/til/2024-01-11-pytorch-collab-to-cpu/</guid>
-      <description>Remember to(&#39;cpu&#39;) in Pytorch to release GPU memory When I saw that Microsoft had released phi-2, a 2.7B parameters LLM, I thought: &amp;ldquo;this is the perfect excuse to get my hands dirty with LLMs&amp;rdquo;. The model was small enough to test it directly inside Google Colab, as it would fit the 15GiB memory GPUs provided in the free plan.
-So without further ado, I opened Google Colab, pip installed HF&amp;rsquo;s transformers library, and wrote the following code snippet to test the model:</description>
+      <description>&lt;h1 id=&#34;remember-tocpu-in-pytorch-to-release-gpu-memory&#34;&gt;Remember &lt;code&gt;to(&#39;cpu&#39;)&lt;/code&gt; in Pytorch to release GPU memory&lt;/h1&gt;&#xA;&lt;p&gt;When I saw that Microsoft had released &lt;a href=&#34;https://www.microsoft.com/en-us/research/blog/phi-2-the-surprising-power-of-small-language-models/&#34;&gt;phi-2&lt;/a&gt;, a 2.7B parameters LLM, I thought: &lt;em&gt;&amp;ldquo;this is the perfect excuse to get my hands dirty with LLMs&amp;rdquo;&lt;/em&gt;. The model was small enough to test it directly inside Google Colab, as it would fit the 15GiB memory GPUs provided in the free plan.&lt;/p&gt;&#xA;&lt;p&gt;So without further ado, I opened Google Colab, &lt;code&gt;pip install&lt;/code&gt;ed HF&amp;rsquo;s &lt;code&gt;transformers&lt;/code&gt; library, and wrote the following code snippet to test the model:&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Making sense of the current state of AI</title>
       <link>/blog/2024-01-10-state-ai/</link>
       <pubDate>Wed, 10 Jan 2024 00:00:00 +0000</pubDate>
-      
       <guid>/blog/2024-01-10-state-ai/</guid>
-      <description>@adlrocha - Making sense of the current state of AI  Or rather, my limited view as an outsider.
- I&amp;rsquo;ve been trying to stay up to date (at least at a high level) with all the new developments in the field of AI, but with my full-time job it has been quite a challenge. This can be even more of a challenge when your full-time job is not closely related with the field of AI.</description>
+      <description>&lt;h1 id=&#34;adlrocha---making-sense-of-the-current-state-of-ai&#34;&gt;@adlrocha - Making sense of the current state of AI&lt;/h1&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;p&gt;Or rather, my limited view as an outsider.&lt;/p&gt;&lt;/blockquote&gt;&#xA;&lt;p&gt;I&amp;rsquo;ve been trying to stay up to date (at least at a high level) with all the new developments in the field of AI, but with my full-time job it has been quite a challenge. This can be even more of a challenge when your full-time job is not closely related with the field of AI. My only sources of information these days for all AI-related topics have been Twitter and Hacker News. To make matters worse, my ML background is quite limited and dates back to my college years, so I only understand just half of what I read.&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>80,000 hours: Positive impact jobs</title>
       <link>/til/2023-07-21-80000/</link>
       <pubDate>Fri, 21 Jul 2023 00:00:00 +0000</pubDate>
-      
       <guid>/til/2023-07-21-80000/</guid>
-      <description>8,000 hours: Positive impact jobs I am genuinely worried about the existential risk that AI may pose to humanity in the next decade. Some people take this as a unreal threat inherited from science fiction movies, but I beg to differ. I have studied AI fundamentals when I was in college, and I even ended up doing AI professionally a decade ago for a few months (when LLMs weren&amp;rsquo;t a thing, the transformer paper had just been published, and random forest was still winning Kaggle competitions).</description>
+      <description>&lt;h1 id=&#34;8000-hours-positive-impact-jobs&#34;&gt;8,000 hours: Positive impact jobs&lt;/h1&gt;&#xA;&lt;p&gt;I am genuinely worried about the existential risk that AI may pose to humanity in the next decade. Some people take this as a unreal threat inherited from science fiction movies, but I beg to differ. I have studied AI fundamentals when I was in college, and I even ended up doing AI professionally a decade ago for a few months (when LLMs weren&amp;rsquo;t a thing, the transformer paper had just been published, and random forest was still winning Kaggle competitions). Sadly, I don&amp;rsquo;t think I have the required background to contribute to this problem in any way.&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>June 2023 AI-related Reading List</title>
       <link>/til/2023-06-26-ai-links/</link>
       <pubDate>Mon, 26 Jun 2023 00:00:00 +0000</pubDate>
-      
       <guid>/til/2023-06-26-ai-links/</guid>
-      <description>June 2023 AI-related Reading List I just found myself with a few dozens of tabs opened with AI-related resources that I wanted to read. I feel that having them in RAM (i.e. opened in my browser) was starting overwhelm me, as I felt I could never find the time to read them (leading to a really uncomfortable feeling while I had to make progress in my day-to-day job). Hence, I decided to periodically move from RAM to a &amp;ldquo;persistent storage&amp;rdquo; my reading lists so that I could pick them up once I have some time for them (and in the process share them with others that my be interested).</description>
+      <description>&lt;h1 id=&#34;june-2023-ai-related-reading-list&#34;&gt;June 2023 AI-related Reading List&lt;/h1&gt;&#xA;&lt;p&gt;I just found myself with a few dozens of tabs opened with AI-related resources that I wanted to read. I feel that having them in &lt;em&gt;RAM&lt;/em&gt; (i.e. opened in my browser) was starting overwhelm me, as I felt I could never find the time to read them (leading to a really uncomfortable feeling while I had to make progress in my day-to-day job). Hence, I decided to periodically move from &lt;em&gt;RAM&lt;/em&gt; to a &lt;em&gt;&amp;ldquo;persistent storage&amp;rdquo;&lt;/em&gt; my reading lists so that I could pick them up once I have some time for them (and in the process share them with others that my be interested).&lt;/p&gt;</description>
     </item>
-    
   </channel>
 </rss>

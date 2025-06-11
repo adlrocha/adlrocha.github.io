@@ -4,17 +4,16 @@
     <title>Blunders on @adlrocha</title>
     <link>/blunders/</link>
     <description>Recent content in Blunders on @adlrocha</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 05 Mar 2024 00:00:00 +0000</lastBuildDate><atom:link href="/blunders/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 05 Mar 2024 00:00:00 +0000</lastBuildDate>
+    <atom:link href="/blunders/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>I should have done this sooner</title>
       <link>/blunders/intro/</link>
       <pubDate>Tue, 05 Mar 2024 00:00:00 +0000</pubDate>
-      
       <guid>/blunders/intro/</guid>
-      <description>I guess this one is self-explanatory. I regret not having come up with this idea of tracking all of my blunders sooner. The idea is to keep a tracker of all the mistakes or &amp;ldquo;better decisions&amp;rdquo; that I could have made through my career. That way I can look back on them the next time I am faced with similar situations. For context, this post gave me the idea.</description>
+      <description>&lt;p&gt;I guess this one is self-explanatory. I regret not having come up with this idea of tracking all of my blunders sooner. The idea is to keep a tracker of all the mistakes or &amp;ldquo;better decisions&amp;rdquo; that I could have made through my career. That way I can look back on them the next time I am faced with similar situations. For context, &lt;a href=&#34;https://cep.dev/posts/every-infrastructure-decision-i-endorse-or-regret-after-4-years-running-infrastructure-at-a-startup/&#34;&gt;this post&lt;/a&gt; gave me the idea.&lt;/p&gt;</description>
     </item>
-    
   </channel>
 </rss>

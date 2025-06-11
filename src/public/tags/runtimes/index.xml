@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Runtimes on @adlrocha</title>
+    <link>//localhost:1313/tags/runtimes/</link>
+    <description>Recent content in Runtimes on @adlrocha</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 31 Jan 2024 00:00:00 +0000</lastBuildDate>
+    <atom:link href="//localhost:1313/tags/runtimes/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Deno Internals</title>
+      <link>//localhost:1313/blog/2024-xx-xx-deno-internals/</link>
+      <pubDate>Wed, 31 Jan 2024 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/blog/2024-xx-xx-deno-internals/</guid>
+      <description>&lt;ul&gt;&#xA;&lt;li&gt;Deno internals: &lt;a href=&#34;https://choubey.gitbook.io/internals-of-deno/architecture/chapter-cover-page&#34;&gt;https://choubey.gitbook.io/internals-of-deno/architecture/chapter-cover-page&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;Embedding &lt;code&gt;deno_core&lt;/code&gt;: &lt;a href=&#34;https://docs.deno.com/runtime/manual/advanced/embedding_deno&#34;&gt;https://docs.deno.com/runtime/manual/advanced/embedding_deno&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;WebGPU examples: &lt;a href=&#34;https://github.com/denoland/webgpu-examples&#34;&gt;https://github.com/denoland/webgpu-examples&lt;/a&gt;&lt;/li&gt;&#xA;&lt;/ul&gt;</description>
+    </item>
+    <item>
+      <title>Deno Internals</title>
+      <link>//localhost:1313/blog/2024-xx-xx-zkvm/</link>
+      <pubDate>Wed, 31 Jan 2024 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/blog/2024-xx-xx-zkvm/</guid>
+      <description>&lt;ul&gt;&#xA;&lt;li&gt;Check how FVM compiles the EVM to Wasm (new runtimes).&lt;/li&gt;&#xA;&lt;li&gt;Vitalik: The different kinds of ZkEVM: &lt;a href=&#34;https://vitalik.ca/general/2022/08/04/zkevm.html&#34;&gt;https://vitalik.ca/general/2022/08/04/zkevm.html&lt;/a&gt;&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h2 id=&#34;zkevms&#34;&gt;ZKEVMs&lt;/h2&gt;&#xA;&lt;p&gt;&lt;img src=&#34;../images/zkevm-comparison.png&#34; alt=&#34;&#34;&gt;&#xA;&lt;img src=&#34;../images/zkevm-landscape.png&#34; alt=&#34;&#34;&gt;&#xA;&lt;em&gt;Source: &lt;a href=&#34;https://blog.jarrodwatts.com/the-ultimate-zk-evm-comparison-guide&#34;&gt;https://blog.jarrodwatts.com/the-ultimate-zk-evm-comparison-guide&lt;/a&gt; (slightly updated)&lt;/em&gt;&lt;/p&gt;&#xA;&lt;p&gt;ZKEVM:&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Scroll:&lt;/li&gt;&#xA;&lt;li&gt;Taiko: &lt;a href=&#34;https://github.com/taikoxyz/raiko&#34;&gt;https://github.com/taikoxyz/raiko&lt;/a&gt;&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h2 id=&#34;general-purpose-zkvms&#34;&gt;General-purpose ZKVMs&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Risc0&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Docs: &lt;a href=&#34;https://dev.risczero.com/api&#34;&gt;https://dev.risczero.com/api&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;Risc0: &lt;a href=&#34;https://github.com/risc0/risc0&#34;&gt;https://github.com/risc0/risc0&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;Zeth: &lt;a href=&#34;https://github.com/risc0/zeth&#34;&gt;https://github.com/risc0/zeth&lt;/a&gt;&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;SP1:&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://github.com/succinctlabs/sp1&#34;&gt;https://github.com/succinctlabs/sp1&lt;/a&gt;&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;ZKWasm / Delphius Labs: &lt;a href=&#34;https://delphinuslab.com/2023/01/29/delphinus-tutorial-1-create-your-first-zkwasm-application/&#34;&gt;https://delphinuslab.com/2023/01/29/delphinus-tutorial-1-create-your-first-zkwasm-application/&lt;/a&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;What is the backend?&lt;/li&gt;&#xA;&lt;li&gt;Wasm functions. Creates a circuit. Generate proofs of the execution.&lt;/li&gt;&#xA;&lt;li&gt;Code: &lt;a href=&#34;https://github.com/DelphinusLab/zkWasm&#34;&gt;https://github.com/DelphinusLab/zkWasm&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;Circuit: &lt;a href=&#34;https://jhc.sjtu.edu.cn/~hongfeifu/manuscriptb.pdf&#34;&gt;https://jhc.sjtu.edu.cn/~hongfeifu/manuscriptb.pdf&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;ZkWasm code explorer: &lt;a href=&#34;https://explorer.zkwasmhub.com/&#34;&gt;https://explorer.zkwasmhub.com/&lt;/a&gt;&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/li&gt;&#xA;&lt;/ul&gt;</description>
+    </item>
+    <item>
+      <title>Ilya u30</title>
+      <link>//localhost:1313/blog/2024-xx-xx-ilya-30-u30/</link>
+      <pubDate>Wed, 31 Jan 2024 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/blog/2024-xx-xx-ilya-30-u30/</guid>
+      <description>&lt;h2 id=&#34;-information-theory-algorithmic-complexity-theory-and-other-relevant-background&#34;&gt;► Information theory, algorithmic complexity theory, and other relevant background&lt;/h2&gt;&#xA;&lt;h3 id=&#34;a-tutorial-introduction-to-the-minimum-description-length-principletutorialpaper&#34;&gt;&lt;a href=&#34;https://w.laudiacay.cool/2024/05/11/Tutorial-Introduction-to-MDL.html&#34;&gt;A Tutorial Introduction to the Minimum Description Length Principle&lt;/a&gt; &lt;a href=&#34;https://arxiv.org/pdf/math/0406077&#34;&gt;(Tutorial/Paper)&lt;/a&gt;&lt;/h3&gt;&#xA;&lt;p&gt;Friendly! Go read it!&lt;/p&gt;&#xA;&lt;h3 id=&#34;kolmogorov-complexity-and-algorithmic-randomnessfrom-page-434-onwards-textbook&#34;&gt;&lt;a href=&#34;https://www.lirmm.fr/~ashen/kolmbook-eng-scan.pdf&#34;&gt;Kolmogorov Complexity And Algorithmic Randomness&lt;/a&gt; from page 434 onwards (Textbook)&lt;/h3&gt;&#xA;&lt;p&gt;Oh this one is way less friendly haha&lt;/p&gt;&#xA;&lt;h3 id=&#34;the-first-law-of-complexodynamicsblog-post-andquantifying-the-rise-and-fall-of-complexity-in-closed-systems-the-coffee-automatonpaper&#34;&gt;&lt;a href=&#34;https://scottaaronson.blog/?p=762&#34;&gt;The First Law of Complexodynamics&lt;/a&gt; (Blog post) and &lt;a href=&#34;https://arxiv.org/pdf/1405.6903&#34;&gt;Quantifying the Rise and Fall of Complexity in Closed Systems: The Coffee Automaton&lt;/a&gt; (Paper)&lt;/h3&gt;&#xA;&lt;p&gt;TODO God I love Scott.&lt;/p&gt;&#xA;&lt;h3 id=&#34;keeping-neural-networks-simple-by-minimizing-the-description-length-of-the-weightspaper&#34;&gt;&lt;a href=&#34;https://www.cs.toronto.edu/~hinton/absps/colt93.pdf&#34;&gt;Keeping Neural Networks Simple by Minimizing the Description Length of the Weights&lt;/a&gt; (Paper)&lt;/h3&gt;&#xA;&lt;p&gt;TODO&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Tinygrad</title>
+      <link>//localhost:1313/blog/2024-xx-xx-tinygrad/</link>
+      <pubDate>Wed, 31 Jan 2024 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/blog/2024-xx-xx-tinygrad/</guid>
+      <description>&lt;ul&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;Good way to learn low-level operations: &lt;a href=&#34;https://twitter.com/_JamesWiles/status/1752536719075803383&#34;&gt;https://twitter.com/_JamesWiles/status/1752536719075803383&lt;/a&gt;&lt;/p&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;Concept of reducing maintainability and layering the stack&lt;/p&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;Micrograd compiled in C: &lt;a href=&#34;https://bernsteinbear.com/blog/compiling-ml-models/&#34;&gt;https://bernsteinbear.com/blog/compiling-ml-models/&lt;/a&gt;&lt;/p&gt;&#xA;&lt;/li&gt;&#xA;&lt;/ul&gt;</description>
+    </item>
+  </channel>
+</rss>

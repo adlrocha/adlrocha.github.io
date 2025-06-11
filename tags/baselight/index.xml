@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Baselight on @adlrocha</title>
+    <link>/tags/baselight/</link>
+    <description>Recent content in Baselight on @adlrocha</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 10 Jun 2025 00:00:00 +0000</lastBuildDate>
+    <atom:link href="/tags/baselight/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Baselight Letters Volume 1: Project Titanic, your personal assistant, and a flagship dataset</title>
+      <link>/blog/2025-06-10-baselight-letters-v1/</link>
+      <pubDate>Tue, 10 Jun 2025 00:00:00 +0000</pubDate>
+      <guid>/blog/2025-06-10-baselight-letters-v1/</guid>
+      <description>&lt;h2 id=&#34;baselight-letters-volume-1-project-titanic-your-personal-assistant-and-a-flagship-dataset&#34;&gt;Baselight Letters Volume 1: Project Titanic, your personal assistant, and a flagship dataset&lt;/h2&gt;&#xA;&lt;p&gt;We&amp;rsquo;ve been heads down pushing new features every week&#xA;to&lt;a href=&#34;https://c.vialoops.com/CL0/https:%2F%2Fbaselight.ai%2F%3Futm_source=loops%26utm_medium=email%26utm_campaign=lfcto1/1/010001975b424eed-5a4da8d6-e0a2-460e-bfbd-d36775aefc03-000000/UfwWxMvxjF9hhLNIqHF8FYdhG9xJ1YMR1ooc6ZPAhq0=408&#34;&gt; Baselight&lt;/a&gt;!&#xA;As the Baselight CTO, I want to make sure everyone knows all that we&amp;rsquo;ve been cooking, and the new&#xA;capabilities that these features would bring to them.&lt;/p&gt;&#xA;&lt;p&gt;This is my attempt to show you, a bi-weekly product update for Baselight. You&amp;rsquo;ve probably come&#xA;across&#xA;these&lt;a href=&#34;https://c.vialoops.com/CL0/https:%2F%2Fx.com%2FBaselightDB%2Fstatus%2F1929922621107261887/1/010001975b424eed-5a4da8d6-e0a2-460e-bfbd-d36775aefc03-000000/xZalc8MoCYafKKBe-2Gs55OKn6qIvStx360QNAzo32E=408&#34;&gt; Baselight Builder&lt;/a&gt;&#xA;and&lt;a href=&#34;https://c.vialoops.com/CL0/https:%2F%2Fx.com%2FBaselightDB%2Fstatus%2F1928149865042715116/1/010001975b424eed-5a4da8d6-e0a2-460e-bfbd-d36775aefc03-000000/wCdDfn_RWeLqZXpVmSVh24BOSKWT2GJSB5hALuANNwU=408&#34;&gt; Baselight is Data&lt;/a&gt;&#xA;updates. Well, these posts unpack what&amp;rsquo;s behind these updates and what&amp;rsquo;s to come.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>
