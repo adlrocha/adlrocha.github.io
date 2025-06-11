@@ -13,7 +13,7 @@ TITLE=$(echo "$TITLE" | sed 's/_/ /g')
 # Create the file with the date and header
 FILE="content/${DIR}/${DATE}-${TITLE}".md
 touch "$FILE"
-cat <<EOF > "$FILE"
+cat <<EOF >"$FILE"
 ---
 title: "$(echo "$TITLE" | sed 's/"/\\"/g')"
 date: "$DATE"
@@ -26,4 +26,4 @@ tags: []
 EOF
 
 # Open the file in your preferred text editor
-emacs "$FILE"
+vim "$FILE"
