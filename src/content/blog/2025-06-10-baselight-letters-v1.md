@@ -103,5 +103,7 @@ help you track down those annoying SQL errors that are sometimes hard to fix.
 The way it works is pretty straightforward, if you run an SQL query that includes errors, the
 assistant will inspect the error and suggest a fix. You can either apply the fix or reject it. No
 more headaches for a misspelled table.
+
 ![](https://lh7-rt.googleusercontent.com/docsz/AD_4nXfoNYk1Lw0EH3FhNGHzrC71yFsMAQsyYvSIPqPXmL6ovcuH1BMYy1oGiRyLbEQpedkYBAnZ5czZb0UbmeNGEVn1BoHBynRYKoMLa2qH8gYeV7AY25XAiIGYofXASlc3v9ghUr55?key=qpwcwKWkgSCXF4oicPGfEg)
+
 And with that! See you in two weeks!
