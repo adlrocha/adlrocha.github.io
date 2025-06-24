@@ -6,8 +6,15 @@
     <description>Recent content in Blogs on @adlrocha</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 10 Jun 2025 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 23 Jun 2025 00:00:00 +0000</lastBuildDate>
     <atom:link href="/blog/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Baselight Letters Volume 2: Anchor datasets, stars, and our goal to open the platform</title>
+      <link>/blog/2025-06-23-baselight-letters-v2/</link>
+      <pubDate>Mon, 23 Jun 2025 00:00:00 +0000</pubDate>
+      <guid>/blog/2025-06-23-baselight-letters-v2/</guid>
+      <description>&lt;h1 id=&#34;baselight-letters-volume-2-anchor-datasets-stars-and-our-goal-to-open-the-platform&#34;&gt;Baselight Letters Volume 2: Anchor datasets, stars, and our goal to open the platform.&lt;/h1&gt;&#xA;&lt;p&gt;It&amp;rsquo;s me again! It is crazy that two weeks have already passed. As promised, here&amp;rsquo;s a rundown of the&#xA;highlights from the past two weeks.&lt;/p&gt;&#xA;&lt;h3 id=&#34;surfacing-high-quality-data-with-stars&#34;&gt;Surfacing high-quality data with stars&lt;/h3&gt;&#xA;&lt;p&gt;As I briefly mentioned in my last letter, two of our main obsessions right now are to make&#xA;high-quality datasets easier to find, and to lower the barriers for users to create their own&#xA;queries and insights. We crossed the 50K datasets mark, and among all of this data we have datasets&#xA;of disparate quality. We want users to be able to identify at first glance the most valuable&#xA;datasets without them having to go one-by-one inspecting the data and figuring out if it is what&#xA;they need for their insight.&lt;/p&gt;</description>
+    </item>
     <item>
       <title>Baselight Letters Volume 1: Project Titanic, your personal assistant, and a flagship dataset</title>
       <link>/blog/2025-06-10-baselight-letters-v1/</link>
