@@ -6,8 +6,15 @@
     <description>Recent content in Blogs on @adlrocha</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 23 Jun 2025 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 07 Jul 2025 00:00:00 +0000</lastBuildDate>
     <atom:link href="/blog/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Baselight Letters Volume 3: MCP, UX and onchain data</title>
+      <link>/blog/2025-07-10-baselight-letters-v3/</link>
+      <pubDate>Mon, 07 Jul 2025 00:00:00 +0000</pubDate>
+      <guid>/blog/2025-07-10-baselight-letters-v3/</guid>
+      <description>&lt;h1 id=&#34;baselight-letters-volume-3-mcp-ux-and-onchain-data&#34;&gt;Baselight Letters Volume 3: MCP, UX and onchain data&lt;/h1&gt;&#xA;&lt;p&gt;Here’s what’s new: • A new MCP server that lets LLMs query Baselight using natural language • Fresh,&#xA;high-quality onchain data across 10+ EVM chains (and growing) • Streamlined charting UX with new&#xA;chart types • Public profile pages to showcase your Baselight activity • A clear roadmap to make&#xA;structured data more accessible for everyone&lt;/p&gt;&#xA;&lt;p&gt;Our mission is to break down barriers to structured data and make it usable, trustworthy, and&#xA;composable for AI builders, researchers, analysts, and anyone who needs better data.&lt;/p&gt;</description>
+    </item>
     <item>
       <title>Baselight Letters Volume 2: Anchor datasets, stars, and our goal to open the platform</title>
       <link>/blog/2025-06-23-baselight-letters-v2/</link>
