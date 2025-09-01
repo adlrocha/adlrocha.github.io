@@ -38,13 +38,25 @@
     <loc>/tags/bigquery/</loc>
     <lastmod>2025-01-23T00:00:00+00:00</lastmod>
   </url><url>
+    <loc>/tags/docker/</loc>
+    <lastmod>2025-01-23T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>/tags/duckdb/</loc>
     <lastmod>2025-01-23T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/til/2025-01-23-duckdb-bigquery/</loc>
+    <loc>/til/2025-09-01-err-net-changed/</loc>
+    <lastmod>2025-01-23T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>/tags/networking/</loc>
+    <lastmod>2025-01-23T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>/til/2025-01-23-duckdb-bigquery-copy/</loc>
     <lastmod>2025-01-23T00:00:00+00:00</lastmod>
   </url><url>
     <loc>/tags/sql/</loc>
+    <lastmod>2025-01-23T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>/tags/til/</loc>
     <lastmod>2025-01-23T00:00:00+00:00</lastmod>
   </url><url>
     <loc>/til/</loc>
@@ -201,9 +213,6 @@
     <lastmod>2020-10-29T18:16:08+01:00</lastmod>
   </url><url>
     <loc>/blog/2020-08-network-coding/</loc>
-    <lastmod>2020-10-13T18:16:08+01:00</lastmod>
-  </url><url>
-    <loc>/tags/networking/</loc>
     <lastmod>2020-10-13T18:16:08+01:00</lastmod>
   </url><url>
     <loc>/blog/2020-10-nat/</loc>
