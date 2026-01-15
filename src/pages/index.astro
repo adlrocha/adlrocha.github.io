@@ -1,0 +1,132 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import Hero from '../components/Hero.astro';
+import ProjectCard from '../components/ProjectCard.astro';
+import PostListItem from '../components/PostListItem.astro';
+import { getCollection } from 'astro:content';
+
+import projects from '../data/projects.json';
+
+const blogPosts = await getCollection('blog', ({ data }) => !data.draft);
+const recentPosts = blogPosts
+  .sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf())
+  .slice(0, 5);
+
+const featuredProjects = projects.filter(p => p.featured);
+---
+
+<BaseLayout title="Home">
+  <Header />
+
+  <main>
+    <Hero />
+
+    <!-- Featured Projects Section -->
+    <section class="section">
+      <div class="container">
+        <div class="section__header">
+          <h2 class="section__title">Featured Projects</h2>
+          <a href="/projects" class="section__link">
+            View all projects
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <line x1="5" y1="12" x2="19" y2="12"/>
+              <polyline points="12 5 19 12 12 19"/>
+            </svg>
+          </a>
+        </div>
+
+        <div class="projects-grid">
+          {featuredProjects.map(project => (
+            <ProjectCard
+              name={project.name}
+              description={project.description}
+              url={project.url}
+              tags={project.tags}
+              year={project.year}
+              featured={project.featured}
+            />
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <!-- Recent Writing Section -->
+    <section class="section">
+      <div class="container">
+        <div class="section__header">
+          <h2 class="section__title">Recent Writing</h2>
+          <a href="/writing" class="section__link">
+            View all posts
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <line x1="5" y1="12" x2="19" y2="12"/>
+              <polyline points="12 5 19 12 12 19"/>
+            </svg>
+          </a>
+        </div>
+
+        <div class="posts-list">
+          {recentPosts.map(post => (
+            <PostListItem
+              title={post.data.title}
+              slug={post.id}
+              date={post.data.date}
+              tags={post.data.tags}
+              type="blog"
+            />
+          ))}
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <Footer />
+</BaseLayout>
+
+<style>
+  .section {
+    padding: var(--space-3xl) 0;
+  }
+
+  .section__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-bottom: var(--space-xl);
+    gap: var(--space-md);
+    flex-wrap: wrap;
+  }
+
+  .section__title {
+    font-size: var(--text-2xl);
+  }
+
+  .section__link {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--space-xs);
+    font-size: var(--text-sm);
+    font-weight: 500;
+    color: var(--color-accent);
+    transition: gap var(--transition-fast);
+  }
+
+  .section__link:hover {
+    gap: var(--space-sm);
+    color: var(--color-accent-hover);
+  }
+
+  .projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: var(--space-lg);
+  }
+
+  .posts-list {
+    background-color: var(--color-bg-secondary);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-lg);
+    padding: var(--space-sm) var(--space-lg);
+  }
+</style>

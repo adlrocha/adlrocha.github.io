@@ -5,8 +5,6 @@ draft: false
 tags: [LLM, AI, pytorch, programming, python]
 ---
 
-# Remember `to('cpu')` in Pytorch to release GPU memory
-
 When I saw that Microsoft had released [phi-2](https://www.microsoft.com/en-us/research/blog/phi-2-the-surprising-power-of-small-language-models/), a 2.7B parameters LLM, I thought: _"this is the perfect excuse to get my hands dirty with LLMs"_. The model was small enough to test it directly inside Google Colab, as it would fit the 15GiB memory GPUs provided in the free plan.
 
 So without further ado, I opened Google Colab, `pip install`ed HF's `transformers` library, and wrote the following code snippet to test the model:

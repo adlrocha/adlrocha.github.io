@@ -2,7 +2,7 @@
 title: "Demystifying Ethereum 2.0"
 date: 2020-11-29T18:16:08+01:00
 draft: false
-tags: web3
+tags: [web3]
 ---
 
 [@adlrocha - Demystifying Ethereum 2.0](https://adlrocha.substack.com/p/adlrocha-demystifying-ethereum-20)

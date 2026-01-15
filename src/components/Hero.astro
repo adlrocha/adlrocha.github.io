@@ -1,0 +1,243 @@
+---
+const socialLinks = [
+  { name: 'GitHub', url: 'https://github.com/adlrocha' },
+  { name: 'Twitter', url: 'https://twitter.com/adlrocha' },
+  { name: 'LinkedIn', url: 'https://linkedin.com/in/adlrocha' },
+];
+---
+
+<section class="hero">
+  <div class="hero__container container">
+    <div class="hero__content animate-fade-in">
+      <h1 class="hero__title">Alfonso de la Rocha</h1>
+      <p class="hero__subtitle">
+        Co-founder & CTO at <a href="https://finisterra.ai" target="_blank" rel="noopener noreferrer">Finisterra Labs</a>.
+        Building distributed systems, blockchain technology, and organizing the world's structured data.
+      </p>
+
+      <div class="hero__social">
+        {socialLinks.map(link => (
+          <a
+            href={link.url}
+            class="hero__social-link"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            {link.name}
+          </a>
+        ))}
+      </div>
+
+      <div class="hero__newsletter">
+        <div class="hero__newsletter-content">
+          <div class="hero__newsletter-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+              <polyline points="22,6 12,13 2,6"/>
+            </svg>
+          </div>
+          <div class="hero__newsletter-text">
+            <p class="hero__newsletter-title">Subscribe to my newsletter</p>
+            <p class="hero__newsletter-desc">Get updates on distributed systems, AI, and tech insights</p>
+          </div>
+        </div>
+        <a
+          href="https://adlrocha.substack.com/subscribe"
+          class="hero__newsletter-btn"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Subscribe
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <line x1="5" y1="12" x2="19" y2="12"/>
+            <polyline points="12 5 19 12 12 19"/>
+          </svg>
+        </a>
+      </div>
+    </div>
+
+    <div class="hero__visual">
+      <div class="hero__gradient"></div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .hero {
+    min-height: 70vh;
+    display: flex;
+    align-items: center;
+    padding: var(--space-3xl) 0;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .hero__container {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--space-2xl);
+    align-items: center;
+  }
+
+  .hero__content {
+    position: relative;
+    z-index: 1;
+  }
+
+  .hero__title {
+    font-size: clamp(2.5rem, 8vw, var(--text-6xl));
+    margin-bottom: var(--space-md);
+    background: linear-gradient(135deg, var(--color-text-primary) 0%, var(--color-text-secondary) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .hero__subtitle {
+    font-size: var(--text-lg);
+    color: var(--color-text-secondary);
+    line-height: var(--leading-relaxed);
+    max-width: 600px;
+    margin-bottom: var(--space-lg);
+  }
+
+  .hero__subtitle a {
+    color: var(--color-accent);
+    font-weight: 500;
+  }
+
+  .hero__subtitle a:hover {
+    color: var(--color-accent-hover);
+  }
+
+  .hero__social {
+    display: flex;
+    gap: var(--space-md);
+    margin-bottom: var(--space-xl);
+  }
+
+  .hero__social-link {
+    font-size: var(--text-sm);
+    font-weight: 500;
+    color: var(--color-text-secondary);
+    text-decoration: none;
+    padding: var(--space-xs) var(--space-sm);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-full);
+    transition: all var(--transition-fast);
+  }
+
+  .hero__social-link:hover {
+    color: var(--color-text-primary);
+    border-color: var(--color-accent);
+    background-color: var(--color-accent-muted);
+  }
+
+  .hero__newsletter {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-md);
+    padding: var(--space-lg);
+    background: linear-gradient(135deg, var(--color-bg-secondary) 0%, var(--color-bg-tertiary) 100%);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-lg);
+    max-width: 500px;
+  }
+
+  .hero__newsletter-content {
+    display: flex;
+    gap: var(--space-md);
+    align-items: flex-start;
+  }
+
+  .hero__newsletter-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 48px;
+    height: 48px;
+    border-radius: var(--radius-md);
+    background-color: var(--color-accent-muted);
+    color: var(--color-accent);
+    flex-shrink: 0;
+  }
+
+  .hero__newsletter-text {
+    flex: 1;
+  }
+
+  .hero__newsletter-title {
+    font-family: var(--font-serif);
+    font-size: var(--text-lg);
+    color: var(--color-text-primary);
+    margin: 0 0 var(--space-xs) 0;
+  }
+
+  .hero__newsletter-desc {
+    font-size: var(--text-sm);
+    color: var(--color-text-secondary);
+    margin: 0;
+  }
+
+  .hero__newsletter-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--space-xs);
+    padding: var(--space-sm) var(--space-lg);
+    background-color: var(--color-accent);
+    color: var(--color-bg-primary);
+    font-weight: 600;
+    font-size: var(--text-sm);
+    text-decoration: none;
+    border-radius: var(--radius-md);
+    transition: all var(--transition-fast);
+    width: 100%;
+  }
+
+  .hero__newsletter-btn:hover {
+    background-color: var(--color-accent-hover);
+    color: var(--color-bg-primary);
+    transform: translateY(-1px);
+  }
+
+  .hero__visual {
+    display: none;
+    position: absolute;
+    top: 0;
+    right: -20%;
+    width: 60%;
+    height: 100%;
+    pointer-events: none;
+  }
+
+  .hero__gradient {
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(ellipse at center, var(--color-accent-muted) 0%, transparent 60%);
+    opacity: 0.5;
+    filter: blur(80px);
+  }
+
+  @media (min-width: 768px) {
+    .hero__newsletter {
+      flex-direction: row;
+      align-items: center;
+    }
+
+    .hero__newsletter-btn {
+      width: auto;
+      flex-shrink: 0;
+    }
+
+    .hero__visual {
+      display: block;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .hero {
+      min-height: 80vh;
+    }
+  }
+</style>

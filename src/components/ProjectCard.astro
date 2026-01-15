@@ -1,0 +1,146 @@
+---
+interface Props {
+  name: string;
+  description: string;
+  url: string;
+  tags: string[];
+  year: string;
+  featured?: boolean;
+}
+
+const { name, description, url, tags, year, featured = false } = Astro.props;
+---
+
+<article class:list={['project-card', { 'project-card--featured': featured }]}>
+  <div class="project-card__header">
+    <div class="project-card__meta">
+      <span class="project-card__year">{year}</span>
+      {featured && <span class="project-card__badge">Featured</span>}
+    </div>
+    <a href={url} target="_blank" rel="noopener noreferrer" class="project-card__link" aria-label={`View ${name}`}>
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/>
+        <polyline points="15 3 21 3 21 9"/>
+        <line x1="10" y1="14" x2="21" y2="3"/>
+      </svg>
+    </a>
+  </div>
+
+  <h3 class="project-card__title">
+    <a href={url} target="_blank" rel="noopener noreferrer">{name}</a>
+  </h3>
+
+  <p class="project-card__description">{description}</p>
+
+  <div class="project-card__tags">
+    {tags.map(tag => (
+      <span class="project-card__tag">{tag}</span>
+    ))}
+  </div>
+</article>
+
+<style>
+  .project-card {
+    padding: var(--space-lg);
+    background-color: var(--color-bg-secondary);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-lg);
+    transition: all var(--transition-base);
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+  }
+
+  .project-card:hover {
+    border-color: var(--color-border-hover);
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-md);
+  }
+
+  .project-card--featured {
+    background: linear-gradient(135deg, var(--color-bg-secondary) 0%, var(--color-accent-muted) 100%);
+    border-color: var(--color-accent);
+  }
+
+  .project-card--featured:hover {
+    border-color: var(--color-accent-hover);
+  }
+
+  .project-card__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: var(--space-md);
+  }
+
+  .project-card__meta {
+    display: flex;
+    align-items: center;
+    gap: var(--space-sm);
+  }
+
+  .project-card__year {
+    font-size: var(--text-xs);
+    color: var(--color-text-tertiary);
+    font-family: var(--font-mono);
+  }
+
+  .project-card__badge {
+    font-size: var(--text-xs);
+    color: var(--color-accent);
+    background-color: var(--color-accent-muted);
+    padding: 2px 8px;
+    border-radius: var(--radius-full);
+    font-weight: 500;
+  }
+
+  .project-card__link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--color-text-tertiary);
+    transition: color var(--transition-fast);
+  }
+
+  .project-card__link:hover {
+    color: var(--color-accent);
+  }
+
+  .project-card__title {
+    font-size: var(--text-xl);
+    margin-bottom: var(--space-sm);
+  }
+
+  .project-card__title a {
+    color: var(--color-text-primary);
+    text-decoration: none;
+  }
+
+  .project-card__title a:hover {
+    color: var(--color-accent);
+  }
+
+  .project-card__description {
+    font-size: var(--text-sm);
+    color: var(--color-text-secondary);
+    line-height: var(--leading-relaxed);
+    flex: 1;
+    margin-bottom: var(--space-md);
+  }
+
+  .project-card__tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-xs);
+    margin-top: auto;
+  }
+
+  .project-card__tag {
+    font-size: var(--text-xs);
+    color: var(--color-text-tertiary);
+    background-color: var(--color-bg-tertiary);
+    padding: 4px 10px;
+    border-radius: var(--radius-full);
+    font-family: var(--font-mono);
+  }
+</style>

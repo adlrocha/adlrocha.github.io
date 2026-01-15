@@ -2,7 +2,7 @@
 title: "Broken Social Incentive Systems"
 date: 2020-10-29T18:16:08+01:00
 draft: false
-tags: reflections
+tags: [reflections]
 ---
 [@adlrocha - Broken Social Incentive Systems](https://adlrocha.substack.com/p/adlrocha-broken-social-incentive)
 ===========================================

@@ -5,8 +5,6 @@ draft: false
 tags: ["til", "networking", "docker"]
 ---
 
-# Fix `ERR_NETWORK_CHANGED`
-
 This was a pretty annoying issue that I had been facing for months and that it was harming my daily
 productivity to a point that I was considering completely formatting my computer and starting from
 scratch. The issue was the following:

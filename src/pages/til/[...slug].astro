@@ -1,0 +1,191 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+import { getCollection, render } from 'astro:content';
+
+export async function getStaticPaths() {
+  const posts = await getCollection('til');
+  return posts.map(post => ({
+    params: { slug: post.id },
+    props: { post },
+  }));
+}
+
+const { post } = Astro.props;
+const { Content } = await render(post);
+
+const formattedDate = post.data.date.toLocaleDateString('en-US', {
+  year: 'numeric',
+  month: 'long',
+  day: 'numeric'
+});
+---
+
+<BaseLayout
+  title={post.data.title}
+  description={post.data.description || `TIL: ${post.data.title}`}
+>
+  <Header />
+
+  <main class="post-page">
+    <article class="container container--narrow">
+      <header class="post__header animate-fade-in">
+        <div class="post__meta">
+          <span class="post__badge">TIL</span>
+          <time datetime={post.data.date.toISOString()}>{formattedDate}</time>
+        </div>
+
+        <h1 class="post__title">{post.data.title}</h1>
+
+        {post.data.tags && post.data.tags.length > 0 && (
+          <div class="post__tags">
+            {post.data.tags.map(tag => (
+              <span class="post__tag">{tag}</span>
+            ))}
+          </div>
+        )}
+      </header>
+
+      <div class="post__content prose">
+        <Content />
+      </div>
+
+      <footer class="post__footer">
+        <a href="/til" class="post__back">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <line x1="19" y1="12" x2="5" y2="12"/>
+            <polyline points="12 19 5 12 12 5"/>
+          </svg>
+          Back to all TILs
+        </a>
+      </footer>
+    </article>
+  </main>
+
+  <Footer />
+</BaseLayout>
+
+<style>
+  .post-page {
+    padding: var(--space-2xl) 0;
+  }
+
+  .post__header {
+    text-align: center;
+    margin-bottom: var(--space-3xl);
+    padding-bottom: var(--space-xl);
+    border-bottom: 1px solid var(--color-border);
+  }
+
+  .post__meta {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: var(--space-sm);
+    font-size: var(--text-sm);
+    color: var(--color-text-tertiary);
+    font-family: var(--font-mono);
+    margin-bottom: var(--space-md);
+  }
+
+  .post__badge {
+    background-color: var(--color-accent);
+    color: var(--color-bg-primary);
+    padding: 2px 8px;
+    border-radius: var(--radius-sm);
+    font-weight: 600;
+    font-size: var(--text-xs);
+  }
+
+  .post__title {
+    font-size: clamp(var(--text-2xl), 4vw, var(--text-4xl));
+    line-height: var(--leading-snug);
+    margin-bottom: var(--space-lg);
+  }
+
+  .post__tags {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: var(--space-xs);
+  }
+
+  .post__tag {
+    font-size: var(--text-xs);
+    color: var(--color-accent);
+    background-color: var(--color-accent-muted);
+    padding: 4px 12px;
+    border-radius: var(--radius-full);
+  }
+
+  .prose {
+    font-size: var(--text-lg);
+    line-height: var(--leading-relaxed);
+    color: var(--color-text-secondary);
+  }
+
+  .prose :global(h2) {
+    font-size: var(--text-2xl);
+    color: var(--color-text-primary);
+    margin-top: var(--space-2xl);
+    margin-bottom: var(--space-md);
+  }
+
+  .prose :global(h3) {
+    font-size: var(--text-xl);
+    color: var(--color-text-primary);
+    margin-top: var(--space-xl);
+    margin-bottom: var(--space-sm);
+  }
+
+  .prose :global(p) {
+    margin-bottom: var(--space-md);
+  }
+
+  .prose :global(a) {
+    color: var(--color-accent);
+    text-decoration: underline;
+    text-underline-offset: 2px;
+  }
+
+  .prose :global(strong) {
+    color: var(--color-text-primary);
+    font-weight: 600;
+  }
+
+  .prose :global(ul),
+  .prose :global(ol) {
+    margin-bottom: var(--space-lg);
+    padding-left: var(--space-lg);
+  }
+
+  .prose :global(pre) {
+    margin: var(--space-lg) 0;
+  }
+
+  .prose :global(code) {
+    font-size: 0.9em;
+  }
+
+  .post__footer {
+    margin-top: var(--space-3xl);
+    padding-top: var(--space-xl);
+    border-top: 1px solid var(--color-border);
+  }
+
+  .post__back {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--space-xs);
+    font-size: var(--text-sm);
+    font-weight: 500;
+    color: var(--color-text-secondary);
+    transition: color var(--transition-fast), gap var(--transition-fast);
+  }
+
+  .post__back:hover {
+    color: var(--color-accent);
+    gap: var(--space-sm);
+  }
+</style>

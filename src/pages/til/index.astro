@@ -1,0 +1,74 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+import PostListItem from '../../components/PostListItem.astro';
+import { getCollection } from 'astro:content';
+
+const posts = await getCollection('til', ({ data }) => !data.draft);
+const sortedPosts = posts.sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf());
+---
+
+<BaseLayout
+  title="TIL"
+  description="Today I Learned - Quick tips, tricks, and lessons from daily programming and engineering work."
+>
+  <Header />
+
+  <main class="page">
+    <div class="container container--narrow">
+      <header class="page__header animate-fade-in">
+        <h1 class="page__title">Today I Learned</h1>
+        <p class="page__description">
+          Quick tips, tricks, and lessons from daily programming and engineering work.
+          Bite-sized knowledge worth remembering.
+        </p>
+      </header>
+
+      <div class="posts-list">
+        {sortedPosts.map(post => (
+          <PostListItem
+            title={post.data.title}
+            slug={post.id}
+            date={post.data.date}
+            tags={post.data.tags}
+            type="til"
+          />
+        ))}
+      </div>
+    </div>
+  </main>
+
+  <Footer />
+</BaseLayout>
+
+<style>
+  .page {
+    padding: var(--space-2xl) 0;
+  }
+
+  .page__header {
+    text-align: center;
+    margin-bottom: var(--space-3xl);
+  }
+
+  .page__title {
+    font-size: var(--text-5xl);
+    margin-bottom: var(--space-md);
+  }
+
+  .page__description {
+    font-size: var(--text-lg);
+    color: var(--color-text-secondary);
+    max-width: 600px;
+    margin: 0 auto;
+    line-height: var(--leading-relaxed);
+  }
+
+  .posts-list {
+    background-color: var(--color-bg-secondary);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-lg);
+    padding: var(--space-sm) var(--space-lg);
+  }
+</style>

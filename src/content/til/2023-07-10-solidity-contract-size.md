@@ -5,7 +5,6 @@ draft: false
 tags: [blockchain, solidity, Ethereum, smart-contract]
 ---
 
-# Reducing the size of Solidity contracts
 I am currently working on a project that we call [IPC (InterPlanetary Consensus)](https://ipc.space/). We are now implementing the core logic of the protocol in a set of Solidity contracts. Unfortunately, the implementation of one of the contracts of the protocol, the `Gateway`, was too large to be deployed (over the `24KB` limit), so we had to figure out ways to reduce its size. [This post](https://ethereum.org/en/developers/tutorials/downsizing-contracts-to-fight-the-contract-size-limit/), is a great introduction of the different approaches to fight the contract size limit. In this quick write-up I will share chronologically how we leveraged each of these approaches to try and make our contract _"deployable"_.
 
 - [Optimize the code](https://ethereum.org/en/developers/tutorials/downsizing-contracts-to-fight-the-contract-size-limit/#remove-functions): It may seem like an obvious one, but optimizing the code it can sometimes have a huge impact in the size of the contract. This is the first thing we tried. We removed functions, duplicate code, enabled the compiler's optimizer (yep, we compile with the `--via-ir` flag), declared custom errors, etc. We definitely reduced the size a lot, but the gateway contract was still to large to be deployed.

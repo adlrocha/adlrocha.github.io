@@ -1,0 +1,111 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import ProjectCard from '../components/ProjectCard.astro';
+
+import projects from '../data/projects.json';
+
+const featuredProjects = projects.filter(p => p.featured);
+const otherProjects = projects.filter(p => !p.featured);
+---
+
+<BaseLayout
+  title="Projects"
+  description="A collection of projects I've worked on in distributed systems, blockchain, and data infrastructure."
+>
+  <Header />
+
+  <main class="page">
+    <div class="container">
+      <header class="page__header animate-fade-in">
+        <h1 class="page__title">Projects</h1>
+        <p class="page__description">
+          A collection of projects I've worked on throughout my career.
+          From distributed systems research to production blockchain infrastructure.
+        </p>
+      </header>
+
+      <section class="projects-section">
+        <h2 class="section-title">Featured</h2>
+        <div class="projects-grid">
+          {featuredProjects.map(project => (
+            <ProjectCard
+              name={project.name}
+              description={project.description}
+              url={project.url}
+              tags={project.tags}
+              year={project.year}
+              featured={project.featured}
+            />
+          ))}
+        </div>
+      </section>
+
+      <section class="projects-section">
+        <h2 class="section-title">Other Projects</h2>
+        <div class="projects-grid">
+          {otherProjects.map(project => (
+            <ProjectCard
+              name={project.name}
+              description={project.description}
+              url={project.url}
+              tags={project.tags}
+              year={project.year}
+              featured={false}
+            />
+          ))}
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <Footer />
+</BaseLayout>
+
+<style>
+  .page {
+    padding: var(--space-2xl) 0;
+  }
+
+  .page__header {
+    text-align: center;
+    margin-bottom: var(--space-3xl);
+    max-width: var(--container-narrow);
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .page__title {
+    font-size: var(--text-5xl);
+    margin-bottom: var(--space-md);
+  }
+
+  .page__description {
+    font-size: var(--text-lg);
+    color: var(--color-text-secondary);
+    line-height: var(--leading-relaxed);
+  }
+
+  .projects-section {
+    margin-bottom: var(--space-3xl);
+  }
+
+  .projects-section:last-child {
+    margin-bottom: 0;
+  }
+
+  .section-title {
+    font-size: var(--text-xl);
+    color: var(--color-text-tertiary);
+    margin-bottom: var(--space-lg);
+    font-family: var(--font-mono);
+    font-weight: 400;
+  }
+
+  .projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: var(--space-lg);
+  }
+</style>

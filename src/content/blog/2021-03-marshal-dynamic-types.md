@@ -2,10 +2,9 @@
 title: "Never take Marshaling for granted"
 date: 2021-03-21
 draft: false
-tags: go, programming
+tags: [go, programming]
 ---
 
-# @adlrocha - Never take Marshaling for granted
 _Marshaling interfaces in Go._
 
 ![alt_text](https://images.unsplash.com/photo-1525091752287-44ce44eab2fa?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1049&q=80 "image_tooltip")

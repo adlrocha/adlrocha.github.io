@@ -5,14 +5,13 @@ draft: false
 tags: [AI, LLM, ML, research]
 ---
 
-# Late Arrival to the Fuss of LLMs
 > From zero to zero-point-one in a few resources
 
 After spending some time reading about the [state of AI](./2023-12-07-state-ai.md) at a high-level, it was time to dive into the details. For obvious reasons, I decided LLMs were a good first-stop for my AI enlightenment. __What are LLMs and how they work (because apparently the why is still a burning open question)?__.
 
 Rivers of digital ink have been spilled lately with gentle introductions and deep illustrations of how LLMs and their underlying transformer architectures work. The good thing about this? There is a lot of information available to learn about them. The bad thing? Filtering the best resources to get you to a good understanding with the lower overhead may be time consuming. Consequently, I decided that instead of writing yet another introductory post about transformers and LLMs, it may be more useful to just share the curated list of resources that have helped me the most on this humble quest. I hope you enjoy it (and if you find any good resource worth including to this list, feel free to send it my way and I'll edit this post). 
 
-![A person arriving late to a party where there is a lot going on](../images/llm-arrive-late.png)
+![A person arriving late to a party where there is a lot going on](/images/llm-arrive-late.png)
 *A person arriving late to a party where there is a lot going on - SDXL*
 
 ##  LLMs

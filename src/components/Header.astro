@@ -1,0 +1,186 @@
+---
+const navItems = [
+  { href: '/writing', label: 'Writing' },
+  { href: '/til', label: 'TIL' },
+  { href: '/projects', label: 'Projects' },
+  { href: '/about', label: 'About' },
+];
+
+const currentPath = Astro.url.pathname;
+---
+
+<header class="header">
+  <div class="header__container container">
+    <a href="/" class="header__logo">
+      <span class="header__logo-text">adlrocha</span>
+    </a>
+
+    <nav class="header__nav">
+      <ul class="header__nav-list">
+        {navItems.map(item => (
+          <li>
+            <a
+              href={item.href}
+              class:list={['header__nav-link', { active: currentPath.startsWith(item.href) }]}
+            >
+              {item.label}
+            </a>
+          </li>
+        ))}
+      </ul>
+    </nav>
+
+    <button class="header__menu-btn" aria-label="Toggle menu" aria-expanded="false">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <line x1="3" y1="6" x2="21" y2="6" class="menu-line menu-line-1" />
+        <line x1="3" y1="12" x2="21" y2="12" class="menu-line menu-line-2" />
+        <line x1="3" y1="18" x2="21" y2="18" class="menu-line menu-line-3" />
+      </svg>
+    </button>
+  </div>
+
+  <div class="header__mobile-nav">
+    <ul class="header__mobile-nav-list">
+      {navItems.map(item => (
+        <li>
+          <a
+            href={item.href}
+            class:list={['header__mobile-nav-link', { active: currentPath.startsWith(item.href) }]}
+          >
+            {item.label}
+          </a>
+        </li>
+      ))}
+    </ul>
+  </div>
+</header>
+
+<style>
+  .header {
+    position: sticky;
+    top: 0;
+    z-index: var(--z-sticky);
+    background-color: rgba(10, 10, 10, 0.9);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid var(--color-border);
+  }
+
+  .header__container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 72px;
+  }
+
+  .header__logo {
+    font-family: var(--font-serif);
+    font-size: var(--text-xl);
+    color: var(--color-text-primary);
+    text-decoration: none;
+  }
+
+  .header__logo:hover {
+    color: var(--color-accent);
+  }
+
+  .header__nav {
+    display: none;
+  }
+
+  .header__nav-list {
+    display: flex;
+    gap: var(--space-lg);
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .header__nav-link {
+    font-size: var(--text-sm);
+    font-weight: 500;
+    color: var(--color-text-secondary);
+    text-decoration: none;
+    transition: color var(--transition-fast);
+    padding: var(--space-xs) 0;
+    position: relative;
+  }
+
+  .header__nav-link:hover,
+  .header__nav-link.active {
+    color: var(--color-text-primary);
+  }
+
+  .header__nav-link.active::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background-color: var(--color-accent);
+  }
+
+  .header__menu-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: none;
+    border: none;
+    color: var(--color-text-primary);
+    cursor: pointer;
+    padding: var(--space-xs);
+  }
+
+  .header__mobile-nav {
+    display: none;
+    padding: var(--space-md) var(--container-padding);
+    border-top: 1px solid var(--color-border);
+    background-color: var(--color-bg-secondary);
+  }
+
+  .header__mobile-nav.open {
+    display: block;
+  }
+
+  .header__mobile-nav-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-sm);
+  }
+
+  .header__mobile-nav-link {
+    display: block;
+    font-size: var(--text-lg);
+    color: var(--color-text-secondary);
+    text-decoration: none;
+    padding: var(--space-sm) 0;
+  }
+
+  .header__mobile-nav-link:hover,
+  .header__mobile-nav-link.active {
+    color: var(--color-accent);
+  }
+
+  @media (min-width: 768px) {
+    .header__nav {
+      display: block;
+    }
+
+    .header__menu-btn {
+      display: none;
+    }
+  }
+</style>
+
+<script>
+  const menuBtn = document.querySelector('.header__menu-btn');
+  const mobileNav = document.querySelector('.header__mobile-nav');
+
+  menuBtn?.addEventListener('click', () => {
+    const isOpen = mobileNav?.classList.toggle('open');
+    menuBtn.setAttribute('aria-expanded', String(isOpen));
+  });
+</script>

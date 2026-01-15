@@ -5,7 +5,6 @@ draft: false
 tags: [decentralization, web3]
 ---
 
-# @adlrocha - From open-source Ato open-platforms
 _Originally published in 2022 [in the newsletter](https://adlrocha.substack.com/p/adlrocha-from-open-source-to-open)_
 > On the killer app for blockchains
 

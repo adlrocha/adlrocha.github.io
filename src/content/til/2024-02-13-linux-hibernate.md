@@ -5,7 +5,6 @@ draft: false
 tags: [Linux, operating systems]
 ---
 
-# Enabling Hibernate on my Linux laptop (Pop OS)
 > Or how to keep your battery after closing your laptop.
 
 I've been using Linux on my laptop for more than a decade now. It is well-known that __depending on the distro and the laptop you use, _"deep sleep"_ and/or hibernate may not be well-supported__. This means that even every time that I closed the lid of my laptop, its battery will end up draining until it runs out. This was quite frustrating, because it meant that if I was working on my laptop and closed the lid without remembering to shut down the laptop, I would come back to a laptop without battery.

@@ -1,0 +1,50 @@
+[
+  {
+    "name": "Finisterra Labs / Baselight",
+    "description": "Building a universal database for structured data - organizing the world's structured information. Making data accessible, searchable, and useful for everyone.",
+    "url": "https://finisterra.ai",
+    "tags": ["Data", "AI", "Startup", "Search"],
+    "featured": true,
+    "year": "2024-Present"
+  },
+  {
+    "name": "InterPlanetary Consensus (IPC)",
+    "description": "Framework to scale blockchain networks with custom VMs and syscalls. Enables hierarchical consensus and cross-chain interoperability for Filecoin and beyond.",
+    "url": "https://github.com/consensus-shipyard/ipc",
+    "tags": ["Blockchain", "Rust", "Distributed Systems", "Consensus"],
+    "featured": true,
+    "year": "2022-2024"
+  },
+  {
+    "name": "Filecoin Indexing System",
+    "description": "Core contributions to storetheindex and storethehash - the database system powering Filecoin's content routing and discovery infrastructure.",
+    "url": "https://github.com/ipni/storetheindex",
+    "tags": ["IPFS", "Filecoin", "Go", "Databases"],
+    "featured": true,
+    "year": "2021-2023"
+  },
+  {
+    "name": "Go-f3",
+    "description": "Golang implementation of the Fast Finality (F3) protocol for Filecoin, providing faster transaction finality and improved security guarantees.",
+    "url": "https://github.com/filecoin-project/go-f3",
+    "tags": ["Consensus", "Go", "Filecoin", "BFT"],
+    "featured": false,
+    "year": "2023-2024"
+  },
+  {
+    "name": "Beyond Bitswap",
+    "description": "Research initiative exploring improvements to file-exchange protocols in Filecoin and distributed systems, focusing on performance and efficiency.",
+    "url": "https://github.com/protocol/beyond-bitswap",
+    "tags": ["P2P", "Research", "Performance", "IPFS"],
+    "featured": false,
+    "year": "2020-2021"
+  },
+  {
+    "name": "ResNetLab",
+    "description": "Platform for building resilient distributed systems through open, asynchronous collaboration on deep technical research problems.",
+    "url": "https://github.com/protocol/resnetlab",
+    "tags": ["Research", "Distributed Systems", "Networking"],
+    "featured": false,
+    "year": "2020-2022"
+  }
+]
