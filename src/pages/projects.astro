@@ -5,14 +5,16 @@ import Footer from '../components/Footer.astro';
 import ProjectCard from '../components/ProjectCard.astro';
 
 import projects from '../data/projects.json';
+import research from '../data/publications.json';
 
 const featuredProjects = projects.filter(p => p.featured);
 const otherProjects = projects.filter(p => !p.featured);
+const { publications, patents } = research;
 ---
 
 <BaseLayout
   title="Projects"
-  description="A collection of projects I've worked on in distributed systems, blockchain, and data infrastructure."
+  description="A collection of projects I've worked on in distributed systems, AI, blockchain, and data infrastructure."
 >
   <Header />
 
@@ -22,7 +24,7 @@ const otherProjects = projects.filter(p => !p.featured);
         <h1 class="page__title">Projects</h1>
         <p class="page__description">
           A collection of projects I've worked on throughout my career.
-          From distributed systems research to production blockchain infrastructure.
+          From distributed systems research to production blockchain infrastructure and AI.
         </p>
       </header>
 
@@ -54,6 +56,53 @@ const otherProjects = projects.filter(p => !p.featured);
               year={project.year}
               featured={false}
             />
+          ))}
+        </div>
+      </section>
+
+      <section class="projects-section">
+        <h2 class="section-title">Publications</h2>
+        <div class="publications-list">
+          {publications.map(pub => (
+            <article class="publication">
+              <a href={pub.url} target="_blank" rel="noopener noreferrer" class="publication__link">
+                <h3 class="publication__title">{pub.title}</h3>
+                <p class="publication__authors">{pub.authors}</p>
+                <div class="publication__meta">
+                  <span class="publication__venue">{pub.venue}</span>
+                  <span class="publication__year">{pub.year}</span>
+                  {pub.citations > 0 && (
+                    <span class="publication__citations">{pub.citations} citations</span>
+                  )}
+                </div>
+              </a>
+            </article>
+          ))}
+        </div>
+        <a href="https://scholar.google.es/citations?user=fP9rZEQAAAAJ" target="_blank" rel="noopener noreferrer" class="scholar-link">
+          View all on Google Scholar
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/>
+            <polyline points="15 3 21 3 21 9"/>
+            <line x1="10" y1="14" x2="21" y2="3"/>
+          </svg>
+        </a>
+      </section>
+
+      <section class="projects-section">
+        <h2 class="section-title">Patents</h2>
+        <div class="publications-list">
+          {patents.map(patent => (
+            <article class="publication publication--patent">
+              <a href={patent.url} target="_blank" rel="noopener noreferrer" class="publication__link">
+                <h3 class="publication__title">{patent.title}</h3>
+                <p class="publication__authors">{patent.authors}</p>
+                <div class="publication__meta">
+                  <span class="publication__patent-number">{patent.patent_number}</span>
+                  <span class="publication__year">{patent.year}</span>
+                </div>
+              </a>
+            </article>
           ))}
         </div>
       </section>
@@ -107,5 +156,97 @@ const otherProjects = projects.filter(p => !p.featured);
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
     gap: var(--space-lg);
+  }
+
+  /* Publications & Patents */
+  .publications-list {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-sm);
+  }
+
+  .publication {
+    background-color: var(--color-bg-secondary);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-md);
+    transition: all var(--transition-fast);
+  }
+
+  .publication:hover {
+    border-color: var(--color-border-hover);
+    transform: translateX(4px);
+  }
+
+  .publication__link {
+    display: block;
+    padding: var(--space-md) var(--space-lg);
+    text-decoration: none;
+    color: inherit;
+  }
+
+  .publication__title {
+    font-size: var(--text-base);
+    font-family: var(--font-sans);
+    font-weight: 500;
+    color: var(--color-text-primary);
+    margin-bottom: var(--space-xs);
+    transition: color var(--transition-fast);
+  }
+
+  .publication:hover .publication__title {
+    color: var(--color-accent);
+  }
+
+  .publication__authors {
+    font-size: var(--text-sm);
+    color: var(--color-text-tertiary);
+    margin-bottom: var(--space-xs);
+  }
+
+  .publication__meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-sm);
+    font-size: var(--text-xs);
+    font-family: var(--font-mono);
+  }
+
+  .publication__venue {
+    color: var(--color-text-secondary);
+  }
+
+  .publication__year {
+    color: var(--color-text-tertiary);
+  }
+
+  .publication__citations {
+    color: var(--color-accent);
+    background-color: var(--color-accent-muted);
+    padding: 2px 8px;
+    border-radius: var(--radius-full);
+  }
+
+  .publication__patent-number {
+    color: var(--color-text-secondary);
+  }
+
+  .publication--patent .publication__title {
+    color: var(--color-text-primary);
+  }
+
+  .scholar-link {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--space-xs);
+    margin-top: var(--space-md);
+    font-size: var(--text-sm);
+    font-weight: 500;
+    color: var(--color-accent);
+    transition: gap var(--transition-fast);
+  }
+
+  .scholar-link:hover {
+    gap: var(--space-sm);
+    color: var(--color-accent-hover);
   }
 </style>

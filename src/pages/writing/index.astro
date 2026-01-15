@@ -4,24 +4,57 @@ import Header from '../../components/Header.astro';
 import Footer from '../../components/Footer.astro';
 import PostCard from '../../components/PostCard.astro';
 import { getCollection } from 'astro:content';
+import { fetchSubstackPosts, type SubstackPost } from '../../lib/substack';
 
-const posts = await getCollection('blog', ({ data }) => !data.draft);
-const sortedPosts = posts.sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf());
+// Fetch local blog posts
+const localPosts = await getCollection('blog', ({ data }) => !data.draft);
+
+// Fetch Substack posts
+const substackPosts = await fetchSubstackPosts();
+
+// Normalize both types to a common format
+type UnifiedPost = {
+  title: string;
+  date: Date;
+  slug?: string;
+  link?: string;
+  tags?: string[];
+  isExternal: boolean;
+};
+
+const allPosts: UnifiedPost[] = [
+  ...localPosts.map(post => ({
+    title: post.data.title,
+    date: post.data.date,
+    slug: post.id,
+    tags: post.data.tags,
+    isExternal: false,
+  })),
+  ...substackPosts.map(post => ({
+    title: post.title,
+    date: post.date,
+    link: post.link,
+    isExternal: true,
+  })),
+];
+
+// Sort all posts by date
+const sortedPosts = allPosts.sort((a, b) => b.date.valueOf() - a.date.valueOf());
 
 // Group posts by year
 const postsByYear = sortedPosts.reduce((acc, post) => {
-  const year = post.data.date.getFullYear();
+  const year = post.date.getFullYear();
   if (!acc[year]) acc[year] = [];
   acc[year].push(post);
   return acc;
-}, {} as Record<number, typeof posts>);
+}, {} as Record<number, UnifiedPost[]>);
 
 const years = Object.keys(postsByYear).map(Number).sort((a, b) => b - a);
 ---
 
 <BaseLayout
   title="Writing"
-  description="Technical articles on distributed systems, blockchain, AI, and software engineering."
+  description="Technical articles on distributed systems, computer science, AI, and software engineering."
 >
   <Header />
 
@@ -30,8 +63,8 @@ const years = Object.keys(postsByYear).map(Number).sort((a, b) => b - a);
       <header class="page__header animate-fade-in">
         <h1 class="page__title">Writing</h1>
         <p class="page__description">
-          Technical articles on distributed systems, blockchain, AI, and software engineering.
-          Thoughts and explorations from my journey building complex systems.
+          Technical articles on distributed systems, computer science, AI, and software engineering.
+          Includes posts from my <a href="https://adlrocha.substack.com" target="_blank" rel="noopener noreferrer">Substack newsletter</a>.
         </p>
       </header>
 
@@ -41,13 +74,41 @@ const years = Object.keys(postsByYear).map(Number).sort((a, b) => b - a);
             <h2 class="year-title">{year}</h2>
             <div class="posts-grid">
               {postsByYear[year].map(post => (
-                <PostCard
-                  title={post.data.title}
-                  slug={post.id}
-                  date={post.data.date}
-                  tags={post.data.tags}
-                  type="blog"
-                />
+                post.isExternal ? (
+                  <article class="post-card post-card--external">
+                    <a href={post.link} class="post-card__link" target="_blank" rel="noopener noreferrer">
+                      <div class="post-card__header">
+                        <time class="post-card__date" datetime={post.date.toISOString()}>
+                          {post.date.toLocaleDateString('en-US', { year: 'numeric', month: 'short', day: 'numeric' })}
+                        </time>
+                        <span class="post-card__badge">Substack</span>
+                      </div>
+                      <h3 class="post-card__title">
+                        {post.title}
+                        <svg class="post-card__external-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                          <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/>
+                          <polyline points="15 3 21 3 21 9"/>
+                          <line x1="10" y1="14" x2="21" y2="3"/>
+                        </svg>
+                      </h3>
+                      <span class="post-card__read-more">
+                        Read on Substack
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                          <line x1="5" y1="12" x2="19" y2="12"/>
+                          <polyline points="12 5 19 12 12 19"/>
+                        </svg>
+                      </span>
+                    </a>
+                  </article>
+                ) : (
+                  <PostCard
+                    title={post.title}
+                    slug={post.slug!}
+                    date={post.date}
+                    tags={post.tags}
+                    type="blog"
+                  />
+                )
               ))}
             </div>
           </section>
@@ -82,6 +143,10 @@ const years = Object.keys(postsByYear).map(Number).sort((a, b) => b - a);
     line-height: var(--leading-relaxed);
   }
 
+  .page__description a {
+    color: var(--color-accent);
+  }
+
   .year-section {
     margin-bottom: var(--space-3xl);
   }
@@ -102,5 +167,82 @@ const years = Object.keys(postsByYear).map(Number).sort((a, b) => b - a);
     display: flex;
     flex-direction: column;
     gap: var(--space-md);
+  }
+
+  /* External post card styles */
+  .post-card--external {
+    padding: var(--space-lg);
+    background-color: var(--color-bg-secondary);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-lg);
+    transition: all var(--transition-base);
+  }
+
+  .post-card--external:hover {
+    border-color: var(--color-border-hover);
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-md);
+  }
+
+  .post-card--external .post-card__link {
+    display: block;
+    text-decoration: none;
+    color: inherit;
+  }
+
+  .post-card--external .post-card__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: var(--space-sm);
+    gap: var(--space-sm);
+  }
+
+  .post-card--external .post-card__date {
+    font-size: var(--text-xs);
+    color: var(--color-text-tertiary);
+    font-family: var(--font-mono);
+  }
+
+  .post-card--external .post-card__badge {
+    font-size: var(--text-xs);
+    color: #ff6719;
+    background-color: rgba(255, 103, 25, 0.15);
+    padding: 2px 8px;
+    border-radius: var(--radius-full);
+    font-weight: 500;
+  }
+
+  .post-card--external .post-card__title {
+    font-size: var(--text-xl);
+    color: var(--color-text-primary);
+    margin-bottom: var(--space-sm);
+    transition: color var(--transition-fast);
+    display: flex;
+    align-items: center;
+    gap: var(--space-xs);
+  }
+
+  .post-card--external:hover .post-card__title {
+    color: var(--color-accent);
+  }
+
+  .post-card--external .post-card__external-icon {
+    opacity: 0.5;
+    flex-shrink: 0;
+  }
+
+  .post-card--external .post-card__read-more {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--space-xs);
+    font-size: var(--text-sm);
+    font-weight: 500;
+    color: var(--color-accent);
+    transition: gap var(--transition-fast);
+  }
+
+  .post-card--external:hover .post-card__read-more {
+    gap: var(--space-sm);
   }
 </style>

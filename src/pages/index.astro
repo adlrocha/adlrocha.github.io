@@ -6,12 +6,45 @@ import Hero from '../components/Hero.astro';
 import ProjectCard from '../components/ProjectCard.astro';
 import PostListItem from '../components/PostListItem.astro';
 import { getCollection } from 'astro:content';
+import { fetchSubstackPosts } from '../lib/substack';
 
 import projects from '../data/projects.json';
 
+// Fetch local blog posts
 const blogPosts = await getCollection('blog', ({ data }) => !data.draft);
-const recentPosts = blogPosts
-  .sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf())
+
+// Fetch Substack posts
+const substackPosts = await fetchSubstackPosts();
+
+// Unified post type
+type UnifiedPost = {
+  title: string;
+  date: Date;
+  slug?: string;
+  link?: string;
+  tags?: string[];
+  isExternal: boolean;
+};
+
+// Merge and sort all posts
+const allPosts: UnifiedPost[] = [
+  ...blogPosts.map(post => ({
+    title: post.data.title,
+    date: post.data.date,
+    slug: post.id,
+    tags: post.data.tags,
+    isExternal: false,
+  })),
+  ...substackPosts.map(post => ({
+    title: post.title,
+    date: post.date,
+    link: post.link,
+    isExternal: true,
+  })),
+];
+
+const recentPosts = allPosts
+  .sort((a, b) => b.date.valueOf() - a.date.valueOf())
   .slice(0, 5);
 
 const featuredProjects = projects.filter(p => p.featured);
@@ -68,13 +101,34 @@ const featuredProjects = projects.filter(p => p.featured);
 
         <div class="posts-list">
           {recentPosts.map(post => (
-            <PostListItem
-              title={post.data.title}
-              slug={post.id}
-              date={post.data.date}
-              tags={post.data.tags}
-              type="blog"
-            />
+            post.isExternal ? (
+              <article class="post-item post-item--external">
+                <a href={post.link} class="post-item__link" target="_blank" rel="noopener noreferrer">
+                  <div class="post-item__content">
+                    <h3 class="post-item__title">
+                      {post.title}
+                      <svg class="post-item__icon" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/>
+                        <polyline points="15 3 21 3 21 9"/>
+                        <line x1="10" y1="14" x2="21" y2="3"/>
+                      </svg>
+                    </h3>
+                    <span class="post-item__badge">Substack</span>
+                  </div>
+                  <time class="post-item__date" datetime={post.date.toISOString()}>
+                    {post.date.toLocaleDateString('en-US', { year: 'numeric', month: 'short', day: 'numeric' })}
+                  </time>
+                </a>
+              </article>
+            ) : (
+              <PostListItem
+                title={post.title}
+                slug={post.slug!}
+                date={post.date}
+                tags={post.tags}
+                type="blog"
+              />
+            )
           ))}
         </div>
       </div>
@@ -128,5 +182,77 @@ const featuredProjects = projects.filter(p => p.featured);
     border: 1px solid var(--color-border);
     border-radius: var(--radius-lg);
     padding: var(--space-sm) var(--space-lg);
+  }
+
+  /* External post item styles */
+  .post-item--external {
+    border-bottom: 1px solid var(--color-border);
+  }
+
+  .post-item--external:last-child {
+    border-bottom: none;
+  }
+
+  .post-item--external .post-item__link {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: var(--space-md);
+    padding: var(--space-md) 0;
+    text-decoration: none;
+    color: inherit;
+    transition: all var(--transition-fast);
+  }
+
+  .post-item--external .post-item__link:hover {
+    padding-left: var(--space-sm);
+  }
+
+  .post-item--external .post-item__content {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-xs);
+    flex: 1;
+    min-width: 0;
+  }
+
+  .post-item--external .post-item__title {
+    font-size: var(--text-base);
+    font-family: var(--font-sans);
+    font-weight: 500;
+    color: var(--color-text-primary);
+    transition: color var(--transition-fast);
+    display: flex;
+    align-items: center;
+    gap: var(--space-xs);
+  }
+
+  .post-item--external .post-item__link:hover .post-item__title {
+    color: var(--color-accent);
+  }
+
+  .post-item--external .post-item__icon {
+    opacity: 0.5;
+    flex-shrink: 0;
+  }
+
+  .post-item--external .post-item__badge {
+    font-size: var(--text-xs);
+    color: #ff6719;
+    font-family: var(--font-mono);
+  }
+
+  .post-item--external .post-item__date {
+    font-size: var(--text-sm);
+    color: var(--color-text-tertiary);
+    font-family: var(--font-mono);
+    flex-shrink: 0;
+  }
+
+  @media (max-width: 640px) {
+    .post-item--external .post-item__link {
+      flex-direction: column;
+      gap: var(--space-xs);
+    }
   }
 </style>

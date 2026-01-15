@@ -2,7 +2,7 @@
   {
     "name": "Finisterra Labs / Baselight",
     "description": "Building a universal database for structured data - organizing the world's structured information. Making data accessible, searchable, and useful for everyone.",
-    "url": "https://finisterra.ai",
+    "url": "https://baselight.app",
     "tags": ["Data", "AI", "Startup", "Search"],
     "featured": true,
     "year": "2024-Present"
@@ -11,16 +11,24 @@
     "name": "InterPlanetary Consensus (IPC)",
     "description": "Framework to scale blockchain networks with custom VMs and syscalls. Enables hierarchical consensus and cross-chain interoperability for Filecoin and beyond.",
     "url": "https://github.com/consensus-shipyard/ipc",
-    "tags": ["Blockchain", "Rust", "Distributed Systems", "Consensus"],
+    "tags": ["Blockchain", "Rust", "Distributed Systems", "Consensus", "Solidity"],
     "featured": true,
     "year": "2022-2024"
   },
   {
+    "name": "Abundance",
+    "description": "Researching next-gen blockchain architecture (as of 2026) to achieve ultimate scalability in permissionless setting and fully resolve Blockchain Trilemma. May or may not succeed but must be fun.",
+    "url": "https://github.com/nazar-pc/abundance/commits/main/?author=adlrocha",
+    "tags": ["Research", "Distributed System", "Rust", "Databases", "Consensus"],
+    "featured": false,
+    "year": "2025"
+  },
+  {
     "name": "Filecoin Indexing System",
     "description": "Core contributions to storetheindex and storethehash - the database system powering Filecoin's content routing and discovery infrastructure.",
-    "url": "https://github.com/ipni/storetheindex",
+    "url": "https://github.com/ipni",
     "tags": ["IPFS", "Filecoin", "Go", "Databases"],
-    "featured": true,
+    "featured": false,
     "year": "2021-2023"
   },
   {
@@ -28,7 +36,7 @@
     "description": "Golang implementation of the Fast Finality (F3) protocol for Filecoin, providing faster transaction finality and improved security guarantees.",
     "url": "https://github.com/filecoin-project/go-f3",
     "tags": ["Consensus", "Go", "Filecoin", "BFT"],
-    "featured": false,
+    "featured": true,
     "year": "2023-2024"
   },
   {
@@ -46,5 +54,13 @@
     "tags": ["Research", "Distributed Systems", "Networking"],
     "featured": false,
     "year": "2020-2022"
+  },
+  {
+    "name": "TrustOS",
+    "description": "Library, contracts and SDK for basic enterprite primitives for blockchain networks",
+    "url": "https://trustos.telefonicatech.com/docs/general/getting-started",
+    "tags": ["Blockchain", "Distributed Systems", "Go", "Hyperledger Fabric"],
+    "featured": false,
+    "year": "2018-2020"
   }
 ]

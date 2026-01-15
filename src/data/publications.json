@@ -1,0 +1,67 @@
+{
+  "publications": [
+    {
+      "title": "Accelerating content routing with bitswap: A multi-path file transfer protocol in IPFS and Filecoin",
+      "authors": "A De la Rocha, D Dias, Y Psaras",
+      "venue": "IFIP Networking Conference",
+      "year": 2021,
+      "citations": 44,
+      "url": "https://scholar.google.es/citations?view_op=view_citation&hl=en&user=fP9rZEQAAAAJ&citation_for_view=fP9rZEQAAAAJ:u5HHmVD_uO8C"
+    },
+    {
+      "title": "Blockchain-based public key infrastructure for inter-domain secure routing",
+      "authors": "A de la Rocha, P Papadimitratos",
+      "venue": "International Workshop on Open Problems in Network Security (iNetSec)",
+      "year": 2017,
+      "citations": 37,
+      "url": "https://scholar.google.es/citations?view_op=view_citation&hl=en&user=fP9rZEQAAAAJ&citation_for_view=fP9rZEQAAAAJ:u-x6o8ySG0sC"
+    },
+    {
+      "title": "Hierarchical consensus: A horizontal scaling framework for blockchains",
+      "authors": "A De la Rocha, L Kokoris-Kogias, JM Soares, M Vukolić",
+      "venue": "IEEE 42nd International Conference on Distributed Computing Systems (ICDCS)",
+      "year": 2022,
+      "citations": 11,
+      "url": "https://scholar.google.es/citations?view_op=view_citation&hl=en&user=fP9rZEQAAAAJ&citation_for_view=fP9rZEQAAAAJ:9yKSN-GCB0IC"
+    },
+    {
+      "title": "Enriching Kademlia by partitioning",
+      "authors": "J Monteiro, PA Costa, J Leitao, A De la Rocha, Y Psaras",
+      "venue": "IEEE 42nd International Conference on Distributed Computing Systems Workshops (ICDCSW)",
+      "year": 2022,
+      "citations": 8,
+      "url": "https://scholar.google.es/citations?view_op=view_citation&hl=en&user=fP9rZEQAAAAJ&citation_for_view=fP9rZEQAAAAJ:2osOgNQ5qMEC"
+    },
+    {
+      "title": "IPFS-FAN: A Function-Addressable Computation Network",
+      "authors": "A de la Rocha, Y Psaras, D Dias",
+      "venue": "IFIP Networking Conference",
+      "year": 2021,
+      "citations": 2,
+      "url": "https://scholar.google.es/citations?view_op=view_citation&hl=en&user=fP9rZEQAAAAJ&citation_for_view=fP9rZEQAAAAJ:d1gkVwhDpl0C"
+    }
+  ],
+  "patents": [
+    {
+      "title": "Method and system for recovering cryptographic keys of a blockchain network",
+      "authors": "A de la Rocha",
+      "patent_number": "US Patent App. 16/725,339",
+      "year": 2020,
+      "url": "https://patents.google.com/patent/US20200204355A1"
+    },
+    {
+      "title": "Method and system for inter-DLT networks trust enhancement",
+      "authors": "A de la Rocha, JLN Díaz",
+      "patent_number": "US Patent 11,374,763",
+      "year": 2022,
+      "url": "https://patents.google.com/patent/US11374763B2"
+    },
+    {
+      "title": "Encoder and decoder and methods thereof",
+      "authors": "P Wennersten, A de la Rocha, J Ström",
+      "patent_number": "US Patent 10,944,967",
+      "year": 2021,
+      "url": "https://patents.google.com/patent/US10944967B2"
+    }
+  ]
+}
