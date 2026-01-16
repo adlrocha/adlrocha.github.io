@@ -1,13 +1,13 @@
 #!/usr/bin/env npx ts-node
 
 /**
- * Fetches Substack RSS feed and caches posts to a JSON file.
- * Run this locally before pushing to update Substack posts.
+ * Fetches Substack RSS feed and merges with existing cached posts.
+ * New posts are added, existing posts are preserved.
  *
  * Usage: npm run fetch-substack
  */
 
-import { writeFileSync } from 'fs';
+import { writeFileSync, readFileSync, existsSync } from 'fs';
 import { XMLParser } from 'fast-xml-parser';
 
 const SUBSTACK_RSS_URL = 'https://adlrocha.substack.com/feed';
@@ -20,6 +20,11 @@ interface SubstackPost {
   description: string;
 }
 
+interface Cache {
+  lastUpdated: string;
+  posts: SubstackPost[];
+}
+
 function stripHtml(html: string): string {
   return html
     .replace(/<[^>]*>/g, '')
@@ -30,6 +35,20 @@ function stripHtml(html: string): string {
     .replace(/&quot;/g, '"')
     .replace(/&#39;/g, "'")
     .trim();
+}
+
+function loadExistingCache(): Cache {
+  if (!existsSync(CACHE_FILE)) {
+    return { lastUpdated: '', posts: [] };
+  }
+
+  try {
+    const content = readFileSync(CACHE_FILE, 'utf-8');
+    return JSON.parse(content);
+  } catch {
+    console.warn('Could not read existing cache, starting fresh');
+    return { lastUpdated: '', posts: [] };
+  }
 }
 
 async function fetchSubstackPosts(): Promise<SubstackPost[]> {
@@ -58,7 +77,7 @@ async function fetchSubstackPosts(): Promise<SubstackPost[]> {
   const items = feed?.rss?.channel?.item || [];
   const itemArray = Array.isArray(items) ? items : [items];
 
-  console.log(`Parsed ${itemArray.length} posts`);
+  console.log(`Parsed ${itemArray.length} posts from RSS`);
 
   return itemArray.map((item: Record<string, unknown>) => ({
     title: String(item.title || ''),
@@ -68,17 +87,52 @@ async function fetchSubstackPosts(): Promise<SubstackPost[]> {
   }));
 }
 
+function mergePosts(existingPosts: SubstackPost[], newPosts: SubstackPost[]): SubstackPost[] {
+  // Create a map of existing posts by link (unique identifier)
+  const postMap = new Map<string, SubstackPost>();
+
+  // Add existing posts to map
+  for (const post of existingPosts) {
+    postMap.set(post.link, post);
+  }
+
+  // Add/update with new posts
+  let newCount = 0;
+  for (const post of newPosts) {
+    if (!postMap.has(post.link)) {
+      newCount++;
+    }
+    postMap.set(post.link, post);
+  }
+
+  console.log(`Found ${newCount} new posts`);
+
+  // Convert back to array and sort by date (newest first)
+  const merged = Array.from(postMap.values());
+  merged.sort((a, b) => new Date(b.date).valueOf() - new Date(a.date).valueOf());
+
+  return merged;
+}
+
 async function main() {
   try {
-    const posts = await fetchSubstackPosts();
+    // Load existing cache
+    const existingCache = loadExistingCache();
+    console.log(`Existing cache has ${existingCache.posts.length} posts`);
 
-    const cache = {
+    // Fetch new posts from RSS
+    const newPosts = await fetchSubstackPosts();
+
+    // Merge posts (preserves old, adds new)
+    const mergedPosts = mergePosts(existingCache.posts, newPosts);
+
+    const cache: Cache = {
       lastUpdated: new Date().toISOString(),
-      posts,
+      posts: mergedPosts,
     };
 
     writeFileSync(CACHE_FILE, JSON.stringify(cache, null, 2));
-    console.log(`\n✓ Cached ${posts.length} posts to ${CACHE_FILE}`);
+    console.log(`\n✓ Total: ${mergedPosts.length} posts cached to ${CACHE_FILE}`);
     console.log(`  Last updated: ${cache.lastUpdated}`);
   } catch (error) {
     console.error('Error:', error);
