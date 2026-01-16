@@ -12,14 +12,23 @@ const SUBSTACK_RSS_URL = 'https://adlrocha.substack.com/feed';
 
 export async function fetchSubstackPosts(): Promise<SubstackPost[]> {
   try {
-    const response = await fetch(SUBSTACK_RSS_URL);
+    console.log('[Substack] Fetching RSS feed...');
+
+    const response = await fetch(SUBSTACK_RSS_URL, {
+      headers: {
+        'User-Agent': 'Mozilla/5.0 (compatible; AstroBot/1.0; +https://adlrocha.com)',
+        'Accept': 'application/rss+xml, application/xml, text/xml, */*',
+      },
+    });
 
     if (!response.ok) {
-      console.warn(`Failed to fetch Substack RSS: ${response.status}`);
+      console.error(`[Substack] Failed to fetch RSS: ${response.status} ${response.statusText}`);
       return [];
     }
 
     const xml = await response.text();
+    console.log(`[Substack] Received ${xml.length} bytes`);
+
     const parser = new XMLParser({
       ignoreAttributes: false,
       attributeNamePrefix: '@_',
@@ -31,6 +40,8 @@ export async function fetchSubstackPosts(): Promise<SubstackPost[]> {
     // Ensure items is an array
     const itemArray = Array.isArray(items) ? items : [items];
 
+    console.log(`[Substack] Parsed ${itemArray.length} posts`);
+
     return itemArray.map((item: Record<string, unknown>) => ({
       title: String(item.title || ''),
       link: String(item.link || ''),
@@ -39,7 +50,7 @@ export async function fetchSubstackPosts(): Promise<SubstackPost[]> {
       isExternal: true as const,
     }));
   } catch (error) {
-    console.warn('Error fetching Substack posts:', error);
+    console.error('[Substack] Error fetching posts:', error);
     return [];
   }
 }
