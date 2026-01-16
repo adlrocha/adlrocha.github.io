@@ -6,10 +6,14 @@
     "dev": "astro dev",
     "build": "astro build",
     "preview": "astro preview",
-    "astro": "astro"
+    "astro": "astro",
+    "fetch-substack": "npx tsx scripts/fetch-substack.ts"
   },
   "dependencies": {
     "astro": "^5.16.9",
     "fast-xml-parser": "^5.3.3"
+  },
+  "devDependencies": {
+    "tsx": "^4.7.0"
   }
 }

@@ -1,0 +1,125 @@
+{
+  "lastUpdated": "2026-01-16T16:10:47.919Z",
+  "posts": [
+    {
+      "title": "@adlrocha - Lego Farming Blocks: Letting AIs Grow our Food",
+      "link": "https://adlrocha.substack.com/p/adlrocha-lego-farming-blocks-letting",
+      "date": "2026-01-11T09:02:21.000Z",
+      "description": "From fragile supply chains to AI-driven home farming: Designing the hardware for food independence...."
+    },
+    {
+      "title": "@adlrocha - Beyond Benchmaxxing: Why the Future of AI is Inference-Time Search",
+      "link": "https://adlrocha.substack.com/p/adlrocha-beyond-benchmaxxing-why",
+      "date": "2026-01-04T09:02:09.000Z",
+      "description": "Benchmarking at inference time as a way to achieve your agent's goals..."
+    },
+    {
+      "title": "@adlrocha - Semiconductors: Why the 21st Century is Fought Over Sand, Not Fuel",
+      "link": "https://adlrocha.substack.com/p/adlrocha-semiconductors-why-the-21st",
+      "date": "2025-12-28T09:01:16.000Z",
+      "description": "Critical Infrastructures of our Society Series (II)..."
+    },
+    {
+      "title": "@adlrocha - The Efficiency Trap of the Food Supply Chain",
+      "link": "https://adlrocha.substack.com/p/adlrocha-the-efficiency-trap-of-the",
+      "date": "2025-12-21T09:00:56.000Z",
+      "description": "Critical Infrastructures of our Society Series (I)..."
+    },
+    {
+      "title": "@adlrocha - Is N=NP?",
+      "link": "https://adlrocha.substack.com/p/adlrocha-is-nnp",
+      "date": "2025-12-14T09:00:39.000Z",
+      "description": "Primer on complexity theory..."
+    },
+    {
+      "title": "@adlrocha - Zero-AI Writing",
+      "link": "https://adlrocha.substack.com/p/adlrocha-zero-ai-writing",
+      "date": "2025-12-07T10:00:55.000Z",
+      "description": "To recovering craftsmanship in the age of generative AI..."
+    },
+    {
+      "title": "@adlrocha - Running LLMs and ML in Wasm",
+      "link": "https://adlrocha.substack.com/p/adlrocha-running-llms-and-ml-in-wasm",
+      "date": "2024-02-18T12:21:46.000Z",
+      "description": "Searching new runtimes for AI..."
+    },
+    {
+      "title": "@adlrocha - Late Arrival to the Fuss of LLMs",
+      "link": "https://adlrocha.substack.com/p/adlrocha-late-arrival-to-the-fuss",
+      "date": "2024-02-04T19:24:06.000Z",
+      "description": "From zero to zero-point-one in a few resources..."
+    },
+    {
+      "title": "@adlrocha - 2024 resolutions",
+      "link": "https://adlrocha.substack.com/p/adlrocha-2024-resolutions",
+      "date": "2024-01-14T19:06:16.000Z",
+      "description": "Getting back into good habits, and entering the world of AI...."
+    },
+    {
+      "title": "@adlrocha - From open-source to open-platforms",
+      "link": "https://adlrocha.substack.com/p/adlrocha-from-open-source-to-open",
+      "date": "2022-10-30T20:37:00.000Z",
+      "description": "On the killer app for blockchains..."
+    },
+    {
+      "title": "@adlrocha - Free Private Cities",
+      "link": "https://adlrocha.substack.com/p/adlrocha-free-private-cities",
+      "date": "2022-03-27T10:32:19.000Z",
+      "description": "A Utopian state or yet another crazy idea..."
+    },
+    {
+      "title": "@adlrocha - Using web3 without holding cryptocurrencies?",
+      "link": "https://adlrocha.substack.com/p/adlrocha-using-web3-without-holding",
+      "date": "2022-02-27T18:42:06.000Z",
+      "description": "Overcoming one of the barriers to mass adoption..."
+    },
+    {
+      "title": "@adlrocha - The Pieces of the Blockchain Lego",
+      "link": "https://adlrocha.substack.com/p/adlrocha-the-pieces-of-the-blockchain",
+      "date": "2022-01-23T19:21:28.000Z",
+      "description": "Just a small piece of the Web3 universe..."
+    },
+    {
+      "title": "@adlrocha - Web3++: The Metaverse",
+      "link": "https://adlrocha.substack.com/p/adlrocha-web3-the-metaverse",
+      "date": "2021-12-12T19:27:55.000Z",
+      "description": "A new front-end to the Web..."
+    },
+    {
+      "title": "@adlrocha - EVM Equivalence v.s. EVM Compatibility",
+      "link": "https://adlrocha.substack.com/p/adlrocha-evm-equivalence-vs-evm-compatibility",
+      "date": "2021-11-14T10:24:27.000Z",
+      "description": "Moving towards the interoperability of chains..."
+    },
+    {
+      "title": "@adlrocha - NFT Bridges",
+      "link": "https://adlrocha.substack.com/p/adlrocha-nft-bridges",
+      "date": "2021-10-17T07:47:26.000Z",
+      "description": "Fighting asset fragmentation in blockchains..."
+    },
+    {
+      "title": "@adlrocha - Sharding",
+      "link": "https://adlrocha.substack.com/p/adlrocha-sharding",
+      "date": "2021-10-03T10:47:12.000Z",
+      "description": "Divide and conquer to scale..."
+    },
+    {
+      "title": "@adlrocha - DAOs: The operating system of communities",
+      "link": "https://adlrocha.substack.com/p/adlrocha-daos-the-operating-system",
+      "date": "2021-09-05T10:05:23.000Z",
+      "description": "Decentralized Autonomous Organizations..."
+    },
+    {
+      "title": "@adlrocha - Blockchain Middleware",
+      "link": "https://adlrocha.substack.com/p/adlrocha-blockchain-middleware",
+      "date": "2021-08-08T09:30:29.000Z",
+      "description": "How we are paving the path to the next blockchain unicorn..."
+    },
+    {
+      "title": "@adlrocha - The State of DEXes",
+      "link": "https://adlrocha.substack.com/p/adlrocha-the-state-of-dexes",
+      "date": "2021-07-18T10:06:13.000Z",
+      "description": "Decentralizing the gateways to crypto..."
+    }
+  ]
+}

@@ -6,10 +6,6 @@ on:
   push:
     branches: ["master"]
 
-  # Weekly rebuild to fetch latest Substack posts
-  schedule:
-    - cron: '0 9 * * 1'  # Every Monday at 9am UTC
-
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
 

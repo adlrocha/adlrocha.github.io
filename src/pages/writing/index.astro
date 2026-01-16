@@ -9,8 +9,8 @@ import { fetchSubstackPosts, type SubstackPost } from '../../lib/substack';
 // Fetch local blog posts
 const localPosts = await getCollection('blog', ({ data }) => !data.draft);
 
-// Fetch Substack posts
-const substackPosts = await fetchSubstackPosts();
+// Get cached Substack posts
+const substackPosts = fetchSubstackPosts();
 
 // Normalize both types to a common format
 type UnifiedPost = {

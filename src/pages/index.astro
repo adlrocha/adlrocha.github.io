@@ -13,8 +13,8 @@ import projects from '../data/projects.json';
 // Fetch local blog posts
 const blogPosts = await getCollection('blog', ({ data }) => !data.draft);
 
-// Fetch Substack posts
-const substackPosts = await fetchSubstackPosts();
+// Get cached Substack posts
+const substackPosts = fetchSubstackPosts();
 
 // Unified post type
 type UnifiedPost = {
