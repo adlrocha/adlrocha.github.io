@@ -1,6 +1,18 @@
 {
-  "lastUpdated": "2026-01-16T16:32:57.238Z",
+  "lastUpdated": "2026-01-27T10:05:49.536Z",
   "posts": [
+    {
+      "title": "@adlrocha - Taming the Agents: My \"Spec-Test-Lint\" Workflow for AI Coding",
+      "link": "https://adlrocha.substack.com/p/adlrocha-taming-the-agents-my-spec",
+      "date": "2026-01-25T09:01:15.000Z",
+      "description": "Why I Moved to a CLI-First AI Setup (and How It Works)..."
+    },
+    {
+      "title": "@adlrocha - Open Source is Dead. Long Live Open Execution",
+      "link": "https://adlrocha.substack.com/p/adlrocha-open-source-is-dead-long",
+      "date": "2026-01-18T09:02:30.000Z",
+      "description": "How AI is killing open-source and what can we do to fix it..."
+    },
     {
       "title": "@adlrocha - Lego Farming Blocks: Letting AIs Grow our Food",
       "link": "https://adlrocha.substack.com/p/adlrocha-lego-farming-blocks-letting",
