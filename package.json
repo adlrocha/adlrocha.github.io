@@ -7,7 +7,10 @@
     "build": "astro build",
     "preview": "astro preview",
     "astro": "astro",
-    "fetch-substack": "npx tsx scripts/fetch-substack.ts"
+    "fetch-substack": "npx tsx scripts/fetch-substack.ts",
+    "fetch-tweets": "npx tsx scripts/fetch-tweets.ts",
+    "update": "npm run fetch-substack && npm run fetch-tweets",
+    "import-tweets": "npx tsx scripts/import-tweets-archive.ts"
   },
   "dependencies": {
     "astro": "^5.16.9",

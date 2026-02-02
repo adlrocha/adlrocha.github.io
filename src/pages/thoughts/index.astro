@@ -1,0 +1,203 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+import { fetchTweets } from '../../lib/tweets';
+
+const tweets = fetchTweets();
+const sortedTweets = tweets.sort((a, b) => b.date.valueOf() - a.date.valueOf());
+
+// Auto-links URLs, @mentions, and #hashtags in tweet text.
+function linkifyTweet(text: string): string {
+  return text
+    .replace(/&/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;')
+    .replace(
+      /(https?:\/\/[^\s]+)/g,
+      '<a href="$1" target="_blank" rel="noopener noreferrer" class="tweet__link">$1</a>'
+    )
+    .replace(
+      /@(\w+)/g,
+      '<a href="https://x.com/$1" target="_blank" rel="noopener noreferrer" class="tweet__mention">@$1</a>'
+    )
+    .replace(
+      /#(\w+)/g,
+      '<a href="https://x.com/hashtag/$1" target="_blank" rel="noopener noreferrer" class="tweet__hashtag">#$1</a>'
+    );
+}
+---
+
+<BaseLayout
+  title="Thoughts"
+  description="Thoughts, ideas, and musings from @adlrocha on Twitter/X."
+>
+  <Header />
+
+  <main class="page">
+    <div class="container container--narrow">
+      <header class="page__header animate-fade-in">
+        <h1 class="page__title">Thoughts</h1>
+        <p class="page__description">
+          Thoughts, ideas, and musings shared on
+          <a href="https://x.com/adlrocha" target="_blank" rel="noopener noreferrer" class="x-link">@adlrocha</a>.
+          My Twitter diary.
+        </p>
+      </header>
+
+      {sortedTweets.length === 0 ? (
+        <p class="empty-state">No thoughts yet. Run <code>npm run update</code> to pull them in.</p>
+      ) : (
+        <div class="tweets-list">
+          {sortedTweets.map(tweet => (
+            <article class="tweet">
+              <div class="tweet__body" set:html={linkifyTweet(tweet.text)} />
+              <footer class="tweet__footer">
+                <time class="tweet__date" datetime={tweet.date.toISOString()}>
+                  {tweet.date.toLocaleDateString('en-US', { year: 'numeric', month: 'short', day: 'numeric' })}
+                </time>
+                <a href={tweet.url} target="_blank" rel="noopener noreferrer" class="tweet__original">
+                  View on X
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/>
+                    <polyline points="15 3 21 3 21 9"/>
+                    <line x1="10" y1="14" x2="21" y2="3"/>
+                  </svg>
+                </a>
+              </footer>
+            </article>
+          ))}
+        </div>
+      )}
+    </div>
+  </main>
+
+  <Footer />
+</BaseLayout>
+
+<style>
+  .page {
+    padding: var(--space-2xl) 0;
+  }
+
+  .page__header {
+    text-align: center;
+    margin-bottom: var(--space-3xl);
+  }
+
+  .page__title {
+    font-size: var(--text-5xl);
+    margin-bottom: var(--space-md);
+  }
+
+  .page__description {
+    font-size: var(--text-lg);
+    color: var(--color-text-secondary);
+    max-width: 600px;
+    margin: 0 auto;
+    line-height: var(--leading-relaxed);
+  }
+
+  .x-link {
+    color: var(--color-accent);
+  }
+
+  .empty-state {
+    text-align: center;
+    color: var(--color-text-tertiary);
+    font-size: var(--text-lg);
+    padding: var(--space-3xl) 0;
+  }
+
+  .empty-state code {
+    font-family: var(--font-mono);
+    background: var(--color-bg-secondary);
+    padding: var(--space-xs) var(--space-sm);
+    border-radius: var(--radius-sm);
+  }
+
+  .tweets-list {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-md);
+  }
+
+  .tweet {
+    background-color: var(--color-bg-secondary);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-lg);
+    padding: var(--space-lg);
+    transition: border-color var(--transition-fast);
+  }
+
+  .tweet:hover {
+    border-color: var(--color-text-tertiary);
+  }
+
+  .tweet__body {
+    font-size: var(--text-base);
+    line-height: var(--leading-relaxed);
+    color: var(--color-text-primary);
+    white-space: pre-wrap;
+    word-break: break-word;
+  }
+
+  .tweet__footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: var(--space-md);
+    padding-top: var(--space-sm);
+    border-top: 1px solid var(--color-border);
+  }
+
+  .tweet__date {
+    font-size: var(--text-sm);
+    color: var(--color-text-tertiary);
+    font-family: var(--font-mono);
+  }
+
+  .tweet__original {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--space-xs);
+    font-size: var(--text-sm);
+    color: var(--color-text-tertiary);
+    text-decoration: none;
+    transition: color var(--transition-fast);
+  }
+
+  .tweet__original:hover {
+    color: var(--color-accent);
+  }
+</style>
+
+<style is:global>
+  .tweet__link {
+    color: var(--color-accent);
+    text-decoration: none;
+    word-break: break-all;
+  }
+
+  .tweet__link:hover {
+    text-decoration: underline;
+  }
+
+  .tweet__mention {
+    color: var(--color-accent);
+    text-decoration: none;
+  }
+
+  .tweet__mention:hover {
+    text-decoration: underline;
+  }
+
+  .tweet__hashtag {
+    color: var(--color-accent);
+    text-decoration: none;
+  }
+
+  .tweet__hashtag:hover {
+    text-decoration: underline;
+  }
+</style>
