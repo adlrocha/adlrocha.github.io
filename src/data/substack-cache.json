@@ -1,6 +1,12 @@
 {
-  "lastUpdated": "2026-01-27T10:05:49.536Z",
+  "lastUpdated": "2026-02-02T14:50:14.304Z",
   "posts": [
+    {
+      "title": "@adlrocha - We are Missing a Security Stack for Autonomous Agents",
+      "link": "https://adlrocha.substack.com/p/adlrocha-we-are-missing-a-security",
+      "date": "2026-02-01T09:01:20.000Z",
+      "description": "From Open Execution to Verifiable Execution: A Revival of Web3 Primitives..."
+    },
     {
       "title": "@adlrocha - Taming the Agents: My \"Spec-Test-Lint\" Workflow for AI Coding",
       "link": "https://adlrocha.substack.com/p/adlrocha-taming-the-agents-my-spec",
