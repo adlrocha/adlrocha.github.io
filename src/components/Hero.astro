@@ -3,6 +3,7 @@ const socialLinks = [
   { name: 'GitHub', url: 'https://github.com/adlrocha' },
   { name: 'Twitter', url: 'https://twitter.com/adlrocha' },
   { name: 'LinkedIn', url: 'https://linkedin.com/in/adlrocha' },
+  { name: 'RSS', url: '/rss.xml' },
 ];
 ---
 
@@ -20,8 +21,8 @@ const socialLinks = [
           <a
             href={link.url}
             class="hero__social-link"
-            target="_blank"
-            rel="noopener noreferrer"
+            target={link.url.startsWith('http') ? '_blank' : undefined}
+            rel={link.url.startsWith('http') ? 'noopener noreferrer' : undefined}
           >
             {link.name}
           </a>

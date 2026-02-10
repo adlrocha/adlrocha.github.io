@@ -4,6 +4,7 @@ const socialLinks = [
   { name: 'Twitter', url: 'https://twitter.com/adlrocha', icon: 'twitter' },
   { name: 'LinkedIn', url: 'https://linkedin.com/in/adlrocha', icon: 'linkedin' },
   { name: 'Email', url: 'mailto:me@adlrocha.com', icon: 'email' },
+  { name: 'RSS Feed', url: '/rss.xml', icon: 'rss' },
 ];
 
 const currentYear = new Date().getFullYear();
@@ -23,8 +24,8 @@ const currentYear = new Date().getFullYear();
             <a
               href={link.url}
               class="footer__social-link"
-              target={link.url.startsWith('mailto') ? undefined : '_blank'}
-              rel={link.url.startsWith('mailto') ? undefined : 'noopener noreferrer'}
+              target={link.url.startsWith('http') ? '_blank' : undefined}
+              rel={link.url.startsWith('http') ? 'noopener noreferrer' : undefined}
               aria-label={link.name}
             >
               {link.icon === 'github' && (
@@ -46,6 +47,12 @@ const currentYear = new Date().getFullYear();
                 <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                   <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
                   <polyline points="22,6 12,13 2,6"/>
+                </svg>
+              )}
+              {link.icon === 'rss' && (
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                  <circle cx="6.18" cy="17.82" r="2.18"/>
+                  <path d="M4 4.44v2.83c7.03 0 12.73 5.7 12.73 12.73h2.83c0-8.59-6.97-15.56-15.56-15.56zm0 5.66v2.83c3.9 0 7.07 3.17 7.07 7.07h2.83c0-5.47-4.43-9.9-9.9-9.9z"/>
                 </svg>
               )}
             </a>
