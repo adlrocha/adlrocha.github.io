@@ -1,35 +1,178 @@
 {
-  "lastUpdated": "2026-02-16T10:45:01.086Z",
+  "lastUpdated": "2026-02-19T09:23:29.657Z",
   "tweets": [
     {
+      "id": "2024179900672811331",
+      "text": "We are first on the ranking! Oh no wait, I was reading the table the other way around 🥲",
+      "date": "2026-02-18T17:51:10.000Z",
+      "url": "https://x.com/adlrocha/status/2024179900672811331",
+      "quotedTweet": {
+        "author": "Pieter Garicano",
+        "text": "Why don't European companies innovate? It is common to blame expensive energy, high taxes, anti-growth politicians, interest groups, and green regulations.\n\nBut California has the same problems, and has created the world's most innovative companies.\n\nEurope's problem is labor",
+        "media": [
+          {
+            "url": "https://pbs.twimg.com/media/HBXqHiAbcAY7DOb?format=jpg&amp;name=orig",
+            "type": "photo",
+            "width": 1408,
+            "height": 876
+          }
+        ]
+      }
+    },
+    {
+      "id": "2024166696387322287",
+      "text": "I know what is happening after this tweet (see gif below) \n\nBut to me `Claude code >> opecode` still. Maybe is just a matter of getting used to your agent.",
+      "date": "2026-02-18T16:58:42.000Z",
+      "url": "https://x.com/adlrocha/status/2024166696387322287",
+      "media": [
+        {
+          "url": "https://video.twimg.com/tweet_video/HBdI4QNW0AAD4cr.mp4",
+          "type": "gif",
+          "poster": "https://pbs.twimg.com/tweet_video_thumb/HBdI4QNW0AAD4cr.jpg",
+          "width": 220,
+          "height": 132
+        }
+      ]
+    },
+    {
+      "id": "2024092192038383639",
+      "text": "Intelligence and knowledge is definitely a commodity now.",
+      "date": "2026-02-18T12:02:39.000Z",
+      "url": "https://x.com/adlrocha/status/2024092192038383639"
+    },
+    {
+      "id": "2024085072144478331",
+      "text": "Reading ideas like these now makes me realise that we were so early with @ConsensusLab_'s IPC and executed so badly. We could have win the market.\n\nIt really makes me sad 😢 This is going to become one of the big \"what-if\"s of my career",
+      "date": "2026-02-18T11:34:21.000Z",
+      "url": "https://x.com/adlrocha/status/2024085072144478331",
+      "quotedTweet": {
+        "author": "LayerZero",
+        "text": "http://x.com/i/article/2020961724988350464"
+      }
+    },
+    {
+      "id": "2023836564522942667",
+      "text": "I shipped my first feature fully from the phone. Up till now I was only reviewing PRs. \n\nAnd I have access to all my local files. Why I didn’t do this earlier? This was useful before agents, but the FOMO pushed me into it. \n\nThis makes work life balance with kids slightly less challenging",
+      "date": "2026-02-17T19:06:52.000Z",
+      "url": "https://x.com/adlrocha/status/2023836564522942667",
+      "quotedTweet": {
+        "author": "adlrocha",
+        "text": "I’ve officially joined the cult. I set up my home env in order to be able to access it from my phone in case I want to trigger a tiny little task in one of my agents :) \n\nI have some ideas of where to go from here, and it may improve my quality of life",
+        "media": [
+          {
+            "url": "https://pbs.twimg.com/media/HBXqAntW4AAFj2k?format=jpg&amp;name=orig",
+            "type": "photo",
+            "width": 947,
+            "height": 2048
+          }
+        ]
+      }
+    },
+    {
+      "id": "2023786626326163923",
+      "text": "And I blame @BaselightDB for this. Having an agent and a global source of data for anything comes pretty handy!",
+      "date": "2026-02-17T15:48:26.000Z",
+      "url": "https://x.com/adlrocha/status/2023786626326163923",
+      "quotedTweet": {
+        "author": "adlrocha",
+        "text": "I’ve officially joined the cult. I set up my home env in order to be able to access it from my phone in case I want to trigger a tiny little task in one of my agents :) \n\nI have some ideas of where to go from here, and it may improve my quality of life",
+        "media": [
+          {
+            "url": "https://pbs.twimg.com/media/HBXqAntW4AAFj2k?format=jpg&amp;name=orig",
+            "type": "photo",
+            "width": 947,
+            "height": 2048
+          }
+        ]
+      }
+    },
+    {
+      "id": "2023780910735532301",
+      "text": "I’ve officially joined the cult. I set up my home env in order to be able to access it from my phone in case I want to trigger a tiny little task in one of my agents :) \n\nI have some ideas of where to go from here, and it may improve my quality of life",
+      "date": "2026-02-17T15:25:43.000Z",
+      "url": "https://x.com/adlrocha/status/2023780910735532301",
+      "media": [
+        {
+          "url": "https://pbs.twimg.com/media/HBXqAntW4AAFj2k?format=jpg&amp;name=orig",
+          "type": "photo",
+          "width": 947,
+          "height": 2048
+        }
+      ]
+    },
+    {
+      "id": "2023399598694465815",
+      "text": "The most productive thing that you can do while waiting for your agents to finish their tasks is reading a book about the fundamentals of what you are tasking them to build.",
+      "date": "2026-02-16T14:10:31.000Z",
+      "url": "https://x.com/adlrocha/status/2023399598694465815"
+    },
+    {
       "id": "2023035652032610520",
-      "text": "“ The window to be first at anything feels like it's shrinking by the day. Literally, by the day.” And as I wrote about a few weeks ago, we are fighting irrelevance!Nikunj Kothari: http://x.com/i/article/2022384720735338496",
+      "text": "“ The window to be first at anything feels like it's shrinking by the day. Literally, by the day.” \n\nAnd as I wrote about a few weeks ago, we are fighting irrelevance!",
       "date": "2026-02-15T14:04:20.000Z",
-      "url": "https://x.com/adlrocha/status/2023035652032610520"
+      "url": "https://x.com/adlrocha/status/2023035652032610520",
+      "quotedTweet": {
+        "author": "Nikunj Kothari",
+        "text": "http://x.com/i/article/2022384720735338496"
+      }
     },
     {
       "id": "2023014162406965662",
-      "text": "I guess this is why we are not having kids and we will soon be extinct.Sex used to be the bait for procreation.Beff (e/acc): Yeah sex is good, but have you tried one-shotting a research problem you've been working on for 6 years in a cheeky Claude binge session on a Saturday?",
+      "text": "I guess this is why we are not having kids and we will soon be extinct.\n\nSex used to be the bait for procreation.",
       "date": "2026-02-15T12:38:56.000Z",
-      "url": "https://x.com/adlrocha/status/2023014162406965662"
+      "url": "https://x.com/adlrocha/status/2023014162406965662",
+      "quotedTweet": {
+        "author": "Beff (e/acc)",
+        "text": "Yeah sex is good, but have you tried one-shotting a research problem you've been working on for 6 years in a cheeky Claude binge session on a Saturday?"
+      }
     },
     {
       "id": "2022732741385593121",
       "text": "I just wanted to briefly hype the title of tomorrow's post featuring @BaselightDB  :) I am also pretty excited about this one",
       "date": "2026-02-14T18:00:40.000Z",
-      "url": "https://x.com/adlrocha/status/2022732741385593121"
+      "url": "https://x.com/adlrocha/status/2022732741385593121",
+      "media": [
+        {
+          "url": "https://pbs.twimg.com/media/HBIwmX-bMAAyEQC?format=jpg&amp;name=orig",
+          "type": "photo",
+          "width": 1024,
+          "height": 559
+        }
+      ]
     },
     {
       "id": "2022651522379825452",
-      "text": "Made me laugh out loud!Justine Moore: Reinstalling OpenClaw on your work laptop after the IT team tells you no",
+      "text": "Made me laugh out loud!",
       "date": "2026-02-14T12:37:56.000Z",
-      "url": "https://x.com/adlrocha/status/2022651522379825452"
+      "url": "https://x.com/adlrocha/status/2022651522379825452",
+      "quotedTweet": {
+        "author": "Justine Moore",
+        "text": "Reinstalling OpenClaw on your work laptop after the IT team tells you no",
+        "media": [
+          {
+            "url": "https://video.twimg.com/amplify_video/2022530738697220096/vid/avc1/480x560/zxjI_3XyMPqugNS0.mp4?tag=21",
+            "type": "video",
+            "poster": "https://pbs.twimg.com/amplify_video_thumb/2022530738697220096/img/DN20IZ60b4mHRRd8.jpg",
+            "width": 480,
+            "height": 560
+          }
+        ]
+      }
     },
     {
       "id": "2022422326642642972",
       "text": "I built an extension to signal AI-generated text. Is crazy to run it in LinkedIn…",
       "date": "2026-02-13T21:27:12.000Z",
-      "url": "https://x.com/adlrocha/status/2022422326642642972"
+      "url": "https://x.com/adlrocha/status/2022422326642642972",
+      "media": [
+        {
+          "url": "https://video.twimg.com/tweet_video/HBEWYijakAI-kDZ.mp4",
+          "type": "gif",
+          "poster": "https://pbs.twimg.com/tweet_video_thumb/HBEWYijakAI-kDZ.jpg",
+          "width": 220,
+          "height": 124
+        }
+      ]
     },
     {
       "id": "2022346097545314515",
@@ -90,12 +233,6 @@
       "text": "Let me stress this point: collateral reuse!Just saying it out loud gives me the chills!adlrocha: Money velocity matters. Is not only the M2 supply what makes things messy. That is why stablecoins are a great idea, once we share the backend double spend is not possible (and velocity can’t be artificially manufactured through collateral reuse)",
       "date": "2026-02-09T19:28:30.000Z",
       "url": "https://x.com/adlrocha/status/2020942904542511403"
-    },
-    {
-      "id": "2020942507912331383",
-      "text": "Money velocity matters. Is not only the M2 supply what makes things messy. That is why stablecoins are a great idea, once we share the backend double spend is not possible (and velocity can’t be artificially manufactured through collateral reuse)",
-      "date": "2026-02-09T19:26:55.000Z",
-      "url": "https://x.com/adlrocha/status/2020942507912331383"
     },
     {
       "id": "2019818371320099284",
@@ -174,12 +311,6 @@
       "text": "I just finished Fahrenheit 451 for the first time (thank you @whereisjorge for the recommendation).It is crazy how a book that is close to a century old can identify so clearly the issues of our current society.People are no let to think freely (and deeply) anymore. They want us distracted. Books are the way to unlock that thinking space.",
       "date": "2026-02-03T08:52:44.000Z",
       "url": "https://x.com/adlrocha/status/2018608582397231364"
-    },
-    {
-      "id": "2018608531868430667",
-      "text": "I just finished Fahrenheit 451 for the first time (thank you @whereisjorge for the recommendation).\n\nIt is crazy how a book that is close to a century old can identify so clearly the issues of our current society.\n\nPeople are no let to think freely (and deeply) anymore. They want… https://t.co/eiKGnKpTbC",
-      "date": "2026-02-03T08:52:32.000Z",
-      "url": "https://x.com/adlrocha/status/2018608531868430667"
     },
     {
       "id": "2018376434541003211",
@@ -596,12 +727,6 @@
       "url": "https://x.com/adlrocha/status/2006354890751414484"
     },
     {
-      "id": "2006354714271809666",
-      "text": "Fun story related to this, &gt;80% of the team behind @BaselightDB is southern European. So we have the talent, we just need believe we are as good as our friends from the other side of the Atlantic. https://t.co/SDa9AePt5a",
-      "date": "2025-12-31T13:20:14.000Z",
-      "url": "https://x.com/adlrocha/status/2006354714271809666"
-    },
-    {
       "id": "2006354255913869559",
       "text": "Potentially a contrarian opinion, but I feel like an opportunity window is opening to start a deep tech company from Spain and other countries of southern Europe. \n\nThe ecosystem is booming, it’s easier to relocate talent here, and money doesn’t understand borders. \n\nFuck…",
       "date": "2025-12-31T13:18:25.000Z",
@@ -818,12 +943,6 @@
       "url": "https://x.com/adlrocha/status/1994133659683836324"
     },
     {
-      "id": "1994133592809857393",
-      "text": "Having sons make you dummer? I think it does.",
-      "date": "2025-11-27T19:57:52.000Z",
-      "url": "https://x.com/adlrocha/status/1994133592809857393"
-    },
-    {
       "id": "1994017676650291631",
       "text": "Looking to trade on today's NFL games using @Kalshi or @RobinhoodApp? Here's my @BaselightDB analysis with a few suggestions :) \n\nNot financial advice, of course, and only for educational purposes. But @BaselightDB is a great data source for prediction markets. https://t.co/lcuVyovMeW",
       "date": "2025-11-27T12:17:15.000Z",
@@ -980,12 +1099,6 @@
       "url": "https://x.com/adlrocha/status/1983826258166251858"
     },
     {
-      "id": "1983826118630084627",
-      "text": "If this resonates with anyone drop me a message! Is all about structured data at inference time! https://t.co/WzCCJeFwqc",
-      "date": "2025-10-30T09:19:39.000Z",
-      "url": "https://x.com/adlrocha/status/1983826118630084627"
-    },
-    {
       "id": "1983459332613128251",
       "text": "Since @Kalshi was regulated by the CFTC I've been obsessed with what that may entail for sports analytics.\n\nThe shift from sports \"betting\" to sports \"trading\" fundamentally changes the nature of the data required. And we have you covered, @BaselightDB AI already helps you make… https://t.co/MfvfCNS696",
       "date": "2025-10-29T09:02:10.000Z",
@@ -1050,12 +1163,6 @@
       "text": "It is increasingly clear reality is all is information theory,  and we life beings are information processing machines.\n \nNatural selection favors those with better information processing capabilities",
       "date": "2025-10-13T18:03:36.000Z",
       "url": "https://x.com/adlrocha/status/1977797382109864423"
-    },
-    {
-      "id": "1977797232100340109",
-      "text": "It is increasingly clear that all is information theory and we life beings are information processing machines.\n \nNatural selection favors those with better information processing capabilities",
-      "date": "2025-10-13T18:03:00.000Z",
-      "url": "https://x.com/adlrocha/status/1977797232100340109"
     },
     {
       "id": "1977003077652873430",
@@ -1170,12 +1277,6 @@
       "text": "I am so sick of reading AI-generated content these days. I need a tool that automatically detects this content and it either makes it more human-like, or just discards it. \n\nBTW, follow me for more sloppy tweets written by a sloppy human with sloppy English",
       "date": "2025-09-16T19:57:24.000Z",
       "url": "https://x.com/adlrocha/status/1968041547913736351"
-    },
-    {
-      "id": "1968041447371968762",
-      "text": "I am so sick of reading AI-generated content these days. I need a tool that automatically detects this content and it either makes ir more human-like, or just discards it. \n\nBTW, follow me for more sloppy tweets written by a sloppy human with sloppy English",
-      "date": "2025-09-16T19:57:00.000Z",
-      "url": "https://x.com/adlrocha/status/1968041447371968762"
     },
     {
       "id": "1967902963910996097",
@@ -1310,12 +1411,6 @@
       "url": "https://x.com/adlrocha/status/1958821485734228421"
     },
     {
-      "id": "1958820534705086822",
-      "text": "It is as important to write the right LLM as to provide them with the right context.",
-      "date": "2025-08-22T09:16:23.000Z",
-      "url": "https://x.com/adlrocha/status/1958820534705086822"
-    },
-    {
       "id": "1957828376040751205",
       "text": "I am so bullish on @BaselightDB these days :) https://t.co/VgehFQT66Z",
       "date": "2025-08-19T15:33:54.000Z",
@@ -1344,12 +1439,6 @@
       "text": "What would be the state of computing be if we hadn’t discovered the transistor and Von Neumann’s architecture? I invite you to do this mental exercise, is a fun one!",
       "date": "2025-08-15T12:30:23.000Z",
       "url": "https://x.com/adlrocha/status/1956332641554166205"
-    },
-    {
-      "id": "1956332549409489261",
-      "text": "What would be the state of computing be if we hadn’t discover the transistor and Von Neumann’s architecture? I invite you to do this mental exercise, is a fun one!",
-      "date": "2025-08-15T12:30:01.000Z",
-      "url": "https://x.com/adlrocha/status/1956332549409489261"
     },
     {
       "id": "1956330879648727068",
@@ -1904,12 +1993,6 @@
       "url": "https://x.com/adlrocha/status/1934641990567620885"
     },
     {
-      "id": "1934641923329044525",
-      "text": "TIL that there are @MongoDB bots periodically monitoring blocks of IP addresses in search for open databases in the default port that they can dump to make a quick few bucks in BTC \n\n(my gut feeling is that they just drop the database and never back up the content. The ransom is… https://t.co/WH1AKgPjea",
-      "date": "2025-06-16T15:59:13.000Z",
-      "url": "https://x.com/adlrocha/status/1934641923329044525"
-    },
-    {
       "id": "1933169924714717380",
       "text": "Exciting news! My talk \"Dismantling One Data Monopoly at a Time in the Age of AI\" has been accepted to this year's edition of @Web3summit. \n\nIf you are around and you want to chat all things data, @BaselightDB, AI and crypto hit me up! https://t.co/BuBTo9Yr4a",
       "date": "2025-06-12T14:30:01.000Z",
@@ -1944,12 +2027,6 @@
       "text": "This has happened to way more people than one would expect :( \nhttps://t.co/GOJIw3m5aG https://t.co/K1GooaHXl1",
       "date": "2025-06-09T14:08:29.000Z",
       "url": "https://x.com/adlrocha/status/1932077342827888797"
-    },
-    {
-      "id": "1932077237781610909",
-      "text": "This has happened to way more people than one would expect :( \nhttps://t.co/M4GkfZARi1",
-      "date": "2025-06-09T14:08:04.000Z",
-      "url": "https://x.com/adlrocha/status/1932077237781610909"
     },
     {
       "id": "1930955520380207457",
