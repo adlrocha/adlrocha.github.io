@@ -26,6 +26,15 @@ function linkifyTweet(text: string): string {
       '<a href="https://x.com/hashtag/$1" target="_blank" rel="noopener noreferrer" class="tweet__hashtag">#$1</a>'
     );
 }
+
+/**
+ * Returns the CSS class for the media grid based on the number of items.
+ */
+function mediaGridClass(count: number): string {
+  if (count === 1) return 'tweet__media tweet__media--single';
+  if (count === 2) return 'tweet__media tweet__media--duo';
+  return 'tweet__media tweet__media--grid';
+}
 ---
 
 <BaseLayout
@@ -52,6 +61,95 @@ function linkifyTweet(text: string): string {
           {sortedTweets.map(tweet => (
             <article class="tweet">
               <div class="tweet__body" set:html={linkifyTweet(tweet.text)} />
+
+              {/* Tweet media (images, gifs, videos) */}
+              {tweet.media && tweet.media.length > 0 && (
+                <div class={mediaGridClass(tweet.media.length)}>
+                  {tweet.media.map(m => (
+                    m.type === 'photo' ? (
+                      <a href={m.url} target="_blank" rel="noopener noreferrer" class="tweet__media-link">
+                        <img
+                          src={m.url}
+                          alt="Tweet image"
+                          loading="lazy"
+                          class="tweet__media-img"
+                        />
+                      </a>
+                    ) : m.type === 'gif' ? (
+                      <video
+                        src={m.url}
+                        poster={m.poster}
+                        autoplay
+                        loop
+                        muted
+                        playsinline
+                        class="tweet__media-video"
+                      />
+                    ) : (
+                      <video
+                        src={m.url}
+                        poster={m.poster}
+                        controls
+                        playsinline
+                        preload="metadata"
+                        class="tweet__media-video"
+                      />
+                    )
+                  ))}
+                </div>
+              )}
+
+              {/* Quoted tweet */}
+              {tweet.quotedTweet && (
+                <blockquote class="tweet__quote">
+                  {tweet.quotedTweet.author && (
+                    <span class="tweet__quote-author">
+                      {tweet.quotedTweet.author}
+                    </span>
+                  )}
+                  <div
+                    class="tweet__quote-text"
+                    set:html={linkifyTweet(tweet.quotedTweet.text)}
+                  />
+                  {/* Quoted tweet media */}
+                  {tweet.quotedTweet.media && tweet.quotedTweet.media.length > 0 && (
+                    <div class={mediaGridClass(tweet.quotedTweet.media.length)}>
+                      {tweet.quotedTweet.media.map(m => (
+                        m.type === 'photo' ? (
+                          <a href={m.url} target="_blank" rel="noopener noreferrer" class="tweet__media-link">
+                            <img
+                              src={m.url}
+                              alt="Quoted tweet image"
+                              loading="lazy"
+                              class="tweet__media-img"
+                            />
+                          </a>
+                        ) : m.type === 'gif' ? (
+                          <video
+                            src={m.url}
+                            poster={m.poster}
+                            autoplay
+                            loop
+                            muted
+                            playsinline
+                            class="tweet__media-video"
+                          />
+                        ) : (
+                          <video
+                            src={m.url}
+                            poster={m.poster}
+                            controls
+                            playsinline
+                            preload="metadata"
+                            class="tweet__media-video"
+                          />
+                        )
+                      ))}
+                    </div>
+                  )}
+                </blockquote>
+              )}
+
               <footer class="tweet__footer">
                 <time class="tweet__date" datetime={tweet.date.toISOString()}>
                   {tweet.date.toLocaleDateString('en-US', { year: 'numeric', month: 'short', day: 'numeric' })}
@@ -142,6 +240,55 @@ function linkifyTweet(text: string): string {
     word-break: break-word;
   }
 
+  /* ---- Media grid ---- */
+
+  .tweet__media {
+    margin-top: var(--space-sm);
+    display: grid;
+    gap: 4px;
+    border-radius: var(--radius-md);
+    overflow: hidden;
+  }
+
+  .tweet__media--single {
+    grid-template-columns: 1fr;
+  }
+
+  .tweet__media--duo {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .tweet__media--grid {
+    grid-template-columns: 1fr 1fr;
+    grid-auto-rows: minmax(0, 200px);
+  }
+
+  /* ---- Quoted tweet ---- */
+
+  .tweet__quote {
+    margin: var(--space-sm) 0 0 0;
+    padding: var(--space-sm) var(--space-md);
+    border-left: 3px solid var(--color-accent);
+    background: var(--color-bg-tertiary);
+    border-radius: 0 var(--radius-md) var(--radius-md) 0;
+  }
+
+  .tweet__quote-author {
+    display: block;
+    font-size: var(--text-sm);
+    font-weight: 600;
+    color: var(--color-text-secondary);
+    margin-bottom: var(--space-xs);
+  }
+
+  .tweet__quote-text {
+    font-size: var(--text-sm);
+    line-height: var(--leading-relaxed);
+    color: var(--color-text-secondary);
+    white-space: pre-wrap;
+    word-break: break-word;
+  }
+
   .tweet__footer {
     display: flex;
     justify-content: space-between;
@@ -199,5 +346,33 @@ function linkifyTweet(text: string): string {
 
   .tweet__hashtag:hover {
     text-decoration: underline;
+  }
+
+  .tweet__media-link {
+    display: block;
+    line-height: 0;
+  }
+
+  .tweet__media-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+
+  .tweet__media-video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    border-radius: var(--radius-md);
+  }
+
+  .tweet__media--single .tweet__media-img,
+  .tweet__media--single .tweet__media-video {
+    max-height: 500px;
+    object-fit: contain;
+    background: var(--color-bg-tertiary);
+    border-radius: var(--radius-md);
   }
 </style>

@@ -40,12 +40,17 @@ export const GET: APIRoute = async () => {
       pubDate: post.date,
       description: post.description,
     })),
-    ...tweets.map((tweet) => ({
-      title: tweet.text.length > 80 ? tweet.text.slice(0, 77) + '...' : tweet.text,
-      link: tweet.url,
-      pubDate: tweet.date,
-      description: tweet.text,
-    })),
+    ...tweets.map((tweet) => {
+      const fullText = tweet.quotedTweet
+        ? `${tweet.text}\n\n> ${tweet.quotedTweet.author}: ${tweet.quotedTweet.text}`
+        : tweet.text;
+      return {
+        title: tweet.text.length > 80 ? tweet.text.slice(0, 77) + '...' : tweet.text,
+        link: tweet.url,
+        pubDate: tweet.date,
+        description: fullText,
+      };
+    }),
   ];
 
   items.sort((a, b) => b.pubDate.valueOf() - a.pubDate.valueOf());
