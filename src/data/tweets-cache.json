@@ -1,6 +1,289 @@
 {
-  "lastUpdated": "2026-02-23T09:38:25.312Z",
+  "lastUpdated": "2026-03-01T09:09:13.831Z",
   "tweets": [
+    {
+      "id": "2027688754584900057",
+      "text": "A bit of hype for tomorrow’s post! \n\nThis one is full of strong opinions weakly held, and the kind of hot takes that I hope trigger a heated debate! Drop by and say hi!",
+      "date": "2026-02-28T10:14:06.000Z",
+      "url": "https://x.com/adlrocha/status/2027688754584900057",
+      "media": [
+        {
+          "url": "https://pbs.twimg.com/media/HCPL7ZSbEAE9Jtd?format=jpg&amp;name=orig",
+          "type": "photo",
+          "width": 1024,
+          "height": 559
+        }
+      ]
+    },
+    {
+      "id": "2027464464820322568",
+      "text": "This is not going to end well.",
+      "date": "2026-02-27T19:22:51.000Z",
+      "url": "https://x.com/adlrocha/status/2027464464820322568",
+      "media": [
+        {
+          "url": "https://video.twimg.com/tweet_video/HCMALoaXsAA9Q_-.mp4",
+          "type": "gif",
+          "poster": "https://pbs.twimg.com/tweet_video_thumb/HCMALoaXsAA9Q_-.jpg",
+          "width": 244,
+          "height": 190
+        }
+      ],
+      "quotedTweet": {
+        "author": "Exec Sum",
+        "text": "BREAKING: OpenAI announced a $110B funding round at a $730B pre-money valuation ($840B post-money). \n\nBreakdown: \n- $50B from Amazon (plus strategic partnership)\n- $30B from NVIDIA (plus next-gen compute deal)\n- $30B from SoftBank"
+      }
+    },
+    {
+      "id": "2027438457396629779",
+      "text": "I am having one of those days where I would love to fire claude code! \n\nThen I remember that if I did so I would have to write the code myself and we forgive each other!",
+      "date": "2026-02-27T17:39:30.000Z",
+      "url": "https://x.com/adlrocha/status/2027438457396629779",
+      "media": [
+        {
+          "url": "https://pbs.twimg.com/media/HCLocawXoAAEQX0?format=png&amp;name=orig",
+          "type": "photo",
+          "width": 551,
+          "height": 73
+        }
+      ]
+    },
+    {
+      "id": "2027324911392289002",
+      "text": "I had so much fun on this one. Thank you @joobid for organising it.\n\nStay tuned because I'll talk about this event on this week's post!\n\nSpoiler alert: The post is full of strong opinions weakly held :)",
+      "date": "2026-02-27T10:08:19.000Z",
+      "url": "https://x.com/adlrocha/status/2027324911392289002",
+      "quotedTweet": {
+        "author": "Jorge Ordovás",
+        "text": "The first AI Socratic event in Madrid has been really amazing, with incredibly interesting and insightful discussions among real AI professionals, from developers and startup founders to researchers, VCs, and large corporations.\n\nOpenclaw and the agentic reality, experiences with",
+        "media": [
+          {
+            "url": "https://pbs.twimg.com/media/HCHVAiYaQAAntvQ?format=jpg&amp;name=orig",
+            "type": "photo",
+            "width": 2048,
+            "height": 1536
+          },
+          {
+            "url": "https://pbs.twimg.com/media/HCHVAihbAAAKIt_?format=jpg&amp;name=orig",
+            "type": "photo",
+            "width": 1536,
+            "height": 2048
+          },
+          {
+            "url": "https://pbs.twimg.com/media/HCHVAh7XIAE8X_G?format=jpg&amp;name=orig",
+            "type": "photo",
+            "width": 1536,
+            "height": 2048
+          },
+          {
+            "url": "https://pbs.twimg.com/media/HCHVAh6WMAABkT2?format=jpg&amp;name=orig",
+            "type": "photo",
+            "width": 1536,
+            "height": 2048
+          }
+        ]
+      }
+    },
+    {
+      "id": "2026732490329653645",
+      "text": "I love to use tools that have been worn out by my own use. \n* Worn out keyboards.\n* Worn out guitars\n* Worn out tables\n* Worn out books",
+      "date": "2026-02-25T18:54:15.000Z",
+      "url": "https://x.com/adlrocha/status/2026732490329653645",
+      "media": [
+        {
+          "url": "https://pbs.twimg.com/media/HCBmawvXsAA6a0F?format=jpg&amp;name=orig",
+          "type": "photo",
+          "width": 1024,
+          "height": 559
+        }
+      ]
+    },
+    {
+      "id": "2026667560461119986",
+      "text": "Oh, come on! I just came up with this and Claude is already releasing an equivalent feature (:\n \nOnly if I had known ...\nhttps://x.com/noahzweben/status/2026371260805271615?s=20",
+      "date": "2026-02-25T14:36:14.000Z",
+      "url": "https://x.com/adlrocha/status/2026667560461119986",
+      "quotedTweet": {
+        "author": "adlrocha",
+        "text": "Oh my! I just leveled up my productivity toolkit. \n\nNow I not only get notified about when my agents need me, but I can actually reply to them directly in-chat to unblock them wherever I am 😍😍",
+        "media": [
+          {
+            "url": "https://pbs.twimg.com/media/HCAhsbNWoAAoid4?format=png&amp;name=orig",
+            "type": "photo",
+            "width": 880,
+            "height": 344
+          },
+          {
+            "url": "https://pbs.twimg.com/media/HCAhverXsAAaaR0?format=png&amp;name=orig",
+            "type": "photo",
+            "width": 642,
+            "height": 399
+          }
+        ]
+      }
+    },
+    {
+      "id": "2026664400111722640",
+      "text": "Oh my! I just leveled up my productivity toolkit. \n\nNow I not only get notified about when my agents need me, but I can actually reply to them directly in-chat to unblock them wherever I am 😍😍",
+      "date": "2026-02-25T14:23:41.000Z",
+      "url": "https://x.com/adlrocha/status/2026664400111722640",
+      "media": [
+        {
+          "url": "https://pbs.twimg.com/media/HCAhsbNWoAAoid4?format=png&amp;name=orig",
+          "type": "photo",
+          "width": 880,
+          "height": 344
+        },
+        {
+          "url": "https://pbs.twimg.com/media/HCAhverXsAAaaR0?format=png&amp;name=orig",
+          "type": "photo",
+          "width": 642,
+          "height": 399
+        }
+      ]
+    },
+    {
+      "id": "2026618218593321190",
+      "text": "Wait! It can even do stock picking in a somewhat sensible way 🤤 Mr. Malone can become my personal screener?",
+      "date": "2026-02-25T11:20:10.000Z",
+      "url": "https://x.com/adlrocha/status/2026618218593321190",
+      "media": [
+        {
+          "url": "https://pbs.twimg.com/media/HB_-T8SWEAMVJZO?format=jpg&amp;name=orig",
+          "type": "photo",
+          "width": 1184,
+          "height": 198
+        }
+      ],
+      "quotedTweet": {
+        "author": "adlrocha",
+        "text": "Man, Mr. Malone in action pulling data from @BaselightDB is the best financial advisor.\n\nI would definitely pay for something like this.\n\nI am pivoting to finance in my next career move!",
+        "media": [
+          {
+            "url": "https://pbs.twimg.com/media/HB_6H47WIAEP9tA?format=jpg&amp;name=orig",
+            "type": "photo",
+            "width": 1314,
+            "height": 1167
+          }
+        ]
+      }
+    },
+    {
+      "id": "2026613879195771171",
+      "text": "Man, Mr. Malone in action pulling data from @BaselightDB is the best financial advisor.\n\nI would definitely pay for something like this.\n\nI am pivoting to finance in my next career move!",
+      "date": "2026-02-25T11:02:56.000Z",
+      "url": "https://x.com/adlrocha/status/2026613879195771171",
+      "media": [
+        {
+          "url": "https://pbs.twimg.com/media/HB_6H47WIAEP9tA?format=jpg&amp;name=orig",
+          "type": "photo",
+          "width": 1314,
+          "height": 1167
+        }
+      ]
+    },
+    {
+      "id": "2026579380017770626",
+      "text": "Token use is the currency of the future. We purchase intelligence the same way that FIAT currency currently buys human labour and goods.",
+      "date": "2026-02-25T08:45:50.000Z",
+      "url": "https://x.com/adlrocha/status/2026579380017770626"
+    },
+    {
+      "id": "2026403308122878220",
+      "text": "I can’t resist the aesthetics of a well-designed mobile friendly app on my phone",
+      "date": "2026-02-24T21:06:12.000Z",
+      "url": "https://x.com/adlrocha/status/2026403308122878220"
+    },
+    {
+      "id": "2026336616654966873",
+      "text": "And of course a bit of this talk involves @BaselightDB and why we are building it ;)",
+      "date": "2026-02-24T16:41:11.000Z",
+      "url": "https://x.com/adlrocha/status/2026336616654966873",
+      "quotedTweet": {
+        "author": "adlrocha",
+        "text": "Turns out I'll be giving a quick talk on AI Socratic Madrid meetup and I am super excited about it.\n\nLet me hype the talk a bit. I'll be sharing my realisation about how the *context is the product* and how *adaptive personalised software* is the new way of shipping software.",
+        "media": [
+          {
+            "url": "https://pbs.twimg.com/media/HB71_l2WwAEJpI1?format=jpg&amp;name=orig",
+            "type": "photo",
+            "width": 1237,
+            "height": 670
+          }
+        ]
+      }
+    },
+    {
+      "id": "2026328235663921504",
+      "text": "Turns out I'll be giving a quick talk on AI Socratic Madrid meetup and I am super excited about it.\n\nLet me hype the talk a bit. I'll be sharing my realisation about how the *context is the product* and how *adaptive personalised software* is the new way of shipping software.",
+      "date": "2026-02-24T16:07:53.000Z",
+      "url": "https://x.com/adlrocha/status/2026328235663921504",
+      "media": [
+        {
+          "url": "https://pbs.twimg.com/media/HB71_l2WwAEJpI1?format=jpg&amp;name=orig",
+          "type": "photo",
+          "width": 1237,
+          "height": 670
+        }
+      ]
+    },
+    {
+      "id": "2026007650144546921",
+      "text": "Building one of these agents with @BaselightDB would be literally minutes (actually, connecting the Baselight's MCP to any of the existing coding agents could get you this out of the box). \n\nContext is all you need!\n\nWe are currenlty missing the datasets required to implement this exact one, but I am really excited about this work and similar use cases that are surfacing for niche agents.\n\nSoon we will incentivise devs to distribute their datasets for Baselight to build the knowledge base for agents so any niche agent can be built out of the box :)\n\nHuge fan of this one @tarikjmoody 🙌 Thanks!",
+      "date": "2026-02-23T18:53:59.000Z",
+      "url": "https://x.com/adlrocha/status/2026007650144546921",
+      "quotedTweet": {
+        "author": "Tarik Moody",
+        "text": "I'm building the Claude Code for real music lovers, DJs, music journalists, and radio programmers (inspired by @virattt's Dexter Finance CLI.  \n\nCrate, built on the Claude Agent SDK, is a personal research assistant AND music workspace for DJs, collectors, music journalists, and",
+        "media": [
+          {
+            "url": "https://pbs.twimg.com/media/HByif84W0AA5vkJ?format=jpg&amp;name=orig",
+            "type": "photo",
+            "width": 2048,
+            "height": 1351
+          }
+        ]
+      }
+    },
+    {
+      "id": "2025884247026725365",
+      "text": "This is how beautiful my Telegram message look like today. I am trying to figure out how to have an army of 24/7 agents that allow me to focus on creative work :)\n\nLet's see how far I manage to get!\n\n(In case you are wondering, that blt-* stands for @BaselightDB :) )",
+      "date": "2026-02-23T10:43:38.000Z",
+      "url": "https://x.com/adlrocha/status/2025884247026725365",
+      "media": [
+        {
+          "url": "https://pbs.twimg.com/media/HB1i30ZWcAAnG_g?format=png&amp;name=orig",
+          "type": "photo",
+          "width": 489,
+          "height": 97
+        }
+      ],
+      "quotedTweet": {
+        "author": "adlrocha",
+        "text": "This weekend I stepped up my game by creating a Telegram bot that notifies me when my agents need me!",
+        "media": [
+          {
+            "url": "https://pbs.twimg.com/media/HB1gw_IWMAAsHE8?format=png&amp;name=orig",
+            "type": "photo",
+            "width": 445,
+            "height": 80
+          }
+        ]
+      }
+    },
+    {
+      "id": "2025881827362189751",
+      "text": "This weekend I stepped up my game by creating a Telegram bot that notifies me when my agents need me!",
+      "date": "2026-02-23T10:34:01.000Z",
+      "url": "https://x.com/adlrocha/status/2025881827362189751",
+      "media": [
+        {
+          "url": "https://pbs.twimg.com/media/HB1gw_IWMAAsHE8?format=png&amp;name=orig",
+          "type": "photo",
+          "width": 445,
+          "height": 80
+        }
+      ]
+    },
     {
       "id": "2025188115355471997",
       "text": "Damn, this was a hard one to write. It's been on my backlog for weeks.\n\n I read (and listened) a lot for this one, and I think I could have done a better job with a bit more of time, but I rather ship it tomorrow and let the community build upon it. See you tomorrow!",
