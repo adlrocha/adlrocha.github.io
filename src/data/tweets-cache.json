@@ -1,6 +1,158 @@
 {
-  "lastUpdated": "2026-03-09T10:58:37.561Z",
+  "lastUpdated": "2026-03-16T18:33:46.071Z",
   "tweets": [
+    {
+      "id": "2033541663046426917",
+      "text": "One of the core things that blockchain technology and smarts contracts provide to the the traditional financial systems is for its actors and underlying operating systems (i.e. the rails) to (finally) be able to speak the same language and interconnect.",
+      "date": "2026-03-16T13:51:28.000Z",
+      "url": "https://x.com/adlrocha/status/2033541663046426917"
+    },
+    {
+      "id": "2033271006752645307",
+      "text": "I hate myself for craving for Monday so I can get some focus time, and I really used to hate Mondays as a kid. \n\nSome people with young kids will relate",
+      "date": "2026-03-15T19:55:59.000Z",
+      "url": "https://x.com/adlrocha/status/2033271006752645307"
+    },
+    {
+      "id": "2032912288018042924",
+      "text": "I shouldn’t be allowed to use agents from my phone without committing the previous stable state. I keep breaking what worked through YOLO prompts. \n\nPrompting distracted (or as a distraction) should be as forbidden as texting your ex drunk!",
+      "date": "2026-03-14T20:10:33.000Z",
+      "url": "https://x.com/adlrocha/status/2032912288018042924"
+    },
+    {
+      "id": "2032452178128822363",
+      "text": "This is actually cool!",
+      "date": "2026-03-13T13:42:15.000Z",
+      "url": "https://x.com/adlrocha/status/2032452178128822363",
+      "quotedTweet": {
+        "author": "TechCrunch",
+        "text": "Tesla becomes a utility in the UK, setting up showdown with Octopus Energy https://techcrunch.com/2026/03/12/tesla-becomes-a-utility-in-the-uk-setting-up-showdown-with-octopus-energy/?utm_source=dlvr.it&utm_medium=twitter"
+      }
+    },
+    {
+      "id": "2032395090774102440",
+      "text": "Are you fucking kidding me! I just sent my Sunday post today by mistake as I was writing it. I didn't even review it 🤦\n\nI'll act as if nothing happened, my subscribers will have a Friday treat and I'll share it more broadly on Sunday.",
+      "date": "2026-03-13T09:55:24.000Z",
+      "url": "https://x.com/adlrocha/status/2032395090774102440"
+    },
+    {
+      "id": "2032381622679409035",
+      "text": "Topic for this week's post chosen. And is going to feature a few cool ideas. Now I just need to write it (that should be the easy part, right? right?) :)",
+      "date": "2026-03-13T09:01:53.000Z",
+      "url": "https://x.com/adlrocha/status/2032381622679409035",
+      "media": [
+        {
+          "url": "https://pbs.twimg.com/media/HDR4TbuWcAA0OYo?format=jpg&amp;name=orig",
+          "type": "photo",
+          "width": 1024,
+          "height": 572
+        }
+      ]
+    },
+    {
+      "id": "2031781989917847874",
+      "text": "In case you were wondering, this is now my Telegram agent orchestrator :)",
+      "date": "2026-03-11T17:19:09.000Z",
+      "url": "https://x.com/adlrocha/status/2031781989917847874",
+      "media": [
+        {
+          "url": "https://pbs.twimg.com/media/HDJW4RnbQAIinUL?format=png&amp;name=orig",
+          "type": "photo",
+          "width": 219,
+          "height": 243
+        }
+      ]
+    },
+    {
+      "id": "2031780561396658540",
+      "text": "And this is how an AI makes a spoiler maybe without even realising (all those Futurama fans out there will get it :) ).",
+      "date": "2026-03-11T17:13:29.000Z",
+      "url": "https://x.com/adlrocha/status/2031780561396658540",
+      "media": [
+        {
+          "url": "https://pbs.twimg.com/media/HDJViw4W8AAgZ5v?format=png&amp;name=orig",
+          "type": "photo",
+          "width": 434,
+          "height": 44
+        }
+      ]
+    },
+    {
+      "id": "2031715986613703086",
+      "text": "One of the positive consequences of AI is that it has the opportunity to put to an end bullshit jobs",
+      "date": "2026-03-11T12:56:53.000Z",
+      "url": "https://x.com/adlrocha/status/2031715986613703086",
+      "media": [
+        {
+          "url": "https://pbs.twimg.com/media/HDIa64WWwAAOyoG?format=jpg&amp;name=orig",
+          "type": "photo",
+          "width": 1325,
+          "height": 2000
+        }
+      ]
+    },
+    {
+      "id": "2031708887984795964",
+      "text": "Ok GLM is good stuff. Slow but good. I am gladly impressed",
+      "date": "2026-03-11T12:28:40.000Z",
+      "url": "https://x.com/adlrocha/status/2031708887984795964"
+    },
+    {
+      "id": "2031708597504086190",
+      "text": "The appetite for paper money is going down hard!",
+      "date": "2026-03-11T12:27:31.000Z",
+      "url": "https://x.com/adlrocha/status/2031708597504086190",
+      "quotedTweet": {
+        "author": "Holger Zschaepitz",
+        "text": "Good Morning from Germany, where today’s 10y govt bond auction technically failed. Of the €5bn on offer, investors submitted bids for only €4.5bn. In the end, just €3.8bn was placed, at a yield of 2.89%; noticeably higher than the 2.73% achieved at the previous auction in",
+        "media": [
+          {
+            "url": "https://pbs.twimg.com/media/HDH9An7XwAAaUuq?format=png&amp;name=orig",
+            "type": "photo",
+            "width": 1466,
+            "height": 902
+          }
+        ]
+      }
+    },
+    {
+      "id": "2031399139804639568",
+      "text": "Context-switching was really killing me when running several agent sessions in parallel.\n\nBut I think I just found how to overcome it, and it's so obvious in retrospective. \n\nI use a terminal multiplexer and do all of my work on the terminal (I use terminals for almost EVERYTHING, including tracking expenses). \n\nI have one tab for each project I am currently working on in parallel, and I am only allow to *round-robin the tabs*.\n\nIf I leave an agent running with a long task I move to the next tab. Does this agent need me? If the answer is yes I unblock it or do some work and move to the next one.\n\nThis creates clear context slots and prevents all the jumping around that I was suffering when I started leveraging agents more extensively with its corresponding context switching and focus toll.",
+      "date": "2026-03-10T15:57:51.000Z",
+      "url": "https://x.com/adlrocha/status/2031399139804639568"
+    },
+    {
+      "id": "2031349273820893454",
+      "text": "Something I wont miss any time soon, writing tests. There’s beauty in building the harness, thinking of the cases, rough edges… but I always hated the act of writing them.\n\nToo much boilerplate, too repetitive. Is good that agents are pretty decent at this",
+      "date": "2026-03-10T12:39:42.000Z",
+      "url": "https://x.com/adlrocha/status/2031349273820893454"
+    },
+    {
+      "id": "2031337858431168897",
+      "text": "Don't ask me how I ended up in this situation, but I am using Claude Code + Kimi K2.5 in Spanish, and is surprisingly good and blazing FAST.\n\nWhat is not to love about this language mix :)",
+      "date": "2026-03-10T11:54:20.000Z",
+      "url": "https://x.com/adlrocha/status/2031337858431168897",
+      "media": [
+        {
+          "url": "https://pbs.twimg.com/media/HDDC7B9XIAANCbX?format=png&amp;name=orig",
+          "type": "photo",
+          "width": 852,
+          "height": 55
+        }
+      ]
+    },
+    {
+      "id": "2030985428338123174",
+      "text": "I saw myself hedging my access to intelligence today again. I may see myself stacking Mac Minis and SGXes next 🤦\n\nAdditional context  on the rationale behind this here: https://adlrocha.substack.com/p/adlrocha-money-and-collateral-in",
+      "date": "2026-03-09T12:33:54.000Z",
+      "url": "https://x.com/adlrocha/status/2030985428338123174"
+    },
+    {
+      "id": "2030983985501773960",
+      "text": "I feel like a punk rocker that softens with age but ends up making the best albums of his career.\n\n I am having a Brian Fallon moment!",
+      "date": "2026-03-09T12:28:10.000Z",
+      "url": "https://x.com/adlrocha/status/2030983985501773960"
+    },
     {
       "id": "2030659240772129243",
       "text": "Bubbles are never where everyone expects them to be (otherwise they wouldn’t be bubbles)",
