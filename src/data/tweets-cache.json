@@ -1,6 +1,286 @@
 {
-  "lastUpdated": "2026-03-16T18:33:46.071Z",
+  "lastUpdated": "2026-04-10T09:11:29.211Z",
   "tweets": [
+    {
+      "id": "2042496454829236418",
+      "text": "Ok, this is the best way to wrap up the week. Time to burn my ears!",
+      "date": "2026-04-10T06:54:37.000Z",
+      "url": "https://x.com/adlrocha/status/2042496454829236418",
+      "quotedTweet": {
+        "author": "ENTER SHIKARI",
+        "text": "the new album LOSE YOUR SELF out now.",
+        "media": [
+          {
+            "url": "https://pbs.twimg.com/media/HFgD1dQWoAAojiE?format=jpg&amp;name=orig",
+            "type": "photo",
+            "width": 1500,
+            "height": 1500
+          }
+        ]
+      }
+    },
+    {
+      "id": "2042146069207752745",
+      "text": "I am genuinely excited about this idea I'm building with my spare cycles. It can really improve the quality of the software we ship!\n\nIf the results are good I am planning to open-source it.",
+      "date": "2026-04-09T07:42:18.000Z",
+      "url": "https://x.com/adlrocha/status/2042146069207752745",
+      "media": [
+        {
+          "url": "https://pbs.twimg.com/media/HFco3KYWkAA-YyJ?format=png&amp;name=orig",
+          "type": "photo",
+          "width": 711,
+          "height": 188
+        }
+      ]
+    },
+    {
+      "id": "2041947090029289547",
+      "text": "Me parece brillante. Prompt injected by your teacher!",
+      "date": "2026-04-08T18:31:38.000Z",
+      "url": "https://x.com/adlrocha/status/2041947090029289547",
+      "quotedTweet": {
+        "author": "P. Duchement",
+        "text": "He introducido un regalito en el enunciado de un trabajo que he marcado a mi alumnado: Una única frase, pero escrita con letra blanca sobre fondo blanco (difícilmente visible para ellos, pero accesible si copias y pegas en un prompt).\n\nY… me lo estoy pasando pipa corrigiendo.",
+        "media": [
+          {
+            "url": "https://pbs.twimg.com/media/HFXxP_jWkAAyvP7?format=jpg&amp;name=orig",
+            "type": "photo",
+            "width": 943,
+            "height": 2048
+          },
+          {
+            "url": "https://pbs.twimg.com/media/HFXxP_eXkAAtG0q?format=jpg&amp;name=orig",
+            "type": "photo",
+            "width": 943,
+            "height": 2048
+          },
+          {
+            "url": "https://pbs.twimg.com/media/HFXxP_gXMAAIUQQ?format=jpg&amp;name=orig",
+            "type": "photo",
+            "width": 943,
+            "height": 2048
+          },
+          {
+            "url": "https://pbs.twimg.com/media/HFXxQANa8AE1Lyz?format=jpg&amp;name=orig",
+            "type": "photo",
+            "width": 943,
+            "height": 2048
+          }
+        ]
+      }
+    },
+    {
+      "id": "2041931459380777031",
+      "text": "This fills me with joy 🤩",
+      "date": "2026-04-08T17:29:31.000Z",
+      "url": "https://x.com/adlrocha/status/2041931459380777031",
+      "media": [
+        {
+          "url": "https://video.twimg.com/tweet_video/HFZl1kQXUAAoW-M.mp4",
+          "type": "gif",
+          "poster": "https://pbs.twimg.com/tweet_video_thumb/HFZl1kQXUAAoW-M.jpg",
+          "width": 434,
+          "height": 248
+        }
+      ],
+      "quotedTweet": {
+        "author": "Jorge Soares",
+        "text": "I finally got around to vibecoding 🍺Corrs Light, a Baselight-powered spurious correlation tech demo. Live now at https://corrslight.xyz/."
+      }
+    },
+    {
+      "id": "2041838463368962461",
+      "text": "The main reason why I am still using Claude Code is because is super configurable, and I extensively use hooks to improve my coding flow. \n\nBut I have to admit that I am coming back to opencode more and more these days!",
+      "date": "2026-04-08T11:19:59.000Z",
+      "url": "https://x.com/adlrocha/status/2041838463368962461"
+    },
+    {
+      "id": "2041821834685866209",
+      "text": "I am catching up with all the Mythos developments, and fuck me, this image in itself gives me the creeps.\n\nThis is a crazy bump in capabilities! We need value-aligned engineers around more than ever.",
+      "date": "2026-04-08T10:13:55.000Z",
+      "url": "https://x.com/adlrocha/status/2041821834685866209",
+      "media": [
+        {
+          "url": "https://pbs.twimg.com/media/HFYB6S_W4AAMap5?format=jpg&amp;name=orig",
+          "type": "photo",
+          "width": 787,
+          "height": 1261
+        }
+      ]
+    },
+    {
+      "id": "2041788015765311926",
+      "text": "There was a time when seeing this much red in Github meant a day off. Time changes, and some people are declaring a day off because Claude is red :) \n\nOnce again, always have a fallback :)",
+      "date": "2026-04-08T07:59:32.000Z",
+      "url": "https://x.com/adlrocha/status/2041788015765311926",
+      "media": [
+        {
+          "url": "https://pbs.twimg.com/media/HFXjK-TXcAAuQ6Y?format=jpg&amp;name=orig",
+          "type": "photo",
+          "width": 1138,
+          "height": 1394
+        }
+      ]
+    },
+    {
+      "id": "2041611696184119718",
+      "text": "It’s so cute watching states negotiate ever-increasing deficits. I get the mechanics and why it happens… but let’s stop calling it a ‘deficit.’ The only deficit worth targeting is ≤ 0.\n\nLet’s call it “spending sparkle” or “fiscal enthusiasm”.",
+      "date": "2026-04-07T20:18:54.000Z",
+      "url": "https://x.com/adlrocha/status/2041611696184119718"
+    },
+    {
+      "id": "2041609575866994782",
+      "text": "This made me laugh out loud. I love Silicon Valley (the TV Show)",
+      "date": "2026-04-07T20:10:28.000Z",
+      "url": "https://x.com/adlrocha/status/2041609575866994782",
+      "quotedTweet": {
+        "author": "litquidity",
+        "text": "“I make a New OpenAI, New Anthropic, and New Google. Good luck, Americans”",
+        "media": [
+          {
+            "url": "https://pbs.twimg.com/media/HFUfxhHXMAAZLw9?format=jpg&amp;name=orig",
+            "type": "photo",
+            "width": 1280,
+            "height": 720
+          }
+        ]
+      }
+    },
+    {
+      "id": "2041513173144977622",
+      "text": "Actually, this is a great topic for a newsletter post :)",
+      "date": "2026-04-07T13:47:24.000Z",
+      "url": "https://x.com/adlrocha/status/2041513173144977622",
+      "media": [
+        {
+          "url": "https://video.twimg.com/tweet_video/HFTpZvjXwAA5gLv.mp4",
+          "type": "gif",
+          "poster": "https://pbs.twimg.com/tweet_video_thumb/HFTpZvjXwAA5gLv.jpg",
+          "width": 480,
+          "height": 400
+        }
+      ],
+      "quotedTweet": {
+        "author": "adlrocha",
+        "text": "I was used to opening all technical interviews with the following question: \"describe what happens when you open a web page\".\n\nDepending on the candidate's background they would describe the lifecycle of a request and go deep into how the browser works, javascript, HTTP, DNS, IP,"
+      }
+    },
+    {
+      "id": "2041512907079401954",
+      "text": "I was used to opening all technical interviews with the following question: \"describe what happens when you open a web page\".\n\nDepending on the candidate's background they would describe the lifecycle of a request and go deep into how the browser works, javascript, HTTP, DNS, IP, or even go deep into ARP and machine code. It was a great way of calibrating the candidate's knowledge and depth. \n\nThese days I am more into the question of \"what happens when you buy a stock\". For this one you can get into brokers, market makers, the clearing house, settlement layers, etc.\n\nIt is crazy how fast finance is becoming the new Internet.",
+      "date": "2026-04-07T13:46:21.000Z",
+      "url": "https://x.com/adlrocha/status/2041512907079401954"
+    },
+    {
+      "id": "2041439958775243117",
+      "text": "I just came across this again. Build your distribution.",
+      "date": "2026-04-07T08:56:28.000Z",
+      "url": "https://x.com/adlrocha/status/2041439958775243117",
+      "media": [
+        {
+          "url": "https://pbs.twimg.com/media/HFSm0WWXoAAsLpp?format=jpg&amp;name=orig",
+          "type": "photo",
+          "width": 1266,
+          "height": 1437
+        }
+      ]
+    },
+    {
+      "id": "2041189605676913080",
+      "text": "A gentle reminder to always have fallback options",
+      "date": "2026-04-06T16:21:40.000Z",
+      "url": "https://x.com/adlrocha/status/2041189605676913080",
+      "media": [
+        {
+          "url": "https://pbs.twimg.com/media/HFPDIA3W0AIbUa0?format=jpg&amp;name=orig",
+          "type": "photo",
+          "width": 1107,
+          "height": 1623
+        }
+      ]
+    },
+    {
+      "id": "2041152208981336208",
+      "text": "The relationship of some people with coding agents is increasingly resembling that of a ludopath. You need to keep the machine warm and operating at all times for the price to appear.\n\nA few months ago I was on the verge of this. I couldn’t afford an idle agent. I think I am recovered and I now use them responsibly. I think…",
+      "date": "2026-04-06T13:53:04.000Z",
+      "url": "https://x.com/adlrocha/status/2041152208981336208"
+    },
+    {
+      "id": "2040854160967442727",
+      "text": "We are a joke",
+      "date": "2026-04-05T18:08:43.000Z",
+      "url": "https://x.com/adlrocha/status/2040854160967442727",
+      "quotedTweet": {
+        "author": "Holger Zschaepitz",
+        "text": "Good Morning from Germany, which now ranks only in the middle of the pack in Europe when it comes to tax-free fuel. Gasoline is most expensive (excluding taxes) in Spain, which may be because Spain subsidizes gasoline by reducing the value-added tax from 21% to 11%.",
+        "media": [
+          {
+            "url": "https://pbs.twimg.com/media/HFIDXNPXoAA1kQC?format=jpg&amp;name=orig",
+            "type": "photo",
+            "width": 2048,
+            "height": 1149
+          }
+        ]
+      }
+    },
+    {
+      "id": "2040813591419343197",
+      "text": "I’ve always been fascinated by markets liquidity. This is a nice read!\n\nhttps://libertystreeteconomics.newyorkfed.org/2026/04/treasury-market-liquidity-since-april-2025/",
+      "date": "2026-04-05T15:27:31.000Z",
+      "url": "https://x.com/adlrocha/status/2040813591419343197"
+    },
+    {
+      "id": "2040715157035163739",
+      "text": "After skimming through the Claude Code code base it is clear to me why it doesn't work that well when using Kimi or GLM as its LLM backend",
+      "date": "2026-04-05T08:56:22.000Z",
+      "url": "https://x.com/adlrocha/status/2040715157035163739"
+    },
+    {
+      "id": "2040713225423958461",
+      "text": "This week I am back to writing about quantum computing for the newsletter, and I ended up with a longer piece than originally planned, but I wanted to ground all the concepts as much as I could.\n\nGoogle published a whitepaper claiming a roughly 20-fold reduction in the quantum resources needed to break the specific type of cryptography (ECDSA on secp256k1) that currently protects every single Bitcoin and Ethereum transaction.\n\nThis was the perfect excuse to go down the rabbit hole of:\n* Shor's Algorithm on a budget\n* The ZKP Irony 😱: My favorite part. Google didn't actually release the attack circuit. Instead, they used a Zero-Knowledge Proof (SP1 wrapped in Groth16) to prove the attack works without releasing the actual weapon. The twisted part? They used elliptic curve cryptography to prove they can break elliptic curve cryptography.\n* Post-quantum cryptography alternatives and \"quantum-resistant\" hard problems\n* And my take about if the quantum timeline has actually changed after this paper. \n\nRead the full post here: https://adlrocha.substack.com/p/adlrocha-googles-zkp-hidden-quantum",
+      "date": "2026-04-05T08:48:42.000Z",
+      "url": "https://x.com/adlrocha/status/2040713225423958461",
+      "media": [
+        {
+          "url": "https://pbs.twimg.com/media/HFIRkjHbcAAm9iM?format=jpg&amp;name=orig",
+          "type": "photo",
+          "width": 1456,
+          "height": 813
+        }
+      ]
+    },
+    {
+      "id": "2040481199424987605",
+      "text": "Well, @pjsousa it’s in Spanish, but it would’ve be amazing to make the analysis with @BaselightDB",
+      "date": "2026-04-04T17:26:42.000Z",
+      "url": "https://x.com/adlrocha/status/2040481199424987605",
+      "quotedTweet": {
+        "author": "Kiko Llaneras",
+        "text": "⚽ 4. ¿Son los futbolistas cada vez mejores?\n\nYo creo que sí: más fuertes, hábiles, mejor entrenados y genéticamente elegidos. No es fácil de medir… pero estos datos de la Premier dan pistas: entre 2006 y 2023 los pases suben un 31% y los sprints un 80% (!)",
+        "media": [
+          {
+            "url": "https://pbs.twimg.com/media/HFDla9TbAAAgilb?format=jpg&amp;name=orig",
+            "type": "photo",
+            "width": 1362,
+            "height": 1086
+          }
+        ]
+      }
+    },
+    {
+      "id": "2040424118294589592",
+      "text": "* Weekly post ready for tomorrow✅",
+      "date": "2026-04-04T13:39:53.000Z",
+      "url": "https://x.com/adlrocha/status/2040424118294589592",
+      "media": [
+        {
+          "url": "https://pbs.twimg.com/media/HFEK5ggXUAAMfYO?format=jpg&amp;name=orig",
+          "type": "photo",
+          "width": 1272,
+          "height": 710
+        }
+      ]
+    },
     {
       "id": "2033541663046426917",
       "text": "One of the core things that blockchain technology and smarts contracts provide to the the traditional financial systems is for its actors and underlying operating systems (i.e. the rails) to (finally) be able to speak the same language and interconnect.",

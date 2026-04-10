@@ -1,6 +1,24 @@
 {
-  "lastUpdated": "2026-03-16T18:33:41.146Z",
+  "lastUpdated": "2026-04-10T09:11:24.481Z",
   "posts": [
+    {
+      "title": "@adlrocha - Google's ZKP-hidden quantum attack",
+      "link": "https://adlrocha.substack.com/p/adlrocha-googles-zkp-hidden-quantum",
+      "date": "2026-04-05T08:38:20.000Z",
+      "description": "Proving a 20x reduction in the resources needed to break secp256k1, while using a vulnerable primitive to do it...."
+    },
+    {
+      "title": "@adlrocha - What if AI doesn’t need more RAM but better math?",
+      "link": "https://adlrocha.substack.com/p/adlrocha-what-if-ai-doesnt-need-more",
+      "date": "2026-03-29T08:03:03.000Z",
+      "description": "How TurboQuant compresses the KV cache without losing accuracy, and what that could mean for memory stocks..."
+    },
+    {
+      "title": "@adlrocha - Why AI Is Making Your RAM More Expensive (and what can be done about it)",
+      "link": "https://adlrocha.substack.com/p/adlrocha-why-ai-is-making-your-ram",
+      "date": "2026-03-22T08:52:13.000Z",
+      "description": "The supply chain stress, the physics behind it, and five architectural bets on what changes next..."
+    },
     {
       "title": "@adlrocha - Auto-research: The Lab that runs while you sleep",
       "link": "https://adlrocha.substack.com/p/adlrocha-auto-research-the-lab-that",
