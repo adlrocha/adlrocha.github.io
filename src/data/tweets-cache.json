@@ -1,6 +1,119 @@
 {
-  "lastUpdated": "2026-04-10T09:11:29.211Z",
+  "lastUpdated": "2026-04-13T08:28:09.761Z",
   "tweets": [
+    {
+      "id": "2043567260787220644",
+      "text": "Today is the first time that one of my posts makes it to the front page of HackerNews without being me the one sharing it.\n\nThis was completely unexpected. Thank you all. Keep the feedback coming!",
+      "date": "2026-04-13T05:49:37.000Z",
+      "url": "https://x.com/adlrocha/status/2043567260787220644",
+      "media": [
+        {
+          "url": "https://pbs.twimg.com/media/HFw1gWUW0AAXdOf?format=jpg&amp;name=orig",
+          "type": "photo",
+          "width": 1170,
+          "height": 537
+        }
+      ]
+    },
+    {
+      "id": "2043433618857447461",
+      "text": "I mention it in today’s post (https://adlrocha.substack.com/p/adlrocha-how-the-ai-loser-may-end). Having the best model is not enough to win, you have to meet users where their intelligence needs are (their device, their tools, etc.).\n\nContext is all you need! \n\nThis is why Anthropic is winning, and Apple have a few levers that they can pull to win the AI race. \n\nSee 👇",
+      "date": "2026-04-12T20:58:34.000Z",
+      "url": "https://x.com/adlrocha/status/2043433618857447461",
+      "quotedTweet": {
+        "author": "Claude",
+        "text": "Claude for Word is now in beta.\n\nDraft, edit, and revise documents directly from the sidebar. Claude preserves your formatting, and edits appear as tracked changes.\n\nAvailable on Team and Enterprise plans.",
+        "media": [
+          {
+            "url": "https://video.twimg.com/amplify_video/2042648096434270208/vid/avc1/1920x1080/bKlmMghf6IWdpD8Z.mp4?tag=21",
+            "type": "video",
+            "poster": "https://pbs.twimg.com/media/HFkGCDGXcAAexOZ?format=jpg&amp;name=orig",
+            "width": 2048,
+            "height": 1152
+          }
+        ]
+      }
+    },
+    {
+      "id": "2043279210790146508",
+      "text": "X keeps hiding my posts, let’s see if a quick quote boots my visibility a bit",
+      "date": "2026-04-12T10:45:00.000Z",
+      "url": "https://x.com/adlrocha/status/2043279210790146508",
+      "quotedTweet": {
+        "author": "adlrocha",
+        "text": "Newsletter day! Today I am diving back into the AI platform wars. I ended up looking closely at the intersection of hardware architecture and market strategy to challenge a narrative we've been hearing for three years.\n\nWhile the rest of the industry has been burning bags of cash",
+        "media": [
+          {
+            "url": "https://pbs.twimg.com/media/HFsJ_RibUAAkxjB?format=png&amp;name=orig",
+            "type": "photo",
+            "width": 800,
+            "height": 663
+          },
+          {
+            "url": "https://pbs.twimg.com/media/HFsMw_-WUAAh5s5?format=jpg&amp;name=orig",
+            "type": "photo",
+            "width": 1456,
+            "height": 794
+          }
+        ]
+      }
+    },
+    {
+      "id": "2043240977087795374",
+      "text": "Newsletter day! Today I am diving back into the AI platform wars. I ended up looking closely at the intersection of hardware architecture and market strategy to challenge a narrative we've been hearing for three years.\n\nWhile the rest of the industry has been burning bags of cash on infrastructure and CapEx to win the next state-of-the-art benchmark, the company everyone framed as the “AI loser” might actually be sitting in the best position possible. \n\nI am of course referring to Apple!\n\nRead the full post here: https://adlrocha.substack.com/p/adlrocha-how-the-ai-loser-may-end",
+      "date": "2026-04-12T08:13:05.000Z",
+      "url": "https://x.com/adlrocha/status/2043240977087795374",
+      "media": [
+        {
+          "url": "https://pbs.twimg.com/media/HFsJ_RibUAAkxjB?format=png&amp;name=orig",
+          "type": "photo",
+          "width": 800,
+          "height": 663
+        },
+        {
+          "url": "https://pbs.twimg.com/media/HFsMw_-WUAAh5s5?format=jpg&amp;name=orig",
+          "type": "photo",
+          "width": 1456,
+          "height": 794
+        }
+      ]
+    },
+    {
+      "id": "2043061875928183178",
+      "text": "We need to get back to the age of Bell Labs-style playful explorations",
+      "date": "2026-04-11T20:21:24.000Z",
+      "url": "https://x.com/adlrocha/status/2043061875928183178"
+    },
+    {
+      "id": "2043031049098191133",
+      "text": "Relevant note: This may not directly apply to all fields. I will be testing this hypothesis in the coming weeks/months/years",
+      "date": "2026-04-11T18:18:54.000Z",
+      "url": "https://x.com/adlrocha/status/2043031049098191133",
+      "quotedTweet": {
+        "author": "adlrocha",
+        "text": "We are now bottlenecked by the number of ideas we have.\n\nWhen the barriers to execution lower, idea throughput and the ability to test them and collect feedback fast will become increasingly important"
+      }
+    },
+    {
+      "id": "2043030733392925084",
+      "text": "We are now bottlenecked by the number of ideas we have.\n\nWhen the barriers to execution lower, idea throughput and the ability to test them and collect feedback fast will become increasingly important",
+      "date": "2026-04-11T18:17:39.000Z",
+      "url": "https://x.com/adlrocha/status/2043030733392925084"
+    },
+    {
+      "id": "2042875297763151872",
+      "text": "Post for the week ready! I am going to share my view about Apple and their \"AI strategy\" :) \n\nThis was a fun one to write and think about.",
+      "date": "2026-04-11T08:00:00.000Z",
+      "url": "https://x.com/adlrocha/status/2042875297763151872",
+      "media": [
+        {
+          "url": "https://pbs.twimg.com/media/HFifNarWQAACEBP?format=jpg&amp;name=orig",
+          "type": "photo",
+          "width": 2048,
+          "height": 1117
+        }
+      ]
+    },
     {
       "id": "2042496454829236418",
       "text": "Ok, this is the best way to wrap up the week. Time to burn my ears!",
