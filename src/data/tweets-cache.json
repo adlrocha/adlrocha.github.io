@@ -1,6 +1,264 @@
 {
-  "lastUpdated": "2026-04-13T08:28:09.761Z",
+  "lastUpdated": "2026-04-19T20:05:12.296Z",
   "tweets": [
+    {
+      "id": "2045948058546983295",
+      "text": "Don't you ever feel like there are certain people you just have a weakness for? Like, no matter what they get themselves into, you’d just follow them blindly? I can think of a couple lately. And I love when that happens.\n\nAs we use to say in Spanish: “me dejo liar”",
+      "date": "2026-04-19T19:30:03.000Z",
+      "url": "https://x.com/adlrocha/status/2045948058546983295"
+    },
+    {
+      "id": "2045942107139957166",
+      "text": "It’s been years since I don’t hate Mondays. And I used to hate them with all my heart. \n\nI want to think that something I may be doing right. To many more years of not hating Mondays",
+      "date": "2026-04-19T19:06:24.000Z",
+      "url": "https://x.com/adlrocha/status/2045942107139957166",
+      "media": [
+        {
+          "url": "https://video.twimg.com/tweet_video/HGSlf6Ka4AA9QZ-.mp4",
+          "type": "gif",
+          "poster": "https://pbs.twimg.com/tweet_video_thumb/HGSlf6Ka4AA9QZ-.jpg",
+          "width": 500,
+          "height": 500
+        }
+      ]
+    },
+    {
+      "id": "2045823177155105068",
+      "text": "I am wondering if I should leave for some other time the post that I had planned for next week and analyse the source code of Hermes agents. Definitely a fun one to read. \n\nIt would be a great part 2 to this week’s post!",
+      "date": "2026-04-19T11:13:49.000Z",
+      "url": "https://x.com/adlrocha/status/2045823177155105068",
+      "quotedTweet": {
+        "author": "adlrocha",
+        "text": "Today I am finally diving into the massive Claude Code leak and what it actually means for the future of building with AI.\n\nFor the past couple of years, the dominant industry narrative has been that the foundation model is the product and everything else is just plumbing. We’ve",
+        "media": [
+          {
+            "url": "https://pbs.twimg.com/media/HGP8770bQAErjof?format=jpg&amp;name=orig",
+            "type": "photo",
+            "width": 1024,
+            "height": 572
+          }
+        ]
+      }
+    },
+    {
+      "id": "2045776916578513260",
+      "text": "Today I am finally diving into the massive Claude Code leak and what it actually means for the future of building with AI.\n\nFor the past couple of years, the dominant industry narrative has been that the foundation model is the product and everything else is just plumbing. We’ve all heard the dismissive “that's just a GPT wrapper”. But after digging into the 512,000 lines of TypeScript accidentally shipped by Anthropic, that assumption completely falls apart.\n\nThe leaked code is essentially an unintentional field manual for serious agent engineering. From sleep-based memory consolidation and four-layer context compaction to undercover modes and anti-distillation countermeasures, the code proves one major thing.\n\nThe model isn't the product. It's just the processor. The scaffolding is the operating system.\n\nIf you want a glimpse into the new era of software engineering and how the most advanced agents actually work under the hood, I break it all down in today's post (this may actually become a series as I briefly mention in the post).\n\nRead the full analysis here:\nhttps://open.substack.com/pub/adlrocha/p/adlrocha-a-glimpse-of-the-new-software",
+      "date": "2026-04-19T08:10:00.000Z",
+      "url": "https://x.com/adlrocha/status/2045776916578513260",
+      "media": [
+        {
+          "url": "https://pbs.twimg.com/media/HGP8770bQAErjof?format=jpg&amp;name=orig",
+          "type": "photo",
+          "width": 1024,
+          "height": 572
+        }
+      ]
+    },
+    {
+      "id": "2045738426540949560",
+      "text": "My beloved lord nibbles agent orchestrator have been supporting sanboxes Hermes agents since last week. At some point I should clean it and open source it!",
+      "date": "2026-04-19T05:37:03.000Z",
+      "url": "https://x.com/adlrocha/status/2045738426540949560",
+      "quotedTweet": {
+        "author": "Shubham Saboo",
+        "text": "This is HUGE.\n\nOllama now supports Hermes AI Agents.\n\nA fully local self-improving AI Agent that runs for you 24/7 for free.",
+        "media": [
+          {
+            "url": "https://pbs.twimg.com/media/HGPCJTMaEAA_Fi4?format=png&amp;name=orig",
+            "type": "photo",
+            "width": 2048,
+            "height": 937
+          }
+        ]
+      }
+    },
+    {
+      "id": "2045564037023318520",
+      "text": "Now is when the fun starts",
+      "date": "2026-04-18T18:04:05.000Z",
+      "url": "https://x.com/adlrocha/status/2045564037023318520",
+      "media": [
+        {
+          "url": "https://video.twimg.com/tweet_video/HGNNpGVWgAAGLe4.mp4",
+          "type": "gif",
+          "poster": "https://pbs.twimg.com/tweet_video_thumb/HGNNpGVWgAAGLe4.jpg",
+          "width": 220,
+          "height": 90
+        }
+      ],
+      "quotedTweet": {
+        "author": "Securitize",
+        "text": "$30 Billion in tokenized assets...\n\n$399.97 Trillion to go.",
+        "media": [
+          {
+            "url": "https://pbs.twimg.com/media/HGNGRnga4AAjirf?format=jpg&amp;name=orig",
+            "type": "photo",
+            "width": 1920,
+            "height": 1080
+          }
+        ]
+      }
+    },
+    {
+      "id": "2045454126532665490",
+      "text": "A great reminder to always hedge your options and have fallbacks",
+      "date": "2026-04-18T10:47:21.000Z",
+      "url": "https://x.com/adlrocha/status/2045454126532665490",
+      "quotedTweet": {
+        "author": "Gergely Orosz",
+        "text": "Pretty telling how Anthropic \n\n1. Thinks it’s perfectly acceptable to ban a 60-person paying org without justification\n\n2. Are comfortable outsourcing this to some automated system\n\n3. Do no human review nor offer human contact\n\n4. Get it wrong and customer now super pissed"
+      }
+    },
+    {
+      "id": "2045406828083708199",
+      "text": "Oh come on, really? I just realised this one ALSO had a typo.\n\nI am going to have to start a “find the typo” game with my followers 🤦🤦",
+      "date": "2026-04-18T07:39:24.000Z",
+      "url": "https://x.com/adlrocha/status/2045406828083708199",
+      "quotedTweet": {
+        "author": "adlrocha",
+        "text": "Sunday post ready to rumble. I learn a bunch on this one, and it gave me a few ideas for follow ups. I hope you enjoy it!",
+        "media": [
+          {
+            "url": "https://pbs.twimg.com/media/HGHzwp5WcAAHrN9?format=jpg&amp;name=orig",
+            "type": "photo",
+            "width": 1024,
+            "height": 572
+          }
+        ]
+      }
+    },
+    {
+      "id": "2045183787982549008",
+      "text": "Sunday post ready to rumble. I learn a bunch on this one, and it gave me a few ideas for follow ups. I hope you enjoy it!",
+      "date": "2026-04-17T16:53:07.000Z",
+      "url": "https://x.com/adlrocha/status/2045183787982549008",
+      "media": [
+        {
+          "url": "https://pbs.twimg.com/media/HGHzwp5WcAAHrN9?format=jpg&amp;name=orig",
+          "type": "photo",
+          "width": 1024,
+          "height": 572
+        }
+      ]
+    },
+    {
+      "id": "2045156136429523369",
+      "text": "And this is less joy :(",
+      "date": "2026-04-17T15:03:14.000Z",
+      "url": "https://x.com/adlrocha/status/2045156136429523369",
+      "media": [
+        {
+          "url": "https://pbs.twimg.com/media/HGHap28aoAA1Aoq?format=jpg&amp;name=orig",
+          "type": "photo",
+          "width": 980,
+          "height": 51
+        }
+      ],
+      "quotedTweet": {
+        "author": "adlrocha",
+        "text": "This fills me with joy. I am a man of simple dreams",
+        "media": [
+          {
+            "url": "https://pbs.twimg.com/media/HGHXC_abgAA_WQj?format=png&amp;name=orig",
+            "type": "photo",
+            "width": 574,
+            "height": 64
+          }
+        ]
+      }
+    },
+    {
+      "id": "2045152190810001856",
+      "text": "This fills me with joy. I am a man of simple dreams",
+      "date": "2026-04-17T14:47:34.000Z",
+      "url": "https://x.com/adlrocha/status/2045152190810001856",
+      "media": [
+        {
+          "url": "https://pbs.twimg.com/media/HGHXC_abgAA_WQj?format=png&amp;name=orig",
+          "type": "photo",
+          "width": 574,
+          "height": 64
+        }
+      ]
+    },
+    {
+      "id": "2045047179694194750",
+      "text": "Opencode may be less efficient in tokens, but it is more diligent with following my AI factory dev harness.\n\nOpencode + GLM5.1 is slowly becoming my go-to coding stack",
+      "date": "2026-04-17T07:50:17.000Z",
+      "url": "https://x.com/adlrocha/status/2045047179694194750"
+    },
+    {
+      "id": "2044850099243671835",
+      "text": "I couldn’t resist, and this just happened. You. Sycophant.",
+      "date": "2026-04-16T18:47:09.000Z",
+      "url": "https://x.com/adlrocha/status/2044850099243671835",
+      "media": [
+        {
+          "url": "https://pbs.twimg.com/media/HGDEUBIaAAE-VGe?format=jpg&amp;name=orig",
+          "type": "photo",
+          "width": 1260,
+          "height": 512
+        }
+      ]
+    },
+    {
+      "id": "2044844751589953906",
+      "text": "Same feeling here, today GLM managed to fix for me something that Claude failed at",
+      "date": "2026-04-16T18:25:54.000Z",
+      "url": "https://x.com/adlrocha/status/2044844751589953906",
+      "quotedTweet": {
+        "author": "Gergely Orosz",
+        "text": "Claude just keeps regressing for me, day after day.\n\nI swear that until a few days ago, when Claude did not know something, it kicked off a web search, figured out, and answered.\n\nNow it just refuses to do the work that I pay for. It's like showing you the middle finger. Really?",
+        "media": [
+          {
+            "url": "https://pbs.twimg.com/media/HGCjzEmWkAAAU0N?format=jpg&amp;name=orig",
+            "type": "photo",
+            "width": 1506,
+            "height": 826
+          }
+        ]
+      }
+    },
+    {
+      "id": "2044812670201635124",
+      "text": "Of course, they compared themselves to Gemma4 (as they should, because I think Gemma4 is the closest I have got to local models, as I mentioned a few days ago). \n\nThat being said, let's hope that this is not another instance of Benchmaxxing (https://adlrocha.substack.com/p/adlrocha-beyond-benchmaxxing-why)",
+      "date": "2026-04-16T16:18:26.000Z",
+      "url": "https://x.com/adlrocha/status/2044812670201635124",
+      "media": [
+        {
+          "url": "https://pbs.twimg.com/media/HGCiEBiXAAEv52E?format=jpg&amp;name=orig",
+          "type": "photo",
+          "width": 934,
+          "height": 1458
+        }
+      ],
+      "quotedTweet": {
+        "author": "adlrocha",
+        "text": "I don't have time to test all the new models being released 😱😱 \n\nThe best thing about building your own company in the AI age is that you are in the driving seat so you get to shape the company, experiment, and engineer the processes to be AI native. \n\nAnyway, this tweet",
+        "media": [
+          {
+            "url": "https://pbs.twimg.com/media/HGCg7XgXkAEVqi4?format=jpg&amp;name=orig",
+            "type": "photo",
+            "width": 1112,
+            "height": 643
+          }
+        ]
+      }
+    },
+    {
+      "id": "2044811930745888948",
+      "text": "I don't have time to test all the new models being released 😱😱 \n\nThe best thing about building your own company in the AI age is that you are in the driving seat so you get to shape the company, experiment, and engineer the processes to be AI native. \n\nAnyway, this tweet started as a way to share my excitement about Qwen3.6 being released, and ended up into a reflection about entrepreneurship.\n\nWecome to my brain these days :)",
+      "date": "2026-04-16T16:15:29.000Z",
+      "url": "https://x.com/adlrocha/status/2044811930745888948",
+      "media": [
+        {
+          "url": "https://pbs.twimg.com/media/HGCg7XgXkAEVqi4?format=jpg&amp;name=orig",
+          "type": "photo",
+          "width": 1112,
+          "height": 643
+        }
+      ]
+    },
     {
       "id": "2043567260787220644",
       "text": "Today is the first time that one of my posts makes it to the front page of HackerNews without being me the one sharing it.\n\nThis was completely unexpected. Thank you all. Keep the feedback coming!",
