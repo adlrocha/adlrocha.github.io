@@ -1,6 +1,215 @@
 {
-  "lastUpdated": "2026-04-19T20:05:12.296Z",
+  "lastUpdated": "2026-04-26T07:54:06.056Z",
   "tweets": [
+    {
+      "id": "2048309355120910559",
+      "text": "Last week’s post about the Claude Code leak proved something crucial: the real engineering in AI isn't the model, it's the scaffolding around it. But that got me thinking, how do the best open-source projects approach these exact same problems?\n\nFor the past week, I've been digging through the source code of popular agent frameworks like @NousResearch  Hermes and @badlogicgames's Pi to find out. My hypothesis? We are all finding the same kind of problems when building agents and converging to somewhat similar solutions. \n\nThe model is still not the product. It's the CPU. The context window is the RAM. And as these shared architectures standardise across frameworks, we are rapidly moving toward a world of \"fungible software.\"\n\nRead the full analysis here for my take in the matter: https://adlrocha.substack.com/p/adlrocha-the-model-is-still-not-the",
+      "date": "2026-04-26T07:53:00.000Z",
+      "url": "https://x.com/adlrocha/status/2048309355120910559",
+      "media": [
+        {
+          "url": "https://pbs.twimg.com/media/HG0OO2iXsAAeRaN?format=jpg&amp;name=orig",
+          "type": "photo",
+          "width": 1456,
+          "height": 813
+        }
+      ]
+    },
+    {
+      "id": "2048098719917027619",
+      "text": "I am actually really energised for next week. Don’t ask me why but like last week, I am still excited about Mondays",
+      "date": "2026-04-25T17:56:01.000Z",
+      "url": "https://x.com/adlrocha/status/2048098719917027619"
+    },
+    {
+      "id": "2048097907698548786",
+      "text": "I am seriously considering to buy a few GPUs and build my LLM rig. I am loving this local LLM experience. \n\nSomeone with a few K$ that wants to share the cost in exchange for access?",
+      "date": "2026-04-25T17:52:47.000Z",
+      "url": "https://x.com/adlrocha/status/2048097907698548786"
+    },
+    {
+      "id": "2047789952117723592",
+      "text": "You’ve probably already read this from me, but my role model in business is…\n\nMichael Scott",
+      "date": "2026-04-24T21:29:05.000Z",
+      "url": "https://x.com/adlrocha/status/2047789952117723592",
+      "media": [
+        {
+          "url": "https://video.twimg.com/tweet_video/HGs2Gn9aAAA_2Ox.mp4",
+          "type": "gif",
+          "poster": "https://pbs.twimg.com/tweet_video_thumb/HGs2Gn9aAAA_2Ox.jpg",
+          "width": 498,
+          "height": 410
+        }
+      ]
+    },
+    {
+      "id": "2047621591865962590",
+      "text": "Good engineers are lazy and they are constantly trying to automate their job and get them obsolete",
+      "date": "2026-04-24T10:20:05.000Z",
+      "url": "https://x.com/adlrocha/status/2047621591865962590"
+    },
+    {
+      "id": "2047618563091943798",
+      "text": "I would of course be stranded by now somewhere in the UK if it wasn’t for @whereisjorge’s help.\n\nThis is why we trust him the grown up stuff",
+      "date": "2026-04-24T10:08:03.000Z",
+      "url": "https://x.com/adlrocha/status/2047618563091943798",
+      "quotedTweet": {
+        "author": "adlrocha",
+        "text": "Things that can only happen to me, but have already happened a few times in my life: planning a trip thinking that I am landing at Airport A but landing at Airport B, just to realise my mistake when I disconnect airplane mode in landing, but in time to improvise my whole route to"
+      }
+    },
+    {
+      "id": "2047617681222750645",
+      "text": "Things that can only happen to me, but have already happened a few times in my life: planning a trip thinking that I am landing at Airport A but landing at Airport B, just to realise my mistake when I disconnect airplane mode in landing, but in time to improvise my whole route to destination",
+      "date": "2026-04-24T10:04:32.000Z",
+      "url": "https://x.com/adlrocha/status/2047617681222750645"
+    },
+    {
+      "id": "2047549568938594362",
+      "text": "Reality hits you hard, bro!",
+      "date": "2026-04-24T05:33:53.000Z",
+      "url": "https://x.com/adlrocha/status/2047549568938594362",
+      "quotedTweet": {
+        "author": "Pablo Grueso",
+        "text": "@adlrocha Pure Schumpeter. \nOr sadism, who knows... :)",
+        "media": [
+          {
+            "url": "https://pbs.twimg.com/media/HGpaeTzXQAAYrsj?format=jpg&amp;name=orig",
+            "type": "photo",
+            "width": 1600,
+            "height": 900
+          }
+        ]
+      }
+    },
+    {
+      "id": "2047407751567909037",
+      "text": "AI is the perfect for corporation to remove some fat.\n\nThere will contraction before the expansion.",
+      "date": "2026-04-23T20:10:21.000Z",
+      "url": "https://x.com/adlrocha/status/2047407751567909037"
+    },
+    {
+      "id": "2047310037513601536",
+      "text": "Ok, this made me laugh out loud! Brilliant!",
+      "date": "2026-04-23T13:42:04.000Z",
+      "url": "https://x.com/adlrocha/status/2047310037513601536",
+      "quotedTweet": {
+        "author": "",
+        "text": "Igor Os:"
+      }
+    },
+    {
+      "id": "2047300658198450180",
+      "text": "I am already running locally, in case you were wondering!",
+      "date": "2026-04-23T13:04:48.000Z",
+      "url": "https://x.com/adlrocha/status/2047300658198450180",
+      "quotedTweet": {
+        "author": "Qwen",
+        "text": "🚀 Meet Qwen3.6-27B, our latest dense, open-source model, packing flagship-level coding power!\n\nYes, 27B, and Qwen3.6-27B punches way above its weight. 👇\n\nWhat's new:\n🧠 Outstanding agentic coding — surpasses Qwen3.5-397B-A17B across all major coding benchmarks\n💡 Strong",
+        "media": [
+          {
+            "url": "https://pbs.twimg.com/media/HGgw3IVacAEszY9?format=jpg&amp;name=orig",
+            "type": "photo",
+            "width": 1200,
+            "height": 647
+          }
+        ]
+      }
+    },
+    {
+      "id": "2047267957344964760",
+      "text": "Google recently proved they can break Bitcoin's cryptography with 20x fewer qubits than we thought, without actually showing the attack circuit.\n\nHow? They used a zero-knowledge proof to demonstrate the circuit works.\n\nThe irony? The proof itself uses elliptic curve cryptography, the same primitive the attack breaks.\n\nIt's responsible disclosure for the quantum age: prove the vulnerability is real, withhold the exploit.\n\nBut here's what keeps me up at night: if CRQCs ever arrive at scale, the ZKP ecosystem goes down with the rest.\n\n🐧 Read the full breakdown: https://adlrocha.substack.com/p/adlrocha-googles-zkp-hidden-quantum",
+      "date": "2026-04-23T10:54:52.000Z",
+      "url": "https://x.com/adlrocha/status/2047267957344964760",
+      "media": [
+        {
+          "url": "https://pbs.twimg.com/media/HGlbWdcWcAAC14k?format=jpg&amp;name=orig",
+          "type": "photo",
+          "width": 1456,
+          "height": 813
+        }
+      ]
+    },
+    {
+      "id": "2047041406393254207",
+      "text": "I was discussing this exact thing with @PabloGrueso the other day.\n\nARR is a fake metric, and says nothing about the durability or quality of a business.\n\nHow Recurring is actually that Revenue?",
+      "date": "2026-04-22T19:54:38.000Z",
+      "url": "https://x.com/adlrocha/status/2047041406393254207",
+      "quotedTweet": {
+        "author": "sourcery",
+        "text": "ARR is a fake metric.\n\n@mignano says some companies are \"literally just taking yesterday’s subscription rate and multiplying it by 365.”\n\n“It doesn’t say anything about the durability or quality of revenue.”",
+        "media": [
+          {
+            "url": "https://video.twimg.com/amplify_video/2047012198820818944/vid/avc1/1920x1080/gSMl31pSzktq8AUw.mp4?tag=21",
+            "type": "video",
+            "poster": "https://pbs.twimg.com/amplify_video_thumb/2047012198820818944/img/uGmJRdNpIRTNAT_x.jpg",
+            "width": 1920,
+            "height": 1080
+          }
+        ]
+      }
+    },
+    {
+      "id": "2047018989885206942",
+      "text": "I called it the QA agent in my AI factory pipeline, but Claude releases again a feature that I just merged a few days ago. \n\nGreat minds think alike? \n\nI have a specific project in mind where this is going to be critical ;)",
+      "date": "2026-04-22T18:25:33.000Z",
+      "url": "https://x.com/adlrocha/status/2047018989885206942",
+      "quotedTweet": {
+        "author": "ClaudeDevs",
+        "text": "New in Claude Code: /ultrareview (research preview) runs a fleet of bug-hunting agents in the cloud.\n\nFindings land in the CLI or Desktop automatically. Run it before merging critical changes—auth, data migrations, etc. \n\nPro and Max users get 3 free reviews through 5/5.",
+        "media": [
+          {
+            "url": "https://video.twimg.com/amplify_video/2046999336412913664/vid/avc1/1080x1080/N4_JvtcqqijCt9er.mp4?tag=21",
+            "type": "video",
+            "poster": "https://pbs.twimg.com/amplify_video_thumb/2046999336412913664/img/Orz36ChX1Wvcp-7s.jpg",
+            "width": 1400,
+            "height": 1400
+          }
+        ]
+      }
+    },
+    {
+      "id": "2046995944999174417",
+      "text": "You probably won’t believe me, but I haven’t used Claude in the whole week. Kimi + GLM + local Qwen have solved all my needs so far.\n\nIf you told me one month ago I would thought you were crazy. \n\nThis shit MOVES FAST!",
+      "date": "2026-04-22T16:53:59.000Z",
+      "url": "https://x.com/adlrocha/status/2046995944999174417"
+    },
+    {
+      "id": "2046995545349108131",
+      "text": "Time to update my local model! I just got an upgrade!",
+      "date": "2026-04-22T16:52:24.000Z",
+      "url": "https://x.com/adlrocha/status/2046995545349108131",
+      "quotedTweet": {
+        "author": "Qwen",
+        "text": "🚀 Meet Qwen3.6-27B, our latest dense, open-source model, packing flagship-level coding power!\n\nYes, 27B, and Qwen3.6-27B punches way above its weight. 👇\n\nWhat's new:\n🧠 Outstanding agentic coding — surpasses Qwen3.5-397B-A17B across all major coding benchmarks\n💡 Strong",
+        "media": [
+          {
+            "url": "https://pbs.twimg.com/media/HGgw3IVacAEszY9?format=jpg&amp;name=orig",
+            "type": "photo",
+            "width": 1200,
+            "height": 647
+          }
+        ]
+      }
+    },
+    {
+      "id": "2046947498040635524",
+      "text": "The Claude Code leak revealed something nobody expected:\n\nThe model isn't the product. The scaffolding is.\n\nHere's what 512K lines of leaked TypeScript taught us about the new software engineering:\n\n🐧Context management through compaction hierarchies, proactive summarisation, reactive overflow handling, headless session snipping, and context collapse for verbose outputs\n\n🐧KAIROS \"Dream Model\", a background daemon that runs after 24h of inactivity, reviewing memory files, pruning contradictions, and consolidating learnings into durable knowledge\n\n🐧Structured tooling over raw shell access. Typed Grep/Glob tools with defined permissions, parallel reads, serial writes, and live LSP symbol graphs instead of static text parsing\n\nThe model runs inside this system like a processor runs inside an OS.\n\nThe biggest takeaway? Raw intelligence is now a commodity layer in the stack. The real engineering work is building the scaffolding that works around model limitations.\n\nEngineers who master this orchestration layer, the memory systems, the tooling primitives, the context governance, will define what's possible.\n\nThose who only prompt? They'll be left behind.\n\n🐧 Full analysis in my newsletter: https://adlrocha.substack.com/p/adlrocha-a-glimpse-of-the-new-software\n\nSubscribe to stay tuned for more deep dives into the AI-first engineering stack.",
+      "date": "2026-04-22T13:41:28.000Z",
+      "url": "https://x.com/adlrocha/status/2046947498040635524"
+    },
+    {
+      "id": "2046919733979599087",
+      "text": "A lot of the hiring in the next few months will involve builders reimagining the internal tooling of companies to be AI-ready.\n\nLet’s squeeze the vale out of those tokens!",
+      "date": "2026-04-22T11:51:09.000Z",
+      "url": "https://x.com/adlrocha/status/2046919733979599087"
+    },
+    {
+      "id": "2046678319312327138",
+      "text": "Testing AI agents is hard, and it requires a three-layer approach:\n\n1️⃣ Scaffolding unit tests, deterministic checks for your orchestration logic\n2️⃣ Issue-tagged regression tests, real bugs that broke production\n3️⃣ LLM-as-judge + task-based evals to measure actual capability\n\nThe open problem: detecting small prompt regressions that break complex workflow\n\nThis week is already booked, but will write about my experience working on these problems in two weeks in the newsletter. Subscribe to stay tuned!",
+      "date": "2026-04-21T19:51:51.000Z",
+      "url": "https://x.com/adlrocha/status/2046678319312327138"
+    },
     {
       "id": "2045948058546983295",
       "text": "Don't you ever feel like there are certain people you just have a weakness for? Like, no matter what they get themselves into, you’d just follow them blindly? I can think of a couple lately. And I love when that happens.\n\nAs we use to say in Spanish: “me dejo liar”",
