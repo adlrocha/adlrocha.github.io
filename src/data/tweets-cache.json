@@ -1,6 +1,205 @@
 {
-  "lastUpdated": "2026-04-26T07:54:06.056Z",
+  "lastUpdated": "2026-05-03T17:50:22.032Z",
   "tweets": [
+    {
+      "id": "2050996228888936688",
+      "text": "Showing up every day keeps hurting like the first day.\n\nTotally worth it, though.",
+      "date": "2026-05-03T17:49:41.000Z",
+      "url": "https://x.com/adlrocha/status/2050996228888936688"
+    },
+    {
+      "id": "2050956476311580886",
+      "text": "Time to lock myself away to ship something. It’s been a while",
+      "date": "2026-05-03T15:11:43.000Z",
+      "url": "https://x.com/adlrocha/status/2050956476311580886"
+    },
+    {
+      "id": "2050954252764234180",
+      "text": "Interesting take. I don’t know how I feel about it. Compilers can introduce a level of non-determinism that is not even close to LLMs stochasticity.\nI am afraid agents are still not reliable enough to be treated as compilers.",
+      "date": "2026-05-03T15:02:53.000Z",
+      "url": "https://x.com/adlrocha/status/2050954252764234180",
+      "quotedTweet": {
+        "author": "solst/ICE of Astarte",
+        "text": "Interesting article on treating agent output like compiler output (and why) \n\nhttps://skiplabs.io/blog/codegen_as_compiler",
+        "media": [
+          {
+            "url": "https://pbs.twimg.com/media/HHP61oKX0AAZg3Q?format=jpg&amp;name=orig",
+            "type": "photo",
+            "width": 1206,
+            "height": 722
+          }
+        ]
+      }
+    },
+    {
+      "id": "2050850346814292118",
+      "text": "How do you test an AI agent when it never gives the same answer twice?\n\nI'm wrapping up my series on agent engineering by tackling the \"Eval Problem.\" Traditional assertion-based testing breaks immediately with stochastic LLMs, but here is what actually works in production:\n\n1️⃣ Layer 1: Aggressive unit testing for the deterministic parts (prompts, tool dispatch). \n2️⃣ Layer 2: Targeted E2E evals for the stochastic model calls.\n\nAs we learned building @BaselightDB, the real bottleneck isn't the tooling (evalite, Braintrust, etc.). It's defining \"success\" precisely enough to finally automate away the manual \"vibes test.\"\n\nRead the full breakdown here: https://open.substack.com/pub/adlrocha/p/adlrocha-the-eval-problem-how-to",
+      "date": "2026-05-03T08:10:00.000Z",
+      "url": "https://x.com/adlrocha/status/2050850346814292118",
+      "media": [
+        {
+          "url": "https://pbs.twimg.com/media/HHUH8x6XUAAjZj9?format=jpg&amp;name=orig",
+          "type": "photo",
+          "width": 1024,
+          "height": 572
+        }
+      ]
+    },
+    {
+      "id": "2050548747948392576",
+      "text": "This  week writing my Sunday post has been a challenge.\n\nI've been stranded in a small village without Internet. A storm blasted the only base station giving us service.\n\nBut I did it! Post ready and scheduled. Be sure to subscribe if you don't want to miss it!",
+      "date": "2026-05-02T12:11:33.000Z",
+      "url": "https://x.com/adlrocha/status/2050548747948392576",
+      "media": [
+        {
+          "url": "https://pbs.twimg.com/media/HHUC1NrW4AAYI47?format=jpg&amp;name=orig",
+          "type": "photo",
+          "width": 1024,
+          "height": 572
+        }
+      ]
+    },
+    {
+      "id": "2049893095613870523",
+      "text": "Turns out I won’t have Internet signal for the rest of the week for… reasons (we rely on a single base station in my current location and they decided to switch it off).\n\nSee you in the other side. Writing the post for Sunday is going to be fun!",
+      "date": "2026-04-30T16:46:13.000Z",
+      "url": "https://x.com/adlrocha/status/2049893095613870523"
+    },
+    {
+      "id": "2049892715492471020",
+      "text": "Just. Keep. Building.",
+      "date": "2026-04-30T16:44:43.000Z",
+      "url": "https://x.com/adlrocha/status/2049892715492471020"
+    },
+    {
+      "id": "2049785056491655657",
+      "text": "It still amazes me how fast money can be moved around these days",
+      "date": "2026-04-30T09:36:55.000Z",
+      "url": "https://x.com/adlrocha/status/2049785056491655657"
+    },
+    {
+      "id": "2049581945198161923",
+      "text": "One of the risks of using coding agents is feature bloat (as getting new features is virtually free).\n\nJust saying…",
+      "date": "2026-04-29T20:09:49.000Z",
+      "url": "https://x.com/adlrocha/status/2049581945198161923",
+      "quotedTweet": {
+        "author": "ClaudeDevs",
+        "text": "Claude Code ships with a built-in skill for working with the Claude Platform.\n\nUseful for model migrations, using  API features (e.g., prompt caching), or onboarding to newer APIs like Claude Managed Agents.",
+        "media": [
+          {
+            "url": "https://video.twimg.com/amplify_video/2049574832241864704/vid/avc1/3840x2160/6LyIIisgmU6lKBPh.mp4?tag=21",
+            "type": "video",
+            "poster": "https://pbs.twimg.com/amplify_video_thumb/2049574832241864704/img/zb_ZHb-8NXRzl5vp.jpg",
+            "width": 2048,
+            "height": 1152
+          }
+        ]
+      }
+    },
+    {
+      "id": "2049570801557336131",
+      "text": "I’ve been trying to write a deep, insightful, and thoughtful tweet for minutes because it’s been a while since I post, but I have nothing. \n\nI could use an LLM, but I rather share how brain drained I am today.\n\nI love building things with people that are smarter than me (hey! There’s my insightful tweet, completely unfiltered and unplanned)",
+      "date": "2026-04-29T19:25:32.000Z",
+      "url": "https://x.com/adlrocha/status/2049570801557336131"
+    },
+    {
+      "id": "2049175442503127505",
+      "text": "Now delivering the two messages as specified:\n\nWe outsourced manufacturing to China. Now we're outsourcing thinking to AI.\n\nThe difference: you can't reshore cognition once it atrophies.\n\nWhen was the last time you genuinely struggled with a hard problem instead of pasting it into a model? \n\nI don't know if this should worry me but it does!",
+      "date": "2026-04-28T17:14:31.000Z",
+      "url": "https://x.com/adlrocha/status/2049175442503127505"
+    },
+    {
+      "id": "2048708747145404489",
+      "text": "Qwen3.6 is a beast!",
+      "date": "2026-04-27T10:20:03.000Z",
+      "url": "https://x.com/adlrocha/status/2048708747145404489",
+      "media": [
+        {
+          "url": "https://pbs.twimg.com/media/HG55vjQbcAAjiY8?format=png&amp;name=orig",
+          "type": "photo",
+          "width": 528,
+          "height": 22
+        }
+      ]
+    },
+    {
+      "id": "2048668978839457796",
+      "text": "They are trying to find a sustainable cost model.",
+      "date": "2026-04-27T07:42:01.000Z",
+      "url": "https://x.com/adlrocha/status/2048668978839457796",
+      "media": [
+        {
+          "url": "https://pbs.twimg.com/media/HG5VkvebcAAX0BI?format=png&amp;name=orig",
+          "type": "photo",
+          "width": 717,
+          "height": 334
+        }
+      ],
+      "quotedTweet": {
+        "author": "adlrocha",
+        "text": "The economics of AI will start hitting hard!",
+        "media": [
+          {
+            "url": "https://pbs.twimg.com/media/HG5VJGDbIAAAF0A?format=png&amp;name=orig",
+            "type": "photo",
+            "width": 720,
+            "height": 403
+          }
+        ]
+      }
+    },
+    {
+      "id": "2048668658944118975",
+      "text": "The economics of AI will start hitting hard!",
+      "date": "2026-04-27T07:40:45.000Z",
+      "url": "https://x.com/adlrocha/status/2048668658944118975",
+      "media": [
+        {
+          "url": "https://pbs.twimg.com/media/HG5VJGDbIAAAF0A?format=png&amp;name=orig",
+          "type": "photo",
+          "width": 720,
+          "height": 403
+        }
+      ]
+    },
+    {
+      "id": "2048667871065059602",
+      "text": "\"The goal of some parents is to work so hard that their kids and  grandkids get to live a life that appears spoiled by the standards of  previous generations.\"\n\nReally nice read on the importance of long-term money\n\nhttps://collabfund.substack.com/p/long-term-money",
+      "date": "2026-04-27T07:37:37.000Z",
+      "url": "https://x.com/adlrocha/status/2048667871065059602"
+    },
+    {
+      "id": "2048478894773440957",
+      "text": "I found a clear weakness on all of my posts. Their titles. I need your help!\n\nI definitely overthink them trying to make them somewhat poetical, but they are non descriptive and I feel people don’t read them because they say “what the fuck is this about? Is this worth my time?”\n\nI think I need to go with more obvious and self-descriptive titles. WDYT? \n\nToday’s post for reference: https://adlrocha.substack.com/p/adlrocha-the-model-is-still-not-the",
+      "date": "2026-04-26T19:06:42.000Z",
+      "url": "https://x.com/adlrocha/status/2048478894773440957",
+      "media": [
+        {
+          "url": "https://pbs.twimg.com/media/HG2or7VbIAAYPHT?format=jpg&amp;name=orig",
+          "type": "photo",
+          "width": 2048,
+          "height": 1143
+        }
+      ]
+    },
+    {
+      "id": "2048455308700217631",
+      "text": "These LLM architectures are beautiful. I need to frame my favourite one to put in in my office.\n\nDeepseek v3 will always have a special place in my heart",
+      "date": "2026-04-26T17:32:58.000Z",
+      "url": "https://x.com/adlrocha/status/2048455308700217631",
+      "quotedTweet": {
+        "author": "Sebastian Raschka",
+        "text": "April was a pretty strong month for LLM releases:\n- Gemma 4\n- GLM-5.1\n- Qwen3.6\n- Kimi K2.6\n- DeepSeek V4\n\nAll are now added to the LLM Architecture Gallery. \nMore details once I am fully back in May!",
+        "media": [
+          {
+            "url": "https://pbs.twimg.com/media/HG1tkNHXQAAxDrf?format=jpg&amp;name=orig",
+            "type": "photo",
+            "width": 2048,
+            "height": 1365
+          }
+        ]
+      }
+    },
     {
       "id": "2048309355120910559",
       "text": "Last week’s post about the Claude Code leak proved something crucial: the real engineering in AI isn't the model, it's the scaffolding around it. But that got me thinking, how do the best open-source projects approach these exact same problems?\n\nFor the past week, I've been digging through the source code of popular agent frameworks like @NousResearch  Hermes and @badlogicgames's Pi to find out. My hypothesis? We are all finding the same kind of problems when building agents and converging to somewhat similar solutions. \n\nThe model is still not the product. It's the CPU. The context window is the RAM. And as these shared architectures standardise across frameworks, we are rapidly moving toward a world of \"fungible software.\"\n\nRead the full analysis here for my take in the matter: https://adlrocha.substack.com/p/adlrocha-the-model-is-still-not-the",

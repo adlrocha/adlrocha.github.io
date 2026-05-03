@@ -1,6 +1,12 @@
 {
-  "lastUpdated": "2026-04-26T07:54:01.054Z",
+  "lastUpdated": "2026-05-03T17:50:17.302Z",
   "posts": [
+    {
+      "title": "@adlrocha - The Eval Problem: How to Test AI Agents When They Never Give the Same Answer Twice",
+      "link": "https://adlrocha.substack.com/p/adlrocha-the-eval-problem-how-to",
+      "date": "2026-05-03T08:01:34.000Z",
+      "description": "A practical two-layer approach, with lessons from Baselight AI and other agents..."
+    },
     {
       "title": "@adlrocha - The Model is still not the Product",
       "link": "https://adlrocha.substack.com/p/adlrocha-the-model-is-still-not-the",
