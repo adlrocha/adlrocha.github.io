@@ -1,6 +1,98 @@
 {
-  "lastUpdated": "2026-05-03T17:50:22.032Z",
+  "lastUpdated": "2026-05-10T18:17:08.438Z",
   "tweets": [
+    {
+      "id": "2053387062196248608",
+      "text": "GitHub Copilot’s recent shift to usage-based billing isn't a surprise, it's a wake-up call. Big Tech and AI labs haven't been generous; they’ve been subsidising token costs to build your dependency before they extract value. Every cheap API call is a training data point. Every workflow you wrap around their service is a switching cost they are accumulating on your behalf.\n\nThe \"AI bubble\" isn't just a bubble, it's a dependency trap.\n\nIn this post, I break down why we need to treat AI compute like solar power: an investment in independence from the central grid. I've spent months deep in the details researching the local LLM inference hardware market to escape decreasing token allowances and rising subscription bills.\n\nI explore the Hardware Landscape (Mid-2026) guide, we cover, and I describe how the perfect plug-and-play inference box doesn't exist yet, I’ve decided to start building and benchmarking it myself.\n\nThis is a gap in the market that I want someone to fill (or I will fill it myself)\n\nRead the full post: https://open.substack.com/pub/adlrocha/p/adlrocha-in-a-quest-to-becoming-ai",
+      "date": "2026-05-10T08:10:00.000Z",
+      "url": "https://x.com/adlrocha/status/2053387062196248608",
+      "media": [
+        {
+          "url": "https://pbs.twimg.com/media/HHuk8uEXIAI8A8H?format=jpg&amp;name=orig",
+          "type": "photo",
+          "width": 1024,
+          "height": 572
+        }
+      ]
+    },
+    {
+      "id": "2052413221647044963",
+      "text": "I think X is consistently hiding my tweets. I must have misbehaved or something. I am going to become more of a consumer than a produced at this point, and find alternative distribution channels for my content :)",
+      "date": "2026-05-07T15:40:18.000Z",
+      "url": "https://x.com/adlrocha/status/2052413221647044963",
+      "media": [
+        {
+          "url": "https://pbs.twimg.com/media/HHui6ilWkAEUk_B?format=png&amp;name=orig",
+          "type": "photo",
+          "width": 92,
+          "height": 519
+        }
+      ]
+    },
+    {
+      "id": "2052103199205544100",
+      "text": "Market timing!",
+      "date": "2026-05-06T19:08:23.000Z",
+      "url": "https://x.com/adlrocha/status/2052103199205544100",
+      "quotedTweet": {
+        "author": "Luke Gromen",
+        "text": "\"Professor, don't you find it curious that a new US-Iran peace deal leaks almost every time the 10y UST yield breaks 4.4% on the upside?\"\n\n\"Actually, if I think about it, I don't find it curious at all.\"",
+        "media": [
+          {
+            "url": "https://pbs.twimg.com/media/HHo9hCyW8AgZ7oA?format=jpg&amp;name=orig",
+            "type": "photo",
+            "width": 1682,
+            "height": 1304
+          }
+        ]
+      }
+    },
+    {
+      "id": "2051954455185072631",
+      "text": "We were used to say that \"if something can be exploited it will be exploited\". That was the theory, but now it's becoming a reality in practice.\n\nFun times!",
+      "date": "2026-05-06T09:17:20.000Z",
+      "url": "https://x.com/adlrocha/status/2051954455185072631"
+    },
+    {
+      "id": "2051934627401437583",
+      "text": "Always design tasks delegated to an agent with the feedback loop in mind so they can work autonomously for longer and verify their own work",
+      "date": "2026-05-06T07:58:32.000Z",
+      "url": "https://x.com/adlrocha/status/2051934627401437583"
+    },
+    {
+      "id": "2051916983038296199",
+      "text": "I love being the dumbest person in the room, and it’s happening a lot lately",
+      "date": "2026-05-06T06:48:26.000Z",
+      "url": "https://x.com/adlrocha/status/2051916983038296199"
+    },
+    {
+      "id": "2051916806445486372",
+      "text": "At least we did to things right the first time",
+      "date": "2026-05-06T06:47:44.000Z",
+      "url": "https://x.com/adlrocha/status/2051916806445486372",
+      "quotedTweet": {
+        "author": "Josh Payne",
+        "text": "Second-time founders be like…\n\n> GTM > PMF\n> Go fully remote\n> Profitability is king\n> Must have a Big TAM\n> Outsource non-core tasks\n> Have great advisors/investors\n> Prioritize customer conversations\n> Focused on retention over growth\n> Hire fewer, more experienced people\n>"
+      }
+    },
+    {
+      "id": "2051747485761102195",
+      "text": "I am increasingly convinced that moving forward you won’t to find a job, but design your own.\n\nThis is why entrepreneurs have a head start",
+      "date": "2026-05-05T19:34:54.000Z",
+      "url": "https://x.com/adlrocha/status/2051747485761102195"
+    },
+    {
+      "id": "2051204211887538515",
+      "text": "The best way to get good product taste is to try a lot of products and be opinionated about them",
+      "date": "2026-05-04T07:36:08.000Z",
+      "url": "https://x.com/adlrocha/status/2051204211887538515"
+    },
+    {
+      "id": "2051031385553391841",
+      "text": "I’ve always enjoyed grandiose visions and ambitious missions :) exciting!",
+      "date": "2026-05-03T20:09:23.000Z",
+      "url": "https://x.com/adlrocha/status/2051031385553391841"
+    },
     {
       "id": "2050996228888936688",
       "text": "Showing up every day keeps hurting like the first day.\n\nTotally worth it, though.",

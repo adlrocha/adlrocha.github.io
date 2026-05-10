@@ -1,6 +1,12 @@
 {
-  "lastUpdated": "2026-05-03T17:50:17.302Z",
+  "lastUpdated": "2026-05-10T18:17:03.566Z",
   "posts": [
+    {
+      "title": "@adlrocha - In a quest to becoming AI-independent",
+      "link": "https://adlrocha.substack.com/p/adlrocha-in-a-quest-to-becoming-ai",
+      "date": "2026-05-10T08:02:45.000Z",
+      "description": "Why the AI bubble is a dependency trap: A guide to local LLM inference hardware..."
+    },
     {
       "title": "@adlrocha - The Eval Problem: How to Test AI Agents When They Never Give the Same Answer Twice",
       "link": "https://adlrocha.substack.com/p/adlrocha-the-eval-problem-how-to",
