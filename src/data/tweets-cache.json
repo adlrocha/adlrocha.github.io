@@ -1,6 +1,144 @@
 {
-  "lastUpdated": "2026-05-10T18:17:08.438Z",
+  "lastUpdated": "2026-05-17T17:47:52.816Z",
   "tweets": [
+    {
+      "id": "2056069018058924206",
+      "text": "To my surprise, I am enjoying Grok lately. Intelligence is definitely a commodity. I hadn’t changed providers for any other thing so often ever",
+      "date": "2026-05-17T17:47:08.000Z",
+      "url": "https://x.com/adlrocha/status/2056069018058924206"
+    },
+    {
+      "id": "2055996758967423277",
+      "text": "Last week I wrote about the hardware side of running AI locally: why memory bandwidth beats raw compute, which machines are worth building, and where the market is heading. Missed it? Start there, this post builds directly on it.\n\nThis week I dive into the software side of the quest: the tricks and choices that deliver 3-5× faster inference on the same hardware. From MoE offloading to speculative decoding, the full attention zoo, and more.\n\nI’m increasingly convinced that the real future lies in deeply co-optimised software-model-hardware implementations. The kind @antirez showed with ds4, a few thousand lines of pure C, written specifically for one model (DeepSeekv4) on Apple Silicon, pushing 1M context and usable agentic performance on a laptop.\n\nThe pieces are here. Now it’s about gluing them together into something truly plug-and-play for everyone.\n\nRead the full post: https://open.substack.com/pub/adlrocha/p/adlrocha-towards-local-plug-and-play",
+      "date": "2026-05-17T13:00:00.000Z",
+      "url": "https://x.com/adlrocha/status/2055996758967423277",
+      "media": [
+        {
+          "url": "https://pbs.twimg.com/media/HIdlzVaW0AAnoPv?format=jpg&amp;name=orig",
+          "type": "photo",
+          "width": 1200,
+          "height": 800
+        }
+      ]
+    },
+    {
+      "id": "2055720758819570003",
+      "text": "After going through the notes from @javilop about the X algorithm, it is clear to me that is not the best channel for my content (and my personal behaviour).\n\nI don’t plan AT ALL when I post, I use it as a journal so I “burst tweet” as ideas come to mind, I don’t even know what timezones are, and don’t get me started about creating engagement on that 30 min window because I am horrible at clickbaiting. \n\nI am Mr. Algorithm’s nil scorer. The only thing I do right? I hate writing threads, they are a waste of time. Turns out I was right on that one.",
+      "date": "2026-05-16T18:43:17.000Z",
+      "url": "https://x.com/adlrocha/status/2055720758819570003",
+      "quotedTweet": {
+        "author": "Javi López ⛩️",
+        "text": "✨ xAI publicó ayer el algoritmo de X y no entiendo cómo nadie se ha dado cuenta de lo que realmente tiene en sus tripas\n\nMe he fundido 500 pavos en Claude analizando hasta la última línea\n\nEsto es lo que he descubierto (POST LARGO, guárdatelo para luego):\n\n0/ Cada cuenta tiene",
+        "media": [
+          {
+            "url": "https://pbs.twimg.com/media/HIc-C4jWUAA17kj?format=jpg&amp;name=orig",
+            "type": "photo",
+            "width": 1502,
+            "height": 1432
+          }
+        ]
+      }
+    },
+    {
+      "id": "2055554487754928237",
+      "text": "Periodic reminder that I share updates to my posts in Substack notes. \n\nSubscribe to https://adlrocha.substack.com if you don't want to miss a thing.",
+      "date": "2026-05-16T07:42:34.000Z",
+      "url": "https://x.com/adlrocha/status/2055554487754928237",
+      "media": [
+        {
+          "url": "https://pbs.twimg.com/media/HIbLt62XAAAbLZi?format=jpg&amp;name=orig",
+          "type": "photo",
+          "width": 927,
+          "height": 724
+        }
+      ]
+    },
+    {
+      "id": "2054846095260291396",
+      "text": "This is also my experience. \n\nWe still need a human in the loop. The human designs the architecture, the agent builds the feature: \n\nhttps://blog.k10s.dev/im-going-back-to-writing-code-by-hand/",
+      "date": "2026-05-14T08:47:40.000Z",
+      "url": "https://x.com/adlrocha/status/2054846095260291396"
+    },
+    {
+      "id": "2054630525956989420",
+      "text": "This! Joining the mission!",
+      "date": "2026-05-13T18:31:05.000Z",
+      "url": "https://x.com/adlrocha/status/2054630525956989420",
+      "quotedTweet": {
+        "author": "0xSero",
+        "text": "http://x.com/i/article/2034961360191098880"
+      }
+    },
+    {
+      "id": "2054605598252020048",
+      "text": "Month after month I need to allocate my savings somewhere. And I really don't know where. I feel like voting on an election, all options are bad and we are forced to choose the least bad.\n\nI really need @Shellmentcom to ship ASAP!\n\n@PabloGrueso, no pressure!",
+      "date": "2026-05-13T16:52:02.000Z",
+      "url": "https://x.com/adlrocha/status/2054605598252020048"
+    },
+    {
+      "id": "2054566762985713969",
+      "text": "This just happened, thank you all for your support. It may not seem much but I am so happy about this. \n\nNow I just need budget to buy machines and get the ball rolling.",
+      "date": "2026-05-13T14:17:42.000Z",
+      "url": "https://x.com/adlrocha/status/2054566762985713969",
+      "media": [
+        {
+          "url": "https://pbs.twimg.com/media/HINJPksWkAAIhG2?format=png&amp;name=orig",
+          "type": "photo",
+          "width": 331,
+          "height": 139
+        }
+      ]
+    },
+    {
+      "id": "2054448191051850096",
+      "text": "And this is what I am going to build towards with the time I have! As mentioned in my last post https://adlrocha.substack.com/p/adlrocha-in-a-quest-to-becoming-ai",
+      "date": "2026-05-13T06:26:33.000Z",
+      "url": "https://x.com/adlrocha/status/2054448191051850096",
+      "quotedTweet": {
+        "author": "the tiny corp",
+        "text": "@APompliano We need stacks of GPUs in every house, not really big stacks of GPUs controlled by companies who are trying to extract value from us."
+      }
+    },
+    {
+      "id": "2053905478179328081",
+      "text": "More info about the talk :) \n\nThe topic of the talk may ring a bell to myh newsletter subscribers.",
+      "date": "2026-05-11T18:30:00.000Z",
+      "url": "https://x.com/adlrocha/status/2053905478179328081",
+      "media": [
+        {
+          "url": "https://pbs.twimg.com/media/HICvHXfXwAAqC1L?format=png&amp;name=orig",
+          "type": "photo",
+          "width": 453,
+          "height": 487
+        }
+      ],
+      "quotedTweet": {
+        "author": "adlrocha",
+        "text": "I'll be speaking at CONVEX Summit 2026 in Madrid! 📣 Mark your calendar: June 17&18. Looking forward to connecting at #CONVEX26 with the amazing tech community. 🎟️ https://www.convexsummit.com/\n\nStay tuned for more info about the schedule and details about my talk! Looking forward to",
+        "media": [
+          {
+            "url": "https://pbs.twimg.com/media/HICruGKWUAARdhY?format=jpg&amp;name=orig",
+            "type": "photo",
+            "width": 2048,
+            "height": 1152
+          }
+        ]
+      }
+    },
+    {
+      "id": "2053830415874421050",
+      "text": "I'll be speaking at CONVEX Summit 2026 in Madrid! 📣 Mark your calendar: June 17&18. Looking forward to connecting at #CONVEX26 with the amazing tech community. 🎟️ https://www.convexsummit.com/\n\nStay tuned for more info about the schedule and details about my talk! Looking forward to seeing you around!",
+      "date": "2026-05-11T13:31:44.000Z",
+      "url": "https://x.com/adlrocha/status/2053830415874421050",
+      "media": [
+        {
+          "url": "https://pbs.twimg.com/media/HICruGKWUAARdhY?format=jpg&amp;name=orig",
+          "type": "photo",
+          "width": 2048,
+          "height": 1152
+        }
+      ]
+    },
     {
       "id": "2053387062196248608",
       "text": "GitHub Copilot’s recent shift to usage-based billing isn't a surprise, it's a wake-up call. Big Tech and AI labs haven't been generous; they’ve been subsidising token costs to build your dependency before they extract value. Every cheap API call is a training data point. Every workflow you wrap around their service is a switching cost they are accumulating on your behalf.\n\nThe \"AI bubble\" isn't just a bubble, it's a dependency trap.\n\nIn this post, I break down why we need to treat AI compute like solar power: an investment in independence from the central grid. I've spent months deep in the details researching the local LLM inference hardware market to escape decreasing token allowances and rising subscription bills.\n\nI explore the Hardware Landscape (Mid-2026) guide, we cover, and I describe how the perfect plug-and-play inference box doesn't exist yet, I’ve decided to start building and benchmarking it myself.\n\nThis is a gap in the market that I want someone to fill (or I will fill it myself)\n\nRead the full post: https://open.substack.com/pub/adlrocha/p/adlrocha-in-a-quest-to-becoming-ai",

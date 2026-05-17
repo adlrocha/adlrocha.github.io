@@ -1,6 +1,12 @@
 {
-  "lastUpdated": "2026-05-10T18:17:03.566Z",
+  "lastUpdated": "2026-05-17T17:47:47.794Z",
   "posts": [
+    {
+      "title": "@adlrocha - Towards local plug-and-play AI",
+      "link": "https://adlrocha.substack.com/p/adlrocha-towards-local-plug-and-play",
+      "date": "2026-05-17T08:02:35.000Z",
+      "description": "Local LLM inference optimisations: from attention mechanisms to predictive decoding and software-model-hardware implementations...."
+    },
     {
       "title": "@adlrocha - In a quest to becoming AI-independent",
       "link": "https://adlrocha.substack.com/p/adlrocha-in-a-quest-to-becoming-ai",
