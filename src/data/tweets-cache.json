@@ -1,6 +1,226 @@
 {
-  "lastUpdated": "2026-05-17T17:47:52.816Z",
+  "lastUpdated": "2026-06-02T13:48:30.711Z",
   "tweets": [
+    {
+      "id": "2061442597860593887",
+      "text": "I wasn't aware of this \"hardware compatibility\" feature from @huggingface. It's going to make my life so much easier!!",
+      "date": "2026-06-01T13:39:49.000Z",
+      "url": "https://x.com/adlrocha/status/2061442597860593887",
+      "media": [
+        {
+          "url": "https://pbs.twimg.com/media/HJu3Hd1WIAAj2WZ?format=png&amp;name=orig",
+          "type": "photo",
+          "width": 714,
+          "height": 313
+        }
+      ]
+    },
+    {
+      "id": "2061004629844877340",
+      "text": "I’ve been thinking a lot lately about the right way to work with AI agents. Are we treating them like interns we have to constantly check on? Like contractors we brief and let run? Or even as peers in a swarm?\n\nThis piece explores the spectrum of agent relationships and how shifting your approach can actually unlock way better results.\n\nIf you’re deep into agents (or trying to get there), I think you’ll find it useful.\nLink: https://adlrocha.substack.com/p/adlrocha-stop-micromanaging-your",
+      "date": "2026-05-31T08:39:30.000Z",
+      "url": "https://x.com/adlrocha/status/2061004629844877340",
+      "media": [
+        {
+          "url": "https://pbs.twimg.com/media/HJoovZ-XgAM3IQg?format=jpg&amp;name=orig",
+          "type": "photo",
+          "width": 784,
+          "height": 1168
+        }
+      ]
+    },
+    {
+      "id": "2060400353594462720",
+      "text": "Saw it somewhere in Twitter, sorry for not giving attribution. I am not the author but I think that it is brilliant. \n\nBalance sheets should show this number now.",
+      "date": "2026-05-29T16:38:19.000Z",
+      "url": "https://x.com/adlrocha/status/2060400353594462720",
+      "media": [
+        {
+          "url": "https://pbs.twimg.com/media/HJgDJ1rW0AAyehk?format=jpg&amp;name=orig",
+          "type": "photo",
+          "width": 1122,
+          "height": 1402
+        }
+      ]
+    },
+    {
+      "id": "2060269158441336975",
+      "text": "\"Even if it is a time sink, it is usually more rewarding to just switch on the AI slop slot machine and start vibing with it.\"\n\nI just came up with this sentence from my Sunday post and I am so proud of it that I had to share with my broader audience.\n\nI am that simple.",
+      "date": "2026-05-29T07:56:59.000Z",
+      "url": "https://x.com/adlrocha/status/2060269158441336975"
+    },
+    {
+      "id": "2059564483899425085",
+      "text": "Co-worker: \"wait 2 mins, my computer is going slow\"\nMe: \"stop running that local model\"\n\n(a few decades ago we would have blamed porn instead)",
+      "date": "2026-05-27T09:16:52.000Z",
+      "url": "https://x.com/adlrocha/status/2059564483899425085"
+    },
+    {
+      "id": "2058896693970506180",
+      "text": "It's been half a decade since I last went to South Summit Madrid.\n\nThis year I’m dropping by again.\nIf you’re going and want to meet up, catch up, or just say hi, hit me up.\n\nLooking forward to it.",
+      "date": "2026-05-25T13:03:18.000Z",
+      "url": "https://x.com/adlrocha/status/2058896693970506180",
+      "media": [
+        {
+          "url": "https://video.twimg.com/tweet_video/HJKrn-EWYAAdhX6.mp4",
+          "type": "gif",
+          "poster": "https://pbs.twimg.com/tweet_video_thumb/HJKrn-EWYAAdhX6.jpg",
+          "width": 498,
+          "height": 322
+        }
+      ]
+    },
+    {
+      "id": "2058837813894787342",
+      "text": "I am too optimistic to see here a European awakening?",
+      "date": "2026-05-25T09:09:20.000Z",
+      "url": "https://x.com/adlrocha/status/2058837813894787342",
+      "quotedTweet": {
+        "author": "InvestorFromEurope",
+        "text": "Everyone's been waiting for \"the European Amazon\" for 20 years.\n\nTurns out it might be a discount grocery chain.\n\nDutch Central Bank just picked Lidl as its cloud provider. Not AWS. Not Google. Not Microsoft. Lidl.\n\nThe reason: trust in US tech is eroding across European",
+        "media": [
+          {
+            "url": "https://pbs.twimg.com/media/HHKVpIeXEAAVY9W?format=jpg&amp;name=orig",
+            "type": "photo",
+            "width": 2048,
+            "height": 682
+          }
+        ]
+      }
+    },
+    {
+      "id": "2058816259408404614",
+      "text": "We may start seeing more and more orange here",
+      "date": "2026-05-25T07:43:41.000Z",
+      "url": "https://x.com/adlrocha/status/2058816259408404614",
+      "media": [
+        {
+          "url": "https://pbs.twimg.com/media/HJJid-pWoAA7jHT?format=jpg&amp;name=orig",
+          "type": "photo",
+          "width": 1100,
+          "height": 1100
+        }
+      ]
+    },
+    {
+      "id": "2058572479984250990",
+      "text": "72 tok/s on my Strix Halo. Qwen + MTP enabled is AMAZING.\n\nI'll test its performance in coding and other tasks and report back, but is the closest that I've got to a usable LLM model.  \n\nNext step: Gemma4 with a drafter model.\n\nIf you have no idea what I am talking about give these two a read: \n* https://adlrocha.substack.com/p/adlrocha-towards-local-plug-and-play\n* https://adlrocha.substack.com/p/adlrocha-in-a-quest-to-becoming-ai",
+      "date": "2026-05-24T15:35:00.000Z",
+      "url": "https://x.com/adlrocha/status/2058572479984250990",
+      "media": [
+        {
+          "url": "https://pbs.twimg.com/media/HJEjJN4X0AAP67D?format=png&amp;name=orig",
+          "type": "photo",
+          "width": 883,
+          "height": 213
+        }
+      ]
+    },
+    {
+      "id": "2058497233884955008",
+      "text": "This is a perfect way to illustrate the alignment problem. We are horrible communicating objective intent to AIs, and without proper guardrails they will do whatever it takes to get the job done. \n\nImagine the second-order consequences of subjective intent at a state-level. Fun, fun, fun!",
+      "date": "2026-05-24T10:36:00.000Z",
+      "url": "https://x.com/adlrocha/status/2058497233884955008",
+      "media": [
+        {
+          "url": "https://pbs.twimg.com/media/HJEWp79WIAAXIva?format=png&amp;name=orig",
+          "type": "photo",
+          "width": 889,
+          "height": 775
+        }
+      ]
+    },
+    {
+      "id": "2058449769777733821",
+      "text": "After the last few weeks going down the local AI inference rabbit hole, I wanted to come back to something I’ve been thinking about (and honestly struggling with) for a while now.\n\nOver the past year and a half we've all gone through a journey in how we relate to coding. Me personally, I started treating LLMs like a super smart rubber duck, then moved to using Cursor as a very capable pair programmer… and somewhere around the beginning of this year I realised I had basically stopped writing most of the production code myself.\n\nIt’s a strange feeling. I’ve essentially been promoted from someone who types code to someone who mostly manages agents. And I’m still not sure how I feel about it.\n\nIn the post I share my take about:\n* how my relationship with AI coding tools evolved through different phases\n* what this shift really means for the day-to-day of being a software engineer\n* the new archetypes that seem to be emerging (and which ones feel most future-proof)\n* and the thing that actually worries me: that we might be losing something important in the process (the “forgetting problem”)\n\nIf you’ve been feeling any of this too, I’d really like to hear where you stand.\n\nRead it here: https://open.substack.com/pub/adlrocha/p/adlrocha-how-ai-is-redefining-software",
+      "date": "2026-05-24T07:27:23.000Z",
+      "url": "https://x.com/adlrocha/status/2058449769777733821",
+      "media": [
+        {
+          "url": "https://pbs.twimg.com/media/HJEVFRYX0AAO0ol?format=jpg&amp;name=orig",
+          "type": "photo",
+          "width": 1168,
+          "height": 784
+        }
+      ]
+    },
+    {
+      "id": "2057869551015018724",
+      "text": "Productive week, but now I need to pay myself and write at some point the Sunday post. I know what I want to write about, but I just need a quiet house.\n\nSpoiler alert: that’s not going to happen any time soon. But this is actually great, I love my kids!",
+      "date": "2026-05-22T17:01:48.000Z",
+      "url": "https://x.com/adlrocha/status/2057869551015018724"
+    },
+    {
+      "id": "2057750314019594514",
+      "text": "Not me.",
+      "date": "2026-05-22T09:08:00.000Z",
+      "url": "https://x.com/adlrocha/status/2057750314019594514",
+      "media": [
+        {
+          "url": "https://video.twimg.com/tweet_video/HI6ZACUXcAAGahU.mp4",
+          "type": "gif",
+          "poster": "https://pbs.twimg.com/tweet_video_thumb/HI6ZACUXcAAGahU.jpg",
+          "width": 480,
+          "height": 400
+        }
+      ],
+      "quotedTweet": {
+        "author": "Python Programming",
+        "text": "Claude Code vs Developer 🤣🤣🤣",
+        "media": [
+          {
+            "url": "https://video.twimg.com/amplify_video/2053778136396144641/vid/avc1/720x1280/AzgKrZSFm28JozRR.mp4?tag=27",
+            "type": "video",
+            "poster": "https://pbs.twimg.com/amplify_video_thumb/2053778136396144641/img/yUsFKvjC2d3__si4.jpg",
+            "width": 720,
+            "height": 1280
+          }
+        ]
+      }
+    },
+    {
+      "id": "2057399563124695543",
+      "text": "I had this same idea the other day as I was listening to @lexfridman's podcast on this. \n\nLet's build this!",
+      "date": "2026-05-21T09:54:15.000Z",
+      "url": "https://x.com/adlrocha/status/2057399563124695543",
+      "quotedTweet": {
+        "author": "0xSero",
+        "text": "FFmpeg but for LLM inference, who's building this?",
+        "media": [
+          {
+            "url": "https://pbs.twimg.com/media/HI1G214WcAAA9SQ?format=jpg&amp;name=orig",
+            "type": "photo",
+            "width": 1400,
+            "height": 945
+          }
+        ]
+      }
+    },
+    {
+      "id": "2057073655247450309",
+      "text": "I am too simple. This made me laugh!",
+      "date": "2026-05-20T12:19:12.000Z",
+      "url": "https://x.com/adlrocha/status/2057073655247450309",
+      "quotedTweet": {
+        "author": "JT",
+        "text": "karpathy pulling up to the office for his first day on the research team",
+        "media": [
+          {
+            "url": "https://video.twimg.com/amplify_video/2056865675889516545/vid/avc1/1280x720/hvKL9bCZQ8Vrpmol.mp4?tag=27",
+            "type": "video",
+            "poster": "https://pbs.twimg.com/amplify_video_thumb/2056865675889516545/img/A68xjji64HuDdB6-.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        ]
+      }
+    },
+    {
+      "id": "2056680152118002165",
+      "text": "Closing tabs is the best way to learning how to let go! It can get brutally hard.",
+      "date": "2026-05-19T10:15:34.000Z",
+      "url": "https://x.com/adlrocha/status/2056680152118002165"
+    },
     {
       "id": "2056069018058924206",
       "text": "To my surprise, I am enjoying Grok lately. Intelligence is definitely a commodity. I hadn’t changed providers for any other thing so often ever",
