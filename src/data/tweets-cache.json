@@ -1,6 +1,106 @@
 {
-  "lastUpdated": "2026-06-02T13:48:30.711Z",
+  "lastUpdated": "2026-06-08T08:12:20.575Z",
   "tweets": [
+    {
+      "id": "2063896840261579182",
+      "text": "I think setting Claude Sonnet's default effort as \"Low\" is a product mistake. It may save them some tokens and lower the cost per user, but it makes their product in its default form feel dumber than it is.",
+      "date": "2026-06-08T08:12:06.000Z",
+      "url": "https://x.com/adlrocha/status/2063896840261579182",
+      "media": [
+        {
+          "url": "https://pbs.twimg.com/media/HKRvEg4WcAAoP6U?format=jpg&amp;name=orig",
+          "type": "photo",
+          "width": 1084,
+          "height": 538
+        }
+      ]
+    },
+    {
+      "id": "2063524613183746144",
+      "text": "It ended up longer than I planned, but I’m pretty happy with how this one turned out.\nThe AI mood feels like it’s shifting. \n\nThe “this will replace everyone tomorrow” hype is cooling off into a more grounded “okay, now how the hell do we actually make this useful?” phase. Tokenmaxxing leaderboards, massive budgets burned with little to show, codebases full of slop that people are now ripping out… it’s starting to feel like we’re heading into a bit of a winter. Not because the tech is broken, but because we still haven’t figured out how to adopt it properly.\n\nIs the honeymoon phase of agents actually over? Happy to hear your thoughts.\n\nRead it here: https://adlrocha.substack.com/p/adlrocha-are-we-approaching-a-new",
+      "date": "2026-06-07T07:33:00.000Z",
+      "url": "https://x.com/adlrocha/status/2063524613183746144",
+      "media": [
+        {
+          "url": "https://pbs.twimg.com/media/HKMcrNCXIAAbaww?format=jpg&amp;name=orig",
+          "type": "photo",
+          "width": 1168,
+          "height": 784
+        }
+      ]
+    },
+    {
+      "id": "2062772486438085089",
+      "text": "I agree. The risk of entering the VC-game is that you need to eventually offer liquidity for your investors.\n\nYou either keep fundraising, go public, or make money. If you make enough money you can buy them back and you can buy some freedom.\n\nI am not saying SpaceX will be a bad investment in the long run (because I don’t know) but this IPO is definitely a trap for uneducated investors.\n\nStay safe and learn from crypto 😂",
+      "date": "2026-06-05T05:44:19.000Z",
+      "url": "https://x.com/adlrocha/status/2062772486438085089",
+      "quotedTweet": {
+        "author": "Dami-Defi",
+        "text": "Realising Apple went public at under $2 billion and 15 times revenue in 1980.\n\nSpaceX wants you to buy at $2 trillion and 100 times revenue in 2026.\n\nThat is not getting in early. That is being the exit for venture capitalists who have held this equity for years at a fraction of",
+        "media": [
+          {
+            "url": "https://video.twimg.com/amplify_video/2062565546516983808/vid/avc1/1218x720/G006e-3wA_MeI631.mp4?tag=14",
+            "type": "video",
+            "poster": "https://pbs.twimg.com/amplify_video_thumb/2062565546516983808/img/ICLblIa2j9BFRH7K.jpg",
+            "width": 2048,
+            "height": 1209
+          }
+        ]
+      }
+    },
+    {
+      "id": "2062558431257489618",
+      "text": "It ended up becoming longer than originally planed, but I am genuinely proud of this week's post :) I had a lot of fun writing it.",
+      "date": "2026-06-04T15:33:45.000Z",
+      "url": "https://x.com/adlrocha/status/2062558431257489618",
+      "media": [
+        {
+          "url": "https://pbs.twimg.com/media/HJ-t8apWgAAkj5A?format=jpg&amp;name=orig",
+          "type": "photo",
+          "width": 1168,
+          "height": 784
+        }
+      ]
+    },
+    {
+      "id": "2062265978788942264",
+      "text": "This is good news for my strix halo. I can’t wait to run this beauty.\n\nThe era of local models is finally here!",
+      "date": "2026-06-03T20:11:39.000Z",
+      "url": "https://x.com/adlrocha/status/2062265978788942264",
+      "quotedTweet": {
+        "author": "Google Gemma",
+        "text": "Meet Gemma 4 12B!\n\nA unified, encoder-free multimodal model designed to bring high-performance intelligence directly to your laptop, and released under an Apache 2.0 license.\n\nBridging the gap between edge efficiency and advanced reasoning. Here is what’s new with Gemma 4 12B: 👇",
+        "media": [
+          {
+            "url": "https://pbs.twimg.com/media/HJ5oo_8bcAA9D-A?format=jpg&amp;name=orig",
+            "type": "photo",
+            "width": 2048,
+            "height": 1155
+          }
+        ]
+      }
+    },
+    {
+      "id": "2062265638962217012",
+      "text": "And I know no one will read this tweet because now I know how the algorithm works, but that’s how my brain works and I am a “burst tweeter”. \n\nThere’s nothing more rewarding at the end of the day than a good book or a good conversation (ok, maybe a good beer)",
+      "date": "2026-06-03T20:10:18.000Z",
+      "url": "https://x.com/adlrocha/status/2062265638962217012"
+    },
+    {
+      "id": "2062264902186619213",
+      "text": "I know what I am going to write about this Sunday.",
+      "date": "2026-06-03T20:07:22.000Z",
+      "url": "https://x.com/adlrocha/status/2062264902186619213",
+      "media": [
+        {
+          "url": "https://video.twimg.com/tweet_video/HJ6i_yfWcAIcbIT.mp4",
+          "type": "gif",
+          "poster": "https://pbs.twimg.com/tweet_video_thumb/HJ6i_yfWcAIcbIT.jpg",
+          "width": 498,
+          "height": 198
+        }
+      ]
+    },
     {
       "id": "2061442597860593887",
       "text": "I wasn't aware of this \"hardware compatibility\" feature from @huggingface. It's going to make my life so much easier!!",
