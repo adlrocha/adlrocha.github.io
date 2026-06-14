@@ -1,6 +1,160 @@
 {
-  "lastUpdated": "2026-06-08T08:12:20.575Z",
+  "lastUpdated": "2026-06-14T16:20:22.520Z",
   "tweets": [
+    {
+      "id": "2066193837857325472",
+      "text": "Mondays are quiet. I like Mondays",
+      "date": "2026-06-14T16:19:33.000Z",
+      "url": "https://x.com/adlrocha/status/2066193837857325472"
+    },
+    {
+      "id": "2066150183046353144",
+      "text": "So it goes.",
+      "date": "2026-06-14T13:26:05.000Z",
+      "url": "https://x.com/adlrocha/status/2066150183046353144",
+      "quotedTweet": {
+        "author": "Hedgeye",
+        "text": "The LLM Token Expenditure Index is now back to its January level, when the agentic AI market exploded",
+        "media": [
+          {
+            "url": "https://pbs.twimg.com/media/HKuor57WIAApHMq?format=jpg&amp;name=orig",
+            "type": "photo",
+            "width": 1100,
+            "height": 811
+          }
+        ]
+      }
+    },
+    {
+      "id": "2066075922214596998",
+      "text": "This week has been a fun (and long) one to write. Did Anthropic just pull a Three-Body Problem on the open AI ecosystem? 👽\n\nFable 5 is an absolute beast, proving the \"AI plateau\" is a myth. But the way they rolled it out reveals a massive, growing structural divide in tech.\n\nICYMI, Fable shipped with silent classifiers that actively degrade its performance if it detects you are using it for frontier AI development. You pay for SOTA, but get a sandbagged model so you can't compete with their internal R&D\n\nWe are transitioning from being \"GPU-poor\" to \"Token-poor.\" But restriction accelerates the alternative. Just like closed-source software pushed the world to build Linux, this \"dependency trap\" is the ultimate catalyst for local inference and open-weight models.\n\nAI independence is the infrastructure fight of the next decade. Dive into my full breakdown on why: https://open.substack.com/pub/adlrocha/p/adlrocha-ai-inequality-from-gpu-poor",
+      "date": "2026-06-14T08:31:00.000Z",
+      "url": "https://x.com/adlrocha/status/2066075922214596998",
+      "media": [
+        {
+          "url": "https://pbs.twimg.com/media/HKmZ9cjWQAAt5Ow?format=jpg&amp;name=orig",
+          "type": "photo",
+          "width": 784,
+          "height": 1168
+        }
+      ]
+    },
+    {
+      "id": "2065723210138632342",
+      "text": "So it goes.",
+      "date": "2026-06-13T09:09:27.000Z",
+      "url": "https://x.com/adlrocha/status/2065723210138632342",
+      "quotedTweet": {
+        "author": "sdmat",
+        "text": "Anthropic",
+        "media": [
+          {
+            "url": "https://pbs.twimg.com/media/HKqbeW0boAACNwv?format=jpg&amp;name=orig",
+            "type": "photo",
+            "width": 1536,
+            "height": 1024
+          }
+        ]
+      }
+    },
+    {
+      "id": "2065703757866791101",
+      "text": "On the need of becoming AI independent.\n\nI am discussing this topic more and more on my newsletter lately. Check out the archive and subscribe to get this week's post (where I stress this needs once again)",
+      "date": "2026-06-13T07:52:09.000Z",
+      "url": "https://x.com/adlrocha/status/2065703757866791101",
+      "quotedTweet": {
+        "author": "Armin Ronacher ⇌",
+        "text": "Europeans please wake up."
+      }
+    },
+    {
+      "id": "2065494211810517343",
+      "text": "So it goes.",
+      "date": "2026-06-12T17:59:29.000Z",
+      "url": "https://x.com/adlrocha/status/2065494211810517343",
+      "quotedTweet": {
+        "author": "zerohedge",
+        "text": "*SPACEX SHARES INDICATED TO OPEN 29% ABOVE IPO PRICE IN DEBUT"
+      }
+    },
+    {
+      "id": "2065352417160343683",
+      "text": "Post written for this week's newsletter.\n\nYou can still subscribe at https://adlrocha.substack.com to get it fresh out of the oven in your inbox this Sunday.",
+      "date": "2026-06-12T08:36:03.000Z",
+      "url": "https://x.com/adlrocha/status/2065352417160343683",
+      "media": [
+        {
+          "url": "https://pbs.twimg.com/media/HKmaxLMXIAAAjUo?format=jpg&amp;name=orig",
+          "type": "photo",
+          "width": 784,
+          "height": 1168
+        }
+      ]
+    },
+    {
+      "id": "2065069809990070377",
+      "text": "i am the only one that hates people that do not use capital letter when they write. even after full stops. i hate this more than typos and bad grammar. because I do the latter a lot. it would be hypocritical. but is use capital letters. so there you go!",
+      "date": "2026-06-11T13:53:04.000Z",
+      "url": "https://x.com/adlrocha/status/2065069809990070377"
+    },
+    {
+      "id": "2064763899191107862",
+      "text": "I can confirm that is pretty good!",
+      "date": "2026-06-10T17:37:29.000Z",
+      "url": "https://x.com/adlrocha/status/2064763899191107862",
+      "quotedTweet": {
+        "author": "adlrocha",
+        "text": "Time to test this guy to see what all this fuss is about",
+        "media": [
+          {
+            "url": "https://pbs.twimg.com/media/HKd-g-gWMAAxdXG?format=png&amp;name=orig",
+            "type": "photo",
+            "width": 645,
+            "height": 64
+          }
+        ]
+      }
+    },
+    {
+      "id": "2064758322444566539",
+      "text": "Time to test this guy to see what all this fuss is about",
+      "date": "2026-06-10T17:15:20.000Z",
+      "url": "https://x.com/adlrocha/status/2064758322444566539",
+      "media": [
+        {
+          "url": "https://pbs.twimg.com/media/HKd-g-gWMAAxdXG?format=png&amp;name=orig",
+          "type": "photo",
+          "width": 645,
+          "height": 64
+        }
+      ]
+    },
+    {
+      "id": "2064755998573666415",
+      "text": "While everyone is praising Fable I am falling in love again with Kimi K2.6",
+      "date": "2026-06-10T17:06:06.000Z",
+      "url": "https://x.com/adlrocha/status/2064755998573666415"
+    },
+    {
+      "id": "2064634191224914165",
+      "text": "/goal mode is the incarnation of Karpathy's autoresearch.",
+      "date": "2026-06-10T09:02:04.000Z",
+      "url": "https://x.com/adlrocha/status/2064634191224914165"
+    },
+    {
+      "id": "2064614099170849267",
+      "text": "Getting this kind of feedback is the extra motivation that one needs to consistently write a new post every week. \n\nI will be eternally grateful to all my loyal readers that push me to keep writing and learning every day :)",
+      "date": "2026-06-10T07:42:14.000Z",
+      "url": "https://x.com/adlrocha/status/2064614099170849267",
+      "media": [
+        {
+          "url": "https://pbs.twimg.com/media/HKb7JytWoAAf6aP?format=png&amp;name=orig",
+          "type": "photo",
+          "width": 328,
+          "height": 75
+        }
+      ]
+    },
     {
       "id": "2063896840261579182",
       "text": "I think setting Claude Sonnet's default effort as \"Low\" is a product mistake. It may save them some tokens and lower the cost per user, but it makes their product in its default form feel dumber than it is.",
