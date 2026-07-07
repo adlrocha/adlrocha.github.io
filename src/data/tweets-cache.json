@@ -1,6 +1,199 @@
 {
-  "lastUpdated": "2026-06-14T16:20:22.520Z",
+  "lastUpdated": "2026-07-07T08:38:56.857Z",
   "tweets": [
+    {
+      "id": "2074392421245329490",
+      "text": "So it goes.",
+      "date": "2026-07-07T07:17:48.000Z",
+      "url": "https://x.com/adlrocha/status/2074392421245329490",
+      "quotedTweet": {
+        "author": "zerohedge",
+        "text": "Tech CEOs: Just Kidding About That Jobpocalypse https://www.zerohedge.com/ai/tech-ceos-just-kidding-about-jobpocalypse"
+      }
+    },
+    {
+      "id": "2074387477524107708",
+      "text": "I finally read how the X algorithm works. Now I understand why I am invisible for the algo.\n\nIn other contexts this would be a super power. I am a superhero",
+      "date": "2026-07-07T06:58:09.000Z",
+      "url": "https://x.com/adlrocha/status/2074387477524107708"
+    },
+    {
+      "id": "2074183803325518333",
+      "text": "Been there, done that. Y @david_bonilla tiene toda la razón.\n\nUna conversación y buen timing alineado con el roadmap del acquired fue nuestro caso. \n\nHicimos cosas bien, pero muchos mejores que nosotros se quedaron en el camino",
+      "date": "2026-07-06T17:28:49.000Z",
+      "url": "https://x.com/adlrocha/status/2074183803325518333",
+      "quotedTweet": {
+        "author": "David Bonilla",
+        "text": "Vender una empresa es en un 99 % estar en el lugar adecuado en el momento adecuado.\n\nNo cometáis el error de creer que, porque hayáis vendido una o dos con mayor o menor éxito, vosotros sois el Factor X."
+      }
+    },
+    {
+      "id": "2073787143198044378",
+      "text": "Y gracias a @PabloGrueso, este año asistiré a mi primera #TRGCON. Encima sobre una temática de la que rajo mucho. Con muchas ganas!  \n\nGracias por eliminar mi pereza innata.",
+      "date": "2026-07-05T15:12:38.000Z",
+      "url": "https://x.com/adlrocha/status/2073787143198044378",
+      "media": [
+        {
+          "url": "https://video.twimg.com/tweet_video/HMeSaV8WEAAuMo0.mp4",
+          "type": "gif",
+          "poster": "https://pbs.twimg.com/tweet_video_thumb/HMeSaV8WEAAuMo0.jpg",
+          "width": 400,
+          "height": 224
+        }
+      ],
+      "quotedTweet": {
+        "author": "Pablo Grueso",
+        "text": "Entrada para la #TRGCON comprada, con el atuendo apropiado, desde lo alto del Sacre Coeur de París",
+        "media": [
+          {
+            "url": "https://pbs.twimg.com/media/HMdAAfoXMAA0DSX?format=jpg&amp;name=orig",
+            "type": "photo",
+            "width": 1536,
+            "height": 2048
+          }
+        ]
+      }
+    },
+    {
+      "id": "2073683047573069995",
+      "text": "My plan was simple: hedge my family’s access to intelligence by building a local AI box on my desk. But last week, I finally did the math on rising hardware prices and exploding model sizes, and I realised it may be harder than expected.\n\nBetween US export controls gating frontier models by individual passports and a brutal global scramble for scarce memory, the window for individuals to secure their footing is closing. The consensus inside the bubble points to a tight timeline (somewhere between 12 to 18 months) before the economic game permanently changes.\n\nIn this week’s post I describe how access is solving itself through open weights. The real bottleneck is capital and a real-time understanding of the economic machine. I'm shifting my side-project focus to building an auto-research loop of AI agents to model this complex financial system, not to change the world, but to protect my community before the music stops.\n\nRead the full piece here: https://open.substack.com/pub/adlrocha/p/adlrocha-the-18-months-deadline",
+      "date": "2026-07-05T08:19:00.000Z",
+      "url": "https://x.com/adlrocha/status/2073683047573069995",
+      "media": [
+        {
+          "url": "https://pbs.twimg.com/media/HMXlGnlWQAAo871?format=jpg&amp;name=orig",
+          "type": "photo",
+          "width": 1024,
+          "height": 572
+        }
+      ]
+    },
+    {
+      "id": "2073372275387056241",
+      "text": "Ok, fucking excited with what we are about to build",
+      "date": "2026-07-04T11:44:06.000Z",
+      "url": "https://x.com/adlrocha/status/2073372275387056241"
+    },
+    {
+      "id": "2073323319600767039",
+      "text": "I am not proud of tomorrow’s post. It was rushed and I don’t have time to rewrite it. I hope readers do not hate it.",
+      "date": "2026-07-04T08:29:34.000Z",
+      "url": "https://x.com/adlrocha/status/2073323319600767039"
+    },
+    {
+      "id": "2072748205029163186",
+      "text": "I am the only one that hadn’t had the time to test Fable? \n\nI am still happy with my GLM-friend",
+      "date": "2026-07-02T18:24:16.000Z",
+      "url": "https://x.com/adlrocha/status/2072748205029163186"
+    },
+    {
+      "id": "2072406647629115500",
+      "text": "So it goes. \n\nI’ve been saying for a bit now, this is a contraction from the low rates era that will precede a new expansion when the dust of the AI diffusion starts settling",
+      "date": "2026-07-01T19:47:02.000Z",
+      "url": "https://x.com/adlrocha/status/2072406647629115500",
+      "quotedTweet": {
+        "author": "Rohan Paul",
+        "text": "The first AI layoff wave is already producing a human rehiring wave.\n\nPer a report by Orgvue 39% made AI-related redundancies. Among those leaders, 55% said they made wrong calls about which jobs to remove.\n\nThe failure point seems to be that companies often removed the people",
+        "media": [
+          {
+            "url": "https://pbs.twimg.com/media/HMKUvXIa8AA-rOG?format=png&amp;name=orig",
+            "type": "photo",
+            "width": 720,
+            "height": 657
+          }
+        ]
+      }
+    },
+    {
+      "id": "2072303829748523407",
+      "text": "So it goes.\n\nMaybe that was too much CAPEX after all.\n\nWe may start getting second-hand GPUs at a discount",
+      "date": "2026-07-01T12:58:29.000Z",
+      "url": "https://x.com/adlrocha/status/2072303829748523407",
+      "quotedTweet": {
+        "author": "zerohedge",
+        "text": "*META IS BUILDING A CLOUD BUSINESS TO SELL EXCESS AI COMPUTE\n\nFirst SpaceX, now Meta selling something called \"excess compute\""
+      }
+    },
+    {
+      "id": "2072243310002065602",
+      "text": "A good analogy that I sometimes use to think about LLMs is that they are like bloom filters over all their training knowledge",
+      "date": "2026-07-01T08:58:00.000Z",
+      "url": "https://x.com/adlrocha/status/2072243310002065602"
+    },
+    {
+      "id": "2072030251073331391",
+      "text": "Finally",
+      "date": "2026-06-30T18:51:22.000Z",
+      "url": "https://x.com/adlrocha/status/2072030251073331391",
+      "quotedTweet": {
+        "author": "ClaudeDevs",
+        "text": "Claude Desktop is now available on Linux (Ubuntu and Debian) in beta.\n\nAlongside the browser and terminal, you now get a first-class desktop experience with Claude Code, Claude Cowork, and chat on all paid plans.",
+        "media": [
+          {
+            "url": "https://pbs.twimg.com/media/HMEuXrJbEAAiTYm?format=jpg&amp;name=orig",
+            "type": "photo",
+            "width": 2048,
+            "height": 1152
+          }
+        ]
+      }
+    },
+    {
+      "id": "2072029665091293577",
+      "text": "So it goes.",
+      "date": "2026-06-30T18:49:03.000Z",
+      "url": "https://x.com/adlrocha/status/2072029665091293577",
+      "quotedTweet": {
+        "author": "",
+        "text": "Igor Os:"
+      }
+    },
+    {
+      "id": "2071915406332252639",
+      "text": "More disgusting LLM-generate mouthfuls from today...",
+      "date": "2026-06-30T11:15:01.000Z",
+      "url": "https://x.com/adlrocha/status/2071915406332252639",
+      "media": [
+        {
+          "url": "https://pbs.twimg.com/media/HMDsE32WYAAVBw8?format=png&amp;name=orig",
+          "type": "photo",
+          "width": 672,
+          "height": 76
+        }
+      ]
+    },
+    {
+      "id": "2071652601192407326",
+      "text": "Before LLMs, whenever I had to do something in the computer more than twice I wrote a script for it.\n\nNow I write a skill. Scripts where generally outdated a few months past, but skills adapt, which is convenient",
+      "date": "2026-06-29T17:50:44.000Z",
+      "url": "https://x.com/adlrocha/status/2071652601192407326"
+    },
+    {
+      "id": "2071518201318445431",
+      "text": "A lot can be learnt if you read all the output of you agent’s work.\n\nFor things that you are not an expert of you can change roles and become the apprentice of your agent (instead of the other way around)",
+      "date": "2026-06-29T08:56:40.000Z",
+      "url": "https://x.com/adlrocha/status/2071518201318445431"
+    },
+    {
+      "id": "2071493368497213816",
+      "text": "New batch of excuses. Your dog may no longer have eaten your homework",
+      "date": "2026-06-29T07:18:00.000Z",
+      "url": "https://x.com/adlrocha/status/2071493368497213816",
+      "quotedTweet": {
+        "author": "",
+        "text": "Igor Os:"
+      }
+    },
+    {
+      "id": "2071480169722704086",
+      "text": "You see here two ends of the spectrum pulling to their own camps.\n\nWe live interesting times!",
+      "date": "2026-06-29T06:25:33.000Z",
+      "url": "https://x.com/adlrocha/status/2071480169722704086",
+      "quotedTweet": {
+        "author": "Peter Yang",
+        "text": "I'm trying to wrap my head around these two ideas:\n\n1. Cloud agents are coming we should use VPS vs. our laptops\n\n2. Everyone should buy hardware to run local models\n\nAren't they conflicting a bit?"
+      }
+    },
     {
       "id": "2066193837857325472",
       "text": "Mondays are quiet. I like Mondays",
