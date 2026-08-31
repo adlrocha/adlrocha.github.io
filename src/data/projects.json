@@ -24,6 +24,20 @@
     "year": "2024-2026"
   },
   {
+    "name": "Local AI Infrastructure",
+    "description": "Running the models I depend on on hardware I own (Strix Halo + NVIDIA DGX Spark) instead of renting someone else's compute: local inference, all-day agent workloads, and custom agent tooling.",
+    "tags": ["AI", "Local Inference", "Agents", "Self-hosted"],
+    "featured": true,
+    "year": "2026-Present"
+  },
+  {
+    "name": "Personal Data Lake & RAG",
+    "description": "Self-hosted data lake over my entire digital footprint — writing, code, and every AI-agent session — with a RAG layer on top, so I can query my own history in natural language.",
+    "tags": ["AI", "RAG", "Data", "Self-hosted"],
+    "featured": true,
+    "year": "2026-Present"
+  },
+  {
     "name": "InterPlanetary Consensus (IPC)",
     "description": "Framework to scale blockchain networks with custom VMs and syscalls. Enables hierarchical consensus and cross-chain interoperability for Filecoin and beyond.",
     "url": "https://github.com/consensus-shipyard/ipc",
