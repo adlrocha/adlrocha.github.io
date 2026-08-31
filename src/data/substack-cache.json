@@ -1,6 +1,42 @@
 {
-  "lastUpdated": "2026-07-07T08:38:51.802Z",
+  "lastUpdated": "2026-08-31T12:22:36.323Z",
   "posts": [
+    {
+      "title": "@adlrocha - Base Models Stopped Being the Bottleneck",
+      "link": "https://adlrocha.substack.com/p/adlrocha-base-models-stopped-being",
+      "date": "2026-08-30T08:01:30.000Z",
+      "description": "GLM5.3 and Qwen3.8-27B performance improvements previous generation is explained through post-training..."
+    },
+    {
+      "title": "@adlrocha - What Changed in Kimi K3 to make it so good?",
+      "link": "https://adlrocha.substack.com/p/adlrocha-wwhat-changed-in-kimi-k3",
+      "date": "2026-08-23T08:01:13.000Z",
+      "description": "From a notebook to a transcript, and focusing on the depth layer..."
+    },
+    {
+      "title": "@adlrocha - Software Should Be Designed To Last",
+      "link": "https://adlrocha.substack.com/p/adlrocha-software-should-be-designed-989",
+      "date": "2026-08-02T08:01:29.000Z",
+      "description": "August Off Series Vol. I..."
+    },
+    {
+      "title": "@adlrocha - The Context Bootloader",
+      "link": "https://adlrocha.substack.com/p/adlrocha-the-context-bootloader",
+      "date": "2026-07-26T08:17:19.000Z",
+      "description": "Or how to keep your agent&#8217;s context fresh as mint as they loop..."
+    },
+    {
+      "title": "@adlrocha - The Model Race Hangover",
+      "link": "https://adlrocha.substack.com/p/adlrocha-the-model-race-hangover",
+      "date": "2026-07-19T07:53:15.000Z",
+      "description": "A round-up of my recent theses, and a wrap for the season...."
+    },
+    {
+      "title": "@adlrocha - Forget “Fat” Models. The Future is Narrow",
+      "link": "https://adlrocha.substack.com/p/adlrocha-forget-fat-models-the-future",
+      "date": "2026-07-12T08:01:22.000Z",
+      "description": "How to REAP your experts to fight the upcoming open-weight crunch..."
+    },
     {
       "title": "@adlrocha - The 18-months Deadline",
       "link": "https://adlrocha.substack.com/p/adlrocha-the-18-months-deadline",

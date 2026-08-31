@@ -1,6 +1,181 @@
 {
-  "lastUpdated": "2026-07-07T08:38:56.857Z",
+  "lastUpdated": "2026-08-31T12:22:41.229Z",
   "tweets": [
+    {
+      "id": "2094068579637342480",
+      "text": "The prouder I am of a post, and the more research work it required, the less impact it has.\n\nAm I overthinking it? Should I just start sharing my raw strong opinions? (those always do great :))\n\nIn any case, I love writing even if no one is reading. It matches meditation in terms of organising your thoughts.\n\nOne day I should publish publicly all the handwritten notebooks of ideas that I keep at home (my newsletter is just a fraction of what I write every week)",
+      "date": "2026-08-30T14:23:49.000Z",
+      "url": "https://x.com/adlrocha/status/2094068579637342480"
+    },
+    {
+      "id": "2093978026111639608",
+      "text": "GLM-5.3 and Qwen3.8-27B shipped on the same day.\n\nNeither of them changed a single line of architecture.\n\nBoth of them got significantly better. Do you want to know why?\n\nWeekly post freshly out of the oven describing what post-training can do to your models and why the base model has stopped being the bottleneck: https://adlrocha.substack.com/p/adlrocha-base-models-stopped-being",
+      "date": "2026-08-30T08:24:00.000Z",
+      "url": "https://x.com/adlrocha/status/2093978026111639608",
+      "media": [
+        {
+          "url": "https://pbs.twimg.com/media/HQ6bg3DXAAAKimv?format=jpg&amp;name=orig",
+          "type": "photo",
+          "width": 1168,
+          "height": 784
+        }
+      ]
+    },
+    {
+      "id": "2093779825529938004",
+      "text": "I am late this week, and I just finished writing my post for tomorrow. Is not elegant to say it publicly, but I am proud of it. I really like how it shaped up.",
+      "date": "2026-08-29T19:16:25.000Z",
+      "url": "https://x.com/adlrocha/status/2093779825529938004",
+      "media": [
+        {
+          "url": "https://pbs.twimg.com/media/HQ6ZntCXYAAvX3C?format=jpg&amp;name=orig",
+          "type": "photo",
+          "width": 1168,
+          "height": 784
+        }
+      ]
+    },
+    {
+      "id": "2093735679201095868",
+      "text": "Actually this could also apply easily to marriage.\n\nTurns out business and marriage may have more in common than what one would expect.",
+      "date": "2026-08-29T16:21:00.000Z",
+      "url": "https://x.com/adlrocha/status/2093735679201095868",
+      "quotedTweet": {
+        "author": "adlrocha",
+        "text": "The best thing that you can do in business is to do what Munger did with Buffet.\n\nThey were used to talk and brainstorm about ideas every day, up to a point in their lives where they didn’t have to even have a call with each other to solve a problem. They could simulate the"
+      }
+    },
+    {
+      "id": "2093720455509078290",
+      "text": "The best thing that you can do in business is to do what Munger did with Buffet.\n\nThey were used to talk and brainstorm about ideas every day, up to a point in their lives where they didn’t have to even have a call with each other to solve a problem. They could simulate the conversations they would have and crack the solution without even picking up the phone.\n\nThat is the value of a long-term partnership with someone smarter than you.",
+      "date": "2026-08-29T15:20:30.000Z",
+      "url": "https://x.com/adlrocha/status/2093720455509078290"
+    },
+    {
+      "id": "2093334787406852153",
+      "text": "You can see clearly how some companies are ADHD. They change focus as soon as they see the next shiny thing.\n\nName yours!",
+      "date": "2026-08-28T13:48:00.000Z",
+      "url": "https://x.com/adlrocha/status/2093334787406852153"
+    },
+    {
+      "id": "2093214409342529539",
+      "text": "Turns out I am not rrhh e only one that prefers reading open model outputs.\n\nBig labs should start acknowledging that even if they solve the task humans still read their output",
+      "date": "2026-08-28T05:49:39.000Z",
+      "url": "https://x.com/adlrocha/status/2093214409342529539",
+      "quotedTweet": {
+        "author": "raulk",
+        "text": "The more I speak to these new models, the more obvious it is that, despite having rich symbolic representations of the world, they’ve been trained to not expose them raw in conversation.\n\nDS4 and GLM5.3 sound like super competent, yet **approachable** engineers.\n\nWho would’ve"
+      }
+    },
+    {
+      "id": "2093022227931259235",
+      "text": "I don't know if it is a skill or a curse, but I seem to be able to eventually make all agents agree with me :)\n\nThey call it psycophancy, I call it perseverance.",
+      "date": "2026-08-27T17:06:00.000Z",
+      "url": "https://x.com/adlrocha/status/2093022227931259235"
+    },
+    {
+      "id": "2093001502071624149",
+      "text": "The releases of GLM5.3-Flash and Qwen3.8-Flash yesterday marked AI independence day.\n\nI am going to start referring to this day as \"AI independence day\", because they enabled running crazy intelligence at home at a decent price.\n\nI've actually used that concept of \"AI independence day\" in two of my conversations of the day already.",
+      "date": "2026-08-27T15:43:38.000Z",
+      "url": "https://x.com/adlrocha/status/2093001502071624149"
+    },
+    {
+      "id": "2092911749867724959",
+      "text": "There is no way you can't love @posthog's marketing.\n\nAnd the title of the email is \"Hedhog Mode has broken containment\" (pun definitely intended... I hope)",
+      "date": "2026-08-27T09:47:00.000Z",
+      "url": "https://x.com/adlrocha/status/2092911749867724959",
+      "media": [
+        {
+          "url": "https://pbs.twimg.com/media/HQt2WrDXoAA6ila?format=jpg&amp;name=orig",
+          "type": "photo",
+          "width": 838,
+          "height": 1194
+        }
+      ]
+    },
+    {
+      "id": "2092896036008124883",
+      "text": "I would never have thought I would see myself tweeting this: \"I find way more pleasant to read GPT-sol outputs than Opus'. Opus is becoming intelligible\". \n\nMaybe the latter has developed a language that is no longer designed to be read by humans. It resembles English, but that's it.\n\nBut I have the bad habit to still read and review what my agents generate, so I need to understand it.",
+      "date": "2026-08-27T08:44:33.000Z",
+      "url": "https://x.com/adlrocha/status/2092896036008124883"
+    },
+    {
+      "id": "2092872709197701353",
+      "text": "A monopoly through vertical integration is brewing",
+      "date": "2026-08-27T07:11:52.000Z",
+      "url": "https://x.com/adlrocha/status/2092872709197701353",
+      "media": [
+        {
+          "url": "https://pbs.twimg.com/media/HQtgoihXAAAKjoz?format=jpg&amp;name=orig",
+          "type": "photo",
+          "width": 1080,
+          "height": 908
+        }
+      ]
+    },
+    {
+      "id": "2092719662882566645",
+      "text": "And this, kids, was the day that Arch’s new package manager was born\n\n(Or not, but it would be the start of a nice story)",
+      "date": "2026-08-26T21:03:43.000Z",
+      "url": "https://x.com/adlrocha/status/2092719662882566645",
+      "quotedTweet": {
+        "author": "DHH",
+        "text": "Update: I heard back! The team was not interested in any direct collaboration with Omarchy or the Omacom Foundation. Message received 🫡"
+      }
+    },
+    {
+      "id": "2092692607855886342",
+      "text": "I've been having a weird feeling these past few weeks. I know what open model to use for different tasks, but I don't know for what and when to trust Anthropic and OpenAI models.\n\nI am wondering if this is an artefact of my increasing use of open models, or because we don't know how and when the big labs models that they are using are the ones that they advertised (or the same as last week).\n\nI am only using big lab models now when is strictly necessary (or force down my throat)",
+      "date": "2026-08-26T19:16:12.000Z",
+      "url": "https://x.com/adlrocha/status/2092692607855886342"
+    },
+    {
+      "id": "2092662941367619688",
+      "text": "So you are telling me that with a bit of pruning I'll be able to run GLM5.3-Flash at home?",
+      "date": "2026-08-26T17:18:19.000Z",
+      "url": "https://x.com/adlrocha/status/2092662941367619688",
+      "media": [
+        {
+          "url": "https://video.twimg.com/tweet_video/HQqh2ZJXMAEskql.mp4",
+          "type": "gif",
+          "poster": "https://pbs.twimg.com/tweet_video_thumb/HQqh2ZJXMAEskql.jpg",
+          "width": 480,
+          "height": 384
+        }
+      ],
+      "quotedTweet": {
+        "author": "0xSero",
+        "text": "I can get this running on \n\n- 2x RTX Pro 6000 (no pruning)\n- 8x RTX 3090/4090 (no pruning)\n- 1x DGX Spark (with pruning)\n\nIn the next 48 hours, need 4-8x b200/b300s \n\ntotal cost = around 2-3k usd \n\nWilling to help fund it?"
+      }
+    },
+    {
+      "id": "2092658903540482247",
+      "text": "This is fucking huge! I can't wait to try it (and run it myself).",
+      "date": "2026-08-26T17:02:16.000Z",
+      "url": "https://x.com/adlrocha/status/2092658903540482247",
+      "quotedTweet": {
+        "author": "Qwen",
+        "text": "⚡Meet Qwen3.8-Flash, a multimodal MoE and an early preview of the Qwen4 architecture, now open-weight!\n\nThe production version Qwen3.8-Flash will be available soon via QwenCloud API at just $ 0.16/1M input tokens and $ 0.47/1M output tokens.\n\n125B parameters + 51B N-gram",
+        "media": [
+          {
+            "url": "https://pbs.twimg.com/media/HQpdouobYAAGEj1?format=jpg&amp;name=orig",
+            "type": "photo",
+            "width": 1920,
+            "height": 1080
+          }
+        ]
+      }
+    },
+    {
+      "id": "2092355637166358920",
+      "text": "I approve",
+      "date": "2026-08-25T20:57:12.000Z",
+      "url": "https://x.com/adlrocha/status/2092355637166358920",
+      "quotedTweet": {
+        "author": "tobi lutke",
+        "text": "I’m thinking about banning Claude code at Shopify until they change their mind and read AGENTS.md and .agents/skills etc. \n\nInsisting on only reading CLAUDE.md sometimes leads to split brain problems when different team members use different tools. Just unnecessary."
+      }
+    },
     {
       "id": "2074392421245329490",
       "text": "So it goes.",
