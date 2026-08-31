@@ -1,11 +1,27 @@
 [
   {
-    "name": "Finisterra Labs / Baselight",
-    "description": "Building a universal database for structured data - organizing the world's structured information. Making data accessible, searchable, and useful for everyone.",
-    "url": "https://baselight.app",
-    "tags": ["Data", "AI", "Startup", "Search"],
+    "name": "AI Primitives @ Chainalysis",
+    "description": "Senior Staff Engineer on the founding AI primitives team, building the streams, workflows, and core primitives behind Chainalysis' AI and agentic products. Also leading the tiger team driving agentic-SDLC adoption across the engineering org.",
+    "url": "https://www.chainalysis.com",
+    "tags": ["AI", "Agents", "Infrastructure", "LLMs"],
     "featured": true,
-    "year": "2024-Present"
+    "year": "2026-Present"
+  },
+  {
+    "name": "Shellment",
+    "description": "Co-founded Shellment and took it from zero to a live first version with 200+ KYC'ed users, running an AI-driven SDLC end-to-end with no dedicated engineering team. Still evolving the platform the same way.",
+    "url": "https://shellment.com",
+    "tags": ["Fintech", "AI", "Startup"],
+    "featured": true,
+    "year": "2025-Present"
+  },
+  {
+    "name": "Finisterra Labs / Baselight",
+    "description": "Co-founded Finisterra Labs and built Baselight, an LLM interpretability and verifiability platform (3,000+ registered users), on top of a query engine designed for structured data. Acquired by Chainalysis in 2026.",
+    "url": "https://baselight.app",
+    "tags": ["Data", "AI", "Startup", "LLMs"],
+    "featured": true,
+    "year": "2024-2026"
   },
   {
     "name": "InterPlanetary Consensus (IPC)",
@@ -21,7 +37,7 @@
     "url": "https://github.com/nazar-pc/abundance/commits/main/?author=adlrocha",
     "tags": ["Research", "Distributed System", "Rust", "Databases", "Consensus"],
     "featured": false,
-    "year": "2025"
+    "year": "2024-2025"
   },
   {
     "name": "Filecoin Indexing System",
@@ -33,7 +49,7 @@
   },
   {
     "name": "Go-f3",
-    "description": "Golang implementation of the Fast Finality (F3) protocol for Filecoin, providing faster transaction finality and improved security guarantees.",
+    "description": "Contributed to go-f3, the Golang implementation of the Fast Finality (F3) protocol for Filecoin; built the end-to-end testing framework for the F3 rollout with FilOz.",
     "url": "https://github.com/filecoin-project/go-f3",
     "tags": ["Consensus", "Go", "Filecoin", "BFT"],
     "featured": true,
