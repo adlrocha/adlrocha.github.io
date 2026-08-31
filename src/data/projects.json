@@ -9,11 +9,11 @@
   },
   {
     "name": "Shellment",
-    "description": "Co-founded Shellment and took it from zero to a live first version with 200+ KYC'ed users, running an AI-driven SDLC end-to-end with no dedicated engineering team. Still evolving the platform the same way.",
+    "description": "Co-founded Shellment, a CNMV-regulated platform for tokenised investment in non-residential real estate. Took it from zero to a live first version with 200+ KYC'ed users, running an AI-driven SDLC end-to-end with no dedicated engineering team. Still evolving the platform the same way.",
     "url": "https://shellment.com",
-    "tags": ["Fintech", "AI", "Startup"],
+    "tags": ["Fintech", "AI", "Startup", "Tokenisation"],
     "featured": true,
-    "year": "2025-Present"
+    "year": "2026-Present"
   },
   {
     "name": "Finisterra Labs / Baselight",
@@ -52,7 +52,7 @@
     "description": "Contributed to go-f3, the Golang implementation of the Fast Finality (F3) protocol for Filecoin; built the end-to-end testing framework for the F3 rollout with FilOz.",
     "url": "https://github.com/filecoin-project/go-f3",
     "tags": ["Consensus", "Go", "Filecoin", "BFT"],
-    "featured": true,
+    "featured": false,
     "year": "2023-2024"
   },
   {
