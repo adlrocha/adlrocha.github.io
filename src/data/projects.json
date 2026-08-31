@@ -32,7 +32,7 @@
   },
   {
     "name": "Personal Data Lake & RAG",
-    "description": "Self-hosted data lake over my entire digital footprint — writing, code, and every AI-agent session — with a RAG layer on top, so I can query my own history in natural language.",
+    "description": "Self-hosted data lake over my entire digital footprint (writing, code, and every AI-agent session) with a RAG layer on top, so I can query my own history in natural language.",
     "tags": ["AI", "RAG", "Data", "Self-hosted"],
     "featured": true,
     "year": "2026-Present"
