@@ -6,7 +6,7 @@ import Footer from '../components/Footer.astro';
 
 <BaseLayout
   title="About"
-  description="Alfonso de la Rocha - Co-founder & CTO at Finisterra Labs. Building distributed systems, blockchain technology, and organizing the world's structured data."
+  description="Alfonso de la Rocha (@adlrocha). Engineer and researcher turned founder: a decade in research, startups with different fates, and a weekly newsletter on AI systems."
 >
   <Header />
 
@@ -20,21 +20,20 @@ import Footer from '../components/Footer.astro';
         <section class="about-section">
           <p class="about-intro">
             Hi, I'm <strong>Alfonso de la Rocha</strong> (also known as <a href="https://twitter.com/adlrocha" target="_blank" rel="noopener noreferrer">@adlrocha</a> online).
-            I'm currently the Co-founder & CTO at <a href="https://finisterra.ai" target="_blank" rel="noopener noreferrer">Finisterra Labs</a>,
-            where we're building infrastructure to organise the world's structured data.
-          </p>
-        </section>
-
-        <section class="about-section">
-          <h2>What I'm Building</h2>
-          <p>
-          At Finisterra Labs, we're working on <strong>Baselight</strong>, a universal database for structured data.
-          Think of it as "Google for structured data", making structured data accessible, searchable, and useful for everyone.
+            Engineer and researcher turned founder. I spent close to a decade in research at places
+            like Protocol Labs and Telefónica R&D before founding my own startups. Their fates varied:
+            from acquisition to bankruptcy. I still do engineering and build startups.
           </p>
         </section>
 
         <section class="about-section">
           <h2>Background</h2>
+          <p>
+            Before Chainalysis, I co-founded <strong>Finisterra Labs</strong>, where we built
+            <a href="https://baselight.app" target="_blank" rel="noopener noreferrer"><strong>Baselight</strong></a>, an LLM
+            interpretability and verifiability platform that reached 3,000+ registered users, on top of a query engine I
+            designed and implemented. Chainalysis acquired the company in 2026.
+          </p>
           <p>
             Before founding Finisterra Labs, I spent <strong>4+ years at Protocol Labs</strong> working on some of the most
             challenging problems in distributed systems and blockchain technology. Some highlights:
@@ -42,9 +41,35 @@ import Footer from '../components/Footer.astro';
           <ul>
             <li><strong>InterPlanetary Consensus (IPC)</strong> - A framework to scale blockchain networks with custom VMs and syscalls</li>
             <li><strong>Filecoin Indexing System</strong> - Core database infrastructure for content routing</li>
-            <li><strong>Go-f3</strong> - Fast Finality protocol implementation for Filecoin</li>
+            <li><strong>Go-f3</strong> - End-to-end testing framework for Filecoin's Fast Finality (F3) rollout, with FilOz</li>
             <li><strong>Beyond Bitswap & ResNetLab</strong> - Research on file-exchange and distributed systems</li>
           </ul>
+          <p>
+            Along the way I also spent six months contributing research to
+            <a href="https://github.com/nazar-pc/abundance" target="_blank" rel="noopener noreferrer"><strong>Project Abundance</strong></a>,
+            an attempt at a next-generation blockchain architecture that fully resolves the blockchain trilemma.
+            Earlier still, I led Telefónica's R&D blockchain team, shipping production deployments and filing several patents.
+          </p>
+        </section>
+
+        <section class="about-section">
+          <h2>Writing & Community</h2>
+          <p>
+            I write <a href="https://adlrocha.substack.com" target="_blank" rel="noopener noreferrer"><strong>Beyond The Code</strong></a>,
+            a weekly technical newsletter. As an avid reader, I am continuously reading and trying to learn new things
+            (I know, kind of a nerdy hobby). As Richard Feynman once said, "if you cannot explain something in simple terms,
+            you don't understand it. The best way to learn is to teach." So the main purpose of the newsletter is to explain
+            in simple terms the things that I learn. You win, and I win.
+          </p>
+          <p>
+            In practice that means hard technical topics made legible: LLM internals (KV cache, quantisation, context windows),
+            distributed systems, on-chain infrastructure, AI agents, and an opinionated take on what it all means for engineers.
+            I've published weekly for over two years, without gaps, and several posts have reached the Hacker News front page.
+            I sometimes write featured pieces or technical breakdowns by request.
+          </p>
+          <p>
+            I also co-host <strong>AI Socratic Madrid</strong>, a community running Socratic discussions about AI.
+          </p>
         </section>
 
         <section class="about-section">

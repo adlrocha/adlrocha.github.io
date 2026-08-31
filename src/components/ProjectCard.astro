@@ -2,7 +2,7 @@
 interface Props {
   name: string;
   description: string;
-  url: string;
+  url?: string;
   tags: string[];
   year: string;
   featured?: boolean;
@@ -17,17 +17,21 @@ const { name, description, url, tags, year, featured = false } = Astro.props;
       <span class="project-card__year">{year}</span>
       {featured && <span class="project-card__badge">Featured</span>}
     </div>
-    <a href={url} target="_blank" rel="noopener noreferrer" class="project-card__link" aria-label={`View ${name}`}>
-      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-        <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/>
-        <polyline points="15 3 21 3 21 9"/>
-        <line x1="10" y1="14" x2="21" y2="3"/>
-      </svg>
-    </a>
+    {url && (
+      <a href={url} target="_blank" rel="noopener noreferrer" class="project-card__link" aria-label={`View ${name}`}>
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/>
+          <polyline points="15 3 21 3 21 9"/>
+          <line x1="10" y1="14" x2="21" y2="3"/>
+        </svg>
+      </a>
+    )}
   </div>
 
   <h3 class="project-card__title">
-    <a href={url} target="_blank" rel="noopener noreferrer">{name}</a>
+    {url
+      ? <a href={url} target="_blank" rel="noopener noreferrer">{name}</a>
+      : name}
   </h3>
 
   <p class="project-card__description">{description}</p>
