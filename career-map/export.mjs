@@ -7,7 +7,10 @@
  * `<dir>/career-map.png`.
  *
  * Usage:
- *   node career-map/export.mjs [<dir>]        default dir: public/career
+ *   node career-map/export.mjs [<dir>]                 default dir: public/career; fails on any error
+ *   node career-map/export.mjs --best-effort [<dir>]   for deploys: if the export fails, remove any
+ *                                                      partial PNG/PDF, rebuild the page without its
+ *                                                      download links, warn and exit 0
  *
  * Environment:
  *   CHROMIUM    browser binary (default: first of CHROMIUM_CANDIDATES found on PATH)
@@ -15,16 +18,19 @@
  *   CI          when set, Chromium runs without its sandbox (CI runners often lack the
  *               user namespaces it needs; the page is our own local file)
  */
-import { access, constants, stat } from "node:fs/promises";
+import { access, constants, rm, stat } from "node:fs/promises";
 import { execFile } from "node:child_process";
 import { delimiter, dirname, join, resolve } from "node:path";
 import { fileURLToPath, pathToFileURL } from "node:url";
 import { promisify } from "node:util";
+import { build } from "./build.mjs";
 
 /** PNG resolution when CAREER_DPI is not set. */
 export const DEFAULT_DPI = 192;
 /** Browser binaries tried, in order, when CHROMIUM is not set. */
 export const CHROMIUM_CANDIDATES = ["chromium", "chromium-browser", "google-chrome", "google-chrome-stable"];
+/** Files the export writes next to index.html. */
+export const EXPORT_FILES = ["career-map.pdf", "career-map.png"];
 const BROWSER_TIMEOUT_MS = 120_000;
 
 /**
@@ -144,12 +150,46 @@ export async function exportMap(dir, { env = process.env } = {}) {
   return { pdf, png: `${pngBase}.png` };
 }
 
+/**
+ * Export, or fall back to a page without download links so a deploy never depends on the export.
+ * @param {string} dir directory holding the built index.html
+ * @param {{ exporter?: (dir: string) => Promise<unknown>, rebuild: (dir: string) => Promise<string[]> }} steps
+ *   exporter: produces the PNG/PDF (default exportMap); rebuild: rebuilds the page without download links
+ * @returns {Promise<{ exported: boolean, reason?: string }>}
+ * @throws {Error} only when the fallback rebuild itself fails
+ */
+export async function exportOrFallback(dir, { exporter = exportMap, rebuild }) {
+  try {
+    await exporter(dir);
+    return { exported: true };
+  } catch (err) {
+    const reason = err instanceof Error ? err.message : String(err);
+    await Promise.all(EXPORT_FILES.map((file) => rm(resolve(dir, file), { force: true })));
+    const errors = await rebuild(dir);
+    if (errors.length > 0) throw new Error(`Rebuilding the page without downloads failed:\n  - ${errors.join("\n  - ")}`);
+    return { exported: false, reason };
+  }
+}
+
 const isMain = process.argv[1] && resolve(process.argv[1]) === fileURLToPath(import.meta.url);
 if (isMain) {
-  const dir = process.argv[2] ?? resolve(dirname(fileURLToPath(import.meta.url)), "..", "public", "career");
+  const srcDir = dirname(fileURLToPath(import.meta.url));
+  const args = process.argv.slice(2);
+  const bestEffort = args.includes("--best-effort");
+  const dir = args.find((a) => a !== "--best-effort") ?? resolve(srcDir, "..", "public", "career");
   try {
-    const { pdf, png } = await exportMap(dir);
-    console.log(`Career map exported:\n  ${pdf}\n  ${png}`);
+    if (bestEffort) {
+      const result = await exportOrFallback(dir, { rebuild: (out) => build({ srcDir, outDir: out, downloads: false }) });
+      if (result.exported) {
+        console.log(`Career map PNG and PDF exported to ${dir}`);
+      } else {
+        // "::warning::" shows as an annotation on the GitHub Actions run; elsewhere it is plain text.
+        console.warn(`${process.env.CI ? "::warning::" : "warning: "}Career map PNG/PDF skipped, page published without download links. ${result.reason.split("\n")[0]}`);
+      }
+    } else {
+      const { pdf, png } = await exportMap(dir);
+      console.log(`Career map exported:\n  ${pdf}\n  ${png}`);
+    }
   } catch (err) {
     console.error(err instanceof Error ? err.message : err);
     process.exit(1);

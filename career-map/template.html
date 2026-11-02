@@ -358,7 +358,7 @@ footer { font-size: 13px; color: var(--muted); border-top: 1px solid var(--rule)
   <header class="hd" id="hd"></header>
   <div class="map-wrap">
     <div class="map-scroll"><div class="map" id="map" role="group" aria-label="Career timeline"></div></div>
-    <p class="hint"><span>Select any entry to read more.</span><a href="career-map.png" target="_blank" rel="noopener">Image version (PNG)</a><a href="career-map.pdf" target="_blank" rel="noopener">PDF</a></p>
+    <p class="hint"><span>Select any entry to read more.</span><a class="download" href="career-map.png" target="_blank" rel="noopener">Image version (PNG)</a><a class="download" href="career-map.pdf" target="_blank" rel="noopener">PDF</a></p>
   </div>
   <section class="story" id="story" aria-labelledby="story-title"></section>
   <div class="list" id="list"></div>
@@ -692,6 +692,8 @@ async function main() {
     document.getElementById("map").replaceChildren(el("p", { class: "error" }, "This is the unbuilt template. Run npm run career-map and open public/career/index.html."));
     return;
   }
+  // The build sets downloads=false when the PNG/PDF export failed, so the page never links to missing files.
+  if (DATA.downloads === false) document.querySelectorAll(".download").forEach((link) => link.remove());
   const model = buildModel(DATA);
   renderHeader(model);
   renderStory(model);

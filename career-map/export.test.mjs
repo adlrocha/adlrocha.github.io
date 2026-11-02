@@ -1,9 +1,9 @@
 import { test, describe } from "node:test";
 import assert from "node:assert/strict";
-import { chmod, mkdtemp, mkdir, rm, writeFile } from "node:fs/promises";
+import { chmod, mkdtemp, mkdir, readdir, rm, writeFile } from "node:fs/promises";
 import { tmpdir } from "node:os";
 import { delimiter, join } from "node:path";
-import { chromiumArgs, DEFAULT_DPI, exportMap, findBinary, parseDpi, pdftoppmArgs } from "./export.mjs";
+import { chromiumArgs, DEFAULT_DPI, EXPORT_FILES, exportMap, exportOrFallback, findBinary, parseDpi, pdftoppmArgs } from "./export.mjs";
 
 describe("parseDpi", () => {
   test("defaults when unset or empty", () => {
@@ -99,5 +99,62 @@ describe("exportMap", () => {
   });
   test("rejects a bad DPI before doing any work", async () => {
     await assert.rejects(exportMap("/nonexistent", { env: { CAREER_DPI: "9000" } }), /CAREER_DPI/);
+  });
+});
+
+describe("exportOrFallback", () => {
+  /** A dir with an index.html and stale export files, as left by a half-finished export. */
+  async function outDir() {
+    const root = await mkdtemp(join(tmpdir(), "career-out-"));
+    await writeFile(join(root, "index.html"), "<p>map</p>");
+    await Promise.all(EXPORT_FILES.map((file) => writeFile(join(root, file), "partial")));
+    return root;
+  }
+
+  test("keeps the exported files and does not rebuild when the export works", async () => {
+    const root = await outDir();
+    let rebuilt = false;
+    try {
+      const result = await exportOrFallback(root, {
+        exporter: async () => {},
+        rebuild: async () => { rebuilt = true; return []; },
+      });
+      assert.deepEqual(result, { exported: true });
+      assert.equal(rebuilt, false);
+      assert.deepEqual((await readdir(root)).sort(), ["career-map.pdf", "career-map.png", "index.html"]);
+    } finally {
+      await rm(root, { recursive: true });
+    }
+  });
+
+  test("removes partial files and rebuilds without downloads when the export fails", async () => {
+    const root = await outDir();
+    const rebuilt = [];
+    try {
+      const result = await exportOrFallback(root, {
+        exporter: async () => { throw new Error("No Chromium found"); },
+        rebuild: async (dir) => { rebuilt.push(dir); return []; },
+      });
+      assert.deepEqual(result, { exported: false, reason: "No Chromium found" });
+      assert.deepEqual(rebuilt, [root]);
+      assert.deepEqual(await readdir(root), ["index.html"]);
+    } finally {
+      await rm(root, { recursive: true });
+    }
+  });
+
+  test("still fails when the fallback rebuild fails", async () => {
+    const root = await outDir();
+    try {
+      await assert.rejects(
+        exportOrFallback(root, {
+          exporter: async () => { throw new Error("boom"); },
+          rebuild: async () => ["career.json: bad date"],
+        }),
+        /without downloads failed:\n {2}- career\.json: bad date/,
+      );
+    } finally {
+      await rm(root, { recursive: true });
+    }
   });
 });

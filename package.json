@@ -5,7 +5,7 @@
   "scripts": {
     "predev": "npm run career-map:html",
     "dev": "astro dev",
-    "prebuild": "npm run career-map:test && npm run career-map",
+    "prebuild": "npm run career-map:test && npm run career-map:site",
     "build": "astro build",
     "preview": "astro preview",
     "astro": "astro",
@@ -15,6 +15,7 @@
     "import-tweets": "npx tsx scripts/import-tweets-archive.ts",
     "career-map": "npm run career-map:html && node career-map/export.mjs public/career",
     "career-map:html": "node career-map/build.mjs --out public/career",
+    "career-map:site": "npm run career-map:html && node career-map/export.mjs --best-effort public/career",
     "career-map:logos": "node career-map/fetch-logos.mjs",
     "career-map:test": "node --test career-map/build.test.mjs career-map/export.test.mjs"
   },

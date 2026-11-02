@@ -297,6 +297,17 @@ describe("resolveAssets", () => {
       assert.ok(fragment.includes('"assets":{"photo":null,"logos":{"a":"data:image/png;base64,'));
       assertError(warnings, 'logo "b" not found');
     }));
+
+  test("build links the downloads unless told they are missing", () =>
+    withSrc({ "template.html": `<script>const D = ${DATA_PLACEHOLDER};</script>` }, async (dir) => {
+      await writeFile(join(dir, "career.json"), JSON.stringify(withLogos([])));
+      const fragmentFor = async (options) => {
+        assert.deepEqual(await build({ srcDir: dir, outDir: join(dir, "out"), ...options }), []);
+        return readFile(join(dir, "out", "fragment.html"), "utf8");
+      };
+      assert.ok((await fragmentFor({})).includes('"downloads":true'));
+      assert.ok((await fragmentFor({ downloads: false })).includes('"downloads":false'));
+    }));
 });
 
 describe("fetch-logos helpers", () => {

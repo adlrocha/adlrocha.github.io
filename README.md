@@ -44,14 +44,18 @@ npm run preview
 ```bash
 npm run career-map        # build public/career/{index.html,career-map.png,career-map.pdf}
 npm run career-map:html   # page only (no browser needed); also runs before `npm run dev`
+npm run career-map:site   # what deploys run: the page, plus the PNG/PDF if they can be made
 npm run career-map:logos  # download logos missing from career-map/logos/
 npm run career-map:test   # validator, build and export tests
 ```
 
-`npm run build` runs the tests and `npm run career-map` first, so every deploy publishes a fresh
-map: edit `career.json`, push, done. `public/career/` is generated and not committed. The PNG and
-PDF need Chromium (set `CHROMIUM=...` if it is not on PATH) and `pdftoppm` (poppler); the deploy
-workflow installs poppler and uses the runner's Google Chrome.
+`npm run build` runs the tests and `npm run career-map:site` first, so every deploy publishes a
+fresh map: edit `career.json`, push, done. `public/career/` is generated and not committed.
+
+Only the page is on the deploy's critical path. The PNG and PDF need Chromium (set
+`CHROMIUM=...` if it is not on PATH) and `pdftoppm` (poppler); if either is missing or the export
+fails, the deploy still succeeds: the page is published without its download links and the run
+shows a warning. An invalid `career.json` or a failing test does stop the deploy.
 
 Data rules (enforced by the build, which fails with a list of problems):
 

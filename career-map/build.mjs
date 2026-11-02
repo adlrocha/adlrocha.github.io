@@ -7,7 +7,9 @@
  *   - fragment.html  page body without the document wrapper (for hosts that add their own)
  *
  * Usage:
- *   node career-map/build.mjs [--out <dir>]
+ *   node career-map/build.mjs [--out <dir>] [--no-downloads]
+ *
+ * --no-downloads leaves out the PNG/PDF links (for when they are not exported).
  *
  * Exits with status 1 and prints every problem when the data is invalid.
  */
@@ -324,10 +326,11 @@ export async function resolveAssets(data, srcDir) {
 
 /**
  * Read, validate and write the career map.
- * @param {{ srcDir: string, outDir: string, onWarning?: (message: string) => void }} options
+ * @param {{ srcDir: string, outDir: string, downloads?: boolean, onWarning?: (message: string) => void }} options
+ *   downloads: whether the page links to career-map.png and career-map.pdf (false when they are not exported)
  * @returns {Promise<string[]>} validation errors (nothing is written when non-empty)
  */
-export async function build({ srcDir, outDir, onWarning = () => {} }) {
+export async function build({ srcDir, outDir, downloads = true, onWarning = () => {} }) {
   const dataPath = join(srcDir, "career.json");
   let data;
   try {
@@ -345,7 +348,7 @@ export async function build({ srcDir, outDir, onWarning = () => {} }) {
   });
   const { assets, warnings } = await resolveAssets(data, srcDir);
   warnings.forEach(onWarning);
-  const fragment = renderFragment(template, { ...data, assets });
+  const fragment = renderFragment(template, { ...data, assets, downloads });
   await mkdir(outDir, { recursive: true });
   await writeFile(join(outDir, "fragment.html"), fragment);
   await writeFile(join(outDir, "index.html"), wrapDocument(fragment));
@@ -359,7 +362,8 @@ if (isMain) {
   const outDir = outFlag > -1 && process.argv[outFlag + 1]
     ? resolve(process.argv[outFlag + 1])
     : resolve(srcDir, "..", "public", "career");
-  const errors = await build({ srcDir, outDir, onWarning: (message) => console.warn(`warning: ${message}`) });
+  const downloads = !process.argv.includes("--no-downloads");
+  const errors = await build({ srcDir, outDir, downloads, onWarning: (message) => console.warn(`warning: ${message}`) });
   if (errors.length > 0) {
     console.error(`career.json has ${errors.length} problem(s):\n  - ${errors.join("\n  - ")}`);
     process.exit(1);

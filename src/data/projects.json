@@ -17,7 +17,7 @@
   },
   {
     "name": "Finisterra Labs / Baselight",
-    "description": "Co-founded Finisterra Labs and built Baselight, an LLM interpretability and verifiability platform (3,000+ registered users), on top of a query engine designed for structured data. Acquired by Chainalysis in 2026.",
+    "description": "Co-founded Finisterra Labs and built Baselight, a structured data layer for agents and humans (3,000+ registered users), on top of a query engine designed for structured data. Acquired by Chainalysis in 2026.",
     "url": "https://baselight.app",
     "tags": ["Data", "AI", "Startup", "LLMs"],
     "featured": true,
