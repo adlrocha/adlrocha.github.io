@@ -1,0 +1,707 @@
+<title>Alfonso de la Rocha Career Map</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<meta name="description" content="Career map of Alfonso de la Rocha: research, industry, founding, teaching and community, from 2010 to today.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..800&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+/* Layout: phase chevrons over a proportional time axis; one swimlane per kind of activity,
+   each entry marked by its organisation's logo. Palette: only the CV's moderncv "blue"
+   colours (#3973b3, #737373, black) plus paper; logos sit on white tiles in both themes. */
+:root {
+  --paper: #ffffff;
+  --ink: #000000;
+  --muted: #737373;
+  --accent: #3973b3;
+  --on-accent: #ffffff;
+  --tile: #ffffff;
+  --accent-soft: color-mix(in srgb, var(--accent) 17%, var(--paper));
+  --accent-mid: color-mix(in srgb, var(--accent) 30%, var(--paper));
+  --accent-line: color-mix(in srgb, var(--accent) 55%, var(--paper));
+  --rule: color-mix(in srgb, var(--muted) 22%, var(--paper));
+  --rule-strong: color-mix(in srgb, var(--muted) 45%, var(--paper));
+  --zebra: color-mix(in srgb, var(--accent) 4%, var(--paper));
+
+  --font-display: "Archivo", "Arial Narrow", "Helvetica Neue", Arial, sans-serif;
+  --font-body: "Archivo", "Helvetica Neue", Arial, sans-serif;
+  --font-data: "IBM Plex Mono", ui-monospace, "SFMono-Regular", Menlo, monospace;
+
+  --label-w: 10rem;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --paper: #000000;
+    --ink: #ffffff;
+    --muted: color-mix(in srgb, #737373 55%, #ffffff);
+    --accent: color-mix(in srgb, #3973b3 78%, #ffffff);
+    --on-accent: #000000;
+    --accent-soft: color-mix(in srgb, #3973b3 30%, var(--paper));
+    --accent-mid: color-mix(in srgb, #3973b3 50%, var(--paper));
+    --accent-line: color-mix(in srgb, #3973b3 75%, var(--paper));
+    --rule: color-mix(in srgb, #737373 35%, var(--paper));
+    --rule-strong: color-mix(in srgb, #737373 70%, var(--paper));
+    --zebra: color-mix(in srgb, #3973b3 9%, var(--paper));
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --paper: #000000;
+  --ink: #ffffff;
+  --muted: color-mix(in srgb, #737373 55%, #ffffff);
+  --accent: color-mix(in srgb, #3973b3 78%, #ffffff);
+  --on-accent: #000000;
+  --accent-soft: color-mix(in srgb, #3973b3 30%, var(--paper));
+  --accent-mid: color-mix(in srgb, #3973b3 50%, var(--paper));
+  --accent-line: color-mix(in srgb, #3973b3 75%, var(--paper));
+  --rule: color-mix(in srgb, #737373 35%, var(--paper));
+  --rule-strong: color-mix(in srgb, #737373 70%, var(--paper));
+  --zebra: color-mix(in srgb, #3973b3 9%, var(--paper));
+  color-scheme: dark;
+}
+
+*, *::before, *::after { box-sizing: border-box; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+body {
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--font-body);
+  font-size: 15px;
+  line-height: 1.5;
+}
+.page {
+  max-width: 1600px;
+  margin: 0 auto;
+  padding-block: 40px 48px;
+  padding-left: max(16px, env(safe-area-inset-left, 0px));
+  padding-right: max(16px, env(safe-area-inset-right, 0px));
+  display: grid;
+  gap: 36px;
+}
+a { color: var(--accent); text-underline-offset: 2px; }
+:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+
+/* ---------- Header ---------- */
+.hd { display: grid; grid-template-columns: auto minmax(0, 1fr); gap: 28px; align-items: center; }
+.photo {
+  width: 132px; height: 132px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 4px solid var(--accent);
+}
+.hd-text { display: grid; gap: 12px; min-width: 0; }
+.eyebrow {
+  font-family: var(--font-data);
+  font-size: 12px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin: 0;
+}
+.hd h1 {
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-stretch: 72%;
+  font-size: clamp(2.4rem, 6vw, 4.2rem);
+  line-height: 0.95;
+  letter-spacing: -0.01em;
+  margin: 0;
+  text-wrap: balance;
+}
+.hd h1 span { color: var(--accent); }
+.tagline { margin: 0; max-width: 62ch; font-size: 1.15rem; text-wrap: pretty; }
+.links { display: flex; flex-wrap: wrap; gap: 6px 18px; margin: 0; padding: 0; list-style: none; font-size: 14px; }
+
+/* ---------- Logo tiles ---------- */
+.logo {
+  flex: none;
+  width: 20px; height: 20px;
+  border-radius: 4px;
+  background: var(--tile);
+  border: 1px solid var(--rule);
+  display: grid; place-items: center;
+  overflow: hidden;
+}
+.logo img { width: 100%; height: 100%; object-fit: contain; padding: 1px; }
+.logo.initials {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: var(--on-accent);
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 11px;
+  line-height: 1;
+}
+.logo.lg { width: 44px; height: 44px; border-radius: 8px; }
+.logo.lg img { padding: 3px; }
+.logo.lg.initials { font-size: 20px; }
+.logo.md { width: 34px; height: 34px; border-radius: 6px; }
+.logo.md img { padding: 2px; }
+.logo.md.initials { font-size: 15px; }
+
+/* ---------- Map (desktop) ---------- */
+.map-scroll { overflow-x: auto; }
+.map { min-width: 1040px; display: grid; }
+.row { display: grid; grid-template-columns: var(--label-w) minmax(0, 1fr); }
+.track { position: relative; min-width: 0; }
+.lane-name {
+  font-family: var(--font-data);
+  font-size: 11.5px;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--muted);
+  padding: 10px 12px 0 2px;
+}
+
+.phase-row .track { height: 128px; }
+.phase { position: absolute; top: 0; bottom: 0; display: grid; grid-template-rows: 68px auto; gap: 8px; }
+.chevron {
+  --notch: 16px;
+  background: var(--accent-soft);
+  clip-path: polygon(0 0, calc(100% - var(--notch)) 0, 100% 50%, calc(100% - var(--notch)) 100%, 0 100%, var(--notch) 50%);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 0 calc(var(--notch) + 6px) 0 calc(var(--notch) + 10px);
+  min-width: 0;
+}
+.phase:first-child .chevron { clip-path: polygon(0 0, calc(100% - var(--notch)) 0, 100% 50%, calc(100% - var(--notch)) 100%, 0 100%); padding-left: 12px; }
+.phase.current .chevron { background: var(--accent-mid); }
+.age {
+  flex: none;
+  width: 46px; height: 46px;
+  border-radius: 50%;
+  background: var(--accent);
+  color: var(--on-accent);
+  display: grid; place-items: center; align-content: center;
+  font-family: var(--font-data);
+  font-weight: 500;
+  font-size: 17px;
+  line-height: 1;
+}
+.age small { display: block; font-size: 8px; letter-spacing: 0.08em; text-transform: uppercase; margin-top: 2px; text-align: center; }
+.phase-name { min-width: 0; display: grid; }
+.phase-name strong {
+  font-family: var(--font-display);
+  font-stretch: 75%;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 1.1;
+  hyphens: auto;
+  overflow-wrap: anywhere;
+}
+.phase-name span { font-family: var(--font-data); font-size: 12px; color: var(--muted); font-variant-numeric: tabular-nums; }
+.phase-theme { margin: 0; padding: 0 18px 0 12px; font-size: 14px; font-weight: 600; line-height: 1.3; color: var(--accent); text-wrap: balance; }
+
+.axis-row .track { height: 24px; border-bottom: 1px solid var(--rule-strong); }
+.tick {
+  position: absolute; bottom: 4px;
+  font-family: var(--font-data); font-size: 11px; color: var(--muted);
+  padding-left: 3px; font-variant-numeric: tabular-nums;
+}
+.tick::before { content: ""; position: absolute; left: 0; bottom: -4px; height: 6px; border-left: 1px solid var(--rule-strong); }
+
+.lanes { position: relative; }
+.lane { border-bottom: 1px solid var(--rule); }
+.lane:nth-child(even) { background: var(--zebra); }
+.lane .track {
+  background-image: linear-gradient(to right, var(--rule) 1px, transparent 1px);
+  background-size: calc(100% / var(--years)) 100%;
+}
+.boundaries { position: absolute; top: 0; bottom: 0; left: var(--label-w); right: 0; pointer-events: none; }
+.boundary { position: absolute; top: 0; bottom: 0; border-left: 1px dashed var(--accent-line); }
+.now { position: absolute; top: -28px; bottom: 0; border-left: 2px solid var(--accent); }
+.now span {
+  position: absolute; top: 0; right: 4px;
+  font-family: var(--font-data); font-size: 10.5px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--accent);
+  background: var(--paper); padding: 0 3px;
+}
+
+.item {
+  position: absolute;
+  z-index: 1;
+  height: 30px;
+  margin: 0; padding: 0;
+  border: 0;
+  background: none;
+  color: var(--ink);
+  font: inherit;
+  cursor: pointer;
+  text-align: left;
+}
+.lbl {
+  position: absolute;
+  top: 0;
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  font-family: var(--font-body);
+  font-size: 13px;
+  font-weight: 500;
+  line-height: 22px;
+  white-space: nowrap;
+  padding-right: 3px;
+}
+/* Periods: name + logo on top, a slim bar underneath showing the real duration. */
+.span .lbl { padding-left: 0; }
+.span.start .lbl { left: 0; }
+.span.end .lbl { right: 0; padding-left: 3px; padding-right: 0; }
+.span::after {
+  content: "";
+  position: absolute; left: 0; right: 0; top: 24px;
+  height: 6px;
+  border-radius: 3px;
+  background: var(--accent-line);
+}
+.span.ongoing::after { background: linear-gradient(to right, var(--accent-line) 55%, color-mix(in srgb, var(--accent-line) 0%, transparent)); }
+.span:hover::after, .span.selected::after { background: var(--accent); }
+/* Moments: a diamond with the name beside it. */
+.point { width: 0; }
+.point::before {
+  content: "";
+  position: absolute; left: -6px; top: 5px;
+  width: 12px; height: 12px;
+  background: var(--accent);
+  transform: rotate(45deg);
+}
+.point.start .lbl { left: 10px; }
+.point.end .lbl { right: 10px; }
+.lbl { background: var(--paper); }
+.lane:nth-child(even) .lbl { background: var(--zebra); }
+.item:hover .txt, .item.selected .txt { color: var(--accent); }
+.item.selected .txt { text-decoration: underline; text-underline-offset: 3px; }
+.point.selected::before { outline: 2px solid var(--accent); outline-offset: 2px; }
+
+.hint { margin: 10px 0 0; font-size: 13.5px; color: var(--muted); display: flex; flex-wrap: wrap; gap: 4px 16px; }
+
+/* ---------- Detail panel ---------- */
+.detail {
+  position: fixed;
+  right: max(20px, calc(env(safe-area-inset-right, 0px) + 20px));
+  bottom: max(20px, calc(env(safe-area-inset-bottom, 0px) + 20px));
+  width: min(420px, calc(100vw - 40px));
+  max-height: calc(100vh - 40px);
+  overflow-y: auto;
+  background: var(--paper);
+  border: 1px solid var(--rule-strong);
+  box-shadow: 0 12px 32px color-mix(in srgb, var(--ink) 18%, transparent);
+  padding: 18px 20px 20px;
+  display: grid;
+  gap: 8px;
+  z-index: 20;
+}
+.detail-head { display: flex; gap: 12px; align-items: center; padding-right: 28px; }
+.detail h2 { margin: 0; font-family: var(--font-display); font-stretch: 85%; font-size: 20px; line-height: 1.15; text-wrap: balance; }
+.detail .org { margin: 0; font-weight: 600; }
+.detail .when { margin: 0; font-family: var(--font-data); font-size: 12px; color: var(--muted); font-variant-numeric: tabular-nums; }
+.detail .body { margin: 0; text-wrap: pretty; }
+.close {
+  position: absolute; top: 10px; right: 10px;
+  width: 30px; height: 30px;
+  border: 0; background: none; color: var(--muted);
+  font-size: 22px; line-height: 1; cursor: pointer;
+}
+.close:hover { color: var(--ink); }
+.item-links { display: flex; flex-wrap: wrap; gap: 4px 14px; margin: 0; padding: 0; list-style: none; font-size: 14px; }
+
+/* ---------- Story ---------- */
+.story h2 { font-family: var(--font-display); font-stretch: 80%; font-size: 24px; margin: 0 0 16px; }
+.story-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 28px; }
+.story-grid article { display: grid; gap: 6px; align-content: start; border-top: 3px solid var(--accent); padding-top: 12px; min-width: 0; }
+.story-grid h3 { margin: 0; font-family: var(--font-display); font-stretch: 80%; font-size: 20px; }
+.story-grid .theme { margin: 0; color: var(--accent); font-weight: 600; font-size: 14.5px; }
+.story-grid p { margin: 0; font-size: 14.5px; text-wrap: pretty; }
+.logo-row { display: flex; flex-wrap: wrap; gap: 6px; margin: 4px 0 2px; padding: 0; list-style: none; }
+
+/* ---------- List (phones) ---------- */
+.list { display: none; gap: 32px; }
+.list section { display: grid; gap: 12px; }
+.list-head { display: flex; gap: 12px; align-items: center; }
+.list-head h2 { margin: 0; font-family: var(--font-display); font-stretch: 80%; font-size: 22px; line-height: 1.1; }
+.list-head .phase-dates { font-family: var(--font-data); font-size: 12px; color: var(--muted); }
+.list .theme { margin: 0; color: var(--accent); font-weight: 600; }
+.list .summary { margin: 0; font-size: 14px; }
+.group h3 { margin: 6px 0 4px; font-family: var(--font-data); font-size: 11px; font-weight: 500; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); }
+.group ul { list-style: none; margin: 0; padding: 0; display: grid; }
+.group li { border-top: 1px solid var(--rule); }
+.group details > summary { cursor: pointer; padding: 8px 0; display: flex; align-items: center; gap: 10px; list-style: none; }
+.group details > summary::-webkit-details-marker { display: none; }
+.group summary .name { font-weight: 600; min-width: 0; flex: 1; }
+.group summary .when { flex: none; font-family: var(--font-data); font-size: 12px; color: var(--muted); }
+.group summary .dot { flex: none; width: 20px; display: grid; place-items: center; }
+.group summary .dot::before { content: ""; width: 10px; height: 10px; background: var(--accent); transform: rotate(45deg); }
+.group details[open] > summary .name { color: var(--accent); }
+.group .more { display: grid; gap: 6px; padding: 0 0 12px 30px; font-size: 14px; }
+.group .more p { margin: 0; }
+
+footer { font-size: 13px; color: var(--muted); border-top: 1px solid var(--rule); padding-top: 14px; }
+.error { color: var(--ink); border: 1px solid var(--rule-strong); padding: 16px; }
+
+/* Export mode (#export): what the PNG/PDF shows. */
+.export .hint, .export .detail { display: none !important; }
+.export .page { width: 1600px; max-width: none; }
+
+/* Phone layout. Export mode is excluded because Chrome evaluates print media queries
+   against the default paper width, not the @page size set for the export. */
+@media (max-width: 760px) {
+  :root:not(.export) .hd { grid-template-columns: minmax(0, 1fr); gap: 16px; }
+  :root:not(.export) .photo { width: 96px; height: 96px; }
+  :root:not(.export) .map-wrap, :root:not(.export) .story { display: none; }
+  :root:not(.export) .list { display: grid; }
+  :root:not(.export) .detail { display: none; }
+}
+@media (prefers-reduced-motion: no-preference) {
+  .txt, .span { transition: color 120ms ease, background-color 120ms ease, border-color 120ms ease; }
+}
+</style>
+
+<div class="page" lang="en">
+  <header class="hd" id="hd"></header>
+  <div class="map-wrap">
+    <div class="map-scroll"><div class="map" id="map" role="group" aria-label="Career timeline"></div></div>
+    <p class="hint"><span>Select any entry to read more.</span><a href="career-map.png" target="_blank" rel="noopener">Image version (PNG)</a><a href="career-map.pdf" target="_blank" rel="noopener">PDF</a></p>
+  </div>
+  <section class="story" id="story" aria-labelledby="story-title"></section>
+  <div class="list" id="list"></div>
+  <footer id="ft"></footer>
+</div>
+<aside class="detail" id="detail" hidden aria-live="polite"></aside>
+
+<script>
+"use strict";
+const DATA = /*__CAREER_DATA__*/null;
+const MONTHS = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
+const PACK_GAP = 10;
+const ROW = 36;
+const LOGO_W = 20 + 5;
+
+/** Create an element with attributes and children (strings become text nodes). */
+function el(tag, attrs, ...children) {
+  const node = document.createElement(tag);
+  Object.entries(attrs || {}).forEach(([key, value]) => {
+    if (value === undefined || value === null || value === false) return;
+    if (key === "class") node.className = value;
+    else if (key === "style") Object.assign(node.style, value);
+    else if (key.startsWith("on")) node.addEventListener(key.slice(2), value);
+    else node.setAttribute(key, value === true ? "" : String(value));
+  });
+  children.flat().forEach((child) => {
+    if (child === null || child === undefined || child === false) return;
+    node.append(child instanceof Node ? child : document.createTextNode(String(child)));
+  });
+  return node;
+}
+
+/** "YYYY" | "YYYY-MM" -> fractional year (bare year = January). */
+function parseDate(value) {
+  const [y, m] = String(value).split("-");
+  return Number(y) + (m ? (Number(m) - 1) / 12 : 0);
+}
+const hasMonth = (value) => String(value).length > 4;
+
+function formatDate(value) {
+  if (!hasMonth(value)) return String(value);
+  const [y, m] = value.split("-");
+  return `${MONTHS[Number(m) - 1]} ${y}`;
+}
+const yearOf = (value) => String(value).slice(0, 4);
+
+function buildModel(data) {
+  const now = parseDate(data.asOf) + 1 / 12;
+  const t0 = Math.floor(parseDate(data.phases[0].start));
+  const t1 = Math.ceil(now + 1.5);
+  const itemTimes = (item) => {
+    if ("date" in item) {
+      const t = parseDate(item.date) + (hasMonth(item.date) ? 1 / 24 : 0.5);
+      return { kind: "point", a: t, b: t };
+    }
+    const a = parseDate(item.start);
+    const b = item.end === null ? now : parseDate(item.end) + (hasMonth(item.end) ? 1 / 12 : 0);
+    return { kind: "span", a, b, ongoing: item.end === null };
+  };
+  const items = data.items.map((item, index) => ({ ...item, index, ...itemTimes(item) }));
+  const phases = data.phases.map((phase) => ({
+    ...phase,
+    a: parseDate(phase.start),
+    b: phase.end === null ? t1 : parseDate(phase.end),
+    age: Math.floor(parseDate(phase.start)) - data.person.born,
+  }));
+  const phaseOf = (item) => phases.reduce((found, p, i) => (item.a >= p.a ? i : found), 0);
+  return { data, now, t0, t1, items, phases, phaseOf, lanes: data.lanes, logos: data.assets?.logos ?? {} };
+}
+
+function whenText(item) {
+  if ("date" in item) return formatDate(item.date);
+  const range = `${formatDate(item.start)} – ${item.end === null ? "present" : formatDate(item.end)}`;
+  if (!hasMonth(item.start) || (item.end !== null && !hasMonth(item.end))) return range;
+  const months = Math.max(1, Math.round((item.b - item.a) * 12));
+  const years = Math.floor(months / 12);
+  const rest = months % 12;
+  const parts = [years ? `${years} yr${years > 1 ? "s" : ""}` : "", rest ? `${rest} mo${rest > 1 ? "s" : ""}` : ""].filter(Boolean);
+  return `${range} · ${parts.join(" ")}`;
+}
+
+const phaseYears = (p) => `${Math.floor(p.a)}–${p.end === null ? "now" : Math.floor(p.b)}`;
+
+function linkList(links, className) {
+  if (!links || links.length === 0) return null;
+  return el("ul", { class: className }, links.map((link) => el("li", {}, el("a", { href: link.url, target: "_blank", rel: "noopener" }, link.label))));
+}
+
+/** Logo tile for an item: the embedded logo, or the organisation's initial. */
+function logoTile(model, item, size, label) {
+  const src = item.logo ? model.logos[item.logo] : undefined;
+  const sizeClass = size ? ` ${size}` : "";
+  if (src) {
+    return el("span", { class: `logo${sizeClass}`, title: label || null }, el("img", { src, alt: label || "", loading: "eager", decoding: "sync" }));
+  }
+  const initial = ((item.org || item.label).match(/[A-Za-z0-9]/) || ["•"])[0].toUpperCase();
+  return el("span", { class: `logo initials${sizeClass}`, title: label || null, "aria-hidden": label ? null : "true" }, initial);
+}
+
+/* ---------- Header, story, footer ---------- */
+function renderHeader(model) {
+  const { person, assets } = model.data;
+  const [first, ...rest] = person.name.split(" ");
+  document.getElementById("hd").replaceChildren(
+    assets?.photo ? el("img", { class: "photo", src: assets.photo, alt: `Portrait of ${person.name}` }) : null,
+    el("div", { class: "hd-text" },
+      el("p", { class: "eyebrow" }, "Career map"),
+      el("h1", {}, `${first} `, el("span", {}, rest.join(" "))),
+      el("p", { class: "tagline" }, person.tagline),
+      linkList(person.links, "links"),
+    ),
+  );
+  document.getElementById("ft").replaceChildren(`Last updated ${formatDate(model.data.asOf)}.`);
+}
+
+/** Organisations active in a phase, one tile per logo, in lane order. */
+function phaseLogos(model, phaseIndex) {
+  const laneOrder = new Map(model.lanes.map((lane, i) => [lane.id, i]));
+  const seen = new Set();
+  return model.items
+    .filter((item) => item.kind === "span" && item.logo && model.phaseOf(item) === phaseIndex)
+    .sort((x, y) => laneOrder.get(x.lane) - laneOrder.get(y.lane) || x.a - y.a)
+    .filter((item) => !seen.has(item.logo) && seen.add(item.logo));
+}
+
+function renderStory(model) {
+  document.getElementById("story").replaceChildren(
+    el("h2", { id: "story-title" }, "The story so far"),
+    el("div", { class: "story-grid" }, model.phases.map((p, pi) =>
+      el("article", {},
+        el("p", { class: "eyebrow" }, `Age ${p.age} · ${phaseYears(p)}`),
+        el("h3", {}, p.label),
+        el("p", { class: "theme" }, p.theme),
+        el("ul", { class: "logo-row" }, phaseLogos(model, pi).map((item) => el("li", {}, logoTile(model, item, "md", item.org || item.label)))),
+        p.summary ? el("p", {}, p.summary) : null,
+      ),
+    )),
+  );
+}
+
+/* ---------- Detail panel ---------- */
+let selected = null;
+
+function closeDetail() {
+  document.getElementById("detail").hidden = true;
+  if (selected) {
+    selected.classList.remove("selected");
+    selected.setAttribute("aria-expanded", "false");
+  }
+  selected = null;
+}
+
+function openDetail(model, item, button) {
+  closeDetail();
+  selected = button;
+  button.classList.add("selected");
+  button.setAttribute("aria-expanded", "true");
+  const lane = model.lanes.find((l) => l.id === item.lane);
+  const panel = document.getElementById("detail");
+  panel.replaceChildren(
+    el("button", { class: "close", type: "button", "aria-label": "Close details", onclick: closeDetail }, "×"),
+    el("div", { class: "detail-head" },
+      item.kind === "span" ? logoTile(model, item, "lg") : null,
+      el("div", {}, el("p", { class: "eyebrow" }, lane ? lane.label : ""), el("h2", {}, item.title)),
+    ),
+    item.org ? el("p", { class: "org" }, item.org) : null,
+    el("p", { class: "when" }, whenText(item)),
+    item.detail ? el("p", { class: "body" }, item.detail) : null,
+    linkList(item.links, "item-links"),
+  );
+  panel.hidden = false;
+}
+
+/* ---------- Timeline ---------- */
+function makeMeasurer(probeParent) {
+  const probe = el("span", { class: "lbl", style: { position: "absolute", visibility: "hidden" } }, "x");
+  probeParent.append(probe);
+  const ctx = document.createElement("canvas").getContext("2d");
+  ctx.font = getComputedStyle(probe).font;
+  probe.remove();
+  return (text) => Math.ceil(ctx.measureText(text).width);
+}
+
+/**
+ * Place each item's label (starting at the item, or ending at it near the right edge)
+ * and stack overlapping items into rows. Works in pixels for the current track width.
+ */
+function packLane(items, width, toPx, measure) {
+  const placed = items.map((item) => {
+    const x0 = toPx(item.a);
+    const x1 = item.kind === "span" ? Math.max(toPx(item.b), x0 + 6) : x0;
+    const offset = item.kind === "span" ? 0 : 10;
+    const lw = measure(item.label) + (item.kind === "span" ? LOGO_W : 0) + 6 + offset;
+    const mode = x0 + lw <= width ? "start" : "end";
+    const ext = mode === "start"
+      ? [x0 - (item.kind === "point" ? 6 : 0), Math.max(x1, x0 + lw)]
+      : [Math.min(x0, x1 - lw), x1 + (item.kind === "point" ? 6 : 0)];
+    return { item, mode, ext };
+  });
+  const rowEnds = [];
+  [...placed].sort((p, q) => p.ext[0] - q.ext[0]).forEach((p) => {
+    const row = rowEnds.findIndex((end) => end + PACK_GAP <= p.ext[0]);
+    p.row = row === -1 ? rowEnds.length : row;
+    rowEnds[p.row] = p.ext[1];
+  });
+  return { placed, rows: Math.max(1, rowEnds.length) };
+}
+
+function renderMap(model) {
+  const map = document.getElementById("map");
+  const span = model.t1 - model.t0;
+  const pct = (t) => `${((t - model.t0) / span) * 100}%`;
+  map.style.setProperty("--years", String(span));
+
+  const phaseTrack = el("div", { class: "track" }, model.phases.map((p, i) =>
+    el("div", { class: `phase${p.end === null ? " current" : ""}`, style: { left: pct(p.a), width: `calc(${pct(p.b)} - ${pct(p.a)} - ${i < model.phases.length - 1 ? 2 : 0}px)` } },
+      el("div", { class: "chevron" },
+        el("div", { class: "age", "aria-label": `Age ${p.age}` }, String(p.age), el("small", {}, "yrs")),
+        el("div", { class: "phase-name" }, el("strong", {}, p.label), el("span", {}, phaseYears(p))),
+      ),
+      el("p", { class: "phase-theme" }, p.theme),
+    ),
+  ));
+
+  const years = Array.from({ length: span }, (_, i) => model.t0 + i);
+  const axisTrack = el("div", { class: "track" }, years.map((y) => el("span", { class: "tick", style: { left: pct(y) } }, String(y))));
+
+  const laneTracks = model.lanes.map((lane) => {
+    const track = el("div", { class: "track" });
+    const items = model.items.filter((item) => item.lane === lane.id);
+    return { lane, track, items, row: el("div", { class: "row lane" }, el("div", { class: "lane-name" }, lane.label), track) };
+  });
+
+  const boundaries = el("div", { class: "boundaries", "aria-hidden": "true" },
+    model.phases.slice(1).map((p) => el("div", { class: "boundary", style: { left: pct(p.a) } })),
+    el("div", { class: "now", style: { left: pct(model.now) } }, el("span", {}, "now")),
+  );
+
+  map.replaceChildren(
+    el("div", { class: "row phase-row" }, el("div", { class: "lane-name" }, "Phase"), phaseTrack),
+    el("div", { class: "row axis-row" }, el("div", {}), axisTrack),
+    el("div", { class: "lanes" }, laneTracks.map((l) => l.row), boundaries),
+  );
+
+  const measure = makeMeasurer(map);
+  const layout = () => {
+    const width = laneTracks[0]?.track.getBoundingClientRect().width ?? 0;
+    if (width === 0) return;
+    const toPx = (t) => ((t - model.t0) / span) * width;
+    closeDetail();
+    laneTracks.forEach(({ track, items }) => {
+      const { placed, rows } = packLane(items, width, toPx, measure);
+      track.style.height = `${rows * ROW + 6}px`;
+      track.replaceChildren(...placed.map(({ item, mode, row }) => {
+        const classes = ["item", item.kind, mode, item.ongoing ? "ongoing" : ""].filter(Boolean).join(" ");
+        const style = { left: pct(item.a), top: `${row * ROW + 7}px` };
+        if (item.kind === "span") style.width = `calc(${pct(item.b)} - ${pct(item.a)})`;
+        const button = el("button", {
+          type: "button",
+          class: classes,
+          style,
+          "aria-expanded": "false",
+          "aria-controls": "detail",
+          "aria-label": `${item.label}, ${whenText(item)}`,
+        }, el("span", { class: "lbl" }, item.kind === "span" ? logoTile(model, item) : null, el("span", { class: "txt" }, item.label)));
+        button.addEventListener("click", () => {
+          if (selected === button) closeDetail();
+          else openDetail(model, item, button);
+        });
+        return button;
+      }));
+    });
+  };
+  layout();
+  let lastWidth = 0;
+  new ResizeObserver((entries) => {
+    const width = Math.round(entries[0].contentRect.width);
+    if (width !== lastWidth) {
+      lastWidth = width;
+      layout();
+    }
+  }).observe(map);
+}
+
+/* ---------- List (phones) ---------- */
+function renderList(model) {
+  document.getElementById("list").replaceChildren(...model.phases.map((p, pi) => {
+    const groups = model.lanes
+      .map((lane) => ({ lane, items: model.items.filter((item) => item.lane === lane.id && model.phaseOf(item) === pi) }))
+      .filter((g) => g.items.length > 0);
+    return el("section", {},
+      el("div", { class: "list-head" },
+        el("div", { class: "age" }, String(p.age), el("small", {}, "yrs")),
+        el("div", {}, el("h2", {}, p.label), el("span", { class: "phase-dates" }, phaseYears(p))),
+      ),
+      el("p", { class: "theme" }, p.theme),
+      p.summary ? el("p", { class: "summary" }, p.summary) : null,
+      groups.map(({ lane, items }) => el("div", { class: "group" },
+        el("h3", {}, lane.label),
+        el("ul", {}, items.map((item) => el("li", {},
+          el("details", {},
+            el("summary", {},
+              item.kind === "span" ? logoTile(model, item) : el("span", { class: "dot", "aria-hidden": "true" }),
+              el("span", { class: "name" }, item.label),
+              el("span", { class: "when" }, "date" in item ? formatDate(item.date) : `${yearOf(item.start)}–${item.end === null ? "now" : yearOf(item.end)}`),
+            ),
+            el("div", { class: "more" },
+              el("p", {}, el("strong", {}, item.title), item.org ? ` · ${item.org}` : ""),
+              el("p", { class: "eyebrow" }, whenText(item)),
+              item.detail ? el("p", {}, item.detail) : null,
+              linkList(item.links, "item-links"),
+            ),
+          ),
+        ))),
+      )),
+    );
+  }));
+}
+
+/** In export mode, size the printed page to the rendered content so the PDF is one page. */
+function fitPrintPage() {
+  const width = Math.ceil(document.documentElement.scrollWidth);
+  const height = Math.ceil(document.documentElement.scrollHeight) + 2;
+  document.head.append(el("style", {}, `@page { size: ${width}px ${height}px; margin: 0; }`));
+}
+
+async function main() {
+  const isExport = location.hash === "#export";
+  if (isExport) document.documentElement.classList.add("export");
+  if (!DATA) {
+    document.getElementById("map").replaceChildren(el("p", { class: "error" }, "This is the unbuilt template. Run npm run career-map and open public/career/index.html."));
+    return;
+  }
+  const model = buildModel(DATA);
+  renderHeader(model);
+  renderStory(model);
+  renderList(model);
+  if (document.fonts && document.fonts.ready) await document.fonts.ready;
+  renderMap(model);
+  document.addEventListener("keydown", (event) => {
+    if (event.key === "Escape") closeDetail();
+  });
+  if (isExport) fitPrintPage();
+}
+main();
+</script>

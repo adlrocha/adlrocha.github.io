@@ -3,14 +3,20 @@
   "type": "module",
   "version": "1.0.0",
   "scripts": {
+    "predev": "npm run career-map:html",
     "dev": "astro dev",
+    "prebuild": "npm run career-map:test && npm run career-map",
     "build": "astro build",
     "preview": "astro preview",
     "astro": "astro",
     "fetch-substack": "npx tsx scripts/fetch-substack.ts",
     "fetch-tweets": "npx tsx scripts/fetch-tweets.ts",
     "update": "npm run fetch-substack && npm run fetch-tweets",
-    "import-tweets": "npx tsx scripts/import-tweets-archive.ts"
+    "import-tweets": "npx tsx scripts/import-tweets-archive.ts",
+    "career-map": "npm run career-map:html && node career-map/export.mjs public/career",
+    "career-map:html": "node career-map/build.mjs --out public/career",
+    "career-map:logos": "node career-map/fetch-logos.mjs",
+    "career-map:test": "node --test career-map/build.test.mjs career-map/export.test.mjs"
   },
   "dependencies": {
     "astro": "^5.16.9",

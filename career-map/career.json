@@ -1,0 +1,491 @@
+{
+  "person": {
+    "name": "Alfonso de la Rocha",
+    "born": 1992,
+    "photo": "assets/photo.jpg",
+    "tagline": "From telecom networks to blockchains, cryptography, distributed systems and data infrastructure for AI.",
+    "links": [
+      { "label": "adlrocha.com", "url": "https://adlrocha.com" },
+      { "label": "Newsletter", "url": "https://adlrocha.substack.com" },
+      { "label": "Google Scholar", "url": "https://scholar.google.es/citations?user=fP9rZEQAAAAJ" },
+      { "label": "GitHub", "url": "https://github.com/adlrocha" },
+      { "label": "LinkedIn", "url": "https://www.linkedin.com/in/adlrocha/" }
+    ]
+  },
+  "asOf": "2026-11",
+  "logos": {
+    "upm": { "domain": "upm.es" },
+    "kth": { "domain": "kth.se" },
+    "ericsson": { "domain": "ericsson.com" },
+    "protocol-labs": { "domain": "protocol.ai" },
+    "filecoin": { "domain": "filecoin.io" },
+    "abundance": { "domain": "abundance.build" },
+    "minsait": { "domain": "minsait.com" },
+    "telefonica": { "domain": "telefonica.com" },
+    "chainalysis": { "domain": "chainalysis.com" },
+    "lastbasic": { "domain": "lastbasic.com" },
+    "baselight": { "domain": "baselight.app" },
+    "shellment": { "domain": "shellment.com" },
+    "wayra": { "domain": "wayra.com" },
+    "filoz": { "domain": "filoz.org" },
+    "incubicon": { "domain": "incubicon.com" },
+    "usal": { "domain": "usal.es", "url": "https://usal.es/files/glazed-builder/usal-icon.png?fid=60989" },
+    "universidad-europea": { "domain": "universidadeuropea.com" },
+    "inesdi": { "domain": "inesdi.com" },
+    "xprize": {
+      "domain": "xprize.org",
+      "url": "https://assets-us-01.kc-usercontent.com/9bc15d1f-8a5c-007d-b507-e3496e85af86/400b6a1b-6641-4887-9b70-3cc9e27706ce/XPRIZE-Logo-Black.svg",
+      "crop": "0 0 32 32"
+    },
+    "alastria": { "domain": "alastria.io" },
+    "substack": { "domain": "substack.com" },
+    "enigma": { "domain": "scrt.network" },
+    "aisocratic": { "domain": "aisocratic.org" }
+  },
+  "phases": [
+    {
+      "label": "Academia",
+      "theme": "Cloud energy, video coding and secure routing",
+      "start": "2010-09",
+      "end": "2017-04",
+      "summary": "Telecom engineering at UPM, a double MSc with KTH, and research on green data centres and on securing BGP. Securing BGP is where I first met blockchains."
+    },
+    {
+      "label": "Industry",
+      "theme": "Enterprise blockchain, cryptography and patents",
+      "start": "2017-04",
+      "end": "2020-05",
+      "summary": "Chatbots and then blockchain at Minsait, Spain's national blockchain network Alastria, and cryptography R&D at Telefónica: TrustOS, five patents and two hackathon prizes."
+    },
+    {
+      "label": "Protocol research",
+      "theme": "Distributed systems at internet scale",
+      "start": "2020-05",
+      "end": "2024-05",
+      "summary": "Research engineer at Protocol Labs: content routing for IPFS, the Filecoin network indexer, and leading IPC from an open research problem to mainnet."
+    },
+    {
+      "label": "Entrepreneurship",
+      "theme": "Data infrastructure for AI",
+      "start": "2024-05",
+      "end": null,
+      "summary": "Co-founded Finisterra Labs and built Baselight, a structured data layer for agents and humans. Raised $3.75M, was acquired by Chainalysis, and now works on its AI team while co-founding Shellment."
+    }
+  ],
+  "lanes": [
+    { "id": "studies", "label": "Studies" },
+    { "id": "research", "label": "Research" },
+    { "id": "industry", "label": "Industry" },
+    { "id": "founder", "label": "Founder" },
+    { "id": "advisor", "label": "Advisor" },
+    { "id": "teaching", "label": "Teaching" },
+    { "id": "community", "label": "Community & writing" },
+    { "id": "papers", "label": "Papers & patents" },
+    { "id": "honours", "label": "Honours & milestones" }
+  ],
+  "items": [
+    {
+      "lane": "studies",
+      "label": "UPM · BSc Telecom",
+      "logo": "upm",
+      "title": "BSc Telecommunication Technologies & Services Engineering",
+      "org": "ETSIT, Universidad Politécnica de Madrid",
+      "start": "2010-09",
+      "end": "2014-06"
+    },
+    {
+      "lane": "studies",
+      "label": "KTH + UPM · Double MSc",
+      "logo": "kth",
+      "title": "Double degree: MSc Electrical Engineering & MSc Telecommunication Engineering",
+      "org": "KTH Royal Institute of Technology (Stockholm) & Universidad Politécnica de Madrid",
+      "start": "2015-08",
+      "end": "2017-02",
+      "detail": "Thesis with Ericsson Research on adaptive loop filters for next-generation video coding, graded cum laude."
+    },
+
+    {
+      "lane": "research",
+      "label": "GreenStack · UPM",
+      "logo": "upm",
+      "title": "Research collaborator, GreenLSI group",
+      "org": "Universidad Politécnica de Madrid",
+      "start": "2014-02",
+      "end": "2015-06",
+      "detail": "Put the group's prediction models and energy-aware VM allocation policies into OpenStack. Measured energy savings on real cloud deployments."
+    },
+    {
+      "lane": "research",
+      "label": "KTH · Secure routing",
+      "logo": "kth",
+      "title": "Research fellow, Networked Systems Security group",
+      "org": "KTH Royal Institute of Technology",
+      "start": "2016-01",
+      "end": "2017-04",
+      "detail": "With Prof. Panos Papadimitratos: a blockchain-based PKI to secure inter-domain routing (BGP). Published at iNetSec 2017. Blockchains solved our problem of distributing identity and trust without a central authority, which is how I entered the space."
+    },
+    {
+      "lane": "research",
+      "label": "Ericsson · Video coding",
+      "logo": "ericsson",
+      "title": "Researcher (MSc thesis)",
+      "org": "Ericsson Research, Stockholm",
+      "start": "2016-08",
+      "end": "2017-02",
+      "detail": "Explored how the objective gains of adaptive loop filters in next-generation MPEG codecs translate into perceived quality, and developed an algorithm that improved compression further. Led to a patent filing."
+    },
+    {
+      "lane": "research",
+      "label": "ResNetLab",
+      "logo": "protocol-labs",
+      "title": "Resilient Networks Lab",
+      "org": "Protocol Labs",
+      "start": "2020-05",
+      "end": "2022",
+      "detail": "Beyond Bitswap: research on faster file exchange in IPFS and Filecoin. Findings were folded into the libp2p roadmap.",
+      "links": [
+        { "label": "beyond-bitswap", "url": "https://github.com/protocol/beyond-bitswap" },
+        { "label": "ResNetLab", "url": "https://github.com/protocol/resnetlab" }
+      ]
+    },
+    {
+      "lane": "research",
+      "label": "Filecoin Core",
+      "logo": "filecoin",
+      "title": "Filecoin core engineering",
+      "org": "Protocol Labs",
+      "start": "2022",
+      "end": "2023",
+      "detail": "Built the InterPlanetary Network Indexer (storetheindex, go-storethehash, index-provider). It makes every CID stored on Filecoin discoverable in real time at cid.contact.",
+      "links": [
+        { "label": "storetheindex", "url": "https://github.com/ipni/storetheindex" },
+        { "label": "go-storethehash", "url": "https://github.com/ipld/go-storethehash" }
+      ]
+    },
+    {
+      "lane": "research",
+      "label": "ConsensusLab · IPC",
+      "logo": "protocol-labs",
+      "title": "ConsensusLab",
+      "org": "Protocol Labs",
+      "start": "2023",
+      "end": "2024-05",
+      "detail": "Led the design and implementation of IPC (InterPlanetary Consensus): hierarchical, EVM-compatible subnets on Filecoin, taken from open research to mainnet in Rust and Go.",
+      "links": [{ "label": "IPC", "url": "https://github.com/consensus-shipyard/ipc" }]
+    },
+    {
+      "lane": "research",
+      "label": "Abundance · Sharding",
+      "logo": "abundance",
+      "title": "Part-time researcher, sharding design",
+      "org": "Abundance (open source)",
+      "start": "2025-03",
+      "end": "2025-07",
+      "detail": "Worked with Nazar Mokrynskyi on the sharding design of a new blockchain: draft specs for sharded archiving, data availability sampling, shard block proofs and farmer membership allocation, plus weekly research updates on the project blog.",
+      "links": [
+        { "label": "Repository", "url": "https://github.com/nazar-pc/abundance" },
+        { "label": "Blog", "url": "https://abundance.build/blog/" }
+      ]
+    },
+
+    {
+      "lane": "industry",
+      "label": "Minsait · Chatbots → blockchain",
+      "logo": "minsait",
+      "title": "Technical lead",
+      "org": "Minsait (Indra)",
+      "start": "2017-04",
+      "end": "2018-07",
+      "detail": "Led an intrapreneurial chatbot team (Rasa, spaCy, Watson) and then Minsait's blockchain team. Represented Indra's technical strategy in the Alastria consortium."
+    },
+    {
+      "lane": "industry",
+      "label": "Telefónica · Blockchain & crypto R&D",
+      "logo": "telefonica",
+      "title": "Blockchain technological expert",
+      "org": "Telefónica, Blockchain Competence Center",
+      "start": "2018-08",
+      "end": "2020-05",
+      "detail": "Designed core blockchain, cryptography and digital identity technology across Telefónica units. Conceived TrustOS, which is still in production. Contributed to Hyperledger Labs' TrustID. Technical referent in cryptography."
+    },
+    {
+      "lane": "industry",
+      "label": "Protocol Labs · Research engineer",
+      "logo": "protocol-labs",
+      "title": "Research engineer",
+      "org": "Protocol Labs",
+      "start": "2020-05",
+      "end": "2024-05",
+      "detail": "Four years across ResNetLab, Filecoin core and ConsensusLab. Four peer-reviewed papers and talks across Europe and North America.",
+      "links": [{ "label": "Research profile", "url": "https://research.protocol.ai/authors/alfonso-delarocha/" }]
+    },
+    {
+      "lane": "industry",
+      "label": "Chainalysis · Staff SWE, AI",
+      "logo": "chainalysis",
+      "title": "Staff software engineer, AI team",
+      "org": "Chainalysis",
+      "start": "2026-07",
+      "end": null,
+      "detail": "Joined through the acquisition of Finisterra Labs / Baselight."
+    },
+
+    {
+      "lane": "founder",
+      "label": "LastBasic · CTO",
+      "logo": "lastbasic",
+      "title": "Chief technical officer",
+      "org": "LastBasic",
+      "start": "2019-09",
+      "end": "2023-08",
+      "detail": "Designed and built the technical platform and set the technology strategy for a startup that turns hardware prototypes into products."
+    },
+    {
+      "lane": "founder",
+      "label": "Finisterra Labs · Baselight",
+      "logo": "baselight",
+      "title": "Co-founder & CTO",
+      "org": "Finisterra Labs (Baselight)",
+      "start": "2024-05",
+      "end": "2026-07",
+      "detail": "Built Baselight, a structured data layer for AI: 400B+ rows across 68K+ datasets, a natural-language query interface with citations, and an MCP server for Claude, ChatGPT and Gemini. Led a team of 12. Raised $3.75M led by Haun Ventures. Acquired by Chainalysis in 2026."
+    },
+    {
+      "lane": "founder",
+      "label": "Shellment · CTO",
+      "logo": "shellment",
+      "title": "Co-founder & CTO",
+      "org": "Shellment",
+      "start": "2026-07",
+      "end": null,
+      "detail": "Took the platform from zero to a live v1, with 200+ KYC-verified users in the first week. Evolved through an AI-driven SDLC instead of a dedicated engineering team."
+    },
+
+    {
+      "lane": "advisor",
+      "label": "Wayra · Tech due diligence",
+      "logo": "wayra",
+      "title": "Technical advisor",
+      "org": "Wayra & Telefónica Ventures",
+      "start": "2018-08",
+      "end": "2020-05",
+      "detail": "Technical advice and due diligence on startups for Telefónica's accelerator and venture arm."
+    },
+    {
+      "lane": "advisor",
+      "label": "FilOz · F3",
+      "logo": "filoz",
+      "title": "Advisor & hands-on engineer",
+      "org": "FilOz",
+      "start": "2024-03",
+      "end": "2024-06",
+      "detail": "Helped test and harden Filecoin's new fast finality gadget (F3) ahead of launch. F3 shipped in 2025 and cut Filecoin's finality from 7.5 hours to minutes."
+    },
+
+    {
+      "lane": "teaching",
+      "label": "Incubicón",
+      "logo": "incubicon",
+      "title": "Professor, MicroMaster in FinTech & Blockchain",
+      "org": "Incubicón",
+      "start": "2018-07",
+      "end": "2021-11"
+    },
+    {
+      "lane": "teaching",
+      "label": "U. Salamanca",
+      "logo": "usal",
+      "title": "Professor, Master's in Blockchain Technology",
+      "org": "Universidad de Salamanca",
+      "start": "2018-10",
+      "end": "2021-11"
+    },
+    {
+      "lane": "teaching",
+      "label": "Universidad Europea",
+      "logo": "universidad-europea",
+      "title": "Lecturer",
+      "org": "Universidad Europea",
+      "start": "2018",
+      "end": "2024",
+      "detail": "Taught several editions between 2018 and 2024."
+    },
+    {
+      "lane": "teaching",
+      "label": "Inesdi / ThreePoints",
+      "logo": "inesdi",
+      "title": "Professor, Master's in Fintech & Financial Innovation",
+      "org": "Inesdi Business Techschool",
+      "start": "2019-10",
+      "end": "2025-04",
+      "detail": "Taught the token development and cryptography modules."
+    },
+
+    {
+      "lane": "community",
+      "label": "IBM Watson AI XPRIZE",
+      "logo": "xprize",
+      "title": "AI developer, Primex team",
+      "org": "IBM Watson AI XPRIZE",
+      "start": "2016-08",
+      "end": "2018-06",
+      "detail": "Coordinated the team's TensorFlow developers and built seq2seq chatbots and RNN-based user profiling."
+    },
+    {
+      "lane": "community",
+      "label": "Alastria",
+      "logo": "alastria",
+      "title": "Platform technical team",
+      "org": "Alastria, Spain's national blockchain ecosystem",
+      "start": "2017-10",
+      "end": "2018-10",
+      "detail": "Core contributor: wrote the node monitor in Go, built the test environment and ran the AIP improvement-proposal process."
+    },
+    {
+      "lane": "community",
+      "label": "Coinmonks",
+      "title": "Technical writer",
+      "org": "Coinmonks",
+      "start": "2017-10",
+      "end": "2020-02",
+      "detail": "Technical posts on blockchain and distributed systems."
+    },
+    {
+      "lane": "community",
+      "label": "@adlrocha newsletter",
+      "logo": "substack",
+      "title": "Author, @adlrocha newsletter",
+      "org": "Weekly newsletter",
+      "start": "2018",
+      "end": null,
+      "detail": "A long-running newsletter on distributed systems, cryptography, AI and the future of computing, started while at Telefónica. 720+ subscribers.",
+      "links": [{ "label": "Read it", "url": "https://adlrocha.substack.com" }]
+    },
+    {
+      "lane": "community",
+      "label": "Enigma MPC",
+      "logo": "enigma",
+      "title": "Ambassador",
+      "org": "Enigma MPC",
+      "start": "2018-09",
+      "end": "2018-11"
+    },
+    {
+      "lane": "community",
+      "label": "AI Socratic Madrid",
+      "logo": "aisocratic",
+      "title": "Co-host & ambassador",
+      "org": "AI Socratic",
+      "start": "2026-03",
+      "end": null,
+      "detail": "Co-host of the Madrid chapter of AI Socratic, a network of AI engineers."
+    },
+
+    {
+      "lane": "papers",
+      "label": "iNetSec '17",
+      "title": "Blockchain-based PKI for Inter-Domain Secure Routing",
+      "org": "iNetSec 2017",
+      "date": "2017"
+    },
+    {
+      "lane": "papers",
+      "label": "Patent · video coding",
+      "title": "Encoder and decoder and methods thereof",
+      "org": "WO2018130400A1, filed with Ericsson",
+      "date": "2017-12"
+    },
+    {
+      "lane": "papers",
+      "label": "Patent · key recovery",
+      "title": "Method and system for recovering cryptographic keys of a blockchain network",
+      "org": "US20200235921A1, filed with Telefónica",
+      "date": "2019-01"
+    },
+    {
+      "lane": "papers",
+      "label": "2 patents · inter-DLT trust, private billing",
+      "title": "Inter-DLT network trust enhancement; privacy-preserving billing with homomorphic encryption and blockchain",
+      "org": "US 16906818 and EP3758273A1, Telefónica",
+      "date": "2020-12"
+    },
+    {
+      "lane": "papers",
+      "label": "Patent · quantum consensus",
+      "title": "DLT consensus enhancement using quantum computing mechanisms",
+      "org": "EP3813295A1, Telefónica",
+      "date": "2021-04"
+    },
+    {
+      "lane": "papers",
+      "label": "DI2F '21",
+      "title": "IPFS-FAN: A Function-Addressable Computation Network",
+      "org": "DI2F 2021",
+      "date": "2021"
+    },
+    {
+      "lane": "papers",
+      "label": "2 papers · DINPS '22",
+      "title": "Hierarchical Consensus: A Horizontal Scaling Framework for Blockchains; Enriching Kademlia by Partitioning",
+      "org": "DINPS 2022",
+      "date": "2022"
+    },
+
+    {
+      "lane": "honours",
+      "label": "Cum laude thesis",
+      "title": "Cum laude",
+      "org": "Universidad Politécnica de Madrid",
+      "date": "2017-07",
+      "detail": "Top mark for the thesis Investigating the Adaptive Loop Filter in Next Generation Video Coding."
+    },
+    {
+      "lane": "honours",
+      "label": "Equinox hackathon winner",
+      "title": "Equinox Spring Hackathon winner",
+      "org": "Telefónica",
+      "date": "2019-03",
+      "detail": "ArpanetOS, a proposal for a trust-based internet infrastructure."
+    },
+    {
+      "lane": "honours",
+      "label": "Qiskit hackathon mention",
+      "title": "Qiskit Hackathon Madrid, honourable mention",
+      "org": "IBM Research",
+      "date": "2019-05",
+      "detail": "CryptoQ: hybrid cryptosystems combining classical and quantum computing, built at the first Qiskit hackathon in Europe.",
+      "links": [{ "label": "CryptoQ", "url": "https://github.com/adlrocha/cryptoQ" }]
+    },
+    {
+      "lane": "honours",
+      "label": "Patents Hall of Fame",
+      "title": "Telefónica Patents Hall of Fame 2019",
+      "org": "Telefónica",
+      "date": "2020-01",
+      "detail": "Awarded for filing four distinct patents during 2019."
+    },
+    {
+      "lane": "honours",
+      "label": "FOSDEM '21 speaker",
+      "title": "Speaker, FOSDEM 2021",
+      "org": "FOSDEM",
+      "date": "2021-02",
+      "links": [{ "label": "Talk", "url": "https://fosdem.org/2021/schedule/event/ipfs/" }]
+    },
+    {
+      "lane": "honours",
+      "label": "$3.75M raised",
+      "title": "Finisterra Labs funding round",
+      "org": "Led by Haun Ventures, with Lightshift",
+      "date": "2024-07"
+    },
+    {
+      "lane": "honours",
+      "label": "Acquired by Chainalysis",
+      "title": "Baselight acquired",
+      "org": "Chainalysis",
+      "date": "2026-07",
+      "detail": "The Finisterra Labs team joined Chainalysis's AI team."
+    }
+  ]
+}

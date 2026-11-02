@@ -3,6 +3,8 @@ node_modules/
 
 # Build output
 dist/
+# Career map, generated from career-map/ by `npm run career-map` (runs before every build)
+public/career/
 .astro/
 
 # Editor directories
