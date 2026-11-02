@@ -53,6 +53,17 @@ map: edit `career.json`, push, done. `public/career/` is generated and not commi
 PDF need Chromium (set `CHROMIUM=...` if it is not on PATH) and `pdftoppm` (poppler); the deploy
 workflow installs poppler and uses the runner's Google Chrome.
 
+Data rules (enforced by the build, which fails with a list of problems):
+
+- Dates are `YYYY-MM` or `YYYY` (a bare year means January; a bare-year moment is drawn mid-year).
+- An item is either a period (`start` + `end`, with `end: null` for ongoing) or a moment (`date`).
+- Phases must be contiguous: each `start` equals the previous `end`; only the last may be `null`.
+- Every item needs a `lane` that exists, a short `label` (shown on the map) and a `title`
+  (shown in the detail panel). `org`, `detail` and `links` (https only) are optional.
+- `logo` on an item must be a key of the `logos` registry (`"key": { "domain": "example.com" }`).
+  A missing logo file only warns and shows the organisation's initial instead.
+- Bump `asOf` when you update the map; it drives the "now" marker and ages.
+
 Adding an organisation: add it to `logos` in `career.json` (a `domain`, or a direct `url` and an
 optional SVG `crop` viewBox), set `"logo": "<key>"` on the item, run `npm run career-map:logos`.
 If the downloaded icon looks poor, drop a better `career-map/logos/<key>.svg` in place;
