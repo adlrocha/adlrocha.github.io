@@ -8,7 +8,7 @@
 #   - TWITTER_AUTH_TOKEN env var (auth_token cookie from x.com)
 #   - TWITTER_CT0 env var (ct0 cookie from x.com)
 #
-# Usage: TWITTER_AUTH_TOKEN=xxx TWITTER_CT0=yyy ./update-substack.sh
+# Usage: TWITTER_AUTH_TOKEN=xxx TWITTER_CT0=yyy ./update-content.sh
 
 set -e
 
@@ -22,6 +22,12 @@ npm run fetch-tweets
 echo ""
 echo "Committing and pushing..."
 git add src/data/substack-cache.json src/data/tweets-cache.json
+if git diff --cached --quiet; then
+  echo "No changes — nothing to commit."
+  echo ""
+  echo "✓ Nothing to publish; site stays as-is."
+  exit 0
+fi
 git commit -m "Update Substack posts and tweets"
 git push
 
