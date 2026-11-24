@@ -1,6 +1,66 @@
 {
-  "lastUpdated": "2026-08-31T12:22:36.323Z",
+  "lastUpdated": "2026-11-24T08:53:51.479Z",
   "posts": [
+    {
+      "title": "@adlrocha - How can we limit what AI Labs know about us?",
+      "link": "https://adlrocha.substack.com/p/adlrocha-how-can-we-limit-what-ai",
+      "date": "2026-11-22T09:00:52.000Z",
+      "description": "Filtering, noise, rewriting or routing. What worked, what didn&#8217;t, and what I&#8217;m building next...."
+    },
+    {
+      "title": "@adlrocha - Most of AI moats are just fuel",
+      "link": "https://adlrocha.substack.com/p/adlrocha-most-of-ai-moats-are-just",
+      "date": "2026-11-15T09:14:14.000Z",
+      "description": "On moats, fuel, and loops in the age of AI...."
+    },
+    {
+      "title": "@adlrocha - What AI Labs know about you",
+      "link": "https://adlrocha.substack.com/p/adlrocha-what-ai-labs-know-about",
+      "date": "2026-11-08T09:01:45.000Z",
+      "description": "I asked a local model what AI providers knew about me and it was fucking scary..."
+    },
+    {
+      "title": "@adlrocha - From RLHF tro RLCD",
+      "link": "https://adlrocha.substack.com/p/adlrocha-from-rlhf-tro-rlcd",
+      "date": "2026-10-25T09:01:59.000Z",
+      "description": "And how decision models are trained...."
+    },
+    {
+      "title": "@adlrocha - Decision Models-as-a-judge",
+      "link": "https://adlrocha.substack.com/p/adlrocha-decision-models-as-a-judge",
+      "date": "2026-10-18T08:21:10.000Z",
+      "description": "Or how you can now fit your agent evaluations in CI...."
+    },
+    {
+      "title": "@adlrocha - Decision Models: A new primitive in the AI stack",
+      "link": "https://adlrocha.substack.com/p/adlrocha-decision-models-a-new-primitive",
+      "date": "2026-10-11T08:01:24.000Z",
+      "description": ">Adding system 1 thinking to system 2 models..."
+    },
+    {
+      "title": "@adlrocha - Why Are AI Tokens Getting Cheaper?",
+      "link": "https://adlrocha.substack.com/p/adlrocha-why-are-tokens-getting-cheaper",
+      "date": "2026-10-04T08:04:22.000Z",
+      "description": "When hardware keeps getting more expensive and the labs keep burning money..."
+    },
+    {
+      "title": "@adlrocha - LLMs are Rediscovering the Memory Hierarchy",
+      "link": "https://adlrocha.substack.com/p/adlrocha-llms-are-rediscovering-the",
+      "date": "2026-09-20T08:02:27.000Z",
+      "description": "DeepSeek V4.1-Flash keeps a third of itself outside the GPU, and VRAM stops being the wall...."
+    },
+    {
+      "title": "@adlrocha - Fat agents vs. Narrow agents",
+      "link": "https://adlrocha.substack.com/p/adlrocha-fat-agents-vs-narrow-agents",
+      "date": "2026-09-13T08:02:42.000Z",
+      "description": "From finding the trajectory to the solution, to always following the discovered path..."
+    },
+    {
+      "title": "@adlrocha - AI Independence Day",
+      "link": "https://adlrocha.substack.com/p/adlrocha-ai-independence-day",
+      "date": "2026-09-06T08:02:24.000Z",
+      "description": "Flash models and what is behind the undercover model...."
+    },
     {
       "title": "@adlrocha - Base Models Stopped Being the Bottleneck",
       "link": "https://adlrocha.substack.com/p/adlrocha-base-models-stopped-being",

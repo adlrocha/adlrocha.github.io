@@ -1,6 +1,208 @@
 {
-  "lastUpdated": "2026-08-31T12:22:41.229Z",
+  "lastUpdated": "2026-11-24T08:53:56.261Z",
   "tweets": [
+    {
+      "id": "2124963223476502543",
+      "text": "This is the end of an era (also personally)",
+      "date": "2026-11-23T20:28:07.000Z",
+      "url": "https://x.com/adlrocha/status/2124963223476502543",
+      "media": [
+        {
+          "url": "https://pbs.twimg.com/media/HX1iyMLXwAAwvHQ?format=jpg&amp;name=orig",
+          "type": "photo",
+          "width": 1248,
+          "height": 1248
+        }
+      ]
+    },
+    {
+      "id": "2124430183675683059",
+      "text": "I wrote  a few weeks ago about how a model running on a Spark rebuilt most of my life from the sessions I had sent to AI labs. It scared the shit out of me, so I decided to do some experiments.\n\nI built a privacy filter, got a beautiful 69% drop in what a model could say about me, and even started writing the post around it. \n\nBut I am dumb, and then realised that the number was measuring a broken model full of bugs (the attacker was basically reading nothing because of AI-slop, you know?). The real drop I achieved was only of a 7%.\n\nBut it forced me to explore all the possible solutions: what can we actually do about it? What is the space of privacy solutions? Filtering, noise, rewriting or routing. \n\nMy take is that there's no one-size-fits-all, and that the most promising piece is a small decision model on my desk that routes each request to the right place, and learns from my own leaks (good news, I already have the training data and it seems to work great :) ).\n\nI hope you enjoy these experiments, does privacy worry at all when interacting with AI? I am curious.\n\nhttps://adlrocha.substack.com/p/adlrocha-how-can-we-limit-what-ai",
+      "date": "2026-11-22T09:10:00.000Z",
+      "url": "https://x.com/adlrocha/status/2124430183675683059",
+      "media": [
+        {
+          "url": "https://pbs.twimg.com/media/HXam_CbWsAAnR0J?format=png&amp;name=orig",
+          "type": "photo",
+          "width": 2048,
+          "height": 1075
+        }
+      ]
+    },
+    {
+      "id": "2124089929206780046",
+      "text": "And this is why you want uncorrelated investments (if you can find something uncorrelated these days)",
+      "date": "2026-11-21T10:37:57.000Z",
+      "url": "https://x.com/adlrocha/status/2124089929206780046",
+      "quotedTweet": {
+        "author": "Quit",
+        "text": "Never put all your eggs in one basket",
+        "media": [
+          {
+            "url": "https://pbs.twimg.com/media/HXmHz-2bYAA1uk6?format=jpg&amp;name=orig",
+            "type": "photo",
+            "width": 1536,
+            "height": 1024
+          }
+        ]
+      }
+    },
+    {
+      "id": "2123862371361808736",
+      "text": "Have you heard about crypto? This was a Monday in the early days. \n\nKeep steady, lads!",
+      "date": "2026-11-20T19:33:43.000Z",
+      "url": "https://x.com/adlrocha/status/2123862371361808736",
+      "quotedTweet": {
+        "author": "Brian Roemmele",
+        "text": "One single bogus AI IPO has tanked the entire market. \n\nHistory books will be written on this folly of a company.\n\n$ANT is now being traded BELOW its yesterday offering price.",
+        "media": [
+          {
+            "url": "https://pbs.twimg.com/media/HXlJEFUacAA5fHc?format=jpg&amp;name=orig",
+            "type": "photo",
+            "width": 1132,
+            "height": 1224
+          }
+        ]
+      }
+    },
+    {
+      "id": "2123801976303411360",
+      "text": "Did I mention already that the way we work is going to completely change? \n\nI am in love with nibble and vert. Drop me a message if you want to know more",
+      "date": "2026-11-20T15:33:44.000Z",
+      "url": "https://x.com/adlrocha/status/2123801976303411360",
+      "media": [
+        {
+          "url": "https://pbs.twimg.com/media/HXlCltqXMAAnJRX?format=jpg&amp;name=orig",
+          "type": "photo",
+          "width": 1260,
+          "height": 991
+        }
+      ],
+      "quotedTweet": {
+        "author": "adlrocha",
+        "text": "Software engineers are not going anywhere, but they way we work, and what the role means is going to be completely re-defined.\n\nWe will use a completely different set of tools and skills. \n\nAnd in this context....\n\nVert is getting so powerful! It is becoming my daily driver to",
+        "media": [
+          {
+            "url": "https://pbs.twimg.com/media/HXg0b5LXgAAz1nM?format=jpg&amp;name=orig",
+            "type": "photo",
+            "width": 1816,
+            "height": 864
+          }
+        ]
+      }
+    },
+    {
+      "id": "2123505443180028392",
+      "text": "Software engineers are not going anywhere, but they way we work, and what the role means is going to be completely re-defined.\n\nWe will use a completely different set of tools and skills. \n\nAnd in this context....\n\nVert is getting so powerful! It is becoming my daily driver to interact with agents and  interact with code to the point that I rarely open lazyvim anymore.\n\nI only open LazyVim when I need to edit things by hand.",
+      "date": "2026-11-19T19:55:25.000Z",
+      "url": "https://x.com/adlrocha/status/2123505443180028392",
+      "media": [
+        {
+          "url": "https://pbs.twimg.com/media/HXg0b5LXgAAz1nM?format=jpg&amp;name=orig",
+          "type": "photo",
+          "width": 1816,
+          "height": 864
+        }
+      ]
+    },
+    {
+      "id": "2122666776148295782",
+      "text": "I know we are all doing the same thing, and we are implementing our own bespoke AI-powered tools for agentic engineering that only fits our workflows and potentially wouldn't scale for the mass majority. \n\nBut I am becoming so productive and loving the experience so much.\n\n(I may leaking some of my latest ideas in this screenshot... stay tuned!)",
+      "date": "2026-11-17T12:22:51.000Z",
+      "url": "https://x.com/adlrocha/status/2122666776148295782",
+      "media": [
+        {
+          "url": "https://pbs.twimg.com/media/HXU5oEWXYAAXazL?format=jpg&amp;name=orig",
+          "type": "photo",
+          "width": 1593,
+          "height": 159
+        }
+      ]
+    },
+    {
+      "id": "2122636495450173724",
+      "text": "I would be happy with just two of these :)\n\nSanta, you know what to bring me this Xmas",
+      "date": "2026-11-17T10:22:31.000Z",
+      "url": "https://x.com/adlrocha/status/2122636495450173724",
+      "quotedTweet": {
+        "author": "Mia",
+        "text": "Nvidia now officially supports a cluster of 4 DGX Sparks without a switch 🔥"
+      }
+    },
+    {
+      "id": "2122286427052417503",
+      "text": "These are the kinds of comments you should expect some of my posts to trigger :)\n\n> \"They want you to put a condom on your brain and accept institutionalized mediocrity.\" 🫶 \n\nI still can't understand why you wouldn't subscribe to such a cool newsletter and corresponding community.",
+      "date": "2026-11-16T11:11:29.000Z",
+      "url": "https://x.com/adlrocha/status/2122286427052417503",
+      "media": [
+        {
+          "url": "https://pbs.twimg.com/media/HXPf7xrXoAAcHoI?format=png&amp;name=orig",
+          "type": "photo",
+          "width": 770,
+          "height": 253
+        }
+      ]
+    },
+    {
+      "id": "2122048852161401200",
+      "text": "An actual ASIC that runs one of these. A dream come true. \n\nI should go back to work so I can make this a reality.",
+      "date": "2026-11-15T19:27:26.000Z",
+      "url": "https://x.com/adlrocha/status/2122048852161401200",
+      "quotedTweet": {
+        "author": "dizzee 🔜🌉dec2-8",
+        "text": "heres one where the CEO wouldnt rather die than launch it",
+        "media": [
+          {
+            "url": "https://pbs.twimg.com/media/HXGYOL6XsAAYX6n?format=jpg&amp;name=orig",
+            "type": "photo",
+            "width": 1657,
+            "height": 930
+          }
+        ]
+      }
+    },
+    {
+      "id": "2121679473024074211",
+      "text": "I agree. But this makes me want to challenge the big fish. \n\nOne day",
+      "date": "2026-11-14T18:59:39.000Z",
+      "url": "https://x.com/adlrocha/status/2121679473024074211",
+      "quotedTweet": {
+        "author": "antirez",
+        "text": "If you, like me, are in the effort of inference software, be aware that you are just a facilitator: the whole battle is played in the field of open models and affordable GPUs and VRAM, which is entirely out of our small fishes control."
+      }
+    },
+    {
+      "id": "2120981403269837162",
+      "text": "Turns out it already exists: https://pirateface.co/\n\nNice!",
+      "date": "2026-11-12T20:45:47.000Z",
+      "url": "https://x.com/adlrocha/status/2120981403269837162",
+      "quotedTweet": {
+        "author": "adlrocha",
+        "text": "Just saying... Is someone in? \n\nIs this reminding you of better times?",
+        "media": [
+          {
+            "url": "https://pbs.twimg.com/media/HW8P8fiWMAAhOtR?format=jpg&amp;name=orig",
+            "type": "photo",
+            "width": 1168,
+            "height": 784
+          }
+        ]
+      }
+    },
+    {
+      "id": "2120946477715292270",
+      "text": "Just saying... Is someone in? \n\nIs this reminding you of better times?",
+      "date": "2026-11-12T18:27:00.000Z",
+      "url": "https://x.com/adlrocha/status/2120946477715292270",
+      "media": [
+        {
+          "url": "https://pbs.twimg.com/media/HW8P8fiWMAAhOtR?format=jpg&amp;name=orig",
+          "type": "photo",
+          "width": 1168,
+          "height": 784
+        }
+      ]
+    },
     {
       "id": "2094068579637342480",
       "text": "The prouder I am of a post, and the more research work it required, the less impact it has.\n\nAm I overthinking it? Should I just start sharing my raw strong opinions? (those always do great :))\n\nIn any case, I love writing even if no one is reading. It matches meditation in terms of organising your thoughts.\n\nOne day I should publish publicly all the handwritten notebooks of ideas that I keep at home (my newsletter is just a fraction of what I write every week)",
