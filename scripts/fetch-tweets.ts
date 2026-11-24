@@ -531,6 +531,14 @@ async function main() {
     const mergedTweets = mergeTweets(existingCache.tweets, fetchedTweets);
     const dedupedTweets = deduplicateTweets(mergedTweets);
 
+    // Skip the write (and the commit) when nothing changed — otherwise the
+    // lastUpdated timestamp alone would produce a no-op commit every run.
+    const unchanged = JSON.stringify(dedupedTweets) === JSON.stringify(existingCache.tweets);
+    if (unchanged) {
+      console.log(`\n✓ Total: ${dedupedTweets.length} tweets cached — no changes`);
+      return;
+    }
+
     const cache: Cache = {
       lastUpdated: new Date().toISOString(),
       tweets: dedupedTweets,

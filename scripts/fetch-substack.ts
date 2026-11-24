@@ -126,6 +126,14 @@ async function main() {
     // Merge posts (preserves old, adds new)
     const mergedPosts = mergePosts(existingCache.posts, newPosts);
 
+    // Skip the write (and the commit) when nothing changed — otherwise the
+    // lastUpdated timestamp alone would produce a no-op commit every run.
+    const unchanged = JSON.stringify(mergedPosts) === JSON.stringify(existingCache.posts);
+    if (unchanged) {
+      console.log(`\n✓ Total: ${mergedPosts.length} posts cached — no changes`);
+      return;
+    }
+
     const cache: Cache = {
       lastUpdated: new Date().toISOString(),
       posts: mergedPosts,
